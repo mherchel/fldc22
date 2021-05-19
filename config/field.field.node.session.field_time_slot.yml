@@ -1,0 +1,25 @@
+uuid: bc5a4247-d78b-441c-bf7c-0b91666e07fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time_slot
+    - node.type.session
+id: node.session.field_time_slot
+field_name: field_time_slot
+entity_type: node
+bundle: session
+label: 'Time Slot'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: reference_view_time_slot_date_taxonomy
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

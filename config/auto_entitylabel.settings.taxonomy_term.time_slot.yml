@@ -1,0 +1,9 @@
+status: 1
+pattern: '[term:field_date_time:start_date:custom:D g:ia] to [term:field_date_time:end_date:custom:g:ia (n/j/y)]'
+escape: false
+preserve_titles: false
+save: 1
+chunk: '50'
+dependencies:
+  config:
+    - taxonomy.vocabulary.time_slot

@@ -1,0 +1,8 @@
+uuid: a6651bc2-73b8-44d8-bf12-ef03da9884e7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Session Time Slot'
+vid: time_slot
+description: ''
+weight: 0

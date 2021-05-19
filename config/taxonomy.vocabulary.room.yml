@@ -1,0 +1,8 @@
+uuid: fe6a5295-cb4e-4371-b4fb-2b1c0018309d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Session Room'
+vid: room
+description: ''
+weight: 0

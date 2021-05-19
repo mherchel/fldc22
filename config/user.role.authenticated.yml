@@ -1,4 +1,4 @@
-uuid: d7a16e83-47f0-4d0c-ad49-71bbfc76d337
+uuid: 7faaad47-26cc-46a6-b1a3-f09ac7c212ee
 langcode: en
 status: true
 dependencies: {  }
@@ -6,7 +6,7 @@ _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
   - 'access comments'

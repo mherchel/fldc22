@@ -1,0 +1,12 @@
+display_denied_message: true
+access_denied_message: 'Access denied. You must log in to view this page.'
+access_denied_message_type: error
+redirect_authenticated_users_to: ''
+user_login_path: /user/login
+default_redirect_code: 307
+destination_parameter_override: ''
+match_noredirect_pages: ''
+redirect_to_destination: true
+langcode: en
+_core:
+  default_config_hash: PMB0aJrA5afgG0swQ81b31o6ax8keNE22FKGnQH81EQ

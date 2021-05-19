@@ -1,4 +1,4 @@
-uuid: 69d8ef95-d301-4924-9ea6-0381a06657fc
+uuid: 1b4dd1d5-d3a5-45db-a6ed-158d71b84bed
 langcode: en
 status: true
 dependencies: {  }
@@ -6,7 +6,7 @@ _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
 id: anonymous
 label: 'Anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access comments'

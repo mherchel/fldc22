@@ -1,0 +1,29 @@
+uuid: 8d03414c-d0dc-421c-9a02-0c09f0759172
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.session
+    - taxonomy.vocabulary.session_audience
+id: node.session.field_audience
+field_name: field_audience
+entity_type: node
+bundle: session
+label: Audience
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      session_audience: session_audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

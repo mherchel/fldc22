@@ -1,0 +1,32 @@
+uuid: 27498d23-0f7b-4dba-b100-b7f4757a3e86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+    - node.type.session
+id: node.session.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: session
+label: Speaker(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        speaker: speaker
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

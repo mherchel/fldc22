@@ -1,0 +1,20 @@
+uuid: 55370187-6fa8-4bfe-ada3-3a4ec40ae04e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_time_slot
+field_name: field_time_slot
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

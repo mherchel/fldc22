@@ -1,0 +1,9 @@
+status: 1
+pattern: "[term:field_date:value]\t"
+escape: true
+preserve_titles: false
+save: 0
+chunk: '50'
+dependencies:
+  config:
+    - taxonomy.vocabulary.session_day

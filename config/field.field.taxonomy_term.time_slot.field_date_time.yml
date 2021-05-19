@@ -1,0 +1,26 @@
+uuid: 3c3e3e5b-6103-46f8-9b0b-84a38442b01e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date_time
+    - taxonomy.vocabulary.time_slot
+  module:
+    - datetime_range
+id: taxonomy_term.time_slot.field_date_time
+field_name: field_date_time
+entity_type: taxonomy_term
+bundle: time_slot
+label: 'Date Time'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

@@ -1,0 +1,41 @@
+uuid: 2020e60e-f479-40f4-87d2-836888528123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.time_slot.field_date_time
+    - taxonomy.vocabulary.time_slot
+  module:
+    - datetime_range
+id: taxonomy_term.time_slot.default
+targetEntityType: taxonomy_term
+bundle: time_slot
+mode: default
+content:
+  field_date_time:
+    weight: 4
+    settings:
+      date_order: MDY
+      time_type: '12'
+      increment: 15
+    third_party_settings: {  }
+    type: daterange_datelist
+    region: content
+  name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

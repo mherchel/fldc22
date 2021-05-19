@@ -1,0 +1,66 @@
+uuid: 1f2bfaa4-516b-4b20-a1ee-fef6a39953e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.field_audience
+    - field.field.node.session.field_description
+    - field.field.node.session.field_r
+    - field.field.node.session.field_session_category
+    - field.field.node.session.field_speakers
+    - field.field.node.session.field_time_slot
+    - node.type.session
+  module:
+    - text
+    - user
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  field_audience:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_r:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_category:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_speakers:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_time_slot: true
