@@ -14,7 +14,13 @@
         }
     ],
     "require": {
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/devel": "^4.1",
         "drupal/gin_login": "^1.0@RC",
+        "drupal/r4032login": "^2.1",
+        "drupal/token": "^1.9",
+        "drupal/user_registrationpassword": "^1.0@alpha",
         "drush/drush": "^10",
         "pantheon-upstreams/upstream-configuration": "*"
     },
