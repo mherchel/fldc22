@@ -1,25 +1,24 @@
-uuid: 3d4efb89-5221-4a93-9b40-e1cfa1292e60
+uuid: 44f6721d-521f-43d8-b4dd-ec99a08fec07
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
-    - text
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: EBUo7qOWqaiZaQ_RC9sLY5IoDKphS34v77VIHSACmVY
-id: node.body
-field_name: body
+id: node.field_sponsor_level
+field_name: field_sponsor_level
 entity_type: node
-type: text_with_summary
-settings: {  }
-module: text
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
-persist_with_no_fields: true
+persist_with_no_fields: false
 custom_storage: false
