@@ -333,6 +333,8 @@ display:
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'
         - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'
   page_1:
     display_plugin: page
@@ -347,8 +349,8 @@ display:
         title: 'Session Schedule'
         description: ''
         expanded: false
-        parent: ''
-        weight: 0
+        parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
+        weight: -49
         context: '0'
         menu_name: main
     cache_metadata:
@@ -364,4 +366,6 @@ display:
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'
         - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'

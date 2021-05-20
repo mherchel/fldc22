@@ -34,6 +34,7 @@ module:
   path_alias: 0
   quickedit: 0
   r4032login: 0
+  registration_role: 0
   search: 0
   system: 0
   taxonomy: 0
@@ -44,6 +45,7 @@ module:
   user_registrationpassword: 0
   views_ui: 0
   views: 10
+  login_redirect_per_role: 1000
   standard: 1000
 theme:
   olivero: 0
