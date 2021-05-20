@@ -9,6 +9,7 @@ module:
   ckeditor: 0
   config: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -44,6 +45,7 @@ module:
   user: 0
   user_registrationpassword: 0
   views_ui: 0
+  pathauto: 1
   views: 10
   login_redirect_per_role: 1000
   standard: 1000

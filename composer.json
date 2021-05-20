@@ -21,6 +21,7 @@
         "drupal/field_permissions": "^1.1",
         "drupal/gin_login": "^1.0@RC",
         "drupal/login_redirect_per_role": "^1.7",
+        "drupal/pathauto": "^1.8",
         "drupal/r4032login": "^2.1",
         "drupal/registration_role": "^1.1",
         "drupal/token": "^1.9",
