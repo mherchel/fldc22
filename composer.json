@@ -17,6 +17,8 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/devel": "^4.1",
+        "drupal/field_group": "^3.1",
+        "drupal/field_permissions": "^1.1",
         "drupal/gin_login": "^1.0@RC",
         "drupal/r4032login": "^2.1",
         "drupal/token": "^1.9",
