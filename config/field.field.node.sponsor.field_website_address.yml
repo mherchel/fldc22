@@ -1,0 +1,23 @@
+uuid: 7f39a8a3-4c0f-4907-b480-dc60c6ac189b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website_address
+    - node.type.sponsor
+  module:
+    - link
+id: node.sponsor.field_website_address
+field_name: field_website_address
+entity_type: node
+bundle: sponsor
+label: 'Sponsor Website Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

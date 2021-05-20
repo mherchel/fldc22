@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.sponsor.body
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
+    - field.field.node.sponsor.field_website_address
     - node.type.sponsor
   module:
     - image
+    - link
     - text
     - user
 id: node.sponsor.default
@@ -39,6 +41,18 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_website_address:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   links:
     weight: 100

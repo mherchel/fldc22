@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.sponsor.body
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
+    - field.field.node.sponsor.field_website_address
     - node.type.sponsor
   module:
     - text
@@ -32,3 +33,4 @@ content:
 hidden:
   field_sponsor_level: true
   field_sponsor_logo: true
+  field_website_address: true
