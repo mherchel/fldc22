@@ -1,0 +1,23 @@
+uuid: 2d400f3e-eb61-4e24-99fb-ec5e5dbe05cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_drupal_org_profile
+  module:
+    - link
+    - user
+id: user.user.field_drupal_org_profile
+field_name: field_drupal_org_profile
+entity_type: user
+bundle: user
+label: 'Drupal.org Profile'
+description: 'Example: <em>https://www.drupal.org/u/ultimike</em>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

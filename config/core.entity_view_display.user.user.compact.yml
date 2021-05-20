@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_drupal_org_profile
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_personal_website_link
+    - field.field.user.user.field_title
+    - field.field.user.user.field_twitter_profile_link
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,4 +33,11 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_biography: true
+  field_drupal_org_profile: true
+  field_first_name: true
+  field_last_name: true
+  field_personal_website_link: true
+  field_title: true
+  field_twitter_profile_link: true
   member_for: true
