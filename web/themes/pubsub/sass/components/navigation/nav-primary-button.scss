@@ -64,7 +64,7 @@
     pointer-events: none;
   }
 
-  @media (--nav) {
+  @media ($nav) {
     & .primary-nav__button-toggle {
       flex-shrink: 0;
       align-self: stretch;

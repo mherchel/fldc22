@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --font-sans: "metropolis", sans-serif;
   --font-serif: "Lora", "georgia", serif;

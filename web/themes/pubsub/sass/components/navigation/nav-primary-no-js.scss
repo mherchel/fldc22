@@ -14,7 +14,7 @@ html:not(.js) {
   /**
    * Mobile styles for primary navigation when JS is disabled.
    */
-  @media (--max-nav) {
+  @media ($max-nav) {
     & .primary-nav__menu--level-1 {
       column-width: var(--no-js-nav-column-width);
       column-gap: var(--no-js-nav-column-gap);
@@ -65,7 +65,7 @@ html:not(.js) {
     }
   }
 
-  @media (--nav) {
+  @media ($nav) {
     /**
      * Styles for 'always on mobile navigation' when JS is disabled.
      */

@@ -3,6 +3,8 @@
  * CKEditor frame styles.
  */
 /** cspell:ignore grouptitle */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .cke_editable {
   margin: var(--sp1);
   background-image: none;

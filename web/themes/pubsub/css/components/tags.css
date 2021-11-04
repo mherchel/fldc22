@@ -2,6 +2,8 @@
  * @file
  * Tags field styling.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .field--tags {
   display: flex;
   font-family: var(--font-sans);
@@ -19,7 +21,7 @@
 .field--tags__label:after {
   content: ":";
 }
-@media (--md) {
+@media (min-width: 700px) {
   .field--tags__label {
     line-height: 2;
   }

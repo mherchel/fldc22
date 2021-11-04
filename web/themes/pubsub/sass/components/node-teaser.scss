@@ -34,7 +34,7 @@
     align-items: center;
     margin: 0;
 
-    @media (--lg) {
+    @media ($lg) {
       position: relative; /* Anchor the image */
     }
   }
@@ -49,7 +49,7 @@
     & + .node__title {
       flex-basis: calc(100% - calc(4.5 * var(--sp)));
 
-      @media (--lg) {
+      @media ($lg) {
         flex-basis: auto;
       }
     }
@@ -64,34 +64,34 @@
       object-fit: cover;
       border-radius: 50%;
 
-      @media (--lg) {
-        width: var(--grid-col-width--lg);
-        height: var(--grid-col-width--lg);
+      @media ($lg) {
+        width: var(--grid-col-width$lg);
+        height: var(--grid-col-width$lg);
       }
 
-      @media (--nav) {
-        width: var(--grid-col-width--nav);
-        height: var(--grid-col-width--nav);
+      @media ($nav) {
+        width: var(--grid-col-width$nav);
+        height: var(--grid-col-width$nav);
       }
 
-      @media (--grid-max) {
+      @media ($grid-max) {
         width: var(--grid-col-width--max);
         height: var(--grid-col-width--max);
       }
     }
 
-    @media (--lg) {
+    @media ($lg) {
       position: absolute;
       inset-block-start: 0;
-      inset-inline-start: calc(-1 * ((var(--grid-col-width--lg) + var(--grid-gap--lg))));
+      inset-inline-start: calc(-1 * ((var(--grid-col-width$lg) + var(--grid-gap$lg))));
       margin: 0;
     }
 
-    @media (--nav) {
-      inset-inline-start: calc(-1 * ((var(--grid-col-width--nav) + var(--grid-gap--nav))));
+    @media ($nav) {
+      inset-inline-start: calc(-1 * ((var(--grid-col-width$nav) + var(--grid-gap$nav))));
     }
 
-    @media (--grid-max) {
+    @media ($grid-max) {
       inset-inline-start: calc(-1 * ((var(--grid-col-width--max) + var(--grid-gap--max))));
     }
   }
@@ -103,7 +103,7 @@
     font-size: 24px;
     line-height: var(--line-height-base);
 
-    @media (--lg) {
+    @media ($lg) {
       font-size: var(--sp2);
       line-height: var(--sp3);
     }
@@ -119,12 +119,12 @@
     padding-inline-end: 0;
     background-color: transparent;
 
-    @media (--lg) {
+    @media ($lg) {
       margin-block-start: var(--sp2);
     }
   }
 
-  @media (--lg) {
+  @media ($lg) {
     margin-block-end: var(--sp3);
   }
 }

@@ -5,6 +5,8 @@
  *
  * Allows keyboard users to quickly skip to the main content of the page.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .skip-link {
   display: block;
   width: 100%;

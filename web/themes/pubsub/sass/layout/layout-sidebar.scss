@@ -11,11 +11,11 @@
     align-self: flex-start;
     -ms-grid-row-align: start;
 
-    @media (--grid-md) {
+    @media ($grid-md) {
       grid-column: 1 / 15;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       display: grid;
       grid-template-columns: repeat(8, minmax(0, 1fr));
       grid-column: 3 / 11;
@@ -39,11 +39,11 @@
     -ms-grid-row: 2;
     grid-column: 1 / 7;
 
-    @media (--grid-md) {
+    @media ($grid-md) {
       grid-column: 3 / 13;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       -ms-grid-row: 1;
       grid-column: 12 / 15;
     }

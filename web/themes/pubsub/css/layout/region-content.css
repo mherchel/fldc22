@@ -2,15 +2,17 @@
  * @file
  * Content region layout.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .region--content {
   margin-block-end: var(--sp);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .region--content {
     margin-block-end: var(--sp2);
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .region--content {
     margin-block-end: var(--sp3);
   }

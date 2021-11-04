@@ -2,6 +2,8 @@
  * @file
  * Buttons.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .button {
   display: inline-block;
   height: var(--sp3);

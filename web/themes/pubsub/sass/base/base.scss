@@ -57,7 +57,7 @@ h1 {
   font-size: 28px;
   line-height: var(--sp2);
 
-  @media (--md) {
+  @media ($md) {
     font-size: 60px;
     line-height: var(--sp4);
   }
@@ -68,7 +68,7 @@ h2 {
   font-size: 24px;
   line-height: var(--sp2);
 
-  @media (--md) {
+  @media ($md) {
     font-size: 36px;
     line-height: var(--sp3);
   }
@@ -78,7 +78,7 @@ h3 {
   font-size: 20px;
   line-height: var(--sp1-5);
 
-  @media (--md) {
+  @media ($md) {
     font-size: 24px;
     line-height: var(--sp2);
   }
@@ -110,7 +110,7 @@ h6 {
   font-family: var(--font-sans);
   font-weight: bold;
 
-  @media (--md) {
+  @media ($md) {
     margin-block: var(--sp2);
   }
 }

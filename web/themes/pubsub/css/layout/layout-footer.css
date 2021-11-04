@@ -2,10 +2,12 @@
  * @file
  * Grid system definition for the footer top and footer bottom layouts.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .site-footer__inner {
   padding-block: var(--sp2);
 }
-@media (--nav) {
+@media (min-width: 1200px) {
   .site-footer__inner {
     padding-block: var(--sp4) calc(13 * var(--sp));
   }
@@ -15,7 +17,7 @@
 .region--footer_bottom__inner > * {
   margin-block-end: var(--sp2);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .region--footer_top__inner > *,
 .region--footer_bottom__inner > * {
     flex: 1;
@@ -26,7 +28,7 @@
     margin-inline-end: var(--sp2);
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .region--footer_top__inner,
 .region--footer_bottom__inner {
     display: flex;

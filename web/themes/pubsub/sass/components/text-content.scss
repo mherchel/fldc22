@@ -54,7 +54,7 @@
       margin-block-end: 0;
     }
 
-    @media (--md) {
+    @media ($md) {
       margin-block-start: var(--sp2);
       margin-block-end: var(--sp2);
     }
@@ -104,18 +104,18 @@
       background: var(--color--gray-95);
     }
 
-    @media (--grid-md) {
+    @media ($grid-md) {
       font-size: 32px;
       line-height: var(--sp3);
     }
 
-    @media (--lg) {
+    @media ($lg) {
       font-size: 40px;
       line-height: calc(3.5 * var(--sp));
     }
   }
 
-  @media (--grid-md) {
+  @media ($grid-md) {
     font-size: 18px;
     line-height: var(--sp2);
   }
@@ -148,7 +148,7 @@
  * Decrease font-size for blockquote placed in sidebar region.
  */
 .region--sidebar .text-content blockquote {
-  @media (--lg) {
+  @media ($lg) {
     font-size: 24px;
     line-height: var(--sp2);
   }

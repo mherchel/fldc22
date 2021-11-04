@@ -2,6 +2,8 @@
  * @file
  * Visual styles for fields.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .field:not(:last-child) {
   margin-block-end: var(--sp2);
 }
@@ -12,7 +14,7 @@
 .node--view-mode-teaser .field:last-child {
   margin-block-end: 0;
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .node--view-mode-teaser .field {
     margin-block-end: var(--sp2);
   }

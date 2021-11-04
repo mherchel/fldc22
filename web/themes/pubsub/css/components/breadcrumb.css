@@ -2,6 +2,8 @@
  * @file
  * Breadcrumb region.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .breadcrumb {
   position: relative;
   font-size: 14px;
@@ -19,12 +21,12 @@
   background: linear-gradient(to left, var(--color--white) 0%, rgba(255, 255, 255, 0) 100%);
   /* LTR */
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .breadcrumb:after {
     content: none;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .breadcrumb {
     position: static;
   }
@@ -45,7 +47,7 @@
   padding-inline-start: var(--sp0-5);
   -webkit-overflow-scrolling: touch;
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .breadcrumb__content {
     margin-inline-end: 0;
   }
@@ -63,7 +65,7 @@
   list-style: none;
   white-space: nowrap;
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .breadcrumb__list {
     overflow: visible;
     margin-inline-start: 0;
@@ -91,7 +93,7 @@
 .breadcrumb__item:last-child {
   margin-inline-end: var(--sp3);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .breadcrumb__item:last-child {
     margin-inline-end: 0;
   }

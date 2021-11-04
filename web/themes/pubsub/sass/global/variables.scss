@@ -1,13 +1,11 @@
-$sm: (min-width: 500px);
-$md: (min-width: 700px);
-$lg: (min-width: 1000px);
-$xl: (min-width: 1300px);
+$sm: 'min-width: 500px';
+$md: 'min-width: 700px';
+$lg: 'min-width: 1000px';
 
 /* Navigation related breakpoints */
-$nav-md: (min-width: 500px);
-$nav: (min-width: 1200px);
-$max-nav: (max-width: 1200px);
+$nav: 'min-width: 1200px';
+$max-nav: 'max-width: 1200px';
 
 /* Grid related breakpoints */
-$grid-md: (min-width: 700px);   /* Grid shifts from 6 to 14 columns. */
-$grid-max: (min-width: 1440px); /* Width of the entire grid maxes out. */
+$grid-md: 'min-width: 700px';
+$grid-max: 'min-width: 1440px';

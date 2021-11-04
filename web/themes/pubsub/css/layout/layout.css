@@ -2,12 +2,14 @@
  * @file
  * Base Layout.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .container {
   width: 100%;
   max-width: var(--max-width);
   padding-inline: var(--container-padding);
 }
-@media (--nav) {
+@media (min-width: 1200px) {
   .container {
     padding-inline: var(--container-padding-nav);
   }
@@ -19,7 +21,7 @@
 }
 
 /* Contains the social sidebar, and the primary content area. */
-@media (--nav) {
+@media (min-width: 1200px) {
   .layout-main {
     display: flex;
     flex-direction: row-reverse;
@@ -27,7 +29,7 @@
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   .main-content {
     width: calc(100% - var(--content-left));
     margin-inline-end: auto;
@@ -37,7 +39,7 @@
 .main-content__container {
   padding-block-start: var(--sp3);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .main-content__container {
     padding-block-start: var(--sp5);
   }

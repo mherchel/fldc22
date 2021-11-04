@@ -2,6 +2,8 @@
  * @file
  * Dropbutton styles.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --dropbutton--height: var(--sp1-5);
   --dropbutton--bg-color: var(--color--gray-75);

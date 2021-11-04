@@ -8,7 +8,7 @@
 .site-header {
   position: relative;
 
-  @media (--nav) {
+  @media ($nav) {
     /* Necessary to keep the content from jumping up when header transitions to fixed. */
     min-height: var(--site-header-height-wide);
     border-block-end: solid 1px transparent; /* Will show in Windows high contrast mode. */
@@ -30,7 +30,7 @@
   transition: all 0.5s;
 
   &.is-fixed {
-    @media (--nav) {
+    @media ($nav) {
       &:not(.is-expanded) {
         pointer-events: none;
       }
@@ -38,7 +38,7 @@
   }
 }
 
-@media (--nav) {
+@media ($nav) {
   body:not(.is-always-mobile-nav) {
     & .site-header__fixable.is-fixed {
       position: fixed;
@@ -73,33 +73,33 @@
  * works around https://bugs.chromium.org/p/chromium/issues/detail?id=332189
  */
 html.js body:not(.is-always-mobile-nav) .site-header__inner {
-  @media (--nav) {
+  @media ($nav) {
     transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
   }
 }
 
 .site-header__fixable.is-expanded .site-header__inner {
-  @media (--nav) {
+  @media ($nav) {
     box-shadow: -36px 1px 36px rgba(0, 0, 0, 0.08); /* LTR */
   }
 }
 
 [dir="rtl"] .site-header__fixable.is-expanded .site-header__inner {
-  @media (--nav) {
+  @media ($nav) {
     box-shadow: 36px 1px 36px rgba(0, 0, 0, 0.08);
   }
 }
 
 /* Hide the desktop nav when it's fixed and not active. */
 body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
-  @media (--nav) {
+  @media ($nav) {
     transform: translateX(-101%); /* LTR */
     opacity: 0;
   }
 }
 
 [dir="rtl"] body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
-  @media (--nav) {
+  @media ($nav) {
     transform: translateX(101%);
   }
 }

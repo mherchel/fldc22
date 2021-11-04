@@ -2,6 +2,8 @@
  * @file
  * Styles for pagination.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .pager__items {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +27,7 @@
   color: var(--color--gray-20);
   background-color: var(--color--white);
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .pager__item {
     width: var(--sp3);
     height: var(--sp3);

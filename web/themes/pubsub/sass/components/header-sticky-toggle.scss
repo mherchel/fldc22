@@ -11,7 +11,7 @@
 .sticky-header-toggle {
   display: none;
 
-  @media (--nav) {
+  @media ($nav) {
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -35,13 +35,13 @@
 }
 
 body:not(.is-always-mobile-nav) .is-fixed .sticky-header-toggle {
-  @media (--nav) {
+  @media ($nav) {
     visibility: visible;
   }
 }
 
 body.is-always-mobile-nav .sticky-header-toggle {
-  @media (--nav) {
+  @media ($nav) {
     visibility: hidden;
   }
 }

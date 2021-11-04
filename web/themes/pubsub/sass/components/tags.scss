@@ -23,7 +23,7 @@
     content: ":";
   }
 
-  @media (--md) {
+  @media ($md) {
     line-height: 2;
   }
 }

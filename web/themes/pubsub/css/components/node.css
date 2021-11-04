@@ -2,6 +2,8 @@
  * @file
  * Node specific styles.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .node__meta {
   display: flex;
   align-items: center;
@@ -13,7 +15,7 @@
 .node__meta a {
   font-weight: bold;
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .node__meta {
     margin-block-end: var(--sp2);
   }
@@ -47,7 +49,7 @@
 .node__content {
   padding-block-end: var(--sp1-5);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .node__content {
     padding-block-end: var(--sp3);
   }

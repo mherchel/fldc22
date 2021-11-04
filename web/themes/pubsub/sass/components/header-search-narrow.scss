@@ -61,7 +61,7 @@
       }
     }
 
-    @media (--md) {
+    @media ($md) {
       height: calc(4 * var(--sp));
       padding-inline-start: var(--sp2);
       padding-inline-end: var(--sp2);
@@ -125,7 +125,7 @@
       }
     }
 
-    @media (--md) {
+    @media ($md) {
       width: 80px;
     }
   }
@@ -138,7 +138,7 @@
 }
 
 body:not(.is-always-mobile-nav) .block-search-narrow {
-  @media (--nav) {
+  @media ($nav) {
     display: none;
   }
 }

@@ -2,6 +2,8 @@
  * @file
  * Header Search Narrow Block.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .block-search-narrow {
   margin-inline: calc(-1 * var(--sp));
   margin-block-end: var(--sp2);
@@ -57,7 +59,7 @@
     border-bottom-width: 5px;
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .block-search-narrow input[type=search] {
     height: calc(4 * var(--sp));
     padding-inline-start: var(--sp2);
@@ -119,7 +121,7 @@
 .block-search-narrow .search-form__submit:focus span:after {
   transform: scaleX(1);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .block-search-narrow .search-form__submit {
     width: 80px;
   }
@@ -131,7 +133,7 @@
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   body:not(.is-always-mobile-nav) .block-search-narrow {
     display: none;
   }

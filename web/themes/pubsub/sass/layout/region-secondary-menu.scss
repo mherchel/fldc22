@@ -16,7 +16,7 @@
 }
 
 body:not(.is-always-mobile-nav) {
-  @media (--nav) {
+  @media ($nav) {
     & .region--secondary-menu {
       justify-content: flex-end;
       margin: 0;

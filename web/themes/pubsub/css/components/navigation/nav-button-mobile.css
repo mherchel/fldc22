@@ -2,6 +2,8 @@
  * @file
  * Nav Button Mobile.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .mobile-nav-button {
   position: relative;
   z-index: 110;
@@ -28,7 +30,7 @@
   color: inherit;
   /* Override Safari's default UA styles. */
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .mobile-nav-button {
     display: inline-flex;
     width: auto;
@@ -46,7 +48,7 @@
   height: 1px;
   word-wrap: normal;
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .mobile-nav-button__label {
     position: static;
     overflow: visible;

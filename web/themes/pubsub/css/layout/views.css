@@ -2,13 +2,15 @@
  * @file
  * Styles for views.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .view > * {
   margin-block-end: var(--sp2);
 }
 .view > *:last-child {
   margin-block-end: 0;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .view > * {
     margin-block-end: var(--sp3);
   }

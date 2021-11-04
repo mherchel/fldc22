@@ -2,6 +2,8 @@
  * @file
  * Select input elements.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --form-element-select-icon: url("../../images/chevron-down.svg");
 }

@@ -2,6 +2,8 @@
  * @file
  * Button that expands second level nav when clicked.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .primary-nav__button-toggle {
   position: relative;
   overflow: hidden;
@@ -55,7 +57,7 @@
 .primary-nav__button-toggle[aria-hidden=true] {
   pointer-events: none;
 }
-@media (--nav) {
+@media (min-width: 1200px) {
   .primary-nav__button-toggle .primary-nav__button-toggle {
     flex-shrink: 0;
     align-self: stretch;

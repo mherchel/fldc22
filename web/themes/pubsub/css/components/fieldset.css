@@ -2,6 +2,8 @@
  * @file
  * Fieldset.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .fieldset {
   min-width: 0;
   margin-block: var(--sp1);

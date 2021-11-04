@@ -2,15 +2,17 @@
  * @file
  * Provides default layout styles for all layout sections.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .layout {
   margin-block-end: var(--sp);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .layout {
     margin-block-end: var(--sp2);
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .layout {
     margin-block-end: var(--sp3);
   }

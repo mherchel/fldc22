@@ -22,7 +22,7 @@
 }
 
 .node--type-book .links.inline {
-  @media (--md) {
+  @media ($md) {
     text-align: end;
   }
 }

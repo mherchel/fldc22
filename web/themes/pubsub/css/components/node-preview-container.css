@@ -2,6 +2,8 @@
  * @file
  * Node preview container styling.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .node-preview-container {
   padding-block: 0;
   padding-inline-start: var(--sp0-5);

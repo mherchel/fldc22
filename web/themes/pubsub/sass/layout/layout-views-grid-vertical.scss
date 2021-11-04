@@ -14,87 +14,87 @@
   column-gap: var(--views-grid-layout-gap);
 
   &.cols-2 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
   }
 
   &.cols-3 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 3;
     }
   }
 
   &.cols-4 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 3;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       column-count: 4;
     }
   }
 
   &.cols-5 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 3;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       column-count: 5;
     }
   }
 
   &.cols-6 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 3;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       column-count: 6;
     }
   }
 
   &.cols-7 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 3;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       column-count: 7;
     }
   }
 
   &.cols-8 {
-    @media (--sm) {
+    @media ($sm) {
       column-count: 2;
     }
 
-    @media (--md) {
+    @media ($md) {
       column-count: 4;
     }
 
-    @media (--lg) {
+    @media ($lg) {
       column-count: 8;
     }
   }

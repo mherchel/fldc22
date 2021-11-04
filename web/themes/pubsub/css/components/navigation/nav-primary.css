@@ -2,6 +2,8 @@
  * @file
  * Nav Primary.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .primary-nav__menu {
   flex-wrap: wrap;
   list-style: none;
@@ -145,7 +147,7 @@
   margin-block-start: var(--sp1-5);
   opacity: 1;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .primary-nav__menu--level-2 {
     margin-inline-start: calc(-1 * var(--sp3));
     padding-inline-start: var(--sp3);

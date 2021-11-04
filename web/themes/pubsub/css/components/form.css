@@ -2,6 +2,8 @@
  * @file
  * Main form and form item styles.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 ::placeholder {
   color: var(--color--gray-30);
 }

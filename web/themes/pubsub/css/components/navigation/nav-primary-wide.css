@@ -3,7 +3,9 @@
  * @file
  * Nav Primary (wide widths).
  */
-@media (--nav) {
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+@media (min-width: 1200px) {
   .primary-nav__menu-item {
     flex-wrap: nowrap;
     /* Ensure that sub navigation toggle button doesn't wrap underneath link. */
@@ -196,7 +198,7 @@
  * Take into account Drupal's admin toolbars when ensuring that long level-2
  * menus will never overflow viewport.
  */
-@media (--nav) {
+@media (min-width: 1200px) {
   /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
   .toolbar-vertical .primary-nav__menu--level-2,
 .toolbar-horizontal.toolbar-fixed .primary-nav__menu--level-2 {
@@ -219,7 +221,7 @@
  * Only apply transition styles to menu when JS is loaded. This
  * works around https://bugs.chromium.org/p/chromium/issues/detail?id=332189
  */
-@media (--nav) {
+@media (min-width: 1200px) {
   html.js .primary-nav__menu--level-2, html.js .primary-nav__menu-🥕 {
     transition: visibility 0.2s, transform 0.2s, opacity 0.2s;
   }

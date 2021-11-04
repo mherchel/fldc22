@@ -17,7 +17,7 @@
     font-weight: bold;
   }
 
-  @media (--sm) {
+  @media ($sm) {
     margin-block-end: var(--sp2);
   }
 }
@@ -52,7 +52,7 @@
 .node__content {
   padding-block-end: var(--sp1-5);
 
-  @media (--lg) {
+  @media ($lg) {
     padding-block-end: var(--sp3);
   }
 }

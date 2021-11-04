@@ -28,7 +28,7 @@
   color: var(--color--gray-20);
   background-color: var(--color--white);
 
-  @media (--sm) {
+  @media ($sm) {
     width: var(--sp3);
     height: var(--sp3);
   }

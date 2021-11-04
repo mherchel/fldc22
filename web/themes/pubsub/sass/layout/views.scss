@@ -13,7 +13,7 @@
       margin-block-end: 0;
     }
 
-    @media (--md) {
+    @media ($md) {
       margin-block-end: var(--sp3);
     }
   }

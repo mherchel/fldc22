@@ -2,6 +2,8 @@
  * @file
  * Search results specific styles.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .search-results {
   margin-block-end: var(--sp2);
   padding-block: 0;
@@ -9,7 +11,7 @@
   padding-inline-end: 0;
   list-style: none;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .search-results {
     margin-block-end: var(--sp3);
   }
@@ -38,7 +40,7 @@
 .search-result__title a:hover {
   color: var(--color--blue-20);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .search-result__title {
     margin-block-end: var(--sp1);
     font-size: 30px;
@@ -53,7 +55,7 @@
 .search-result__snippet {
   padding-block-end: calc(var(--sp1-5) - 2px);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .search-result__snippet {
     padding-block-end: var(--sp3);
   }
@@ -89,7 +91,7 @@
 .search-results__item:last-child {
   margin-block-end: 0;
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .search-results__item {
     margin-block-end: var(--sp3);
   }

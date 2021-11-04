@@ -2,6 +2,8 @@
  * @file
  * Secondary menu region layout styling.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .region--secondary-menu {
   display: flex;
   margin-block-start: var(--sp2);
@@ -11,7 +13,7 @@
   margin-block-end: 0;
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   body:not(.is-always-mobile-nav) .region--secondary-menu {
     justify-content: flex-end;
     margin: 0;

@@ -13,8 +13,8 @@
     flex: 1 0 100%;
     margin-block-end: var(--grid-gap);
 
-    @media (--md) {
-      flex-basis: calc(50% - (var(--grid-gap--md) * 0.5));
+    @media ($md) {
+      flex-basis: calc(50% - (var(--grid-gap$md) * 0.5));
       flex-grow: 0;
       flex-shrink: 0;
       margin-block-end: 0;
@@ -22,27 +22,27 @@
   }
 
   /* Two column layout. */
-  @media (--md) {
+  @media ($md) {
     & > .layout__region--first,
     & > .layout__region--second {
-      margin-block-end: var(--grid-gap--md);
+      margin-block-end: var(--grid-gap$md);
     }
 
     & > .layout__region--first,
     & > .layout__region--third {
-      margin-inline-end: calc(var(--grid-gap--md) * 0.5);
+      margin-inline-end: calc(var(--grid-gap$md) * 0.5);
     }
 
     & > .layout__region--second,
     & > .layout__region--fourth {
-      margin-inline-start: calc(var(--grid-gap--md) * 0.5);
+      margin-inline-start: calc(var(--grid-gap$md) * 0.5);
     }
   }
 
   /* Four column layout. */
-  @media (--lg) {
+  @media ($lg) {
     & > .layout__region {
-      flex-basis: calc(25% - (var(--grid-gap--md) * 0.75));
+      flex-basis: calc(25% - (var(--grid-gap$md) * 0.75));
     }
 
     & > .layout__region--first,
@@ -51,16 +51,16 @@
     }
 
     & > .layout__region--first {
-      margin-inline-end: calc(var(--grid-gap--md) * 0.5);
+      margin-inline-end: calc(var(--grid-gap$md) * 0.5);
     }
 
     & > .layout__region--second,
     & > .layout__region--third {
-      margin-inline: calc(var(--grid-gap--md) * 0.5);
+      margin-inline: calc(var(--grid-gap$md) * 0.5);
     }
 
     & > .layout__region--fourth {
-      margin-inline-start: calc(var(--grid-gap--md) * 0.5);
+      margin-inline-start: calc(var(--grid-gap$md) * 0.5);
     }
   }
 }

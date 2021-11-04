@@ -2,6 +2,8 @@
  * @file
  * Visual styles for ajax-progress throbber.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .ajax-progress {
   display: inline-block;
 }

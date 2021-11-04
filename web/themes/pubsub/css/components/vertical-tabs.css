@@ -2,12 +2,14 @@
  * @file
  * Vertical Tabs.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --vertical-tabs-menu-width: 15rem;
   --vertical-tabs-menu-border-width: 1px;
 }
 
-@media (--lg) {
+@media (min-width: 1000px) {
   .vertical-tabs {
     display: flex;
   }
@@ -24,7 +26,7 @@
   border-style: solid;
   border-color: var(--color--gray-80);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .vertical-tabs__menu {
     width: var(--vertical-tabs-menu-width);
     border-width: var(--vertical-tabs-menu-border-width) 0 var(--vertical-tabs-menu-border-width) var(--vertical-tabs-menu-border-width);
@@ -34,14 +36,14 @@
 .vertical-tabs__panes {
   margin-block-start: calc(var(--vertical-tabs-menu-border-width) * -1);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .vertical-tabs__panes {
     width: calc(100% - var(--vertical-tabs-menu-width));
     margin-block-start: 0;
   }
 }
 
-@media (--lg) {
+@media (min-width: 1000px) {
   .vertical-tabs__pane {
     min-height: 100%;
   }
@@ -77,7 +79,7 @@
 .vertical-tabs__menu-item.is-selected {
   background-color: var(--color--white);
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .vertical-tabs__menu-item.is-selected {
     margin-inline-end: calc(var(--vertical-tabs-menu-border-width) * -1);
     padding-inline-end: var(--vertical-tabs-menu-border-width);

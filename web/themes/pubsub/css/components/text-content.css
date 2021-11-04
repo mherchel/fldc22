@@ -3,6 +3,8 @@
  * @file
  * Text Content.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .text-content,
 .cke_editable {
   color: var(--color--gray-10);
@@ -53,7 +55,7 @@
 .cke_editable p:last-child {
   margin-block-end: 0;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .text-content p,
 .cke_editable p {
     margin-block-start: var(--sp2);
@@ -105,21 +107,21 @@
   content: "";
   background: var(--color--gray-95);
 }
-@media (--grid-md) {
+@media (min-width: 700px) {
   .text-content blockquote,
 .cke_editable blockquote {
     font-size: 32px;
     line-height: var(--sp3);
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .text-content blockquote,
 .cke_editable blockquote {
     font-size: 40px;
     line-height: calc(3.5 * var(--sp));
   }
 }
-@media (--grid-md) {
+@media (min-width: 700px) {
   .text-content,
 .cke_editable {
     font-size: 18px;
@@ -150,7 +152,7 @@
 /**
  * Decrease font-size for blockquote placed in sidebar region.
  */
-@media (--lg) {
+@media (min-width: 1000px) {
   .region--sidebar .text-content blockquote {
     font-size: 24px;
     line-height: var(--sp2);

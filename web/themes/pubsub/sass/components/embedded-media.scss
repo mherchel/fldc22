@@ -20,7 +20,7 @@ figcaption {
   font-style: italic;
   line-height: var(--sp);
 
-  @media (--sm) {
+  @media ($sm) {
     padding-block: var(--sp);
     padding-inline-start: var(--sp);
     padding-inline-end: var(--sp);
@@ -34,7 +34,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  @media (--grid-md) {
+  @media ($grid-md) {
     float: inline-end;
     max-width: 50%;
     margin-block-start: var(--sp);
@@ -53,7 +53,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  @media (--grid-md) {
+  @media ($grid-md) {
     float: inline-start;
     max-width: 50%;
     margin-block-start: var(--sp);

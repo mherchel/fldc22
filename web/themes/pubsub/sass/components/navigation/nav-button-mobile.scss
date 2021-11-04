@@ -31,7 +31,7 @@
     color: inherit; /* Override Safari's default UA styles. */
   }
 
-  @media (--sm) {
+  @media ($sm) {
     display: inline-flex;
     width: auto;
     padding-inline-start: var(--sp);
@@ -48,7 +48,7 @@
   height: 1px;
   word-wrap: normal;
 
-  @media (--sm) {
+  @media ($sm) {
     position: static;
     overflow: visible;
     clip: auto;

@@ -2,6 +2,8 @@
  * @file
  * Block styling.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .block__title {
   margin-block: 0 var(--sp);
   letter-spacing: 0.02em;

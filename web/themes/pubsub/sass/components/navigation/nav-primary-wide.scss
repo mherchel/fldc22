@@ -5,7 +5,7 @@
 
 @import "../../global/variables";
 
-@media (--nav) {
+@media ($nav) {
   .primary-nav__menu-item {
     flex-wrap: nowrap; /* Ensure that sub navigation toggle button doesn't wrap underneath link. */
 
@@ -211,7 +211,7 @@
  * Take into account Drupal's admin toolbars when ensuring that long level-2
  * menus will never overflow viewport.
  */
-@media (--nav) {
+@media ($nav) {
   /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
   .toolbar-vertical,
   .toolbar-horizontal.toolbar-fixed {
@@ -241,7 +241,7 @@
  * works around https://bugs.chromium.org/p/chromium/issues/detail?id=332189
  */
 html.js  {
-  @media (--nav) {
+  @media ($nav) {
     & .primary-nav__menu--level-2,
     & .primary-nav__menu-🥕 {
       transition: visibility 0.2s, transform 0.2s, opacity 0.2s;

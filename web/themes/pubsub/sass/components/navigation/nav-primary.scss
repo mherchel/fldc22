@@ -162,7 +162,7 @@
     opacity: 1;
   }
 
-  @media (--md) {
+  @media ($md) {
     margin-inline-start: calc(-1 * var(--sp3));
     padding-inline-start: var(--sp3);
   }

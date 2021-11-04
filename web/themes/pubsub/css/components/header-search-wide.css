@@ -2,6 +2,8 @@
  * @file
  * Header Search Wide Block.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 /* Override contextual links so we can position against .site-header. */
 .block-search-wide.contextual-region {
   position: static;
@@ -143,8 +145,8 @@
 
 .block-search-wide__grid {
   display: grid;
-  grid-template-columns: repeat(var(--grid-col-count--md), 1fr);
-  grid-column-gap: var(--grid-gap--md);
+  grid-template-columns: repeat(var(--grid-col-count "min-width: 700px"), 1fr);
+  grid-column-gap: var(--grid-gap "min-width: 700px");
 }
 
 /* Override specificity from container-inline.module.css */

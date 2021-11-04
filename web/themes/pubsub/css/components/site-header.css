@@ -2,10 +2,12 @@
  * @file
  * Site header.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .site-header {
   position: relative;
 }
-@media (--nav) {
+@media (min-width: 1200px) {
   .site-header {
     /* Necessary to keep the content from jumping up when header transitions to fixed. */
     min-height: var(--site-header-height-wide);
@@ -28,13 +30,13 @@
   align-items: flex-end;
   transition: all 0.5s;
 }
-@media (--nav) {
+@media (min-width: 1200px) {
   .site-header__fixable.is-fixed:not(.is-expanded) {
     pointer-events: none;
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   body:not(.is-always-mobile-nav) {
     /* Toolbar is fixed, and tray is either vertical or closed and horizontal. */
     /* Toolbar is fixed, and tray is open and horizontal. */
@@ -65,27 +67,27 @@
  * Only apply transition styles when JS is loaded. This
  * works around https://bugs.chromium.org/p/chromium/issues/detail?id=332189
  */
-@media (--nav) {
+@media (min-width: 1200px) {
   html.js body:not(.is-always-mobile-nav) .site-header__inner {
     transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   .site-header__fixable.is-expanded .site-header__inner {
     box-shadow: -36px 1px 36px rgba(0, 0, 0, 0.08);
     /* LTR */
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   [dir=rtl] .site-header__fixable.is-expanded .site-header__inner {
     box-shadow: 36px 1px 36px rgba(0, 0, 0, 0.08);
   }
 }
 
 /* Hide the desktop nav when it's fixed and not active. */
-@media (--nav) {
+@media (min-width: 1200px) {
   body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
     transform: translateX(-101%);
     /* LTR */
@@ -93,7 +95,7 @@
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   [dir=rtl] body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
     transform: translateX(101%);
   }

@@ -2,6 +2,8 @@
  * @file
  * Text input elements.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 [type=color],
 [type=date],
 [type=datetime-local],
@@ -156,7 +158,7 @@ textarea.error:focus {
 textarea.form-element--small {
   min-height: var(--sp2-5);
 }
-@media (--sm) {
+@media (min-width: 500px) {
   [type=color],
 [type=date],
 [type=datetime-local],

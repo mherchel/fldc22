@@ -66,7 +66,7 @@ textarea {
     min-height: var(--sp2-5);
   }
 
-  @media (--sm) {
+  @media ($sm) {
     width: auto;
   }
 }

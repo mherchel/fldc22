@@ -1,3 +1,5 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --tab-active-border-size: 6px;
 }
@@ -14,7 +16,7 @@
   padding-inline-end: 0;
   list-style: none;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs {
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,7 +31,7 @@
 .tabs__tab.is-active {
   display: flex;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs__tab {
     display: flex;
     margin: 0;
@@ -45,7 +47,7 @@ html:not(.js) .tabs__tab,
 .tabs--secondary .tabs__tab {
   display: block;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs--secondary .tabs__tab {
     display: flex;
   }
@@ -71,7 +73,7 @@ html:not(.js) .tabs__tab,
 .tabs--secondary .tabs__link {
   text-transform: none;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs--secondary .tabs__link {
     border-top-color: transparent;
     border-right-color: transparent;
@@ -103,7 +105,7 @@ html:not(.js) .tabs__tab,
   content: "";
   border-inline-start: var(--tab-active-border-size) solid var(--color--blue-50);
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs__link.is-active:after {
     inset-inline-start: 0;
     width: 100%;
@@ -134,7 +136,7 @@ html:not(.js) .tabs__tab,
   border-color: var(--color--blue-50);
   outline: none;
 }
-@media (--md) {
+@media (min-width: 700px) {
   .tabs__trigger {
     display: none;
   }

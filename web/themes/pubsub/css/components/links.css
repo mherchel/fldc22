@@ -2,6 +2,8 @@
  * @file
  * Links component.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .links.inline {
   margin-inline-start: 0;
   padding-block: 0;
@@ -16,7 +18,7 @@
   padding-inline-end: 1em;
 }
 
-@media (--md) {
+@media (min-width: 700px) {
   .node--type-book .links.inline {
     text-align: end;
   }

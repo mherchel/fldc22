@@ -2,6 +2,8 @@
  * @file
  * Responsive styles for views grid horizontal layout.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --views-grid-layout-gap: var(--sp);
 }
@@ -19,7 +21,7 @@
   margin-inline-end: 0;
   /* 2 column layout. */
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-2 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -34,7 +36,7 @@
   /* 2 column layout. */
   /* 3 column layout. */
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-3 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -43,7 +45,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-3 > * {
     flex-basis: calc(33.3333333333% - 0.6666666667 * var(--views-grid-layout-gap));
   }
@@ -60,7 +62,7 @@
   /* 2 column layout. */
   /* 4 column layout. */
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-4 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -69,7 +71,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-4 > * {
     flex-basis: calc(25% - 0.75 * var(--views-grid-layout-gap));
   }
@@ -87,7 +89,7 @@
   /* 3 column layout. */
   /* 5 column layout. */
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .views-view-grid--horizontal.cols-5 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -96,7 +98,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-5 > * {
     flex-basis: calc(33.3333333333% - 0.6666666667 * var(--views-grid-layout-gap));
   }
@@ -107,7 +109,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-5 > * {
     flex-basis: calc(20% - 0.8 * var(--views-grid-layout-gap));
   }
@@ -125,7 +127,7 @@
   /* 3 column layout. */
   /* 6 column layout. */
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .views-view-grid--horizontal.cols-6 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -134,7 +136,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-6 > * {
     flex-basis: calc(33.3333333333% - 0.6666666667 * var(--views-grid-layout-gap));
   }
@@ -145,7 +147,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-6 > * {
     flex-basis: calc(16.6666666667% - 0.8333333333 * var(--views-grid-layout-gap));
   }
@@ -163,7 +165,7 @@
   /* 3 column layout. */
   /* 7 column layout. */
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .views-view-grid--horizontal.cols-7 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -172,7 +174,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-7 > * {
     flex-basis: calc(33.3333333333% - 0.6666666667 * var(--views-grid-layout-gap));
   }
@@ -183,7 +185,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-7 > * {
     flex-basis: calc(14.2857142857% - 0.8571428571 * var(--views-grid-layout-gap));
   }
@@ -201,7 +203,7 @@
   /* 4 column layout. */
   /* 8 column layout. */
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .views-view-grid--horizontal.cols-8 > * {
     flex-basis: calc(50% - 0.5 * var(--views-grid-layout-gap));
     margin-inline-end: var(--views-grid-layout-gap);
@@ -210,7 +212,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .views-view-grid--horizontal.cols-8 > * {
     flex-basis: calc(25% - 0.75 * var(--views-grid-layout-gap));
   }
@@ -221,7 +223,7 @@
     margin-inline-end: 0;
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .views-view-grid--horizontal.cols-8 > * {
     flex-basis: calc(12.5% - 0.875 * var(--views-grid-layout-gap));
   }

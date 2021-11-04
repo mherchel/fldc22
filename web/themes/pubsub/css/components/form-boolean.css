@@ -2,6 +2,8 @@
  * @file
  * Checkbox and radio input elements.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 input[type=checkbox],
 input[type=radio] {
   display: inline-block;

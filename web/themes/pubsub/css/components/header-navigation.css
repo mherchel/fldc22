@@ -2,6 +2,8 @@
  * @file
  * Navigation in header.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .header-nav {
   position: fixed;
   z-index: 105;
@@ -34,19 +36,19 @@
     flex-basis: max-content;
   }
 }
-@media (--sm) {
+@media (min-width: 500px) {
   .header-nav {
     border-top-width: var(--sp5);
   }
 }
-@media (--md) {
+@media (min-width: 700px) {
   .header-nav {
     padding-block-end: var(--sp3);
     padding-inline-start: var(--sp3);
     border-top-width: var(--sp7);
   }
 }
-@media (--lg) {
+@media (min-width: 1000px) {
   .header-nav {
     grid-column: 5/14;
   }
@@ -64,14 +66,14 @@ html.js .header-nav {
 body.toolbar-vertical .header-nav {
   border-top-width: calc(var(--toolbar-height) + var(--sp3));
 }
-@media (--sm) {
+@media (min-width: 500px) {
   body.toolbar-vertical .header-nav {
     border-top-width: calc(var(--toolbar-height) + var(--sp5));
   }
 }
 
 /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
-@media (--md) {
+@media (min-width: 700px) {
   body.toolbar-vertical .header-nav,
 body.toolbar-horizontal.toolbar-fixed .header-nav {
     border-top-width: calc(var(--toolbar-height) + var(--sp7));
@@ -79,13 +81,13 @@ body.toolbar-horizontal.toolbar-fixed .header-nav {
 }
 
 /* Toolbar is horizontal fixed, and tray is open. */
-@media (--md) {
+@media (min-width: 700px) {
   body.toolbar-horizontal.toolbar-fixed.toolbar-tray-open .header-nav {
     border-top-width: calc(var(--toolbar-height) + var(--toolbar-tray-height) + var(--sp7));
   }
 }
 
-@media (--nav) {
+@media (min-width: 1200px) {
   .header-nav {
     position: static;
     display: flex;

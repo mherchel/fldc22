@@ -34,17 +34,17 @@
     flex-basis: max-content;
   }
 
-  @media (--sm) {
+  @media ($sm) {
     border-top-width: var(--sp5);
   }
 
-  @media (--md) {
+  @media ($md) {
     padding-block-end: var(--sp3);
     padding-inline-start: var(--sp3);
     border-top-width: var(--sp7);
   }
 
-  @media (--lg) {
+  @media ($lg) {
     grid-column: 5 / 14;
   }
 }
@@ -61,7 +61,7 @@ html.js .header-nav {
 body.toolbar-vertical .header-nav {
   border-top-width: calc(var(--toolbar-height) + var(--sp3));
 
-  @media (--sm) {
+  @media ($sm) {
     border-top-width: calc(var(--toolbar-height) + var(--sp5));
   }
 }
@@ -69,20 +69,20 @@ body.toolbar-vertical .header-nav {
 /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
 body.toolbar-vertical .header-nav,
 body.toolbar-horizontal.toolbar-fixed .header-nav {
-  @media (--md) {
+  @media ($md) {
     border-top-width: calc(var(--toolbar-height) + var(--sp7));
   }
 }
 
 /* Toolbar is horizontal fixed, and tray is open. */
 body.toolbar-horizontal.toolbar-fixed.toolbar-tray-open .header-nav {
-  @media (--md) {
+  @media ($md) {
     border-top-width: calc(var(--toolbar-height) + var(--toolbar-tray-height) + var(--sp7));
   }
 }
 
 .header-nav {
-  @media (--nav) {
+  @media ($nav) {
     position: static;
     display: flex;
     visibility: visible;

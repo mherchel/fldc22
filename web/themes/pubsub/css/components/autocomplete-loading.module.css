@@ -2,6 +2,8 @@
  * @file
  * Visual styles for autocomplete input field.
  */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 :root {
   --autocomplete-search-icon-url: url("../../images/magnifying-glass.svg");
   --autocomplete-throbber-icon-url: url("../../images/throbber.svg");
