@@ -1,0 +1,93 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the pubsub theme will change. The pubsub theme is not backwards compatible
+# If you wish to modify the output or assets of pubsub you can:
+# 1. Copy the whole of pubsub and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with pubsub's
+# bug fixes and feature support.
+#
+# 2. Sub-theme pubsub. This is only recommended if you want to make minor
+# tweaks and understand that pubsub could break your modifications as it
+# changes.
+name: pubsub
+type: theme
+base theme: false
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of pubsub, Drupal front-end theme.'
+core_version_requirement: ^9
+version: VERSION
+
+libraries:
+  - pubsub/global-styling
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+libraries-override:
+  system/admin:
+    css:
+      theme:
+        css/system.admin.css: false
+  system/base:
+    css:
+      component:
+        css/components/ajax-progress.module.css: css/components/ajax-progress.module.css
+        css/components/autocomplete-loading.module.css: css/components/autocomplete-loading.module.css
+  core/drupal.checkbox: false
+  core/drupal.dropbutton:
+    css:
+      component:
+        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        misc/vertical-tabs.css: css/components/vertical-tabs.css
+  media/oembed.formatter: false
+  layout_builder/twocol_section: pubsub/layout_builder_twocol_section
+  layout_builder/threecol_section: pubsub/layout_builder_threecol_section
+  layout_builder/fourcol_section: pubsub/layout_builder_fourcol_section
+libraries-extend:
+  core/drupal.message:
+    - pubsub/messages
+  core/drupal.collapse:
+    - pubsub/details
+  core/drupal.dialog:
+    - pubsub/drupal.dialog
+  core/drupal.dialog.off_canvas:
+    - pubsub/dialog.off_canvas
+  core/drupal.progress:
+    - pubsub/progress
+  layout_discovery/onecol:
+    - pubsub/layout_discovery_section
+  layout_discovery/twocol_bricks:
+    - pubsub/layout_discovery_section
+  layout_discovery/twocol:
+    - pubsub/layout_discovery_section
+  layout_discovery/threecol_25_50_25:
+    - pubsub/layout_discovery_section
+  layout_discovery/threecol_33_34_33:
+    - pubsub/layout_discovery_section
+  node/drupal.node.preview:
+    - pubsub/drupal.node.preview
+  core/ckeditor:
+    - pubsub/cke-dialog
+  content_moderation/content_moderation:
+    - pubsub/content_moderation
+ckeditor_stylesheets:
+  - css/base/fonts.css
+  - css/base/base.css
+  - css/components/embedded-media.css
+  - css/components/table.css
+  - css/components/text-content.css
+  - css/theme/ckeditor-frame.css
