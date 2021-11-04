@@ -105,68 +105,11 @@ function pubsub_preprocess_node(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block.html.twig.
- */
-function pubsub_preprocess_block(&$variables) {
-  if (!empty($variables['elements']['#id'])) {
-    /** @var \Drupal\block\BlockInterface $block */
-    $block = \Drupal::entityTypeManager()
-      ->getStorage('block')
-      ->load($variables['elements']['#id']);
-    if ($block) {
-      $region = $block->getRegion();
-
-      if ($variables['base_plugin_id'] === 'system_menu_block') {
-        $variables['content']['#attributes']['region'] = $region;
-        if ($region === 'sidebar') {
-          $variables['#attached']['library'][] = 'pubsub/menu-sidebar';
-        }
-      }
-
-      if ($variables['base_plugin_id'] === 'search_form_block') {
-        if ($region === 'primary_menu') {
-          $variables['#attached']['library'][] = 'pubsub/search-narrow';
-          $variables['content']['actions']['submit']['#theme_wrappers'] = ['input__submit__header_search'];
-        }
-        elseif ($region === 'secondary_menu') {
-          $variables['#attached']['library'][] = 'pubsub/search-wide';
-          $variables['content']['actions']['submit']['#theme_wrappers'] = ['input__submit__header_search'];
-        }
-      }
-    }
-  }
-
-  if ($variables['plugin_id'] === 'system_branding_block') {
-    $site_branding_color = theme_get_setting('site_branding_bg_color');
-    if ($site_branding_color && $site_branding_color !== 'default') {
-      $variables['attributes']['class'][] = 'site-branding--bg-' . $site_branding_color;
-    }
-  }
-
-  // Add a primary-nav class to main menu navigation block.
-  if ($variables['plugin_id'] === 'system_menu_block:main') {
-    $variables['attributes']['class'][] = 'primary-nav';
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter() for menu.
  */
 function pubsub_theme_suggestions_menu_alter(&$suggestions, array $variables) {
   if (isset($variables['attributes']['region'])) {
     $suggestions[] = 'menu__' . $variables['attributes']['region'];
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function pubsub_preprocess_menu(&$variables) {
-  if (isset($variables['attributes']['region'])) {
-    if ($variables['attributes']['region'] === 'sidebar') {
-      $variables['attributes']['class'][] = 'menu--sidebar';
-    }
-    unset($variables['attributes']['region']);
   }
 }
 
@@ -185,22 +128,6 @@ function pubsub_theme_suggestions_form_alter(array &$suggestions, array $variabl
 function pubsub_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
-  }
-
-  switch ($form_id) {
-    case 'search_block_form':
-      // Add placeholder text to keys input.
-      $form['keys']['#attributes']['placeholder'] = t('Search by keyword or phrase.');
-
-      // Add classes to the search form submit input.
-      $form['actions']['submit']['#attributes']['class'][] = 'search-form__submit';
-      break;
-
-    case 'search_form':
-      $form['basic']['keys']['#attributes']['placeholder'] = t('Search by keyword or phrase.');
-      $form['basic']['submit']['#attributes']['class'][] = 'button--primary';
-      $form['advanced']['submit']['#attributes']['class'][] = 'button--primary';
-      break;
   }
 }
 
