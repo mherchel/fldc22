@@ -1,0 +1,22 @@
+uuid: 618f93cd-0d64-4cc8-a841-c1ab047263fe
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pubsub
+_core:
+  default_config_hash: KL0l-qW-Ix2DTkSPWkiHoetUwKwtXVkDNuKjCWEYcww
+id: pubsub_secondary_local_tasks
+theme: pubsub
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

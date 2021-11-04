@@ -1,15 +1,15 @@
-uuid: 90b95106-5d94-4e6d-8017-133ea8bc2389
+uuid: 32ccbe91-08ee-49f6-9dd1-d7e562d745a1
 langcode: en
 status: true
 dependencies:
   module:
     - search
   theme:
-    - olivero
+    - pubsub
 _core:
-  default_config_hash: kF9mVmsseaqxC_a3r0oTNT2MOdiEdr9-6lMUfIa18eI
-id: olivero_search_form_wide
-theme: olivero
+  default_config_hash: DV8zjbXex9kEmg8nnYVwoRNwl2fhAPE4DWjHZUNB5DQ
+id: pubsub_search_form_wide
+theme: pubsub
 region: secondary_menu
 weight: -5
 provider: null

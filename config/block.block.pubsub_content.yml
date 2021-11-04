@@ -1,0 +1,22 @@
+uuid: 505fb4b3-2352-4a32-a432-90cc7498f241
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pubsub
+_core:
+  default_config_hash: oHU5p2ZfDUky5y-g79Z2_daXf4yiNb1sYzb0vFO6vhE
+id: pubsub_content
+theme: pubsub
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,4 +1,4 @@
-admin: claro
-default: olivero
+admin: gin
+default: pubsub
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg

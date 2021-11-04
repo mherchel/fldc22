@@ -1,13 +1,13 @@
-uuid: 0696843b-fb88-451c-b001-5ef4af0b1c3f
+uuid: 0072592b-2cf8-40df-95f2-246cf5369c70
 langcode: en
 status: true
 dependencies:
   theme:
-    - olivero
+    - pubsub
 _core:
-  default_config_hash: WImvmaBdDpwIqobqbDWebBnyxssRvrNEnZSQbOsvOe4
-id: olivero_page_title
-theme: olivero
+  default_config_hash: '-JrMLqQLQQsuTv7Js5wTDa1lhbxXL2aNBRfOFJ8pbHk'
+id: pubsub_page_title
+theme: pubsub
 region: content_above
 weight: -5
 provider: null

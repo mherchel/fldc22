@@ -1,0 +1,13 @@
+uuid: e8c86107-1022-4a2b-8a64-32afc84d8365
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - pubsub
+_core:
+  default_config_hash: rXzd1wqmz0HzfoJxHxHWYN2MuyzJuTAGAA7f3gX7yYs
+id: pubsub_medium
+label: 'pubsub Medium'
+locked: false
+pattern: 'j  F,  Y'

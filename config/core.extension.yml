@@ -50,8 +50,9 @@ module:
   login_redirect_per_role: 1000
   standard: 1000
 theme:
-  olivero: 0
   claro: 0
+  gin: 0
+  pubsub: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
