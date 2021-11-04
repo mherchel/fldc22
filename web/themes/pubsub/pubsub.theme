@@ -18,10 +18,6 @@ use Drupal\user\UserInterface;
  * Adds body classes if certain regions have content.
  */
 function pubsub_preprocess_html(&$variables) {
-  if (theme_get_setting('mobile_menu_all_widths') === 1) {
-    $variables['attributes']['class'][] = 'is-always-mobile-nav';
-  }
-
   // So fonts can be preloaded from base theme in the event pubsub is used as a subtheme.
   $variables['pubsub_path'] = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('pubsub');
 
