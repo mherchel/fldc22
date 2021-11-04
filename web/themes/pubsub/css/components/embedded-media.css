@@ -44,32 +44,6 @@ figcaption {
   }
 }
 
-/* Pull out of grid if nested in content narrow layout. */
-@media (--grid-md) {
-  .layout--content-narrow .align-right,
-.layout--pass--content-narrow > * .align-right {
-    margin-inline-end: calc(-1 * (var(--grid-col-width--md) + var(--grid-gap--md)));
-  }
-}
-@media (--lg) {
-  .layout--content-narrow .align-right,
-.layout--pass--content-narrow > * .align-right {
-    margin-inline-end: calc(-2 * (var(--grid-col-width--lg) + var(--grid-gap--lg)));
-  }
-}
-@media (--nav) {
-  .layout--content-narrow .align-right,
-.layout--pass--content-narrow > * .align-right {
-    margin-inline-end: calc(-3 * (var(--grid-col-width--nav) + var(--grid-gap--nav)));
-  }
-}
-@media (--grid-max) {
-  .layout--content-narrow .align-right,
-.layout--pass--content-narrow > * .align-right {
-    margin-inline-end: calc(-3 * (var(--grid-col-width--max) + var(--grid-gap--max)));
-  }
-}
-
 .align-left {
   float: none;
   /* Override core's align.module.css. */
@@ -88,32 +62,6 @@ figcaption {
     margin-inline-start: 0;
     margin-inline-end: var(--sp2);
     /* Extra right margins in case of aligning next to lists. */
-  }
-}
-
-/* Pull out of grid if nested in content narrow layout. */
-@media (--grid-md) {
-  .layout--content-narrow .align-left,
-.layout--pass--content-narrow > * .align-left {
-    margin-inline-start: calc(-1 * (var(--grid-col-width--md) + var(--grid-gap--md)));
-  }
-}
-@media (--lg) {
-  .layout--content-narrow .align-left,
-.layout--pass--content-narrow > * .align-left {
-    margin-inline-start: calc(-1 * (var(--grid-col-width--lg) + var(--grid-gap--lg)));
-  }
-}
-@media (--nav) {
-  .layout--content-narrow .align-left,
-.layout--pass--content-narrow > * .align-left {
-    margin-inline-start: calc(-1 * (var(--grid-col-width--nav) + var(--grid-gap--nav)));
-  }
-}
-@media (--grid-max) {
-  .layout--content-narrow .align-left,
-.layout--pass--content-narrow > * .align-left {
-    margin-inline-start: calc(-1 * (var(--grid-col-width--max) + var(--grid-gap--max)));
   }
 }
 

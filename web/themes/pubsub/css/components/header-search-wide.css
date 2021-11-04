@@ -52,10 +52,6 @@
   font-size: 32px;
   -webkit-appearance: none;
 }
-.block-search-wide__wrapper input[type=search]::-ms-clear {
-  width: 40px;
-  opacity: 0.5;
-}
 .block-search-wide__wrapper input[type=search]:focus {
   outline: solid 4px transparent;
   outline-offset: -4px;
@@ -137,23 +133,6 @@
   }
   .block-search-wide__wrapper .search-form__submit:focus span:after {
     content: none;
-  }
-}
-@media screen and (-ms-high-contrast: active) {
-  .block-search-wide__wrapper .search-form__submit {
-    /* IE11's high contrast show will not show the background image, so we show the text. */
-    /* Edge's high contrast does show the background image, so we hide it. */
-  }
-  .block-search-wide__wrapper .search-form__submit .visually-hidden {
-    position: static;
-    overflow: visible;
-    clip: auto;
-    width: auto;
-    height: auto;
-    text-align: center;
-  }
-  .block-search-wide__wrapper .search-form__submit .icon--search {
-    display: none;
   }
 }
 
@@ -258,17 +237,4 @@ html:not(.js) .search-block-form:focus-within .block-search-wide__wrapper {
 }
 [dir] .block-search-wide__wrapper input[type=search]:focus {
   background-size: 100% var(--sp0-5);
-}
-
-[dir=rtl] .block-search-wide__wrapper input[type=search] {
-  background-position: bottom right;
-}
-[dir=rtl] .block-search-wide__wrapper .search-form__submit .icon--search:after {
-  transform-origin: right;
-}
-
-@media (--nav) {
-  body:not(.is-always-mobile-nav) .block-search-wide__wrapper, body:not(.is-always-mobile-nav) .block-search-wide__button {
-    display: block;
-  }
 }

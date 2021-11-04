@@ -8,25 +8,9 @@
   color: var(--color--gray-50);
   background: linear-gradient(180deg, var(--color--gray-5) 0%, var(--color--gray-8) 100%);
 }
-.site-footer .menu {
-  margin-inline-start: 0;
-  list-style: none;
-}
-.site-footer .menu ul {
-  margin-inline-start: var(--sp);
-}
-.site-footer .menu li {
-  margin-block-end: var(--sp0-5);
-}
 .site-footer a {
   color: inherit;
 }
 .site-footer a:hover {
   text-decoration: none;
-}
-
-@media (--nav) {
-  body:not(.is-always-mobile-nav) .site-footer {
-    border-inline-start: solid var(--content-left) var(--color--black);
-  }
 }

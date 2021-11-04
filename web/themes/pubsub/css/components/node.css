@@ -44,10 +44,6 @@
   color: var(--color--blue-20);
 }
 
-[dir=rtl] .node__title {
-  background-position: bottom right;
-}
-
 .node__content {
   padding-block-end: var(--sp1-5);
 }

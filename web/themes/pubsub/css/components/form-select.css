@@ -23,9 +23,7 @@ select {
   font-family: inherit;
   font-size: inherit;
   appearance: none;
-  /* Hides default chevron within Internet Explorer. */
   /* Necessary to show chevron in forced colors mode in modern browsers. */
-  /* Necessary for Internet Explorer to show chevron. */
 }
 select:focus {
   border: solid 2px var(--color--blue-50);
@@ -38,9 +36,6 @@ select:focus {
     outline-style: double;
     outline-offset: -1px;
   }
-}
-select::-ms-expand {
-  display: none;
 }
 select[disabled] {
   color: var(--color--gray-30);
@@ -78,17 +73,4 @@ select.form-element--small {
       appearance: revert;
     }
   }
-}
-@media screen and (-ms-high-contrast: active) {
-  select {
-    padding-inline-end: 0;
-    /* Re-enable default chevron for Internet Explorer. */
-  }
-  select::-ms-expand {
-    display: block;
-  }
-}
-
-[dir=rtl] select {
-  background-position: left var(--sp) center;
 }

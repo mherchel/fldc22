@@ -15,7 +15,6 @@
   /* Ensure that header nav not use additional space and force
      system branding block text to unnecessarily wrap. */
   flex-basis: 0;
-  flex-grow: 1; /* Necessary for IE11. */
   width: 100%;
   max-width: var(--mobile-nav-width);
   height: 100%;
@@ -82,7 +81,7 @@ body.toolbar-horizontal.toolbar-fixed.toolbar-tray-open .header-nav {
   }
 }
 
-body:not(.is-always-mobile-nav) .header-nav {
+.header-nav {
   @media (--nav) {
     position: static;
     display: flex;
@@ -102,40 +101,4 @@ body:not(.is-always-mobile-nav) .header-nav {
     border-block-start: 0;
     box-shadow: none;
   }
-}
-
-body.is-always-mobile-nav {
-  /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
-  &.toolbar-vertical .header-nav,
-  &.toolbar-horizontal.toolbar-fixed .header-nav {
-    @media (--nav) {
-      border-top-width: calc(var(--toolbar-height) + var(--sp11));
-    }
-  }
-
-  /* Toolbar is horizontal fixed, and tray is open. */
-  &.toolbar-horizontal.toolbar-fixed.toolbar-tray-open .header-nav {
-    @media (--nav) {
-      border-top-width: calc(var(--toolbar-height) + var(--toolbar-tray-height) + var(--sp11));
-    }
-  }
-
-  & .header-nav {
-    @media (--nav) {
-      overflow: auto;
-      max-width: calc((7 * (var(--grid-col-width--nav) + var(--grid-gap--nav))));
-      padding-inline-end: var(--sp);
-      transition: transform 0.2s, visibility 0.2s;
-      border-top-width: var(--sp11);
-    }
-
-    @media (--grid-max) {
-      max-width: calc(100vw - (var(--max-width) + var(--content-left)) + ((7 * (var(--grid-col-width--max) + var(--grid-gap--max)))));
-      padding-inline-end: calc(100vw - (var(--max-width) + var(--content-left) - var(--sp)));
-    }
-  }
-}
-
-[dir="rtl"] .header-nav.is-active {
-  transform: translateX(100%);
 }

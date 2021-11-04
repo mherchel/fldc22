@@ -73,10 +73,6 @@
   }
 }
 
-[dir="rtl"] .dropbutton-toggle button {
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-}
-
 .dropbutton-action {
   &:first-child {
     margin-inline-end: 2px;
@@ -116,17 +112,6 @@
 
   & a {
     justify-content: center;
-  }
-}
-
-[dir="rtl"] {
-  & .dropbutton-action:first-child {
-    border: solid 1px transparent;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  }
-
-  & .dropbutton-single .dropbutton-action:first-child {
-    border: solid 1px transparent;
   }
 }
 

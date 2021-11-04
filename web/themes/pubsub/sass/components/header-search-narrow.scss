@@ -123,35 +123,10 @@
       & span:after {
         transform: scaleX(1);
       }
-
-      @media screen and (-ms-high-contrast: active) {
-        border-bottom-width: var(--sp0-5);
-
-        & span:after {
-          content: none;
-        }
-      }
     }
 
     @media (--md) {
       width: 80px;
-    }
-
-    @media screen and (-ms-high-contrast: active) {
-      /* IE11's high contrast show will not show the background image, so we show the text. */
-      & .visually-hidden {
-        position: static;
-        overflow: visible;
-        clip: auto;
-        width: auto;
-        height: auto;
-        text-align: center;
-      }
-
-      /* Edge's high contrast does show the background image, so we hide it. */
-      & .icon--search {
-        display: none;
-      }
     }
   }
 
@@ -165,15 +140,5 @@
 body:not(.is-always-mobile-nav) .block-search-narrow {
   @media (--nav) {
     display: none;
-  }
-}
-
-[dir="rtl"] .block-search-narrow {
-  & input[type="search"] {
-    background-position: bottom right;
-  }
-
-  & .search-form__submit .icon--search:after {
-    transform-origin: right;
   }
 }

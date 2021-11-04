@@ -96,10 +96,6 @@
   }
 }
 
-[dir="rtl"] .breadcrumb__item:nth-child(n+2):before {
-  transform: rotate(-45deg);
-}
-
 .breadcrumb__link {
   text-decoration: none;
   color: var(--color--blue-20);

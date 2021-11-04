@@ -18,12 +18,6 @@
   }
 
   @media (--nav) {
-    margin-block-start: var(--sp6);
-  }
-}
-
-@media (--nav) {
-  body:not(.is-always-mobile-nav) .mobile-buttons {
     display: none;
   }
 }

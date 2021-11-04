@@ -38,11 +38,6 @@ select {
     }
   }
 
-  /* Hides default chevron within Internet Explorer. */
-  &::-ms-expand {
-    display: none;
-  }
-
   &[disabled] {
     color: var(--color--gray-30);
     background-color: var(--color--gray-90);
@@ -82,18 +77,4 @@ select {
       appearance: revert;
     }
   }
-
-  /* Necessary for Internet Explorer to show chevron. */
-  @media screen and (-ms-high-contrast: active) {
-    padding-inline-end: 0;
-
-    /* Re-enable default chevron for Internet Explorer. */
-    &::-ms-expand {
-      display: block;
-    }
-  }
-}
-
-[dir="rtl"] select {
-  background-position: left var(--sp) center;
 }

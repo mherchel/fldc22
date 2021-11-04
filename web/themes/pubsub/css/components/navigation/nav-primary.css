@@ -102,10 +102,8 @@
   /* Intentionally not using CSS logical properties. */
   border-top: solid 5px var(--color--blue-50);
 }
-@nest .primary-nav__menu-link:hover & {
-  .primary-nav__menu-link-inner:after {
-    transform: scaleX(1);
-  }
+.primary-nav__menu-link:hover .primary-nav__menu-link-inner:after {
+  transform: scaleX(1);
 }
 
 /*
@@ -174,8 +172,4 @@ html:not(.js) .primary-nav__menu--level-2 {
   visibility: visible;
   max-height: none;
   opacity: 1;
-}
-
-[dir=rtl] .primary-nav__menu-link-inner:after {
-  transform-origin: right;
 }

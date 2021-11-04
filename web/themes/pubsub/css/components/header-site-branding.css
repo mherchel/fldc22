@@ -47,10 +47,6 @@
   }
 }
 
-[dir=rtl] .site-branding {
-  background-image: linear-gradient(-160deg, var(--color--blue-50) 0%, #0d7ab8 78.66%);
-}
-
 .site-branding--bg-gray {
   background: var(--color--gray-95);
 }

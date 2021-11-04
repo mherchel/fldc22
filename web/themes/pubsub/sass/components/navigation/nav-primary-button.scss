@@ -27,10 +27,8 @@
 
   & .icon--menu-toggle {
     position: absolute;
-    /* stylelint-disable csstools/use-logical */
     top: 50%;
     left: 50%;
-    /* stylelint-enable csstools/use-logical */
     width: 16px;
     height: 16px;
     transition: background-color 0.2s;
@@ -40,15 +38,12 @@
     &:before,
     &:after {
       position: absolute;
-      /* stylelint-disable csstools/use-logical */
       top: 50%;
       left: 50%;
-      /* stylelint-enable csstools/use-logical */
       width: var(--sp);
       height: 0;
       content: "";
       transform: translate(-50%, -50%);
-      /* Intentionally not using CSS logical properties. */
       border-top: solid 3px var(--color--blue-50);
     }
 
@@ -68,9 +63,7 @@
   &[aria-hidden="true"] {
     pointer-events: none;
   }
-}
 
-body:not(.is-always-mobile-nav) {
   @media (--nav) {
     & .primary-nav__button-toggle {
       flex-shrink: 0;

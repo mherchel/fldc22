@@ -4,39 +4,30 @@
  * Nav Primary (wide widths).
  */
 @media (--nav) {
-  body:not(.is-always-mobile-nav) {
-    /**
-     * Arrow is placed outside of submenu because the submenu has the
-     * `overflow: hidden` CSS rule applied.
-     */
-    /**
-     * When ensuring that long menus don't overflow viewport, we can give a
-     * little extra room when the toolbar is fixed (and is shorter).
-     */
-  }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item {
+  .primary-nav__menu-item {
     flex-wrap: nowrap;
     /* Ensure that sub navigation toggle button doesn't wrap underneath link. */
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item.primary-nav__menu-item--has-children {
+  .primary-nav__menu-item.primary-nav__menu-item--has-children {
     /* Remove hover state if submenu exists. */
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--link, body:not(.is-always-mobile-nav) .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--nolink {
+  .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--link, .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--nolink {
     flex-basis: auto;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--level-1 .primary-nav__menu-link-inner:after {
+  .primary-nav__menu-item.primary-nav__menu-item--has-children .primary-nav__menu-link--level-1 .primary-nav__menu-link-inner:after {
     content: none;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link {
+
+  .primary-nav__menu-link {
     letter-spacing: 0.02em;
     font-size: 16px;
     line-height: var(--sp1-5);
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link:focus {
+  .primary-nav__menu-link:focus {
     position: relative;
     outline: 0;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link:focus:before {
+  .primary-nav__menu-link:focus:before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,20 +38,21 @@
     border: solid 2px var(--color--blue-50);
     border-radius: 4px;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--button.primary-nav__menu-link--has-children {
+
+  .primary-nav__menu-link--button.primary-nav__menu-link--has-children {
     overflow: visible;
     /* Necessary to view icon in IE11 */
     padding-inline-end: 9px;
     /* Chevron icon for desktop navigation. */
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--button.primary-nav__menu-link--has-children:focus:before {
+  .primary-nav__menu-link--button.primary-nav__menu-link--has-children:focus:before {
     width: calc(100% + var(--sp1-5));
     content: "";
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--button.primary-nav__menu-link--has-children:before {
+  .primary-nav__menu-link--button.primary-nav__menu-link--has-children:before {
     content: none;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--button.primary-nav__menu-link--has-children:after {
+  .primary-nav__menu-link--button.primary-nav__menu-link--has-children:after {
     position: absolute;
     inset-block-start: 50%;
     inset-inline-start: calc(100% - 3px);
@@ -73,24 +65,27 @@
     border-right: solid 2px currentColor;
     border-bottom: solid 2px currentColor;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--button.primary-nav__menu-link--has-children[aria-expanded=true]:after {
+  .primary-nav__menu-link--button.primary-nav__menu-link--has-children[aria-expanded=true]:after {
     opacity: 1;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link-inner {
+
+  .primary-nav__menu-link-inner {
     padding-block: var(--sp1);
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link-inner:after {
+  .primary-nav__menu-link-inner:after {
     transform-origin: center;
     border-top-width: var(--sp0-5);
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu--level-1 {
+
+  .primary-nav__menu--level-1 {
     display: flex;
     align-items: stretch;
     margin-inline-end: var(--sp);
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item--level-1 {
+
+  .primary-nav__menu-item--level-1 {
     position: relative;
     /* Anchor secondary menu */
     display: flex;
@@ -101,10 +96,11 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-item--level-1:not(:last-child) {
+  .primary-nav__menu-item--level-1:not(:last-child) {
     margin-inline-end: var(--sp2);
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
+
+  .primary-nav__menu--level-2 {
     position: absolute;
     z-index: 105;
     /* Appear above search container. */
@@ -114,9 +110,9 @@
     overflow: auto;
     width: 250px;
     /**
-     * Ensure that long level-2 menus will never overflow viewport (focused
-     * elements should always be in viewport per accessibility guidelines).
-     */
+      * Ensure that long level-2 menus will never overflow viewport (focused
+      * elements should always be in viewport per accessibility guidelines).
+      */
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp));
     margin-block-start: 0;
     margin-inline-start: 0;
@@ -136,31 +132,37 @@
     background: var(--color--white);
     box-shadow: 0 1px 36px rgba(0, 0, 0, 0.08);
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu--level-2.is-active-menu-parent {
+  .primary-nav__menu--level-2.is-active-menu-parent {
     visibility: visible;
     margin-block-start: 0;
     transform: translate(-50%, 0);
     opacity: 1;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--level-2 {
+
+  .primary-nav__menu-link--level-2 {
     display: block;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--level-2:focus:before {
+  .primary-nav__menu-link--level-2:focus:before {
     top: 0;
     left: calc(var(--sp0-5) * -1);
     height: 100%;
     transform: none;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--level-2 .primary-nav__menu-link-inner {
+  .primary-nav__menu-link--level-2 .primary-nav__menu-link-inner {
     padding-block: var(--sp0-5);
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-link--level-2 .primary-nav__menu-link-inner:after {
+  .primary-nav__menu-link--level-2 .primary-nav__menu-link-inner:after {
     transform-origin: left;
     border-top-width: 3px;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-🥕 {
+
+  /**
+    * Arrow is placed outside of submenu because the submenu has the
+    * `overflow: hidden` CSS rule applied.
+    */
+  .primary-nav__menu-🥕 {
     position: absolute;
     z-index: 105;
     /* Match level 2 menus. */
@@ -176,35 +178,40 @@
     border-bottom: solid 10px var(--color--blue-50);
     border-left: solid 10px transparent;
   }
-  body:not(.is-always-mobile-nav) .primary-nav__menu-🥕.is-active-menu-parent {
+  .primary-nav__menu-🥕.is-active-menu-parent {
     visibility: visible;
     transform: translate(-50%, 0);
     opacity: 1;
   }
-  body:not(.is-always-mobile-nav) .is-fixed .primary-nav__menu--level-2 {
+
+  /**
+    * When ensuring that long menus don't overflow viewport, we can give a
+    * little extra room when the toolbar is fixed (and is shorter).
+    */
+  .is-fixed .primary-nav__menu--level-2 {
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp) + var(--sp4));
   }
 }
-
 /*
  * Take into account Drupal's admin toolbars when ensuring that long level-2
  * menus will never overflow viewport.
  */
 @media (--nav) {
-  body:not(.is-always-mobile-nav) {
-    /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
-    /* Toolbar is horizontal fixed, and tray is open. */
-  }
-  body:not(.is-always-mobile-nav).toolbar-vertical .primary-nav__menu--level-2, body:not(.is-always-mobile-nav).toolbar-horizontal.toolbar-fixed .primary-nav__menu--level-2 {
+  /* Toolbar is fixed, and tray is vertical or toolbar is horizontal and tray is closed. */
+  .toolbar-vertical .primary-nav__menu--level-2,
+.toolbar-horizontal.toolbar-fixed .primary-nav__menu--level-2 {
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp) - var(--toolbar-height));
   }
-  body:not(.is-always-mobile-nav).toolbar-vertical .is-fixed .primary-nav__menu--level-2, body:not(.is-always-mobile-nav).toolbar-horizontal.toolbar-fixed .is-fixed .primary-nav__menu--level-2 {
+  .toolbar-vertical .is-fixed .primary-nav__menu--level-2,
+.toolbar-horizontal.toolbar-fixed .is-fixed .primary-nav__menu--level-2 {
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp) - var(--toolbar-height) + var(--sp4));
   }
-  body:not(.is-always-mobile-nav).toolbar-horizontal.toolbar-fixed.toolbar-tray-open .primary-nav__menu--level-2 {
+
+  /* Toolbar is horizontal fixed, and tray is open. */
+  .toolbar-horizontal.toolbar-fixed.toolbar-tray-open .primary-nav__menu--level-2 {
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp) - var(--toolbar-height) - var(--toolbar-tray-height));
   }
-  body:not(.is-always-mobile-nav).toolbar-horizontal.toolbar-fixed.toolbar-tray-open .is-fixed .primary-nav__menu--level-2 {
+  .toolbar-horizontal.toolbar-fixed.toolbar-tray-open .is-fixed .primary-nav__menu--level-2 {
     max-height: calc(100vh - var(--site-header-height-wide) - var(--sp) - var(--toolbar-height) - var(--toolbar-tray-height) + var(--sp4));
   }
 }
@@ -213,13 +220,7 @@
  * works around https://bugs.chromium.org/p/chromium/issues/detail?id=332189
  */
 @media (--nav) {
-  html.js body:not(.is-always-mobile-nav) .primary-nav__menu--level-2, html.js body:not(.is-always-mobile-nav) .primary-nav__menu-🥕 {
+  html.js .primary-nav__menu--level-2, html.js .primary-nav__menu-🥕 {
     transition: visibility 0.2s, transform 0.2s, opacity 0.2s;
-  }
-}
-
-@media (--nav) {
-  [dir=rtl] body:not(.is-always-mobile-nav) .primary-nav__menu-link--level-2 .primary-nav__menu-link-inner:after {
-    transform-origin: right;
   }
 }
