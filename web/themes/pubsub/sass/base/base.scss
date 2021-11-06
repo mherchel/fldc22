@@ -21,6 +21,10 @@ html {
 
 body {
   margin: 0;
+
+  &.is-fixed {
+    position: fixed;
+  }
 }
 
 a {

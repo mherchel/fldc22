@@ -21,6 +21,9 @@ html {
 body {
   margin: 0;
 }
+body.is-fixed {
+  position: fixed;
+}
 
 a {
   color: var(--color--blue-20);

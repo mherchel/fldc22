@@ -5,7 +5,7 @@
  */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .social-bar {
     flex-shrink: 0;
     width: var(--content-left);
@@ -19,7 +19,7 @@
   padding-inline-start: var(--sp);
   padding-inline-end: var(--sp);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .social-bar__inner {
     position: relative;
     width: var(--content-left);
@@ -38,7 +38,7 @@
 .rotate > * {
   margin-block-end: var(--sp2);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .rotate > * {
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
     margin-inline-end: var(--sp2);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .rotate .contextual {
     inset-inline: 100% auto;
     transform: rotate(90deg);
@@ -60,7 +60,7 @@
     float: inline-start;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .rotate {
     position: absolute;
     inset-inline-start: 50%;
@@ -79,7 +79,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   [dir=rtl] .rotate {
     transform: rotate(90deg) translateX(100%);
     transform-origin: right;

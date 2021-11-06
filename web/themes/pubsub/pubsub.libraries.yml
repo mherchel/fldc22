@@ -22,8 +22,8 @@ global-styling:
       css/layout/views.css: {}
     component:
       css/components/header.css: {}
-
-
+      css/components/navigation/nav-button-mobile.css: {}
+      css/components/overlay.css: {}
 
 
 
@@ -40,14 +40,10 @@ global-styling:
       css/components/form-text.css: {}
       css/components/form-textarea.css: {}
       css/components/form-select.css: {}
-      css/components/header-buttons-mobile.css: {}
-      css/components/header-navigation.css: {}
-      css/components/header-site-branding.css: {}
-      css/components/header-sticky-toggle.css: {}
-      css/components/hero.css: {}
+
       css/components/links.css: {}
       css/components/messages.css: {}
-      css/components/navigation/nav-button-mobile.css: {}
+
       css/components/node.css: {}
       css/components/node-teaser.css: {}
       css/components/page-title.css: {}
@@ -187,10 +183,10 @@ maintenance-page:
     component:
       css/components/maintenance-page.css: {}
 
-menu-sidebar:
+menu:
   css:
     component:
-      css/components/navigation/menu-sidebar.css: {}
+      css/components/navigation/menu.css: {}
 
 messages:
   js:
@@ -199,10 +195,14 @@ messages:
 navigation-primary:
   css:
     component:
-      css/components/navigation/menu-main.css: {}
+      css/components/navigation/primary-nav.css: {}
+      css/components/navigation/primary-nav-narrow.css: {}
+      css/components/navigation/primary-nav-wide.css: {}
   js:
     js/navigation.js: {}
     js/second-level-navigation.js: {}
+  dependencies:
+    - pubsub/menu
 
 powered-by-block:
   css:

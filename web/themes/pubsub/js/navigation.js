@@ -76,7 +76,7 @@
     // Focus trap. This is added to the header element because the navButton
     // element is not a child element of the navWrapper element, and the keydown
     // event would not fire if focus is on the navButton element.
-    props.header.addEventListener('keydown', (e) => {
+    props.siteHeader.addEventListener('keydown', (e) => {
       if (e.key === 'Tab' && isNavOpen(props.navWrapper)) {
         const tabbableNavElements = tabbable.tabbable(props.navWrapper);
         tabbableNavElements.unshift(props.navButton);
@@ -137,12 +137,12 @@
    */
   Drupal.behaviors.pubsubNavigation = {
     attach(context) {
-      const headerId = 'header';
-      const header = once('navigation', `#${headerId}`, context).shift();
-      const navWrapperId = 'header-nav';
+      // const navId = 'block-pubsub-main-menu';
+      const siteHeader = once('mobileNavigation', `.site-header`, context).shift();
+      const navWrapperId = 'block-pubsub-main-menu';
 
-      if (header) {
-        const navWrapper = header.querySelector(`#${navWrapperId}`);
+      if (siteHeader) {
+        const navWrapper = siteHeader.querySelector(`#${navWrapperId}`);
         const { pubsub } = Drupal;
         const navButton = context.querySelector(
           '[data-drupal-selector="mobile-nav-button"]',
@@ -154,7 +154,7 @@
 
         init({
           pubsub,
-          header,
+          siteHeader,
           navWrapperId,
           navWrapper,
           navButton,

@@ -1,0 +1,34 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+@media (max-width: 1100px) {
+  .menu--main {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 500px;
+    padding: 150px var(--sp2) var(--sp2) var(--sp2);
+    background: white;
+    transition: visibility 0.2s, transform 0.2s;
+    visibility: hidden;
+  }
+  .menu--main.is-active {
+    visibility: visible;
+    transform: translateX(-100%);
+    z-index: 105;
+  }
+
+  .primary-nav__menu--level-1 {
+    overflow: auto;
+    font-size: 24px;
+  }
+
+  .primary-nav__menu--level-2 {
+    padding-left: 40px;
+  }
+
+  .primary-nav__menu-link--level-1 {
+    display: flex;
+    padding: 10px 20px;
+  }
+}
