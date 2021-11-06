@@ -464,16 +464,6 @@ function pubsub_form_node_preview_form_select_alter(&$form, FormStateInterface $
 }
 
 /**
- * Implements hook_preprocess_HOOK() for comment.html.twig.
- */
-function pubsub_preprocess_comment(&$variables) {
-  // Getting the node creation time stamp from the comment object.
-  $date = $variables['comment']->getCreatedTime();
-  // Formatting "created" as "X days ago".
-  $variables['created'] = t('@time ago', ['@time' => \Drupal::service('date.formatter')->formatInterval(\Drupal::time()->getRequestTime() - $date)]);
-}
-
-/**
  * Implements hook_form_views_exposed_form_alter().
  */
 function pubsub_form_views_exposed_form_alter(&$form) {
