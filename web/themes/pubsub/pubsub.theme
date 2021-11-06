@@ -292,3 +292,276 @@ function pubsub_preprocess_field(&$variables) {
     $variables['attributes']['class'][] = 'wide-image';
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pubsub_preprocess_field_multiple_value_form(&$variables) {
+  // Make disabled available for the template.
+  $variables['disabled'] = !empty($variables['element']['#disabled']);
+
+  if (!empty($variables['multiple'])) {
+    // Add an additional CSS class for the field label table cell.
+    // This repeats the logic of template_preprocess_field_multiple_value_form()
+    // without using '#prefix' and '#suffix' for the wrapper element.
+    //
+    // If the field is multiple, we don't have to check the existence of the
+    // table header cell.
+    //
+    // @see template_preprocess_field_multiple_value_form().
+    $header_attributes = ['class' => ['form-item__label', 'form-item__label--multiple-value-form']];
+    if (!empty($variables['element']['#required'])) {
+      $header_attributes['class'][] = 'js-form-required';
+      $header_attributes['class'][] = 'form-required';
+    }
+    // Using array_key_first() for addressing the first header cell would be
+    // more elegant here, but we can rely on the related theme.inc preprocess.
+    // @todo change this after https://www.drupal.org/node/3099026 has landed.
+    $variables['table']['#header'][0]['data'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'h4',
+      '#value' => $variables['element']['#title'],
+      '#attributes' => $header_attributes,
+    ];
+
+    if ($variables['disabled']) {
+      $variables['table']['#attributes']['class'][] = 'tabledrag-disabled';
+      $variables['table']['#attributes']['class'][] = 'js-tabledrag-disabled';
+
+      // We will add the 'is-disabled' CSS class to the disabled table header
+      // cells.
+      $header_attributes['class'][] = 'is-disabled';
+      foreach ($variables['table']['#header'] as &$cell) {
+        if (is_array($cell) && isset($cell['data'])) {
+          $cell = $cell + ['class' => []];
+          $cell['class'][] = 'is-disabled';
+        }
+        else {
+          // We have to modify the structure of this header cell.
+          $cell = [
+            'data' => $cell,
+            'class' => ['is-disabled'],
+          ];
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function pubsub_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'tabs__link';
+  $variables['link']['#options']['attributes']['class'][] = 'js-tabs-link';
+
+  // Ensure is-active class is set when the tab is active. The generic active
+  // link handler applies stricter comparison rules than what is necessary for
+  // tabs.
+  if (isset($variables['is_active']) && $variables['is_active'] === TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'is-active';
+  }
+
+  if (isset($variables['element']['#level'])) {
+    $variables['level'] = $variables['element']['#level'];
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK() for fieldset.
+ */
+function pubsub_preprocess_fieldset(&$variables) {
+  $element = $variables['element'];
+  $composite_types = ['checkboxes', 'radios'];
+
+  if (!empty($element['#type']) && in_array($element['#type'], $composite_types) && !empty($variables['element']['#children_errors'])) {
+    $variables['legend_span']['attributes']->addClass('has-error');
+  }
+
+  if (!empty($element['#disabled'])) {
+    $variables['legend_span']['attributes']->addClass('is-disabled');
+
+    if (!empty($variables['description']) && !empty($variables['description']['attributes'])) {
+      $variables['description']['attributes']->addClass('is-disabled');
+    }
+  }
+
+  // Remove 'container-inline' class from the main attributes and add a flag
+  // instead.
+  // @todo remove this after https://www.drupal.org/node/3059593 has been
+  //   resolved.
+  if (!empty($variables['attributes']['class'])) {
+    $container_inline_key = array_search('container-inline', $variables['attributes']['class']);
+
+    if ($container_inline_key !== FALSE) {
+      unset($variables['attributes']['class'][$container_inline_key]);
+      $variables['inline_items'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function pubsub_theme_suggestions_user_alter(&$suggestions, $variables) {
+  $suggestions[] = 'user__' . $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pubsub_preprocess_field__node__created(&$variables) {
+  foreach (Element::children($variables['items']) as $item) {
+    unset($variables['items'][$item]['content']['#prefix']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pubsub_preprocess_field__node__field_image__article(&$variables) {
+  if ($variables['element']['#view_mode'] == 'full') {
+    $image_style = \Drupal::entityTypeManager()->getStorage('image_style')->load('wide');
+    if ($image_style) {
+      foreach (Element::children($variables['items']) as $key) {
+        $variables['items'][$key]['content']['#image_style'] = 'wide';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for setting classes.
+ */
+function pubsub_preprocess_filter_caption(&$variables) {
+  $variables['classes'] = isset($variables['classes']) && !empty($variables['classes']) ? $variables['classes'] . ' caption' : 'caption';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pubsub_form_comment_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $comment = $form_state->getFormObject()
+    ->getEntity();
+  /** @var \Drupal\comment\Entity\Comment $comment */
+  if ($comment->hasParentComment()) {
+    $form['actions']['submit']['#value'] = t('Reply to comment');
+  }
+  else {
+    $form['actions']['submit']['#value'] = t('Post comment');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pubsub_form_node_preview_form_select_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['backlink']['#options']['attributes']['class'][] = 'button';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--small';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--icon-back';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--primary';
+  $form['view_mode']['#attributes']['class'][] = 'form-element--small';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for comment.html.twig.
+ */
+function pubsub_preprocess_comment(&$variables) {
+  // Getting the node creation time stamp from the comment object.
+  $date = $variables['comment']->getCreatedTime();
+  // Formatting "created" as "X days ago".
+  $variables['created'] = t('@time ago', ['@time' => \Drupal::service('date.formatter')->formatInterval(\Drupal::time()->getRequestTime() - $date)]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field--comment.html.twig.
+ */
+function pubsub_preprocess_field__comment(&$variables) {
+  // Add a comment_count.
+  $variables['comment_count'] = count(array_filter($variables['comments'], 'is_numeric', ARRAY_FILTER_USE_KEY));
+
+  // Add user.compact to field-comment if profile's avatar of current user
+  // exist.
+  $user = \Drupal::currentUser();
+  if ($user->isAuthenticated() && $user instanceof UserInterface) {
+    if ($user->hasField('user_picture') && !$user->get('user_picture')->isEmpty()) {
+      $variables['user_picture'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('user')
+        ->view($user, 'compact');
+    }
+
+    $variables['#cache']['contexts'][] = 'user';
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function pubsub_element_info_alter(&$info) {
+  if (array_key_exists('text_format', $info)) {
+    $info['text_format']['#pre_render'][] = [pubsubPreRender::class, 'textFormat'];
+  }
+
+  if (isset($info['status_messages'])) {
+    $info['status_messages']['#pre_render'][] = [pubsubPreRender::class, 'messagePlaceholder'];
+  }
+}
+
+/**
+ * Implements template_preprocess_text_format_wrapper().
+ *
+ * @todo Remove when https://www.drupal.org/node/3016343 is fixed.
+ */
+function pubsub_preprocess_text_format_wrapper(&$variables) {
+  $description_attributes = [];
+  if (!empty($variables['attributes']['id'])) {
+    $description_attributes['id'] = $variables['attributes']['aria-describedby'] = $variables['attributes']['id'];
+    unset($variables['attributes']['id']);
+  }
+  $variables['description_attributes'] = new Attribute($description_attributes);
+}
+
+/**
+ * Implements hook_preprocess_search_result().
+ */
+function pubsub_preprocess_search_result(&$variables) {
+  // Apply custom date formatter to "date" field.
+  if (!empty($variables['result']['date'])) {
+    $variables['info_date'] = \Drupal::service('date.formatter')->format($variables['result']['node']->getCreatedTime(), 'pubsub_medium');
+  }
+}
+
+/**
+ * Implements hook_preprocess_links__comment().
+ */
+function pubsub_preprocess_links__comment(&$variables) {
+  foreach ($variables['links'] as &$link) {
+    $link['link']['#options']['attributes']['class'][] = 'comment__links-link';
+  }
+}
+
+/**
+ * Implements hook_preprocess_table().
+ */
+function pubsub_preprocess_table(&$variables) {
+  // Mark the whole table and the first cells if rows are draggable.
+  if (!empty($variables['rows'])) {
+    $draggable_row_found = FALSE;
+    foreach ($variables['rows'] as &$row) {
+      /** @var \Drupal\Core\Template\Attribute $row['attributes'] */
+      if (!empty($row['attributes']) && $row['attributes']->hasClass('draggable')) {
+        if (!$draggable_row_found) {
+          $variables['attributes']['class'][] = 'draggable-table';
+          $draggable_row_found = TRUE;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_views_exposed_form_alter().
+ */
+function pubsub_form_views_exposed_form_alter(&$form) {
+  $form['#attributes']['class'][] = 'form--inline';
+}
