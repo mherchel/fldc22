@@ -1,19 +1,57 @@
-.menu--level-1 {
+.primary-nav__menu--level-1 {
   display: flex;
   list-style: none;
   padding: 10px;
 }
-.menu--level-1 > * {
+.primary-nav__menu--level-1 > * {
   margin: 20px;
 }
 
-.menu--level-2 {
-  display: none;
+.primary-nav__menu--level-2 {
+  visibility: hidden;
+}
+.primary-nav__menu--level-2.is-active-menu-parent {
+  visibility: visible;
 }
 
-.menu__item--level-1 {
+.primary-nav__menu--level-1 {
   text-transform: uppercase;
   color: var(--color--ocean-10);
   font-size: 16px;
   font-weight: 700;
+}
+
+.primary-nav__menu-item {
+  position: relative;
+}
+
+.primary-nav__menu-link--button.primary-nav__menu-link--has-children {
+  position: relative;
+  padding-inline-end: 9px;
+  /* Chevron icon for desktop navigation. */
+}
+.primary-nav__menu-link--button.primary-nav__menu-link--has-children:after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: calc(100% - 3px);
+  width: 8px;
+  height: 8px;
+  margin-block-start: -2px;
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 0;
+  border-right: solid 2px currentColor;
+  border-bottom: solid 2px currentColor;
+}
+
+.primary-nav__menu--level-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 200px;
+  background: var(--color--sky-90);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
 }

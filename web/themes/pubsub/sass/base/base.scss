@@ -37,7 +37,11 @@ a {
 }
 
 button {
-  font-family: inherit;
+  font: inherit;
+  border: 0;
+  background: 0;
+  appearance: none;
+  cursor: pointer;
 }
 
 img,

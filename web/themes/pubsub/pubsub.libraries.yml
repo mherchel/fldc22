@@ -1,5 +1,4 @@
 global-styling:
-  version: VERSION
   css:
     base:
       css/base/css-variables.css: {}
@@ -23,7 +22,7 @@ global-styling:
       css/layout/views.css: {}
     component:
       css/components/header.css: {}
-      css/components/navigation/menu-main.css: {}
+
 
 
 
@@ -73,87 +72,76 @@ global-styling:
     - core/tabbable
 
 book:
-  version: VERSION
   css:
     theme:
       css/components/book.css: {}
 
 cke-dialog:
-  version: VERSION
   css:
     component:
       css/components/cke-dialog.css: {}
 
-comments:
-  version: VERSION
-  css:
-    component:
-      css/components/comments.css: {}
-  js:
-    js/comments.js: {}
+# comments:
+#
+#   css:
+#     component:
+#       css/components/comments.css: {}
+#   js:
+#     js/comments.js: {}
 
-content-below:
-  version: VERSION
-  css:
-    layout:
-      css/layout/region-content-below.css: {}
+# content-below:
+#
+#   css:
+#     layout:
+#       css/layout/region-content-below.css: {}
 
-content_moderation:
-  version: VERSION
-  css:
-    component:
-      css/components/content-moderation.css: {}
+# content_moderation:
+#
+#   css:
+#     component:
+#       css/components/content-moderation.css: {}
 
 details:
-  version: VERSION
   css:
     theme:
       css/components/details.css: {}
 
 dialog.off_canvas:
-  version: VERSION
   css:
     component:
       css/components/off-canvas.css: {}
 
 dropbutton:
-  version: VERSION
   css:
     component:
       css/components/dropbutton.css: {}
 
 drupal.dialog:
-  version: VERSION
   css:
     theme:
       css/components/ui-dialog.css: {}
 
 drupal.node.preview:
-  version: VERSION
   css:
     theme:
       css/components/node-preview-container.css: {}
 
 feed:
-  version: VERSION
   css:
     theme:
       css/components/feed.css: {}
 
 filter.theme:
-  version: VERSION
   css:
     component:
       css/theme/filter.theme.css: {}
 
 forum:
-  version: VERSION
   css:
     component:
       css/components/forum.css: {}
 
 layout_builder_fourcol_section:
-  version: VERSION
   css:
     layout:
       css/layout/layout-builder-fourcol-section.css: {}
@@ -161,7 +149,6 @@ layout_builder_fourcol_section:
     - pubsub/layout_discovery_section
 
 layout_builder_threecol_section:
-  version: VERSION
   css:
     layout:
       css/layout/layout-builder-threecol-section.css: {}
@@ -169,7 +156,6 @@ layout_builder_threecol_section:
     - pubsub/layout_discovery_section
 
 layout_builder_twocol_section:
-  version: VERSION
   css:
     layout:
       css/layout/layout-builder-twocol-section.css: {}
@@ -177,89 +163,68 @@ layout_builder_twocol_section:
     - pubsub/layout_discovery_section
 
 layout_discovery_section:
-  version: VERSION
   css:
     layout:
       css/layout/layout-discovery-section-layout.css: {}
 
 layout-views-grid-horizontal:
-  version: VERSION
   css:
     layout:
       css/layout/layout-views-grid-horizontal.css: {}
 
 layout-views-grid-vertical:
-  version: VERSION
   css:
     layout:
       css/layout/layout-views-grid-vertical.css: {}
 
 local-actions:
-  version: VERSION
   css:
     component:
       css/components/action-links.css: {}
 
 maintenance-page:
-  version: VERSION
   css:
     component:
       css/components/maintenance-page.css: {}
 
 menu-sidebar:
-  version: VERSION
   css:
     component:
       css/components/navigation/menu-sidebar.css: {}
 
 messages:
-  version: VERSION
   js:
     js/messages.js: {}
 
 navigation-primary:
-  version: VERSION
   css:
     component:
-      css/components/navigation/nav-primary.css: {}
-      css/components/navigation/nav-primary-button.css: {}
-      css/components/navigation/nav-primary-wide.css: {}
+      css/components/navigation/menu-main.css: {}
   js:
     js/navigation.js: {}
     js/second-level-navigation.js: {}
 
-navigation-secondary:
-  version: VERSION
-  css:
-    component:
-      css/components/navigation/nav-secondary.css: {}
-
 powered-by-block:
-  version: VERSION
   css:
     theme:
       css/components/powered-by-block.css: {}
 
 progress:
-  version: VERSION
   css:
     component:
       css/components/progress.css: {}
 
 search-narrow:
-  version: VERSION
   css:
     component:
       css/components/header-search-narrow.css: {}
 
 search-results:
-  version: VERSION
   css:
     theme:
       css/components/search-results.css: {}
 
 search-wide:
-  version: VERSION
   css:
     component:
       css/components/header-search-wide.css: {}
@@ -267,13 +232,11 @@ search-wide:
     js/search.js: {}
 
 sidebar:
-  version: VERSION
   css:
     layout:
       css/layout/layout-sidebar.css: {}
 
 tabs:
-  version: VERSION
   css:
     theme:
       css/components/tabs.css: {}
@@ -281,7 +244,6 @@ tabs:
     js/tabs.js: {}
 
 tags:
-  version: VERSION
   css:
     theme:
       css/components/tags.css: {}
