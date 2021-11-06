@@ -1,0 +1,14 @@
+@import "../global/variables";
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-header__register {
+  padding: 40px;
+  background-color: var(--color--sun-45);
+  color: var(--color--white);
+}

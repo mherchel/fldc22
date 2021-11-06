@@ -23,7 +23,6 @@ libraries:
 regions:
   header: Header
   primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
   hero: 'Hero (full width)'
   highlighted: Highlighted
   breadcrumb: Breadcrumb

@@ -13,14 +13,20 @@ use Drupal\Core\Render\Element;
 use Drupal\user\UserInterface;
 
 /**
+ * Implements hook_preprocess_HOOK() for all document templates.
+ */
+function pubsub_preprocess(&$variables) {
+  // So fonts can be preloaded from base theme in the event pubsub is used as a subtheme.
+  $variables['pubsub_path'] = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('pubsub');
+}
+
+/**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  *
  * Adds body classes if certain regions have content.
  */
 function pubsub_preprocess_html(&$variables) {
   // So fonts can be preloaded from base theme in the event pubsub is used as a subtheme.
-  $variables['pubsub_path'] = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('pubsub');
-
   $query_string = \Drupal::state()->get('system.css_js_query_string') ?: '0';
 
   // Create render array with noscript tag to output non-JavaScript

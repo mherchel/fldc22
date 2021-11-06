@@ -1,0 +1,19 @@
+.menu--level-1 {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+}
+.menu--level-1 > * {
+  margin: 20px;
+}
+
+.menu--level-2 {
+  display: none;
+}
+
+.menu__item--level-1 {
+  text-transform: uppercase;
+  color: var(--color--ocean-10);
+  font-size: 16px;
+  font-weight: 700;
+}

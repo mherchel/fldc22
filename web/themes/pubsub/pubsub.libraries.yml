@@ -2,8 +2,11 @@ global-styling:
   version: VERSION
   css:
     base:
+      css/base/css-variables.css: {}
       css/base/fonts.css: {}
-      css/base/variables.css: {}
+
+
+
       css/base/base.css: {}
       css/base/utility.css: {}
     layout:
@@ -19,6 +22,12 @@ global-styling:
       css/layout/social-bar.css: {}
       css/layout/views.css: {}
     component:
+      css/components/header.css: {}
+      css/components/navigation/menu-main.css: {}
+
+
+
+
       css/components/block.css: {}
       css/components/breadcrumb.css: {}
       css/components/embedded-media.css: {}

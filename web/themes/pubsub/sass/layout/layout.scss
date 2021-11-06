@@ -6,40 +6,16 @@
 @import "../global/variables";
 
 .container {
-  width: 100%;
-  max-width: var(--max-width);
-  padding-inline: var(--container-padding);
-
-  @media ($nav) {
-    padding-inline: var(--container-padding-nav);
-  }
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.page-wrapper {
-  max-width: var(--max-bg-color);
-  background: var(--color--white);
-}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-column-gap: 32px;
 
-/* Contains the social sidebar, and the primary content area. */
-.layout-main {
-  @media ($nav) {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
-}
-
-.main-content {
-  @media ($nav) {
-    width: calc(100% - var(--content-left));
-    margin-inline-end: auto;
-  }
-}
-
-.main-content__container {
-  padding-block-start: var(--sp3);
-
-  @media ($md) {
-    padding-block-start: var(--sp5);
+  :where(& > *) {
+    grid-column: 1 / -1;
   }
 }
