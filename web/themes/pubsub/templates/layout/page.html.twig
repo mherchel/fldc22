@@ -9,17 +9,23 @@
 
   <section class="site-hero container grid">
     <div class="site-hero__details">
-      <span class="site-hero__details-item">
-        {{- camp_details.field_dates.value|date('M d') -}}
-        -
-        {{- camp_details.field_dates.end_value|date('d, Y') -}}
-      </span>
-      <span class="site-hero__details-item">
-        {{ camp_details.field_camp_location_short_.value }}
-      </span>
+      {% if camp_details.field_dates %}
+        <span class="site-hero__details-item">
+          {{- camp_details.field_dates.value|date('M d') -}}
+          -
+          {{- camp_details.field_dates.end_value|date('d, Y') -}}
+        </span>
+      {% endif %}
+      {% if camp_details.field_camp_location_short_ %}
+        <span class="site-hero__details-item">
+          {{ camp_details.field_camp_location_short_.value }}
+        </span>
+      {% endif %}
     </div>
     <div class="site-hero__main">
-      <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
+      {% if camp_details.field_camp_name %}
+        <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
+      {% endif %}
       <p class="site-hero__desc">1 day of <a href="/trainings">trainings</a>, followed by 2 days of fun and Drupal learning with peers from around the world.</p>
     </div>
     <div class="site-hero__media">
