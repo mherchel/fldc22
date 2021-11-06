@@ -6,6 +6,11 @@
   align-items: center;
   gap: 32px;
 }
+@media (min-width: 700px) {
+  .site-header {
+    margin: 56px auto;
+  }
+}
 
 .site-header__action {
   display: flex;

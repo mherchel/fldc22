@@ -1,7 +1,7 @@
 @import "../global/variables";
 
 .site-hero {
-
+  padding-bottom: 120px;
 }
 
 .site-hero__details {
@@ -44,7 +44,18 @@
 }
 
 .site-hero__title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
 
+  @media ($md) {
+    font-size: 56px;
+  }
+
+  @media ($lg) {
+    font-size: 80px;
+  }
 }
 
 .site-hero__desc {
@@ -58,6 +69,10 @@
   @media ($grid-md) {
     grid-column: 7 / -1;
     grid-row: span 2;
+  }
+
+  @media ($grid-max) {
+    grid-column: 9 / -1;
   }
 
   img,

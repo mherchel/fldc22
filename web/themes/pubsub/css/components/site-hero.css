@@ -1,5 +1,9 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+.site-hero {
+  padding-bottom: 120px;
+}
+
 .site-hero__details {
   grid-column: 1/-2;
   display: flex;
@@ -34,6 +38,23 @@
   }
 }
 
+.site-hero__title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 700px) {
+  .site-hero__title {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1000px) {
+  .site-hero__title {
+    font-size: 80px;
+  }
+}
+
 .site-hero__desc {
   font-size: 16px;
   line-height: 32px;
@@ -46,6 +67,11 @@
   .site-hero__media {
     grid-column: 7/-1;
     grid-row: span 2;
+  }
+}
+@media (min-width: 1300px) {
+  .site-hero__media {
+    grid-column: 9/-1;
   }
 }
 .site-hero__media img,

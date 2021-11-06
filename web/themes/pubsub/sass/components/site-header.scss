@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+
+  @media ($grid-md) {
+    margin: 56px auto;
+  }
 }
 
 .site-header__action {
