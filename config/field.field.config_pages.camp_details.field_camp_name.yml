@@ -1,0 +1,21 @@
+uuid: 03e0e48e-59f3-455a-866f-0a0bd511d9eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.storage.config_pages.field_camp_name
+id: config_pages.camp_details.field_camp_name
+field_name: field_camp_name
+entity_type: config_pages
+bundle: camp_details
+label: 'Camp Name'
+description: 'eg "Florida DrupalCamp"'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Florida DrupalCamp'
+default_value_callback: ''
+settings: {  }
+field_type: string

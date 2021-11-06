@@ -1,0 +1,21 @@
+uuid: 04415a5d-b386-46d9-ad94-486a062525a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.storage.config_pages.field_dates
+  module:
+    - datetime_range
+id: config_pages.camp_details.field_dates
+field_name: field_dates
+entity_type: config_pages
+bundle: camp_details
+label: Dates
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

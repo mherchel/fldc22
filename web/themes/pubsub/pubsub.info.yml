@@ -13,11 +13,9 @@
 name: pubsub
 type: theme
 base theme: false
-description: 'A clean, accessible, and flexible Drupal front-end theme.'
-alt text: 'Screenshot of pubsub, Drupal front-end theme.'
+description: 'Florida DrupalCamp 2022 theme'
+alt text: 'chicken tendy sub'
 core_version_requirement: ^9
-version: VERSION
-
 libraries:
   - pubsub/global-styling
 regions:

@@ -1,0 +1,19 @@
+uuid: 10a4b053-28ad-4b20-9e62-1770f4203645
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.storage.config_pages.field_camp_year
+id: config_pages.camp_details.field_camp_year
+field_name: field_camp_year
+entity_type: config_pages
+bundle: camp_details
+label: 'Camp Year'
+description: 'eg 2022, or 22'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

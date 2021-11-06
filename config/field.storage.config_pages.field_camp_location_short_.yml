@@ -1,0 +1,25 @@
+uuid: 2dffec62-96e6-40c3-89e7-9c1858328ddc
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: config_pages.field_camp_location_short_
+field_name: field_camp_location_short_
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

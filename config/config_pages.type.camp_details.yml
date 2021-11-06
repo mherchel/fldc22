@@ -1,0 +1,17 @@
+uuid: 1ce89f38-d970-42b1-a24a-70652f8ab7e4
+langcode: en
+status: true
+dependencies: {  }
+id: camp_details
+label: 'Camp Details'
+context:
+  show_warning: false
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/camp-details
+  weight: 0
+  description: 'Camp Details'
+token: false

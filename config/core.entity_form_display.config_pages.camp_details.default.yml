@@ -1,0 +1,49 @@
+uuid: 99f89f78-2b6c-4a61-97cc-5f67928714fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.field.config_pages.camp_details.field_camp_location_short_
+    - field.field.config_pages.camp_details.field_camp_name
+    - field.field.config_pages.camp_details.field_camp_year
+    - field.field.config_pages.camp_details.field_dates
+  module:
+    - datetime_range
+id: config_pages.camp_details.default
+targetEntityType: config_pages
+bundle: camp_details
+mode: default
+content:
+  field_camp_location_short_:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_camp_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_camp_year:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dates:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+hidden:
+  label: true

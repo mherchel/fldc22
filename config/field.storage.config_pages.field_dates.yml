@@ -1,0 +1,24 @@
+uuid: 4896b4fe-bf7f-49bc-9072-e3dfcf4038de
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - datetime_range
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: config_pages.field_dates
+field_name: field_dates
+entity_type: config_pages
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
