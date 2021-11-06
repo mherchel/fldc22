@@ -21,7 +21,7 @@ global-styling:
       css/layout/social-bar.css: {}
       css/layout/views.css: {}
     component:
-      css/components/header.css: {}
+      css/components/site-header.css: {}
       css/components/navigation/nav-button-mobile.css: {}
       css/components/overlay.css: {}
 
@@ -47,7 +47,6 @@ global-styling:
       css/components/node.css: {}
       css/components/node-teaser.css: {}
       css/components/page-title.css: {}
-      css/components/site-header.css: {}
       css/components/skip-link.css: {}
       css/components/pager.css: {}
       css/components/table.css: {}
@@ -76,6 +75,16 @@ cke-dialog:
   css:
     component:
       css/components/cke-dialog.css: {}
+
+site-hero:
+  css:
+    component:
+      css/components/site-hero.css: {}
+
+site-stats:
+  css:
+    component:
+      css/components/site-stats.css: {}
 
 # comments:
 #

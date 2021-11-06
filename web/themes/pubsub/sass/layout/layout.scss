@@ -6,14 +6,26 @@
 @import "../global/variables";
 
 .container {
+  width: 94%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .grid {
+  --grid-gap: 24px;
+
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 32px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: var(--grid-gap);
+
+  @media ($grid-md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @media ($grid-max) {
+    --grid-gap: 32px;
+    grid-template-columns: repeat(14, 1fr);
+  }
 
   :where(#{&} > *) {
     grid-column: 1 / -1;

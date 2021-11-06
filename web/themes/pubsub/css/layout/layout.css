@@ -5,14 +5,27 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .container {
+  width: 94%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .grid {
+  --grid-gap: 24px;
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 32px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: var(--grid-gap);
+}
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 1300px) {
+  .grid {
+    --grid-gap: 32px;
+    grid-template-columns: repeat(14, 1fr);
+  }
 }
 .grid :where(.grid > *) {
   grid-column: 1/-1;

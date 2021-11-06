@@ -1,0 +1,67 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.site-hero__details {
+  grid-column: 1/-2;
+  display: flex;
+  height: 56px;
+  white-space: nowrap;
+}
+@media (min-width: 700px) {
+  .site-hero__details {
+    grid-column: 1/6;
+  }
+}
+.site-hero__details-item {
+  display: block;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  background: var(--color--sky-94);
+}
+.site-hero__details-item:first-child {
+  background: var(--color--sky-80);
+}
+
+@media (min-width: 700px) {
+  .site-hero__main {
+    grid-row: 2;
+    grid-column: 1/6;
+  }
+}
+
+.site-hero__desc {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.site-hero__media {
+  position: relative;
+}
+@media (min-width: 700px) {
+  .site-hero__media {
+    grid-column: 7/-1;
+    grid-row: span 2;
+  }
+}
+.site-hero__media img,
+.site-hero__media video {
+  width: 100%;
+}
+
+.site-hero__media-cta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px 32px;
+  background: var(--color--white);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--color--ocean-30);
+}

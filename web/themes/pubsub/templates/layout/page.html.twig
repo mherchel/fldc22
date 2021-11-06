@@ -13,6 +13,7 @@
     </div>
   </header>
 
+  {{ attach_library('pubsub/site-hero') }}
   <section class="site-hero container grid">
     <div class="site-hero__details">
       {% if camp_details.field_dates.0 %}
@@ -40,8 +41,11 @@
     </div>
   </section>
 
+  {{ attach_library('pubsub/site-stats') }}
   <section class="site-stats container grid">
-  <h2 class="site-stats__label">Highlights from FL Drupalcamp</h2>
+    <div class="site-stats__label">
+      <h2 class="site-stats__title">Highlights from FL Drupalcamp</h2>
+    </div>
     <ul class="site-stats__list">
       <li class="site-stats__item">
         <div class="site-stats__stat">100+</div>

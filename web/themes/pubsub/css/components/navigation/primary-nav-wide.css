@@ -2,6 +2,8 @@
 /* Grid related breakpoints */
 @media (min-width: 1100px) {
   .primary-nav__menu--level-1 {
+    position: relative;
+    z-index: 105;
     display: flex;
     list-style: none;
     padding: 10px;

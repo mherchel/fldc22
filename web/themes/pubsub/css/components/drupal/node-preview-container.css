@@ -2,15 +2,15 @@
  * @file
  * Node preview container styling.
  */
-
-@import "../global/variables";
-
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .node-preview-container {
   padding-block: 0;
   padding-inline-start: var(--sp0-5);
   padding-inline-end: var(--sp0-5);
   background: var(--color--white);
-  box-shadow: -36px 1px 36px rgba(0, 0, 0, 0.08); /* LTR */
+  box-shadow: -36px 1px 36px rgba(0, 0, 0, 0.08);
+  /* LTR */
 }
 
 body.toolbar-vertical.toolbar-tray-open .node-preview-container {
