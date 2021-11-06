@@ -472,3 +472,24 @@ function pubsub_preprocess_comment(&$variables) {
   // Formatting "created" as "X days ago".
   $variables['created'] = t('@time ago', ['@time' => \Drupal::service('date.formatter')->formatInterval(\Drupal::time()->getRequestTime() - $date)]);
 }
+
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function pubsub_element_info_alter(&$info) {
+  if (array_key_exists('text_format', $info)) {
+    $info['text_format']['#pre_render'][] = [pubsubPreRender::class, 'textFormat'];
+  }
+
+  if (isset($info['status_messages'])) {
+    $info['status_messages']['#pre_render'][] = [pubsubPreRender::class, 'messagePlaceholder'];
+  }
+}
+
+/**
+ * Implements hook_form_views_exposed_form_alter().
+ */
+function pubsub_form_views_exposed_form_alter(&$form) {
+  $form['#attributes']['class'][] = 'form--inline';
+}
