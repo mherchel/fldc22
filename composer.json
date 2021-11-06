@@ -16,6 +16,7 @@
     "require": {
         "drupal/admin_toolbar": "^3.0",
         "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/config_pages": "^2.9",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.1",
         "drupal/field_permissions": "^1.1",
