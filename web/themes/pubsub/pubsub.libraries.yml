@@ -56,17 +56,17 @@ site-stats:
 details:
   css:
     theme:
-      css/components/details.css: {}
+      css/components/drupal/details.css: {}
 
 dialog.off_canvas:
   css:
     component:
-      css/components/off-canvas.css: {}
+      css/components/drupal/off-canvas.css: {}
 
 dropbutton:
   css:
     component:
-      css/components/dropbutton.css: {}
+      css/components/drupal/dropbutton.css: {}
 
 drupal.node.preview:
   css:
