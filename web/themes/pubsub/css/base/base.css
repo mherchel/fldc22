@@ -15,7 +15,7 @@ html {
   font-size: 100%;
   font-weight: normal;
   font-style: normal;
-  line-height: var(--line-height-base);
+  line-height: 1.5;
 }
 
 body {
@@ -31,10 +31,10 @@ body.is-fixed {
 }
 
 a {
-  color: var(--color--blue-20);
+  color: var(--color--ocean-30);
 }
 a:hover {
-  color: var(--color--blue-50);
+  color: var(--color--ocean-55);
 }
 a:focus {
   outline: solid 2px currentColor;
@@ -118,7 +118,7 @@ h4,
 h5,
 h6 {
   margin-block: var(--sp);
-  color: var(--color--gray-0);
+  color: var(--color--night-30);
   font-family: var(--font-sans);
   font-weight: bold;
 }

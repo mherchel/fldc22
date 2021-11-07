@@ -57,6 +57,7 @@
 }
 .site-header__register a {
   text-decoration: none;
+  color: inherit;
 }
 
 .site-header__register-arrow {

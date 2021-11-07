@@ -3,3 +3,7 @@
 .primary-nav__menu-item {
   display: flex;
 }
+
+.primary-nav__menu-link {
+  color: var(--color--night-5);
+}
