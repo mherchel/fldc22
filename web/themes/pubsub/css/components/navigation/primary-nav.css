@@ -1,2 +1,5 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+.primary-nav__menu-item {
+  display: flex;
+}

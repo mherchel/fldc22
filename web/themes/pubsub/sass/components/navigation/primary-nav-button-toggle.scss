@@ -1,0 +1,120 @@
+/**
+ * @file
+ * Button that expands second level nav when clicked.
+ */
+
+@import "../../global/variables";
+
+@media ($mobile-nav) {
+  .primary-nav__button-toggle {
+    position: relative;
+    overflow: hidden;
+    width: var(--sp2);
+    height: var(--sp2);
+    margin-block-start: var(--sp0-5); /* Visually align button with menu link text. */
+    padding-block: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    cursor: pointer;
+    text-indent: -999px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+
+    & .icon--menu-toggle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      transition: background-color 0.2s;
+      transform: translate(-50%, -50%);
+      border-radius: 2px;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--sp);
+        height: 0;
+        content: "";
+        transform: translate(-50%, -50%);
+        border-top: solid 3px currentColor;
+      }
+
+      &:after {
+        transition: opacity 0.2s;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    &[aria-expanded="true"] .icon--menu-toggle:after {
+      opacity: 0;
+    }
+
+    /* aria-hidden attribute is removed by JS. Button is non-functional
+      until JS is enabled.
+    */
+    &[aria-hidden="true"] {
+      pointer-events: none;
+    }
+  }
+}
+
+@media ($nav) {
+  .primary-nav__button-toggle {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: calc(var(--sp2) + 8px);
+    height: auto;
+    margin-block-start: 0;
+    margin-inline-end: calc(-1 * var(--sp2));
+    padding-block: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    cursor: pointer;
+    text-indent: -999px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+
+    &:active {
+      /* Necessary for Safari. */
+      color: currentColor;
+    }
+
+    &[aria-expanded="true"] .icon--menu-toggle:after {
+      opacity: 0.8;
+    }
+
+    & .icon--menu-toggle {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      width: 18px;
+      height: 16px;
+      transition: background-color 0.2s;
+      transform: translateY(-50%);
+      border-radius: 4px;
+      background-color: var(--color--white);
+
+      &:after {
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        content: "";
+        transform: translateY(-50%) rotate(45deg);
+        opacity: 0.8;
+        border-top: none;
+        border-right: solid 2px currentColor;
+        border-bottom: solid 2px currentColor;
+        background: transparent;
+      }
+    }
+  }
+}
