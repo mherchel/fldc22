@@ -22,7 +22,8 @@
    *   True if navButtons is hidden, false if not.
    */
   function isDesktopNav() {
-    return true;
+    const mobileNavButton = document.querySelector('[data-drupal-selector="mobile-nav-button"]');
+    return mobileNavButton.clientHeight === 0;
   }
 
   Drupal.pubsub.isDesktopNav = isDesktopNav;

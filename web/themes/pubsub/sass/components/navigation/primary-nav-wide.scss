@@ -69,7 +69,6 @@
     margin: 0;
     opacity: 0.5;
     transform: translate(-50%, -10px);
-    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
     box-shadow: 0 5px 5px 2px var(--color--night-60);
     border-radius: 9px 9px 0 0;
 
@@ -84,6 +83,10 @@
       border-left: solid 15px transparent;
       border-right: solid 15px transparent;
       border-bottom: solid 10px var(--color--sun-45);
+    }
+
+    html.js & {
+      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
     }
 
     &.is-active-menu-parent {

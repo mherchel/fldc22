@@ -77,25 +77,27 @@
     // element is not a child element of the navWrapper element, and the keydown
     // event would not fire if focus is on the navButton element.
     props.siteHeader.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab' && isNavOpen(props.navWrapper)) {
+      if (e.key === 'Tab' && isNavOpen(props.navWrapper) && !props.pubsub.isDesktopNav()) {
         const tabbableNavElements = tabbable.tabbable(props.navWrapper);
-        tabbableNavElements.unshift(props.navButton);
         const firstTabbableEl = tabbableNavElements[0];
         const lastTabbableEl =
           tabbableNavElements[tabbableNavElements.length - 1];
 
         if (e.shiftKey) {
-          if (
-            document.activeElement === firstTabbableEl &&
-            !props.pubsub.isDesktopNav()
-          ) {
+          if (document.activeElement === firstTabbableEl) {
+            props.navButton.focus();
+            e.preventDefault();
+          }
+          else if (document.activeElement === props.navButton) {
             lastTabbableEl.focus();
             e.preventDefault();
           }
-        } else if (
-          document.activeElement === lastTabbableEl &&
-          !props.pubsub.isDesktopNav()
-        ) {
+        }
+        else if (document.activeElement === lastTabbableEl) {
+          props.navButton.focus();
+          e.preventDefault();
+        }
+        else if (document.activeElement === props.navButton) {
           firstTabbableEl.focus();
           e.preventDefault();
         }
@@ -138,7 +140,7 @@
   Drupal.behaviors.pubsubNavigation = {
     attach(context) {
       // const navId = 'block-pubsub-main-menu';
-      const siteHeader = once('mobileNavigation', `.site-header`, context).shift();
+      const siteHeader = once('mobileNavigation', '.site-header', context).shift();
       const navWrapperId = 'block-pubsub-main-menu';
 
       if (siteHeader) {
