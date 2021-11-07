@@ -19,16 +19,11 @@ core_version_requirement: ^9
 libraries:
   - pubsub/global-styling
 regions:
-  header: Header
   primary_menu: 'Primary menu'
-  hero: 'Hero (full width)'
   highlighted: Highlighted
-  breadcrumb: Breadcrumb
-  social: Social Bar
   content_above: Content Above
   content: Content
   sidebar: 'Sidebar'
-  content_below: 'Content Below'
   footer_top: 'Footer Top'
   footer_bottom: 'Footer Bottom'
 libraries-override:

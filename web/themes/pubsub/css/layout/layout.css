@@ -16,7 +16,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: var(--grid-gap);
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .grid {
     grid-template-columns: repeat(12, 1fr);
   }

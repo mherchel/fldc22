@@ -19,31 +19,13 @@
     {% include '@pubsub/includes/stats.twig' %}
   {% endif %}
 
-  {{ page.breadcrumb }}
-
   {{ page.highlighted }}
 
   {{ page.help }}
 
   <main class="container grid">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
+    {{ page.content }}
   </main>
 
   <footer class="site-footer" >

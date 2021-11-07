@@ -56,12 +56,20 @@
   --color--sun-80: hsla(18, 95%, 83%, 1);
   --color--sun-90: hsla(18, 96%, 91%, 1);
 
-  // named colors
+  // Named colors
   --color--white: #fff;
   --color--red: red;
   --color--gold: gold;
   --color--green: green;
   --color--blue: blue;
 
+  // Layouts
+  --grid-gap: 24px;
+
+  @media ($grid-max) {
+    --grid-gap: 32px;
+  }
+
+  // Forms
   --form-element-border: var(--color--night-50);
 }

@@ -2,6 +2,8 @@ uuid: 543a189a-b0b8-4a7b-81ee-618df7dbc3c2
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - pubsub
 _core:
@@ -19,4 +21,8 @@ settings:
   label_display: '0'
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

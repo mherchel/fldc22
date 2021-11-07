@@ -1,0 +1,24 @@
+uuid: 75e0fd88-c6fd-4eac-9139-f79da2a7c6d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_sponsors
+  module:
+    - views
+  theme:
+    - pubsub
+id: views_block__all_sponsors_block_1_2
+theme: pubsub
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:all_sponsors-block_1'
+settings:
+  id: 'views_block:all_sponsors-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

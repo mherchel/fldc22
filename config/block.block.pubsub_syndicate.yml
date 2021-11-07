@@ -1,6 +1,6 @@
 uuid: 91e4f405-b170-4e21-af8f-8284efa0b957
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
@@ -10,7 +10,7 @@ _core:
   default_config_hash: hdVaefwqTGJ9Qpxdst0Xb8hGZiDH-6x_1U9_pj6gbFc
 id: pubsub_syndicate
 theme: pubsub
-region: social
+region: primary_menu
 weight: 0
 provider: null
 plugin: node_syndicate_block

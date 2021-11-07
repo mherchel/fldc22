@@ -1,11 +1,19 @@
 
-<article{{ attributes.addClass(classes) }}>
+{{ attach_library('pubsub/sponsor-teaser') }}
+
+<article{{ attributes.addClass('sponsor-teaser') }}>
   {% if node.field_website_address.uri %}
-    <a href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
-      {{ content.field_sponsor_logo }}
+    <a target="_blank" href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
+      <div class="sponsor-teaser__first">
+        <div class="sponsor-teaser__img-wrapper">
+          {{ content.field_sponsor_logo }}
+        </div>
+      </div>
+      {{ content.body }}
     </a>
   {% else %}
-    <h3 class="visually-hidden">{{ node.title.value }}</h3>
+    <h4 class="visually-hidden">{{ node.title.value }}</h4>
     {{ content.field_sponsor_logo }}
+    {{ content.body }}
   {% endif %}
 </article>

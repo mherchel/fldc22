@@ -47,5 +47,11 @@
   --color--gold: gold;
   --color--green: green;
   --color--blue: blue;
+  --grid-gap: 24px;
   --form-element-border: var(--color--night-50);
+}
+@media (min-width: 1300px) {
+  :root {
+    --grid-gap: 32px;
+  }
 }

@@ -1,0 +1,81 @@
+@import "../global/variables";
+
+.sponsor-teaser {
+  display: grid;
+  align-items: center;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: drop-shadow(0 0 5px var(--color--sky-80));
+  }
+
+  // I can't figure out how to add a CSS class to the Platinum
+  // sponsors in Views, so I hacked it in CSS.
+  .views-category-grid:first-child & {
+    grid-column: 1 / -1;
+    background-color: var(--color--sky-86);
+    border-radius: 0 16px 0 0;
+
+    a {
+      grid-template-columns: 1fr;
+      grid-column-gap: var(--grid-gap);
+
+      @media ($grid-1-2) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      @media ($grid-2-3) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .sponsor-teaser__first {
+      @media ($grid-1-2) {
+        border-radius: 0;
+      }
+    }
+
+    .field--name-body {
+      display: flex;
+      align-items: center;
+      padding: var(--grid-gap);
+      line-height: 32px;
+
+      @media ($grid-2-3) {
+        grid-column: 2 / -1;
+      }
+    }
+  }
+
+  a {
+    display: grid;
+    align-self: stretch;
+    flex-basis: 100%;
+    text-decoration: none;
+    color: var(--color--night-30);
+
+    &:hover {
+      color: var(--color--night-30);
+    }
+  }
+
+  .field--name-body {
+    display: none;
+  }
+}
+
+.sponsor-teaser__first {
+  display: grid;
+  align-items: center;
+  background-color: var(--color--white);
+  border-radius: 0 16px 0 0;
+}
+
+.sponsor-teaser__img-wrapper {
+  display: grid;
+	place-content: center;
+  padding: var(--grid-gap);
+  aspect-ratio: 256 / 200;
+  filter: grayscale(100%);
+}

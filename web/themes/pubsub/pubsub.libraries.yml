@@ -137,3 +137,13 @@ tabs:
       css/components/drupal/tabs.css: {}
   js:
     js/tabs.js: {}
+
+views-all-sponsors:
+  css:
+    layout:
+      css/layout/view-all-sponsors.css: {}
+
+sponsor-teaser:
+  css:
+    component:
+      css/components/sponsor-teaser.css: {}
