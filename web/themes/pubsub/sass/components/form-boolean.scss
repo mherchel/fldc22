@@ -7,40 +7,33 @@
 
 input[type="checkbox"],
 input[type="radio"] {
+  --form-boolean-border: var(--form-element-border);
+  --form-boolean-bg: var(--color--white);
+  --form-boolean-hover: var(--color--sun-55);
+  --form-boolean--disabled-bg: var(--color--night-90);
+
   display: inline-block;
   width: var(--sp1-5);
   height: var(--sp1-5);
   margin: 0;
   vertical-align: middle;
-  border: 1px solid var(--color--gray-30);
+  border: 1px solid var(--form-boolean-border);
   border-radius: 3px;
-  background-color: var(--color--white);
+  background-color: var(--form-boolean-bg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: var(--sp1) var(--sp1);
   appearance: none;
 
-  &:focus {
-    border: solid 2px var(--color--blue-50);
-    outline: solid 2px var(--color--blue-50);
-
-    @supports (outline-style: double) {
-      border-width: 1px;
-      outline-width: 6px;
-      outline-style: double;
-      outline-offset: -1px;
-    }
-  }
-
   &:hover {
-    border-color: var(--color--blue-70);
+    border-color: var(--form-boolean-hover);
   }
 
   &[disabled] {
-    background-color: var(--color--gray-90);
+    background-color: var(--form-boolean--disabled-bg);
 
     &:hover {
-      border-color: var(--color--gray-30);
+      border-color: var(--form-boolean-border);
     }
 
     &:checked {
@@ -83,19 +76,7 @@ input[type="radio"] {
 
   &:checked {
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.5' cy='8.5' r='8.5' fill='%232494DB'/%3E%3C/svg%3E%0A");
-    background-size: 17px;
-  }
-
-  &:focus {
-    border-width: 2px;
-    border-color: var(--color--blue-50);
-    outline-color: transparent;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color--blue-50);
-  }
-
-  &.error:focus {
-    outline-color: transparent;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color--red);
+    background-size: 16px;
   }
 }
 

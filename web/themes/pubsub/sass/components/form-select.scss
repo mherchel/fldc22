@@ -5,20 +5,21 @@
 
 @import "../global/variables";
 
-:root {
-  --form-element-select-icon: url("../../images/chevron-down.svg");
-}
-
 select {
+  --form-element-select-icon: url("../../images/chevron-down.svg");
+  --form-element-select-border-color: var(--form-element-border);
+  --form-element-select-bg: var(--color--white);
+  --form-element-select-disabled-bg: var(--color--night-90);
+
   max-width: 100%;
   height: var(--sp3);
   padding-block: 0;
   padding-inline-start: var(--sp);
   padding-inline-end: var(--sp3);
   color: var(--color--gray-0);
-  border: 1px solid var(--color--gray-30);
+  border: 1px solid var(--form-element-select-border-color);
   border-radius: var(--border-radius);
-  background-color: var(--color--white);
+  background-color: var(--form-element-select-bg);
   background-image: var(--form-element-select-icon);
   background-repeat: no-repeat;
   background-position: right var(--sp) center; /* LTR */
@@ -26,21 +27,9 @@ select {
   font-size: inherit;
   appearance: none;
 
-  &:focus {
-    border: solid 2px var(--color--blue-50);
-    outline: solid 2px var(--color--blue-50);
-
-    @supports (outline-style: double) {
-      border-width: 1px;
-      outline-width: 6px;
-      outline-style: double;
-      outline-offset: -1px;
-    }
-  }
-
   &[disabled] {
-    color: var(--color--gray-30);
-    background-color: var(--color--gray-90);
+    color: var(--form-element-select-border-color);
+    background-color: var(--form-element-select-disabled-bg);
   }
 
   &.error {

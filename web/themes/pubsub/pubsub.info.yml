@@ -40,11 +40,11 @@ libraries-override:
   core/drupal.dropbutton:
     css:
       component:
-        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+        misc/dropbutton/dropbutton.css: css/components/drupal/dropbutton.css
   core/drupal.vertical-tabs:
     css:
       component:
-        misc/vertical-tabs.css: css/components/vertical-tabs.css
+        misc/vertical-tabs.css: css/components/drupal/vertical-tabs.css
   media/oembed.formatter: false
 libraries-extend:
   core/drupal.message:

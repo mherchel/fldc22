@@ -4,20 +4,20 @@
  */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-:root {
-  --form-element-select-icon: url("../../images/chevron-down.svg");
-}
-
 select {
+  --form-element-select-icon: url("../../images/chevron-down.svg");
+  --form-element-select-border-color: var(--form-element-border);
+  --form-element-select-bg: var(--color--white);
+  --form-element-select-disabled-bg: var(--color--night-90);
   max-width: 100%;
   height: var(--sp3);
   padding-block: 0;
   padding-inline-start: var(--sp);
   padding-inline-end: var(--sp3);
   color: var(--color--gray-0);
-  border: 1px solid var(--color--gray-30);
+  border: 1px solid var(--form-element-select-border-color);
   border-radius: var(--border-radius);
-  background-color: var(--color--white);
+  background-color: var(--form-element-select-bg);
   background-image: var(--form-element-select-icon);
   background-repeat: no-repeat;
   background-position: right var(--sp) center;
@@ -27,21 +27,9 @@ select {
   appearance: none;
   /* Necessary to show chevron in forced colors mode in modern browsers. */
 }
-select:focus {
-  border: solid 2px var(--color--blue-50);
-  outline: solid 2px var(--color--blue-50);
-}
-@supports (outline-style: double) {
-  select:focus {
-    border-width: 1px;
-    outline-width: 6px;
-    outline-style: double;
-    outline-offset: -1px;
-  }
-}
 select[disabled] {
-  color: var(--color--gray-30);
-  background-color: var(--color--gray-90);
+  color: var(--form-element-select-border-color);
+  background-color: var(--form-element-select-disabled-bg);
 }
 select.error {
   border: solid 2px var(--color--red);

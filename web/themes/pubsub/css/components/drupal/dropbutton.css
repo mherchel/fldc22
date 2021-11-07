@@ -4,12 +4,6 @@
  */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-:root {
-  --dropbutton--height: var(--sp1-5);
-  --dropbutton--bg-color: var(--color--gray-75);
-  --dropbutton--border-color: var(--color--blue-20);
-}
-
 .dropbutton-wrapper.open {
   position: relative;
   z-index: 100;
@@ -18,11 +12,15 @@
 }
 
 .dropbutton-widget {
+  --dropbutton--height: var(--sp1-5);
+  --dropbutton--bg-color: var(--color--night-90);
+  --dropbutton--border-color: var(--color--sun-55);
+  --dropbutton-border-radius: 3px;
   position: relative;
   width: 200px;
   height: var(--dropbutton--height);
   padding-inline-end: var(--dropbutton--height);
-  border-radius: var(--border-radius);
+  border-radius: var(--dropbutton-border-radius);
 }
 @supports (width: max-content) {
   .dropbutton-widget {
@@ -40,7 +38,7 @@
   margin-inline-start: 0;
   padding-inline-start: 0;
   list-style: none;
-  font-size: var(--font-size-s);
+  font-size: 14px;
 }
 
 .dropbutton-toggle button {
@@ -55,7 +53,7 @@
   padding: 0;
   cursor: pointer;
   border-color: transparent;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border-radius: 0 var(--dropbutton-border-radius) var(--dropbutton-border-radius) 0;
   /* LTR */
   background: var(--dropbutton--bg-color);
 }
@@ -73,10 +71,13 @@
   border-bottom: solid 2px var(--dropbutton--border-color);
 }
 
+.dropbutton-action {
+  height: 100%;
+}
 .dropbutton-action:first-child {
   margin-inline-end: 2px;
   border: solid 1px transparent;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border-radius: var(--dropbutton-border-radius) 0 0 var(--dropbutton-border-radius);
   /* LTR */
   background: var(--dropbutton--bg-color);
 }
@@ -107,7 +108,7 @@
 .dropbutton-single .dropbutton-action:first-child {
   border-right: solid 1px transparent;
   /* LTR */
-  border-radius: var(--border-radius);
+  border-radius: var(--dropbutton-border-radius);
 }
 .dropbutton-single .dropbutton-action a {
   justify-content: center;
@@ -128,7 +129,7 @@
   transform: translateY(25%) rotate(225deg);
 }
 .dropbutton-wrapper.open .dropbutton-widget {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--dropbutton-border-radius) var(--dropbutton-border-radius) 0 0;
 }
 .dropbutton-wrapper.open .secondary-action {
   visibility: visible;

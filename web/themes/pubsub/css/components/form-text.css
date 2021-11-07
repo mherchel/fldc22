@@ -19,74 +19,19 @@
 [type=url],
 [type=week],
 textarea {
+  --form-element-bg: var(--color--white);
+  --form-element-disabled-bg: var(--color--night-90);
   width: 100%;
   max-width: 100%;
   min-height: var(--sp3);
   padding: 0 var(--sp);
   color: var(--color--gray-0);
-  border: 1px solid var(--color--gray-30);
+  border: 1px solid var(--form-element-border);
   border-radius: var(--border-radius);
-  background-color: var(--color--white);
+  background-color: var(--form-element-bg);
   font-family: inherit;
   font-size: inherit;
   appearance: none;
-}
-[type=color]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=email]:focus,
-[type=file]:focus,
-[type=month]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=search]:focus,
-[type=tel]:focus,
-[type=text]:focus,
-[type=time]:focus,
-[type=url]:focus,
-[type=week]:focus,
-textarea:focus {
-  border: solid 2px var(--color--blue-50);
-  outline: solid 2px var(--color--blue-50);
-}
-@supports (outline-style: double) {
-  [type=color]:focus,
-[type=date]:focus,
-[type=datetime-local]:focus,
-[type=email]:focus,
-[type=file]:focus,
-[type=month]:focus,
-[type=number]:focus,
-[type=password]:focus,
-[type=search]:focus,
-[type=tel]:focus,
-[type=text]:focus,
-[type=time]:focus,
-[type=url]:focus,
-[type=week]:focus,
-textarea:focus {
-    border-width: 1px;
-    outline-width: 6px;
-    outline-style: double;
-    outline-offset: -1px;
-  }
-}
-[type=color]::-ms-clear,
-[type=date]::-ms-clear,
-[type=datetime-local]::-ms-clear,
-[type=email]::-ms-clear,
-[type=file]::-ms-clear,
-[type=month]::-ms-clear,
-[type=number]::-ms-clear,
-[type=password]::-ms-clear,
-[type=search]::-ms-clear,
-[type=tel]::-ms-clear,
-[type=text]::-ms-clear,
-[type=time]::-ms-clear,
-[type=url]::-ms-clear,
-[type=week]::-ms-clear,
-textarea::-ms-clear {
-  display: none;
 }
 [type=color][disabled],
 [type=date][disabled],
@@ -103,8 +48,8 @@ textarea::-ms-clear {
 [type=url][disabled],
 [type=week][disabled],
 textarea[disabled] {
-  color: var(--color--gray-30);
-  background-color: var(--color--gray-90);
+  color: var(--form-element-border);
+  background-color: var(--form-element-disabled-bg);
 }
 [type=color].error,
 [type=date].error,

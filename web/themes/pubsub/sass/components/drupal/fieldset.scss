@@ -6,6 +6,9 @@
 @import "../../global/variables";
 
 .fieldset {
+  --fieldset-border-color: var(--color--night-40);
+  --fieldset-summary-text-color: var(--color--white);
+
   min-width: 0;
   margin-block: var(--sp1);
   margin-inline-start: 0;
@@ -14,7 +17,7 @@
   padding-inline-start: 0;
   padding-inline-end: 0;
   color: inherit;
-  border: solid 2px var(--color--gray-25);
+  border: solid 2px var(--fieldset-border-color);
   border-radius: var(--border-radius);
   background-color: var(--color--white);
 }
@@ -34,7 +37,7 @@
   color: inherit;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  background-color: var(--color--gray-25);
+  background-color: var(--fieldset-border-color);
   font-size: var(--font-size-l);
   font-weight: 700;
   line-height: var(--line-height-base);
@@ -70,12 +73,12 @@
   padding-block: var(--sp0-5);
   padding-inline-start: var(--sp1);
   padding-inline-end: var(--sp1);
-  color: var(--color--white);
+  color: var(--fieldset-summary-text-color);
   line-height: var(--line-height-s);
 }
 
 .fieldset__label.is-disabled {
-  color: var(--color--gray-25);
+  color: var(--fieldset-border-color);
 }
 
 .fieldset__description {
@@ -118,7 +121,7 @@
 }
 
 .fieldset--group .fieldset__legend--visible ~ .fieldset__wrapper {
-  border: solid 2px var(--color--gray-25);
+  border: solid 2px var(--fieldset-border-color);
   border-bottom-right-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
 }

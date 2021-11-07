@@ -33,6 +33,7 @@
   --color--night-50: hsla(202, 5%, 52%, 1);
   --color--night-60: hsla(202, 5%, 60%, 1);
   --color--night-70: hsla(202, 6%, 72%, 1);
+  --color--night-90: hsla(202, 6%, 90%, 1);
 
   // Sky
   --color--sky-80: hsla(194, 66%, 80%, 1);
@@ -61,4 +62,6 @@
   --color--gold: gold;
   --color--green: green;
   --color--blue: blue;
+
+  --form-element-border: var(--color--night-50);
 }
