@@ -1,0 +1,30 @@
+{{ attach_library('pubsub/site-hero') }}
+<section class="site-hero container grid">
+  <div class="site-hero__details">
+    {% if camp_details.field_dates.0 %}
+      <span class="site-hero__details-item">
+        {{- camp_details.field_dates.value|date('M d') -}}
+        -
+        {{- camp_details.field_dates.end_value|date('d, Y') -}}
+      </span>
+    {% endif %}
+    {% if camp_details.field_camp_location_short_.0 %}
+      <span class="site-hero__details-item">
+        {{ camp_details.field_camp_location_short_.value }}
+      </span>
+    {% endif %}
+  </div>
+  <div class="site-hero__main">
+    {% if camp_details.field_camp_name.0 %}
+      <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
+    {% endif %}
+    <p class="site-hero__desc">1 day of <a href="/trainings">trainings</a>, followed by 2 days of fun and Drupal learning with peers from around the world.</p>
+  </div>
+  <div class="site-hero__media">
+    <img src="{{ pubsub_path }}/images/hero-placeholder.jpg" alt="Students sitting in a classroom">
+    <a href="/" class="site-hero__media-cta">
+      Submit a session
+      {% include '@pubsub/../images/arrow-right-orange.svg' %}
+    </a>
+  </div>
+</section>

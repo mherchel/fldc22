@@ -5,6 +5,7 @@
     <div class="site-header__action">
       <div class="site-header__register">
         <a href="http://www.eventbrite.com">Register Now!</a>
+        <img class="site-header__register-arrow" src="{{ pubsub_path }}/images/arrow-right-white.svg" alt="">
       </div>
       <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="{{ 'Toggle Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
         <span class="mobile-nav-button__label">{{ 'Menu'|t }}</span>
@@ -13,55 +14,10 @@
     </div>
   </header>
 
-  {{ attach_library('pubsub/site-hero') }}
-  <section class="site-hero container grid">
-    <div class="site-hero__details">
-      {% if camp_details.field_dates.0 %}
-        <span class="site-hero__details-item">
-          {{- camp_details.field_dates.value|date('M d') -}}
-          -
-          {{- camp_details.field_dates.end_value|date('d, Y') -}}
-        </span>
-      {% endif %}
-      {% if camp_details.field_camp_location_short_.0 %}
-        <span class="site-hero__details-item">
-          {{ camp_details.field_camp_location_short_.value }}
-        </span>
-      {% endif %}
-    </div>
-    <div class="site-hero__main">
-      {% if camp_details.field_camp_name.0 %}
-        <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
-      {% endif %}
-      <p class="site-hero__desc">1 day of <a href="/trainings">trainings</a>, followed by 2 days of fun and Drupal learning with peers from around the world.</p>
-    </div>
-    <div class="site-hero__media">
-      <img src="{{ pubsub_path }}/images/hero-placeholder.jpg" alt="Students sitting in a classroom">
-      <a href="/" class="site-hero__media-cta">Submit a session</a>
-    </div>
-  </section>
-
-  {{ attach_library('pubsub/site-stats') }}
-  <section class="site-stats container grid">
-    <div class="site-stats__label">
-      <h2 class="site-stats__title">Highlights from FL Drupalcamp</h2>
-    </div>
-    <ul class="site-stats__list">
-      <li class="site-stats__item">
-        <div class="site-stats__stat">100+</div>
-        <div class="site-stats__desc">attendees (on average) come from all over to FL</div>
-      </li>
-      <li class="site-stats__item">
-        <div class="site-stats__stat">82%</div>
-        <div class="site-stats__desc">of site visitors believe our statistics immediately</div>
-      </li>
-      <li class="site-stats__item">
-        <div class="site-stats__stat">50+</div>
-        <div class="site-stats__desc">speakers over nearly a decade of events</div>
-      </li>
-    </ul>
-  </section>
-
+  {% if is_front %}
+    {% include '@pubsub/includes/hero.twig' %}
+    {% include '@pubsub/includes/stats.twig' %}
+  {% endif %}
 
   {{ page.breadcrumb }}
 
