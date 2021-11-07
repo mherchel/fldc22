@@ -20,6 +20,7 @@
   --sp1-5: calc(1.5 * var(--sp));
   --sp2: calc(2 * var(--sp));
   --sp2-5: calc(2.5 * var(--sp));
+  --sp3: calc(3 * var(--sp));
 
   // Night
   --color--night-0: hsla(0, 0%, 0%, 1);
@@ -54,6 +55,10 @@
   --color--sun-80: hsla(18, 95%, 83%, 1);
   --color--sun-90: hsla(18, 96%, 91%, 1);
 
-  // white
+  // named colors
   --color--white: #fff;
+  --color--red: red;
+  --color--gold: gold;
+  --color--green: green;
+  --color--blue: blue;
 }

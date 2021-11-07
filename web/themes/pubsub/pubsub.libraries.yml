@@ -132,6 +132,6 @@ sidebar:
 tabs:
   css:
     theme:
-      css/components/tabs.css: {}
+      css/components/drupal/tabs.css: {}
   js:
     js/tabs.js: {}
