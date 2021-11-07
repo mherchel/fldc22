@@ -10,37 +10,18 @@
   color: var(--color--gray-10);
   font-family: var(--font-serif);
   line-height: var(--sp1-5);
-  /*
-    @todo
-
-    text-decoration-thickness is supported by FF & Safari
-    text-underline-offset is supported by Safari
-
-    text-decoration-color supported by Chrome, FF, & Safari
-  */
 }
-.text-content a,
-.cke_editable a {
-  color: var(--color--blue-20);
-  text-decoration-color: var(--color--blue-20);
-  text-decoration-thickness: 2px;
+.text-content a:where(:not(.button)),
+.cke_editable a:where(:not(.button)) {
+  color: var(--color--sun-45);
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--color--sun-80);
   overflow-wrap: break-word;
+  transition: color 0.2s;
 }
-@supports (box-shadow: none) {
-  .text-content a,
-.cke_editable a {
-    transition: box-shadow 0.3s cubic-bezier(0.55, 0.085, 0, 0.99);
-    text-decoration: none;
-    box-shadow: inset 0 -2px 0 0 var(--color--blue-50);
-  }
-  .text-content a:hover,
-.cke_editable a:hover {
-    text-decoration: underline;
-    color: var(--color--black);
-    /* @todo - #d9ecfa isn't currently a variable. */
-    box-shadow: inset 0 -2em 0 0 #d9ecfa;
-    text-decoration-color: #d9ecfa;
-  }
+.text-content a:where(:not(.button)):hover,
+.cke_editable a:where(:not(.button)):hover {
+  color: var(--color--sun-55);
 }
 .text-content p,
 .cke_editable p {
@@ -64,7 +45,7 @@
 }
 .text-content code,
 .cke_editable code {
-  background-color: var(--color--gray-95);
+  background-color: var(--color--night-90);
 }
 .text-content pre code,
 .cke_editable pre code {
@@ -73,7 +54,6 @@
   padding-block: var(--sp);
   padding-inline-start: var(--sp);
   padding-inline-end: var(--sp);
-  color: var(--color--gray-20);
 }
 .text-content blockquote,
 .cke_editable blockquote {
@@ -93,7 +73,7 @@
   inset-block-start: 0;
   inset-inline-start: 0;
   content: "“";
-  color: var(--color--blue-70);
+  color: var(--color--sun-55);
   font-size: 54px;
 }
 .text-content blockquote:after,
@@ -105,7 +85,7 @@
   height: calc(100% - 30px);
   margin-inline-start: 4px;
   content: "";
-  background: var(--color--gray-95);
+  background: var(--color--sun-90);
 }
 @media (min-width: 800px) {
   .text-content blockquote,
@@ -147,14 +127,4 @@
   text-decoration: none;
   color: var(--color--white);
   box-shadow: none;
-}
-
-/**
- * Decrease font-size for blockquote placed in sidebar region.
- */
-@media (min-width: 1000px) {
-  .region--sidebar .text-content blockquote {
-    font-size: 24px;
-    line-height: var(--sp2);
-  }
 }

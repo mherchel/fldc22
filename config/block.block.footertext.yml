@@ -1,0 +1,25 @@
+uuid: 4511f355-acb5-44e4-818f-a11f151859f5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:89c3552c-b046-425e-97dc-514c4bf95da5'
+  module:
+    - block_content
+  theme:
+    - pubsub
+id: footertext
+theme: pubsub
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:89c3552c-b046-425e-97dc-514c4bf95da5'
+settings:
+  id: 'block_content:89c3552c-b046-425e-97dc-514c4bf95da5'
+  label: 'Footer Text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

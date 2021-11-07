@@ -11,34 +11,15 @@
   font-family: var(--font-serif);
   line-height: var(--sp1-5);
 
-  /*
-    @todo
-
-    text-decoration-thickness is supported by FF & Safari
-    text-underline-offset is supported by Safari
-
-    text-decoration-color supported by Chrome, FF, & Safari
-  */
-
-  & a {
-    color: var(--color--blue-20);
-    text-decoration-color: var(--color--blue-20);
-    text-decoration-thickness: 2px;
+  & a:where(:not(.button)) {
+    color: var(--color--sun-45);
+    text-decoration-thickness: 4px;
+    text-decoration-color: var(--color--sun-80);
     overflow-wrap: break-word;
+    transition: color 0.2s;
 
-    @supports (box-shadow: none) {
-      transition: box-shadow 0.3s cubic-bezier(0.55, 0.085, 0, 0.99);
-      text-decoration: none;
-      box-shadow: inset 0 -2px 0 0 var(--color--blue-50);
-
-      &:hover {
-        text-decoration: underline;
-        color: var(--color--black);
-
-        /* @todo - #d9ecfa isn't currently a variable. */
-        box-shadow: inset 0 -2em 0 0 #d9ecfa;
-        text-decoration-color: #d9ecfa;
-      }
+    &:hover {
+      color: var(--color--sun-55);
     }
   }
 
@@ -61,7 +42,7 @@
   }
 
   & code {
-    background-color: var(--color--gray-95);
+    background-color: var(--color--night-90);
   }
 
   & pre code {
@@ -70,7 +51,6 @@
     padding-block: var(--sp);
     padding-inline-start: var(--sp);
     padding-inline-end: var(--sp);
-    color: var(--color--gray-20);
   }
 
   & blockquote {
@@ -89,7 +69,7 @@
       inset-block-start: 0;
       inset-inline-start: 0;
       content: "“";
-      color: var(--color--blue-70);
+      color: var(--color--sun-55);
       font-size: 54px;
     }
 
@@ -101,7 +81,7 @@
       height: calc(100% - 30px);
       margin-inline-start: 4px;
       content: "";
-      background: var(--color--gray-95);
+      background: var(--color--sun-90);
     }
 
     @media ($grid-md) {
@@ -141,15 +121,5 @@
       color: var(--color--white);
       box-shadow: none;
     }
-  }
-}
-
-/**
- * Decrease font-size for blockquote placed in sidebar region.
- */
-.region--sidebar .text-content blockquote {
-  @media ($lg) {
-    font-size: 24px;
-    line-height: var(--sp2);
   }
 }
