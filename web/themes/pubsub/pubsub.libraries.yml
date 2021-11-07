@@ -33,6 +33,7 @@ global-styling:
       css/components/node-teaser.css: {}
       css/components/page-title.css: {}
       css/components/skip-link.css: {}
+      css/components/site-footer.css: {}
       css/components/site-header.css: {}
       css/components/pager.css: {}
       css/components/text-content.css: {}

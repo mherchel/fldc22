@@ -46,11 +46,10 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer class="container grid" >
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  <footer class="site-footer" >
+    {{ page.footer_top }}
+    {{ page.footer_bottom }}
+  </footer>
 
   <div class="overlay" data-drupal-selector="overlay"></div>
 </div>{# /.layout-container #}

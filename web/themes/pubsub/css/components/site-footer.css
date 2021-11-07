@@ -1,0 +1,9 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.site-footer {
+  background-color: var(--color--ocean-10);
+  color: var(--color--white);
+}
+.site-footer a {
+  color: var(--color--sky-80);
+}

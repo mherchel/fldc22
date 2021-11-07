@@ -1,0 +1,11 @@
+
+<article{{ attributes.addClass(classes) }}>
+  {% if node.field_website_address.uri %}
+    <a href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
+      {{ content.field_sponsor_logo }}
+    </a>
+  {% else %}
+    <h3 class="visually-hidden">{{ node.title.value }}</h3>
+    {{ content.field_sponsor_logo }}
+  {% endif %}
+</article>

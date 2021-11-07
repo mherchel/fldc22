@@ -1,0 +1,10 @@
+@import "../global/variables";
+
+.site-footer {
+  background-color: var(--color--ocean-10);
+  color: var(--color--white);
+
+  a {
+    color: var(--color--sky-80);
+  }
+}
