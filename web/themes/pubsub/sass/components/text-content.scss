@@ -8,7 +8,6 @@
 .text-content,
 .cke_editable {
   color: var(--color--gray-10);
-  font-family: var(--font-serif);
   line-height: var(--sp1-5);
 
   & a:where(:not(.button)) {
@@ -113,13 +112,11 @@
 
   & a {
     text-decoration: underline;
-    color: var(--color--white);
-    box-shadow: none;
+    color: inherit;
 
     &:hover {
       text-decoration: none;
-      color: var(--color--white);
-      box-shadow: none;
+      color: inherit;
     }
   }
 }

@@ -8,19 +8,25 @@
 }
 
 .footer-menu--level-1 {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--grid-gap);
-
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+
+  @media ($sm) {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--grid-gap);
+  }
 }
 
 .footer-menu__heading {
   @include left-border-title;
-  margin-bottom: 48px;
+  margin: 48px 0 32px;
   color: inherit;
+
+  @media ($sm) {
+    margin-top: 0;
+  }
 }
 
 .footer-menu__link {

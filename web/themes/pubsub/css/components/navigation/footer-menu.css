@@ -9,12 +9,16 @@
 }
 
 .footer-menu--level-1 {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--grid-gap);
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+}
+@media (min-width: 500px) {
+  .footer-menu--level-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--grid-gap);
+  }
 }
 
 .footer-menu__heading {
@@ -27,13 +31,18 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin-bottom: 48px;
+  margin: 48px 0 32px;
   color: inherit;
 }
 @media (min-width: 1300px) {
   .footer-menu__heading {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+@media (min-width: 500px) {
+  .footer-menu__heading {
+    margin-top: 0;
   }
 }
 

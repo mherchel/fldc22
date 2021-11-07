@@ -21,3 +21,37 @@
 .site-footer a:hover, .site-footer a:focus {
   color: var(--color--white);
 }
+@media (min-width: 700px) {
+  .site-footer .menu--footer {
+    grid-column: 2/-2;
+  }
+}
+@media (min-width: 1000px) {
+  .site-footer .menu--footer {
+    grid-column: 1/10;
+  }
+}
+@media (min-width: 1300px) {
+  .site-footer .menu--footer {
+    grid-column: 2/10;
+  }
+}
+@media (min-width: 700px) {
+  .site-footer .block--footer-text {
+    grid-column: 2/-2;
+  }
+}
+@media (min-width: 1000px) {
+  .site-footer .block--footer-text {
+    grid-column: 11/-1;
+  }
+}
+@media (min-width: 1300px) {
+  .site-footer .block--footer-text {
+    grid-column: 11/-2;
+  }
+}
+
+.block--footer-text .text-content {
+  font-size: 16px;
+}

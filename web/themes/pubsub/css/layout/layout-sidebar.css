@@ -38,3 +38,8 @@
 .layout-sidebar .region--sidebar > * {
   margin-bottom: 0;
 }
+@media (min-width: 800px) {
+  .layout-sidebar .region--sidebar > * {
+    margin-bottom: var(--sp2);
+  }
+}

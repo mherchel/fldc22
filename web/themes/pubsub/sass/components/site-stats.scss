@@ -4,11 +4,21 @@
 $stats-switch: $grid-md;
 
 .site-stats {
+  position: relative;
   padding: 48px 0 0;
-  border-top: solid 8px var(--color--ocean-15);
 
   @media ($stats-switch) {
     padding: 64px 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% + 50vw);
+    height: 0;
+    border-top: solid 8px var(--color--ocean-15);
   }
 }
 

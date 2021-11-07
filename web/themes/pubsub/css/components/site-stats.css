@@ -3,13 +3,22 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .site-stats {
+  position: relative;
   padding: 48px 0 0;
-  border-top: solid 8px var(--color--ocean-15);
 }
 @media (min-width: 800px) {
   .site-stats {
     padding: 64px 0;
   }
+}
+.site-stats:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% + 50vw);
+  height: 0;
+  border-top: solid 8px var(--color--ocean-15);
 }
 
 @media (min-width: 800px) {

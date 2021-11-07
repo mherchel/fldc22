@@ -37,6 +37,10 @@
 
     > * {
       margin-bottom: 0;
+
+      @media ($grid-md) {
+        margin-bottom: var(--sp2);
+      }
     }
   }
 }

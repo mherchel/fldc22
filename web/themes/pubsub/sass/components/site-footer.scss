@@ -21,4 +21,36 @@
       color: var(--color--white);
     }
   }
+
+  .menu--footer {
+    @media ($md) {
+      grid-column: 2 / -2;
+    }
+
+    @media ($lg) {
+      grid-column: 1 / 10;
+    }
+
+    @media ($grid-max) {
+      grid-column: 2 / 10;
+    }
+  }
+
+  .block--footer-text {
+    @media ($md) {
+      grid-column: 2 / -2;
+    }
+
+    @media ($lg) {
+      grid-column: 11 / -1;
+    }
+
+    @media ($grid-max) {
+      grid-column: 11 / -2;
+    }
+  }
+}
+
+.block--footer-text .text-content {
+  font-size: 16px;
 }

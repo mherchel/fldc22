@@ -8,7 +8,6 @@
 .text-content,
 .cke_editable {
   color: var(--color--gray-10);
-  font-family: var(--font-serif);
   line-height: var(--sp1-5);
 }
 .text-content a:where(:not(.button)),
@@ -120,11 +119,9 @@
 }
 .site-footer .text-content a {
   text-decoration: underline;
-  color: var(--color--white);
-  box-shadow: none;
+  color: inherit;
 }
 .site-footer .text-content a:hover {
   text-decoration: none;
-  color: var(--color--white);
-  box-shadow: none;
+  color: inherit;
 }
