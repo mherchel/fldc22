@@ -6,43 +6,45 @@
 @import "../global/variables";
 
 .button {
-  display: inline-block;
+  --button-color-bg: var(--color--white);
+  --button-color-primary: var(--color--ocean-15);
+  --button-color-primary-dark: var(--color--ocean-10);
+  --button-border-radius: 3px;
+  --button-line-height: 18px;
+
+  display: inline-flex;
+  align-items: center;
   height: var(--sp3);
   margin-block: var(--sp1);
   margin-inline-start: 0;
   margin-inline-end: var(--sp1);
-  padding-block: calc((var(--sp3) - var(--line-height-s)) / 2);
-  padding-inline: var(--sp1-5);
+  padding: 1px var(--sp1-5);
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  color: var(--color--blue-20);
-  border: solid 2px var(--color--blue-20);
-  border-radius: var(--border-radius);
-  background-color: var(--color--white);
+  color: var(--button-color-primary);
+  border: solid 2px var(--button-color-primary);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-color-bg);
   font-family: inherit;
   font-size: var(--font-size-l);
   font-weight: 700;
+  line-height: var(--button-line-height);
   appearance: none;
   -webkit-font-smoothing: antialiased;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: var(--color--blue-10);
-    border: solid 2px var(--color--blue-10);
+    color: var(--button-color-primary-dark);
+    border: solid 2px var(--button-color-primary-dark);
     background: none;
     font-weight: 700;
   }
 
-  &:focus {
-    outline: 2px solid var(--color--blue-70);
-    outline-offset: 2px;
-  }
-
   &:active {
-    color: var(--color--blue-20);
-    border-color: var(--color--blue-20);
+    color: var(--button-color-primary);
+    border-color: var(--button-color-primary);
   }
 
   &:disabled,
@@ -50,20 +52,6 @@
     cursor: default;
     color: var(--color--gray-70);
     border-color: var(--color--gray-70);
-  }
-
-  /*
-    IE11 doesn't work properly on button elements so we only do
-    inline-flex on modern browsers.
-  */
-  @supports (display: inline-flex) {
-    display: inline-flex;
-    align-items: center;
-
-    /* Top padding accounts for font not being vertically centered within line-height. */
-    padding-block: 1px 0;
-    padding-inline: var(--sp1-5);
-    line-height: var(--line-height-s);
   }
 }
 
@@ -76,32 +64,31 @@
 
 .button--small {
   height: var(--sp2-5);
-  padding-block: calc((var(--sp2-5) - var(--line-height-s)) / 2);
   padding-inline: var(--sp);
-  font-size: var(--font-size-base);
+  font-size: 16px;
   line-height: normal;
 }
 
 .button--primary {
-  color: var(--color--white);
-  background-color: var(--color--blue-20);
+  color: var(--button-color-bg);
+  background-color: var(--button-color-primary);
 
   &:hover,
   &:focus {
-    color: var(--color--white);
-    border-color: var(--color--blue-10);
-    background-color: var(--color--blue-10);
+    color: var(--button-color-bg);
+    border-color: var(--button-color-primary-dark);
+    background-color: var(--button-color-primary-dark);
   }
 
   &:active {
-    color: var(--color--white);
-    background-color: var(--color--blue-20);
+    color: var(--button-color-bg);
+    background-color: var(--button-color-primary);
   }
 
   &:disabled,
   &.is-disabled {
-    color: var(--color--white);
-    background-color: var(--color--gray-70);
+    color: var(--color--night-35);
+    background-color: var(--color--night-90);
   }
 }
 
