@@ -1,0 +1,32 @@
+@import "../../global/variables";
+@import "../../global/mixins";
+
+.footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu--level-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.footer-menu__heading {
+  @include left-border-title;
+  margin-bottom: 48px;
+  color: inherit;
+}
+
+.footer-menu__link {
+  text-decoration: none;
+}
+
+.footer-menu__item--level-2 {
+  margin-bottom: 24px;
+}

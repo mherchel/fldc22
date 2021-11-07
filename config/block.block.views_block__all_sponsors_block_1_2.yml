@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.all_sponsors
   module:
+    - system
     - views
   theme:
     - pubsub
@@ -21,4 +22,8 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

@@ -3,6 +3,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .site-stats {
+  padding: 48px 0 0;
   border-top: solid 8px var(--color--ocean-15);
 }
 @media (min-width: 800px) {
@@ -19,6 +20,7 @@
 }
 
 .site-stats__title {
+  margin-top: 0;
   border-left: solid 4px var(--color--sun-55);
   padding-left: 20px;
   font-size: 12px;
@@ -32,6 +34,11 @@
   .site-stats__title {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+@media (min-width: 800px) {
+  .site-stats__title {
+    margin-top: 39px;
   }
 }
 

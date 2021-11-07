@@ -3,6 +3,15 @@
 .site-footer {
   background-color: var(--color--ocean-10);
   color: var(--color--white);
+  padding: 64px 0;
+
+  @media ($lg) {
+    padding: 96px 0;
+  }
+
+  @media ($grid-max) {
+    padding: 96px 0;
+  }
 
   a {
     color: var(--color--sky-80);

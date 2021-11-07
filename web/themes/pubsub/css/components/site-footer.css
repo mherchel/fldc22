@@ -3,6 +3,17 @@
 .site-footer {
   background-color: var(--color--ocean-10);
   color: var(--color--white);
+  padding: 64px 0;
+}
+@media (min-width: 1000px) {
+  .site-footer {
+    padding: 96px 0;
+  }
+}
+@media (min-width: 1300px) {
+  .site-footer {
+    padding: 96px 0;
+  }
 }
 .site-footer a {
   color: var(--color--sky-80);

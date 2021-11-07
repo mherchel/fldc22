@@ -1,0 +1,70 @@
+{{ attach_library('pubsub/footer-menu') }}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{% set attributes = attributes.addClass('footer-menu') %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% set is_top_level_menu = menu_level == 0 %}
+  {% set primary_nav_level = 'footer-menu--level-' ~ (menu_level + 1) %}
+  {% import _self as menus %}
+  {% if items %}
+    <ul {{ attributes.addClass('footer-menu', primary_nav_level) }}>
+      {% set attributes = attributes.removeClass(primary_nav_level) %}
+      {% for item in items %}
+
+        {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
+          {% set menu_item_type = 'nolink' %}
+        {% elseif item.url.isRouted and item.url.routeName == '<button>' %}
+          {% set menu_item_type = 'button' %}
+        {% else %}
+          {% set menu_item_type = 'link' %}
+        {% endif %}
+
+        {% set item_classes = [
+            'footer-menu__item',
+            'footer-menu__item--' ~ menu_item_type,
+            'footer-menu__item--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'footer-menu__item--active-trail',
+            item.below ? 'footer-menu__item--has-children',
+          ]
+        %}
+
+        {% set link_classes = [
+            'footer-menu__link',
+            'footer-menu__link--' ~ menu_item_type,
+            'footer-menu__link--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'footer-menu__link--active-trail',
+            item.below ? 'footer-menu__link--has-children',
+          ]
+        %}
+
+        <li{{ item.attributes.addClass(item_classes) }}>
+          {#
+            A unique HTML ID should be used, but that isn't available through
+            Twig yet, so the |clean_id filter is used for now.
+            @see https://www.drupal.org/project/drupal/issues/3115445
+          #}
+          {% set aria_id = (item.title ~ '-submenu-' ~ loop.index )|clean_id %}
+
+          {% if menu_item_type == 'nolink' and is_top_level_menu %}
+            <h3 class="footer-menu__heading">
+               {{- link(item.title, item.url, { 'class': link_classes }) -}}
+            </h3>
+          {% else %}
+            {{ link(item.title, item.url, { 'class': link_classes }) }}
+          {% endif %}
+
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

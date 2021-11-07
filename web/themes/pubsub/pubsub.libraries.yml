@@ -147,3 +147,8 @@ sponsor-teaser:
   css:
     component:
       css/components/sponsor-teaser.css: {}
+
+footer-menu:
+  css:
+    component:
+      css/components/navigation/footer-menu.css: {}

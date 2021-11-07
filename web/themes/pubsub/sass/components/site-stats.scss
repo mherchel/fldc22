@@ -4,6 +4,7 @@
 $stats-switch: $grid-md;
 
 .site-stats {
+  padding: 48px 0 0;
   border-top: solid 8px var(--color--ocean-15);
 
   @media ($stats-switch) {
@@ -20,6 +21,10 @@ $stats-switch: $grid-md;
 
 .site-stats__title {
   @include left-border-title;
+
+  @media ($stats-switch) {
+    margin-top: 39px;
+  }
 }
 
 .site-stats__list {

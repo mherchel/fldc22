@@ -24,8 +24,7 @@ regions:
   content_above: Content Above
   content: Content
   sidebar: 'Sidebar'
-  footer_top: 'Footer Top'
-  footer_bottom: 'Footer Bottom'
+  footer: 'Footer'
 libraries-override:
   system/admin:
     css:
