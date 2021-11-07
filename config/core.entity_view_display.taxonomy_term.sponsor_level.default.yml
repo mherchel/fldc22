@@ -1,0 +1,21 @@
+uuid: 569f820a-417a-4b49-9cef-86dcefa35193
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sponsor_level
+  module:
+    - text
+id: taxonomy_term.sponsor_level.default
+targetEntityType: taxonomy_term
+bundle: sponsor_level
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -5,7 +5,7 @@ dependencies: {  }
 id: camp_details
 label: 'Camp Details'
 context:
-  show_warning: false
+  show_warning: true
   group:
     language: false
   fallback:
