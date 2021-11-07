@@ -1,9 +1,0 @@
-/**
- * @file
- * Region default layout.
- */
-/* Navigation related breakpoints */
-/* Grid related breakpoints */
-.region--hero > *:last-child {
-  margin-block-end: 0;
-}
