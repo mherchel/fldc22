@@ -36,11 +36,6 @@ libraries-override:
     css:
       theme:
         css/system.admin.css: false
-  system/base:
-    css:
-      component:
-        css/components/ajax-progress.module.css: css/components/ajax-progress.module.css
-        css/components/autocomplete-loading.module.css: css/components/autocomplete-loading.module.css
   core/drupal.checkbox: false
   core/drupal.dropbutton:
     css:
@@ -51,40 +46,14 @@ libraries-override:
       component:
         misc/vertical-tabs.css: css/components/vertical-tabs.css
   media/oembed.formatter: false
-  layout_builder/twocol_section: pubsub/layout_builder_twocol_section
-  layout_builder/threecol_section: pubsub/layout_builder_threecol_section
-  layout_builder/fourcol_section: pubsub/layout_builder_fourcol_section
 libraries-extend:
   core/drupal.message:
     - pubsub/messages
   core/drupal.collapse:
     - pubsub/details
-  core/drupal.dialog:
-    - pubsub/drupal.dialog
   core/drupal.dialog.off_canvas:
     - pubsub/dialog.off_canvas
   core/drupal.progress:
     - pubsub/progress
-  layout_discovery/onecol:
-    - pubsub/layout_discovery_section
-  layout_discovery/twocol_bricks:
-    - pubsub/layout_discovery_section
-  layout_discovery/twocol:
-    - pubsub/layout_discovery_section
-  layout_discovery/threecol_25_50_25:
-    - pubsub/layout_discovery_section
-  layout_discovery/threecol_33_34_33:
-    - pubsub/layout_discovery_section
   node/drupal.node.preview:
     - pubsub/drupal.node.preview
-  core/ckeditor:
-    - pubsub/cke-dialog
-  content_moderation/content_moderation:
-    - pubsub/content_moderation
-ckeditor_stylesheets:
-  - css/base/fonts.css
-  - css/base/base.css
-  - css/components/embedded-media.css
-  - css/components/table.css
-  - css/components/text-content.css
-  - css/theme/ckeditor-frame.css

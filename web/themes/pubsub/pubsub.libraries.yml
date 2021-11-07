@@ -3,78 +3,45 @@ global-styling:
     base:
       css/base/css-variables.css: {}
       css/base/fonts.css: {}
-
-
-
       css/base/base.css: {}
-      css/base/utility.css: {}
     layout:
       css/layout/layout.css: {}
-      css/layout/grid.css: {}
-      css/layout/layout-content-narrow.css: {}
-      css/layout/layout-content-medium.css: {}
       css/layout/layout-footer.css: {}
       css/layout/region.css: {}
       css/layout/region-content.css: {}
-      css/layout/region-hero.css: {}
-      css/layout/region-secondary-menu.css: {}
-      css/layout/social-bar.css: {}
       css/layout/views.css: {}
     component:
-      css/components/site-header.css: {}
+      css/components/drupal/block.css: {}
+      css/components/drupal/breadcrumb.css: {}
+      css/components/drupal/embedded-media.css: {}
+      css/components/drupal/container-inline.module.css: {}
+      css/components/drupal/field.css: {}
+      css/components/drupal/fieldset.css: {}
+      css/components/drupal/links.css: {}
+      css/components/drupal/messages.css: {}
       css/components/navigation/nav-button-mobile.css: {}
       css/components/overlay.css: {}
-
-
-
-      css/components/block.css: {}
-      css/components/breadcrumb.css: {}
-      css/components/embedded-media.css: {}
       css/components/footer.css: {}
       css/components/button.css: {}
-      css/components/container-inline.module.css: {}
-      css/components/fieldset.css: {}
-      css/components/field.css: {}
-      css/components/form.css: {}
+      css/components/drupal/form.css: {}
       css/components/form-boolean.css: {}
       css/components/form-text.css: {}
       css/components/form-textarea.css: {}
       css/components/form-select.css: {}
-
-      css/components/links.css: {}
-      css/components/messages.css: {}
-
       css/components/node.css: {}
       css/components/node-teaser.css: {}
       css/components/page-title.css: {}
       css/components/skip-link.css: {}
+      css/components/site-header.css: {}
       css/components/pager.css: {}
-      css/components/table.css: {}
       css/components/text-content.css: {}
-      css/components/tabledrag.css: {}
-      css/components/wide-image.css: {}
-
   js:
     js/checkbox.js: {}
     js/navigation-utils.js: {}
-
   dependencies:
-    - core/drupal.element.closest
-    - core/drupal.element.matches
-    - core/drupal.nodelist.foreach
     - core/drupal
     - core/once
     - core/tabbable
-
-book:
-  css:
-    theme:
-      css/components/book.css: {}
-
-cke-dialog:
-  css:
-    component:
-      css/components/cke-dialog.css: {}
 
 site-hero:
   css:
@@ -85,26 +52,6 @@ site-stats:
   css:
     component:
       css/components/site-stats.css: {}
-
-# comments:
-#
-#   css:
-#     component:
-#       css/components/comments.css: {}
-#   js:
-#     js/comments.js: {}
-
-# content-below:
-#
-#   css:
-#     layout:
-#       css/layout/region-content-below.css: {}
-
-# content_moderation:
-#
-#   css:
-#     component:
-#       css/components/content-moderation.css: {}
 
 details:
   css:
@@ -121,56 +68,10 @@ dropbutton:
     component:
       css/components/dropbutton.css: {}
 
-drupal.dialog:
-  css:
-    theme:
-      css/components/ui-dialog.css: {}
-
 drupal.node.preview:
   css:
     theme:
       css/components/node-preview-container.css: {}
-
-feed:
-  css:
-    theme:
-      css/components/feed.css: {}
-
-filter.theme:
-  css:
-    component:
-      css/theme/filter.theme.css: {}
-
-forum:
-  css:
-    component:
-      css/components/forum.css: {}
-
-layout_builder_fourcol_section:
-  css:
-    layout:
-      css/layout/layout-builder-fourcol-section.css: {}
-  dependencies:
-    - pubsub/layout_discovery_section
-
-layout_builder_threecol_section:
-  css:
-    layout:
-      css/layout/layout-builder-threecol-section.css: {}
-  dependencies:
-    - pubsub/layout_discovery_section
-
-layout_builder_twocol_section:
-  css:
-    layout:
-      css/layout/layout-builder-twocol-section.css: {}
-  dependencies:
-    - pubsub/layout_discovery_section
-
-layout_discovery_section:
-  css:
-    layout:
-      css/layout/layout-discovery-section-layout.css: {}
 
 layout-views-grid-horizontal:
   css:
@@ -185,7 +86,7 @@ layout-views-grid-vertical:
 local-actions:
   css:
     component:
-      css/components/action-links.css: {}
+      css/components/drupal/action-links.css: {}
 
 maintenance-page:
   css:
@@ -213,32 +114,15 @@ navigation-primary:
   dependencies:
     - pubsub/menu
 
-powered-by-block:
-  css:
-    theme:
-      css/components/powered-by-block.css: {}
-
 progress:
   css:
     component:
       css/components/progress.css: {}
 
-search-narrow:
-  css:
-    component:
-      css/components/header-search-narrow.css: {}
-
 search-results:
   css:
     theme:
       css/components/search-results.css: {}
-
-search-wide:
-  css:
-    component:
-      css/components/header-search-wide.css: {}
-  js:
-    js/search.js: {}
 
 sidebar:
   css:
@@ -251,8 +135,3 @@ tabs:
       css/components/tabs.css: {}
   js:
     js/tabs.js: {}
-
-tags:
-  css:
-    theme:
-      css/components/tags.css: {}

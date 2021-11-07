@@ -6,15 +6,5 @@
 @import "../global/variables";
 
 .site-footer {
-  position: relative; /* stack above left social bar */
-  color: var(--color--gray-50);
-  background: linear-gradient(180deg, var(--color--gray-5) 0%, var(--color--gray-8) 100%);
 
-  & a {
-    color: inherit;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
