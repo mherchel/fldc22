@@ -1,22 +1,22 @@
-uuid: 75e0fd88-c6fd-4eac-9139-f79da2a7c6d2
+uuid: 7bc44ff8-6c7d-4650-b193-ae68dd3d8b3b
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.all_sponsors
+    - views.view.sponsors_sidebar
   module:
     - system
     - views
   theme:
     - pubsub
-id: views_block__all_sponsors_block_1_2
+id: views_block__sponsors_sidebar_block_1
 theme: pubsub
-region: content
-weight: -4
+region: sidebar
+weight: 0
 provider: null
-plugin: 'views_block:all_sponsors-block_1'
+plugin: 'views_block:sponsors_sidebar-block_1'
 settings:
-  id: 'views_block:all_sponsors-block_1'
+  id: 'views_block:sponsors_sidebar-block_1'
   label: ''
   provider: views
   label_display: '0'
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: false
+    negate: true

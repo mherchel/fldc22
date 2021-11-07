@@ -4,3 +4,37 @@
  */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+:root {
+  --sidebar-grid-start: 1;
+  --sidebar-grid-divider: 9;
+}
+@media (min-width: 1100px) {
+  :root {
+    --sidebar-grid-start: 2;
+    --sidebar-grid-divider: 10;
+  }
+}
+@media (min-width: 1300px) {
+  :root {
+    --sidebar-grid-divider: 11;
+  }
+}
+
+@media (min-width: 800px) {
+  .layout-sidebar .site-main {
+    grid-column: var(--sidebar-grid-start)/var(--sidebar-grid-divider);
+  }
+}
+@media (min-width: 500px) {
+  .layout-sidebar .region--sidebar {
+    grid-column: 2/-2;
+  }
+}
+@media (min-width: 800px) {
+  .layout-sidebar .region--sidebar {
+    grid-column: var(--sidebar-grid-divider)/-1;
+  }
+}
+.layout-sidebar .region--sidebar > * {
+  margin-bottom: 0;
+}

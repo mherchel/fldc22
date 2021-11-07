@@ -4,3 +4,39 @@
  */
 
 @import "../global/variables";
+
+:root {
+  --sidebar-grid-start: 1;
+  --sidebar-grid-divider: 9;
+
+  @media (min-width: 1100px) {
+    --sidebar-grid-start: 2;
+    --sidebar-grid-divider: 10;
+  }
+
+  @media ($grid-max) {
+    --sidebar-grid-divider: 11;
+  }
+}
+
+.layout-sidebar {
+  .site-main {
+    @media ($grid-md) {
+      grid-column: var(--sidebar-grid-start) / var(--sidebar-grid-divider);
+    }
+  }
+
+  .region--sidebar {
+    @media ($sm) {
+      grid-column: 2 / -2;
+    }
+
+    @media ($grid-md) {
+      grid-column: var(--sidebar-grid-divider) / -1;
+    }
+
+    > * {
+      margin-bottom: 0;
+    }
+  }
+}

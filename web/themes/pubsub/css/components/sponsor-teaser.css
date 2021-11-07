@@ -38,6 +38,11 @@
   padding: var(--grid-gap);
   line-height: 32px;
 }
+@media (min-width: 450px) {
+  .views-category-grid:first-child .sponsor-teaser .field--name-body {
+    padding-left: 0;
+  }
+}
 @media (min-width: 800px) {
   .views-category-grid:first-child .sponsor-teaser .field--name-body {
     grid-column: 2/-1;

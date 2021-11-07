@@ -1,0 +1,26 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+
+
+.view-sponsors-sidebar {
+  padding: 48px;
+  background-color: var(--color--sky-94);
+  box-shadow: 50vw 0 0 var(--color--sky-94), -50vw 0 0 var(--color--sky-94);
+
+  @media ($grid-md) {
+    box-shadow: none;
+  }
+
+  .sponsor-teaser {
+    margin-bottom: var(--grid-gap);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.view-sponsors-sidebar__title {
+  @include left-border-title;
+}

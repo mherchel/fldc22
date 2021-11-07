@@ -32,6 +32,7 @@ body.is-fixed {
 
 a {
   color: var(--color--ocean-30);
+  transition: color 0.2s;
 }
 a:hover {
   color: var(--color--ocean-55);
@@ -39,6 +40,7 @@ a:hover {
 a:focus {
   outline: solid 2px currentColor;
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
 button {
@@ -62,14 +64,19 @@ audio {
 }
 
 h1 {
-  letter-spacing: -0.01em;
-  font-size: 28px;
-  line-height: var(--sp2);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   h1 {
-    font-size: 60px;
-    line-height: var(--sp4);
+    font-size: 56px;
+  }
+}
+@media (min-width: 1300px) {
+  h1 {
+    font-size: 80px;
   }
 }
 

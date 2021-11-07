@@ -2,6 +2,8 @@ uuid: 0072592b-2cf8-40df-95f2-246cf5369c70
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - pubsub
 _core:
@@ -9,7 +11,7 @@ _core:
 id: pubsub_page_title
 theme: pubsub
 region: content_above
-weight: -5
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

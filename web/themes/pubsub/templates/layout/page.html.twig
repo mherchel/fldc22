@@ -21,12 +21,24 @@
 
   {{ page.highlighted }}
 
-  {{ page.help }}
+  {{ page.content_above }}
 
-  <main class="container grid">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    {{ page.content }}
-  </main>
+  {% if page.sidebar %}
+    {{ attach_library('pubsub/sidebar') }}
+    <div class="layout-sidebar container grid">
+  {% endif %}
+
+    <main class="site-main {{ page.sidebar ? '' : 'container' }}">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {{ page.content }}
+    </main>
+
+  {% if page.sidebar %}
+    {{ page.sidebar }}
+    </div>
+  {% endif %}
+
+
 
   <footer class="site-footer" >
     {{ page.footer }}

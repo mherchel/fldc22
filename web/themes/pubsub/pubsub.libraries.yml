@@ -143,6 +143,11 @@ views-all-sponsors:
     layout:
       css/layout/view-all-sponsors.css: {}
 
+view-sponsors-sidebar:
+  css:
+    layout:
+      css/layout/view-sidebar-sponsors.css: {}
+
 sponsor-teaser:
   css:
     component:

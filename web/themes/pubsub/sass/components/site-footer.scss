@@ -15,5 +15,10 @@
 
   a {
     color: var(--color--sky-80);
+
+    &:hover,
+    &:focus {
+      color: var(--color--white);
+    }
   }
 }
