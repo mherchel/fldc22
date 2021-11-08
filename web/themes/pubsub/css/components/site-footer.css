@@ -15,6 +15,9 @@
     padding: 96px 0;
   }
 }
+.path-frontpage .site-footer {
+  box-shadow: 0 -200px 0 var(--color--ocean-10);
+}
 .site-footer a {
   color: var(--color--sky-80);
 }

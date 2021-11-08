@@ -7,6 +7,6 @@
 
 .page-title {
   @media ($grid-md) {
-    grid-column: var(--sidebar-grid-start) / var(--sidebar-grid-divider);
+    grid-column: var(--sidebar-grid-start, 1) / var(--sidebar-grid-divider, -1);
   }
 }

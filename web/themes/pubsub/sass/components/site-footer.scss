@@ -13,6 +13,10 @@
     padding: 96px 0;
   }
 
+  .path-frontpage & {
+    box-shadow: 0 -200px 0 var(--color--ocean-10);
+  }
+
   a {
     color: var(--color--sky-80);
 

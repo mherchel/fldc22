@@ -15,4 +15,12 @@
   @media ($lg) {
     margin-block-end: var(--sp3);
   }
+
+  .path-frontpage & {
+    margin-bottom: 0;
+
+    > * {
+      margin-bottom: 0;
+    }
+  }
 }

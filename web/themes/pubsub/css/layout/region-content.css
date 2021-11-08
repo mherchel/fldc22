@@ -17,3 +17,9 @@
     margin-block-end: var(--sp3);
   }
 }
+.path-frontpage .region--content {
+  margin-bottom: 0;
+}
+.path-frontpage .region--content > * {
+  margin-bottom: 0;
+}

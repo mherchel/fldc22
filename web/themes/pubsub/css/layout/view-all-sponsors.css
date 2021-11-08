@@ -2,6 +2,10 @@
 /* Grid related breakpoints */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+.block-views-blockall-sponsors-block-1 {
+  margin-bottom: 0;
+}
+
 .view-all-sponsors {
   padding: 48px 0;
   background-color: var(--color--sky-94);
@@ -10,18 +14,21 @@
 @media (min-width: 700px) {
   .view-all-sponsors {
     padding: 64px 0;
-    box-shadow: none;
   }
 }
 @media (min-width: 1000px) {
   .view-all-sponsors {
     padding: 72px 0;
+    box-shadow: none;
   }
 }
 @media (min-width: 1300px) {
   .view-all-sponsors {
     padding: 88px 0;
   }
+}
+.path-frontpage .view-all-sponsors {
+  position: relative;
 }
 
 .views-category-grid {
@@ -52,16 +59,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
+  margin: 48px 0 0;
 }
 @media (min-width: 1300px) {
   .views-category-grid__title {
     font-size: 14px;
     line-height: 24px;
-  }
-}
-@media (min-width: 1000px) {
-  .views-category-grid__title {
-    margin-top: 48px;
   }
 }
 

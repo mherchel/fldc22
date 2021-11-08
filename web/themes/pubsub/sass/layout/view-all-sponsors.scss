@@ -1,6 +1,10 @@
 @import "../global/variables";
 @import "../global/mixins";
 
+.block-views-blockall-sponsors-block-1 {
+  margin-bottom: 0;
+}
+
 .view-all-sponsors {
   padding: 48px 0;
   background-color: var(--color--sky-94);
@@ -8,15 +12,19 @@
 
   @media ($md) {
     padding: 64px 0;
-    box-shadow: none;
   }
 
   @media ($lg) {
     padding: 72px 0;
+    box-shadow: none;
   }
 
   @media ($grid-max) {
     padding: 88px 0;
+  }
+
+  .path-frontpage & {
+    position: relative; // Appear in front of the footer's box-shadow on homepage.
   }
 }
 
@@ -38,10 +46,7 @@
 
 .views-category-grid__title {
   @include left-border-title;
-
-  @media ($label-format-switch) {
-    margin-top: 48px;
-  }
+  margin: 48px 0 0;
 }
 
 

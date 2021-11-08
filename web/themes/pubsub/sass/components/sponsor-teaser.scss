@@ -82,4 +82,8 @@
   padding: var(--grid-gap);
   aspect-ratio: 256 / 200;
   filter: grayscale(100%);
+
+  @supports not (aspect-ratio: 1 / 1) {
+    min-height: 200px;
+  }
 }
