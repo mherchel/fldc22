@@ -22,9 +22,14 @@
 
   .primary-nav__menu--level-1 {
     overflow: auto;
-    max-height: calc(100vh - var(--menu-top-padding));
+    height: calc(100vh - var(--menu-top-padding));
     padding-bottom: var(--sp2);
     font-size: 24px;
+  }
+  @supports (height: -webkit-fill-available) {
+    .primary-nav__menu--level-1 {
+      height: calc(-webkit-fill-available - var(--menu-top-padding));
+    }
   }
 
   .primary-nav__menu--level-2 {
