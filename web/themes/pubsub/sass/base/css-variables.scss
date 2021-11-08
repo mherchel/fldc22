@@ -10,7 +10,7 @@
 
 
   /* Layout helpers */
-  --sp: 16px;
+  --sp: 1rem; // 16px.
   --sp0-25: calc(0.25 * var(--sp));
   --sp0-5: calc(0.5 * var(--sp));
   --sp0-75: calc(0.75 * var(--sp));
@@ -65,10 +65,10 @@
   --color--blue: blue;
 
   // Layouts
-  --grid-gap: 24px;
+  --grid-gap: var(--sp1-5);
 
   @media ($grid-max) {
-    --grid-gap: 32px;
+    --grid-gap: var(--sp2);
   }
 
   // Forms

@@ -79,6 +79,8 @@
 
 .site-stats__item {
   display: flex;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
   padding: var(--sp2) 0;
   border-bottom: solid 2px var(--color--sky-86);
 }
