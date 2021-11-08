@@ -89,7 +89,6 @@
   padding: 0 9px;
   text-decoration: none;
   color: var(--color--gray-10);
-  font-weight: 600;
 }
 .dropbutton-action a:focus {
   border: solid 2px var(--dropbutton--border-color);
