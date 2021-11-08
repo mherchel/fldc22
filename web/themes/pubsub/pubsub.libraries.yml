@@ -119,7 +119,7 @@ navigation-primary:
 progress:
   css:
     component:
-      css/components/progress.css: {}
+      css/components/drupal/progress.css: {}
 
 search-results:
   css:

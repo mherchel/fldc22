@@ -151,7 +151,7 @@
     });
   }
 
-  Drupal.pubsub.closeAllSubNav = closeAllSubNav;
+  // Drupal.pubsub.closeAllSubNav = closeAllSubNav;
 
   /**
    * Checks if any sub navigation items are currently active.
@@ -180,7 +180,7 @@
 
   // Ensure that desktop submenus close when escape key is pressed.
   document.addEventListener('keyup', (e) => {
-    if (e.key === 'Escape' || e.key === 'Esc') {
+    if (e.key === 'Escape') {
       if (isDesktopNav()) closeAllSubNav();
     }
   });
@@ -192,7 +192,7 @@
       if (
         areAnySubNavsOpen() &&
         !e.target.matches(
-          '[data-drupal-selector="header-nav"], [data-drupal-selector="header-nav"] *',
+          '#block-pubsub-main-menu, #block-pubsub-main-menu *',
         )
       ) {
         closeAllSubNav();

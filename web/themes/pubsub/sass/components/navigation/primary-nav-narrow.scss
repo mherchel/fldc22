@@ -3,6 +3,7 @@
 @media ($mobile-nav) {
   .menu--main {
     --menu-top-padding: 120px;
+    --mobile-menu-hightlight-color: var(--color--sun-55);
 
     position: fixed;
     top: 0;
@@ -22,6 +23,13 @@
     }
   }
 
+  .primary-nav__menu-link {
+    text-decoration: none;
+  }
+
+  //
+  // Level 1 Nav
+  //
   .primary-nav__menu--level-1 {
     overflow: auto;
     height: calc(100vh - var(--menu-top-padding));
@@ -33,13 +41,63 @@
     }
   }
 
-  .primary-nav__menu--level-2 {
-    flex-basis: 100%;
-    padding-left: 40px;
-  }
-
   .primary-nav__menu-link--level-1 {
     display: flex;
     padding: 10px 20px;
+  }
+
+  .primary-nav__menu-link--button {
+    flex-basis: 100%;
+    position: relative;
+    cursor: pointer;
+
+    /* Plus icon for mobile navigation. */
+    &.primary-nav__menu-link--has-children {
+      padding-inline-end: var(--sp3); /* Ensure text does not overlap icon. */
+
+      &:before,
+      &:after {
+        position: absolute;
+        inset-inline-end: 9px;
+        inset-block-start: calc(var(--sp0-5) + 17px); /* Visually align button with menu link text. */
+        width: 18px;
+        height: 0;
+        content: "";
+        /* Intentionally not using CSS logical properties. */
+        border-top: solid 3px var(--mobile-menu-hightlight-color);
+      }
+
+      &:after {
+        transition: opacity 0.2s;
+        transform: rotate(90deg);
+      }
+
+      &[aria-expanded="true"]:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  //
+  // Level 2 Nav
+  //
+   .primary-nav__menu--level-2 {
+    flex-basis: 100%;
+    margin-left: 16px;
+    padding-left: 20px;
+    visibility: hidden;
+    max-height: 0;
+    border-left: solid 6px var(--mobile-menu-hightlight-color);
+
+    &.is-active-menu-parent {
+      visibility: visible;
+      max-height: none;
+      margin-block-start: var(--sp1-5);
+      opacity: 1;
+    }
+  }
+
+  .primary-nav__menu-link--level-2 {
+    font-size: 20px;
   }
 }
