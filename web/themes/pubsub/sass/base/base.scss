@@ -41,9 +41,13 @@ a {
   }
 
   &:focus {
-    outline: solid 2px currentColor;
+    outline: solid 2px var(--focus-ring-color);
     outline-offset: 2px;
     border-radius: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
   }
 }
 
@@ -53,6 +57,16 @@ button {
   background: 0;
   appearance: none;
   cursor: pointer;
+
+  &:focus {
+    outline: solid 2px var(--focus-ring-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
 }
 
 img,

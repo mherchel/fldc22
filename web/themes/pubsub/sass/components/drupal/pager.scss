@@ -3,7 +3,14 @@
  * Styles for pagination.
  */
 
-@import "../global/variables";
+@import "../../global/variables";
+
+.pager {
+  --pager--text-color: var(--color--night-40);
+  --pager--background: var(--color--white);
+  --pager--highlight: var(--color--ocean-15);
+  --pager--hover-bg: var(--color--sky-97);
+}
 
 .pager__items {
   display: flex;
@@ -16,6 +23,7 @@
   padding-inline-end: 0;
   list-style: none;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .pager__item {
@@ -25,8 +33,8 @@
   width: var(--sp2-5);
   height: var(--sp2-5);
   cursor: default;
-  color: var(--color--gray-20);
-  background-color: var(--color--white);
+  color: var(--pager--text-color);
+  background-color: var(--pager--background);
 
   @media ($sm) {
     width: var(--sp3);
@@ -39,8 +47,8 @@
 }
 
 .pager__item--active {
-  color: var(--color--white);
-  background-color: var(--color--blue-20);
+  color: var(--pager--background);
+  background-color: var(--pager--highlight);
 }
 
 .pager__link {
@@ -50,16 +58,16 @@
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: var(--color--gray-20);
+  color: var(--pager--text-color);
 }
 
 .pager__link:hover {
-  background-color: var(--color--gray-80);
+  background-color: var(--pager--hover-bg);
 }
 
 .pager__link:focus {
-  color: var(--color--blue-20);
-  outline: solid 2px var(--color--blue-20);
+  color: var(--pager--highlight);
+  outline: solid 2px var(--pager--highlight);
   outline-offset: -2px;
 }
 

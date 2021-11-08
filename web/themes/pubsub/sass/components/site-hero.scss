@@ -122,11 +122,16 @@
   border: solid 2px transparent;
   text-indent: -999px;
   overflow: hidden;
-  transition: all 0.2s;
+  transition: background 0.2s;
 
-  &:hover,
+  &:hover, {
+    background: rgba(white, 0.8);
+  }
+
   &:focus {
-    border-color: currentColor;
+    outline: solid 2px currentColor;
+    border-radius: 0;
+    outline-offset: -6px;
   }
 
   &[aria-pressed="true"]:before {
@@ -167,4 +172,10 @@
   line-height: 24px;
   text-decoration: none;
   color: var(--color--ocean-30);
+
+  &:focus {
+    outline: solid 2px currentColor;
+    border-radius: 0;
+    outline-offset: -6px;
+  }
 }

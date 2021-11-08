@@ -19,6 +19,7 @@ global-styling:
       css/components/drupal/links.css: {}
       css/components/drupal/messages.css: {}
       css/components/drupal/drupal-misc.css: {}
+      css/components/drupal/pager.css: {}
       css/components/navigation/nav-button-mobile.css: {}
       css/components/navigation/primary-nav-button-toggle.css: {}
       css/components/overlay.css: {}
@@ -35,7 +36,6 @@ global-styling:
       css/components/skip-link.css: {}
       css/components/site-footer.css: {}
       css/components/site-header.css: {}
-      css/components/pager.css: {}
       css/components/text-content.css: {}
   js:
     js/checkbox.js: {}

@@ -38,9 +38,12 @@ a:hover {
   color: var(--color--ocean-55);
 }
 a:focus {
-  outline: solid 2px currentColor;
+  outline: solid 2px var(--focus-ring-color);
   outline-offset: 2px;
   border-radius: 2px;
+}
+a:focus:not(:focus-visible) {
+  outline: 0;
 }
 
 button {
@@ -49,6 +52,14 @@ button {
   background: 0;
   appearance: none;
   cursor: pointer;
+}
+button:focus {
+  outline: solid 2px var(--focus-ring-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
 }
 
 img,
