@@ -19,6 +19,7 @@ global-styling:
       css/components/drupal/fieldset.css: {}
       css/components/drupal/links.css: {}
       css/components/drupal/messages.css: {}
+      css/components/drupal/drupal-misc.css: {}
       css/components/navigation/nav-button-mobile.css: {}
       css/components/navigation/primary-nav-button-toggle.css: {}
       css/components/overlay.css: {}

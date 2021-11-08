@@ -1,0 +1,57 @@
+@import "../../global/variables";
+@import "../../global/mixins";
+
+//
+// Misc Drupal stuff too little to warrant its own stylesheet.
+//
+
+//
+// TableDrag
+//
+.form-item__label--multiple-value-form {
+  text-align: left;
+}
+
+.draggable a.tabledrag-handle {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
+a.tabledrag-handle .handle {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  background-position: center;
+}
+
+input.field-add-more-submit {
+  @include button--primary;
+  @include button--small;
+}
+
+.tabledrag-toggle-weight {
+  @include button;
+  @include button--small;
+}
+
+tr.drag {
+  background-color: var(--color--sky-94);
+}
+
+abbr.warning {
+  text-decoration: none;
+}
+
+//
+// Autocomplete
+//
+.js input.form-autocomplete,
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-position: right 20px center;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  display: block;
+  padding: var(--sp);
+}

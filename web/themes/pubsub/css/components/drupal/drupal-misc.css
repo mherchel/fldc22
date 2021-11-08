@@ -1,12 +1,25 @@
-/**
- * @file
- * Buttons.
- */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-.button {
+.form-item__label--multiple-value-form {
+  text-align: left;
+}
+
+.draggable a.tabledrag-handle {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
+a.tabledrag-handle .handle {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  background-position: center;
+}
+
+input.field-add-more-submit {
   --button-color-bg: var(--color--white);
   --button-color-primary: var(--color--ocean-15);
   --button-color-primary-dark: var(--color--ocean-10);
@@ -32,39 +45,44 @@
   line-height: var(--button-line-height);
   appearance: none;
   -webkit-font-smoothing: antialiased;
-}
-.button:hover, .button:focus {
-  text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
-}
-.button:active {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
-}
-.button:disabled, .button.is-disabled {
-  cursor: default;
-  color: var(--color--gray-70);
-  border-color: var(--color--gray-70);
-}
-
-/* No margin if is part of a menu. */
-.menu .button {
-  margin-block: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-.button--small {
+  color: var(--button-color-bg);
+  background-color: var(--button-color-primary);
   height: var(--sp2-5);
   padding-inline: var(--sp);
   font-size: 16px;
   line-height: normal;
 }
+input.field-add-more-submit:hover, input.field-add-more-submit:focus {
+  text-decoration: none;
+  color: var(--button-color-primary-dark);
+  border: solid 2px var(--button-color-primary-dark);
+  background: none;
+  font-weight: 700;
+}
+input.field-add-more-submit:active {
+  color: var(--button-color-primary);
+  border-color: var(--button-color-primary);
+}
+input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
+  cursor: default;
+  color: var(--color--gray-70);
+  border-color: var(--color--gray-70);
+}
+input.field-add-more-submit:hover, input.field-add-more-submit:focus {
+  color: var(--button-color-bg);
+  border-color: var(--button-color-primary-dark);
+  background-color: var(--button-color-primary-dark);
+}
+input.field-add-more-submit:active {
+  color: var(--button-color-bg);
+  background-color: var(--button-color-primary);
+}
+input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
+  color: var(--color--night-35);
+  background-color: var(--color--night-90);
+}
 
-.button--primary {
+.tabledrag-toggle-weight {
   --button-color-bg: var(--color--white);
   --button-color-primary: var(--color--ocean-15);
   --button-color-primary-dark: var(--color--ocean-10);
@@ -90,51 +108,42 @@
   line-height: var(--button-line-height);
   appearance: none;
   -webkit-font-smoothing: antialiased;
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
+  height: var(--sp2-5);
+  padding-inline: var(--sp);
+  font-size: 16px;
+  line-height: normal;
 }
-.button--primary:hover, .button--primary:focus {
+.tabledrag-toggle-weight:hover, .tabledrag-toggle-weight:focus {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.button--primary:active {
+.tabledrag-toggle-weight:active {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.button--primary:disabled, .button--primary.is-disabled {
+.tabledrag-toggle-weight:disabled, .tabledrag-toggle-weight.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
 }
-.button--primary:hover, .button--primary:focus {
-  color: var(--button-color-bg);
-  border-color: var(--button-color-primary-dark);
-  background-color: var(--button-color-primary-dark);
-}
-.button--primary:active {
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
-}
-.button--primary:disabled, .button--primary.is-disabled {
-  color: var(--color--night-35);
-  background-color: var(--color--night-90);
+
+tr.drag {
+  background-color: var(--color--sky-94);
 }
 
-.button--icon-back {
-  display: inline-flex;
-  align-items: center;
+abbr.warning {
+  text-decoration: none;
 }
-.button--icon-back:before {
+
+.js input.form-autocomplete,
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-position: right 20px center;
+}
+
+.ui-menu .ui-menu-item-wrapper {
   display: block;
-  width: 0.5em;
-  height: 0.5em;
-  margin-inline-end: 0.5em;
-  content: "";
-  transform: rotate(45deg);
-  /* LTR */
-  border-block-end: solid 2px currentColor;
-  border-inline-start: solid 2px currentColor;
+  padding: var(--sp);
 }

@@ -37,3 +37,6 @@
     line-height: 24px;
   }
 }
+.view-sponsors-sidebar__title:first-of-type {
+  margin-top: 0;
+}

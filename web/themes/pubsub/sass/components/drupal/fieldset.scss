@@ -6,8 +6,9 @@
 @import "../../global/variables";
 
 .fieldset {
-  --fieldset-border-color: var(--color--night-40);
-  --fieldset-summary-text-color: var(--color--white);
+  --fieldset-border-color: var(--color--sky-94);
+  --fieldset-summary-text-color: var(--color--night-20);
+  --fieldset-border-radius: 5px;
 
   min-width: 0;
   margin-block: var(--sp1);
@@ -18,7 +19,7 @@
   padding-inline-end: 0;
   color: inherit;
   border: solid 2px var(--fieldset-border-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--fieldset-border-radius);
   background-color: var(--color--white);
 }
 
@@ -35,8 +36,8 @@
   float: left; /* Prevent sticking out of top of fieldset. */
   width: 100%;
   color: inherit;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--fieldset-border-radius);
+  border-top-right-radius: var(--fieldset-border-radius);
   background-color: var(--fieldset-border-color);
   font-size: var(--font-size-l);
   font-weight: 700;
@@ -71,10 +72,9 @@
 .fieldset__label {
   display: block;
   padding-block: var(--sp0-5);
-  padding-inline-start: var(--sp1);
-  padding-inline-end: var(--sp1);
+  padding-inline-start: var(--sp);
+  padding-inline-end: var(--sp);
   color: var(--fieldset-summary-text-color);
-  line-height: var(--line-height-s);
 }
 
 .fieldset__label.is-disabled {
@@ -122,8 +122,8 @@
 
 .fieldset--group .fieldset__legend--visible ~ .fieldset__wrapper {
   border: solid 2px var(--fieldset-border-color);
-  border-bottom-right-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--fieldset-border-radius);
+  border-bottom-left-radius: var(--fieldset-border-radius);
 }
 
 .fieldset__wrapper--group {
