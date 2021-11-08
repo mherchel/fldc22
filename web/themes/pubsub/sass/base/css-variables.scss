@@ -2,8 +2,6 @@
 
 :root {
   --font-sans: "Inter", sans-serif;
-  // --font-serif: "Lora", "georgia", serif;
-
 
   /* Drupal administrative toolbar heights and width. */
   --toolbar-height: 39px;
@@ -21,41 +19,44 @@
   --sp2: calc(2 * var(--sp));
   --sp2-5: calc(2.5 * var(--sp));
   --sp3: calc(3 * var(--sp));
+  --sp4: calc(4 * var(--sp));
+
+  --hsla-opacity: 1;
 
   // Night
-  --color--night-0: hsla(0, 0%, 0%, 1);
-  --color--night-5: hsla(200, 75%, 5%, 1);
-  --color--night-15: hsla(200, 29%, 13%, 1);
-  --color--night-20: hsla(201, 20%, 21%, 1);
-  --color--night-30: hsla(202, 12%, 29%, 1);
-  --color--night-35: hsla(202, 9%, 36%, 1);
-  --color--night-40: hsla(202, 6%, 43%, 1);
-  --color--night-50: hsla(202, 5%, 52%, 1);
-  --color--night-60: hsla(202, 5%, 60%, 1);
-  --color--night-70: hsla(202, 6%, 72%, 1);
-  --color--night-90: hsla(202, 6%, 90%, 1);
+  --color--night-0: hsla(0, 0%, 0%, var(--hsla-opacity));
+  --color--night-5: hsla(200, 75%, 5%, var(--hsla-opacity));
+  --color--night-15: hsla(200, 29%, 13%, var(--hsla-opacity));
+  --color--night-20: hsla(201, 20%, 21%, var(--hsla-opacity));
+  --color--night-30: hsla(202, 12%, 29%, var(--hsla-opacity));
+  --color--night-35: hsla(202, 9%, 36%, var(--hsla-opacity));
+  --color--night-40: hsla(202, 6%, 43%, var(--hsla-opacity));
+  --color--night-50: hsla(202, 5%, 52%, var(--hsla-opacity));
+  --color--night-60: hsla(202, 5%, 60%, var(--hsla-opacity));
+  --color--night-70: hsla(202, 6%, 72%, var(--hsla-opacity));
+  --color--night-90: hsla(202, 6%, 90%, var(--hsla-opacity));
 
   // Sky
-  --color--sky-80: hsla(194, 66%, 80%, 1);
-  --color--sky-86: hsla(194, 54%, 86%, 1);
-  --color--sky-90: hsla(193, 65%, 90%, 1);
-  --color--sky-94: hsla(195, 67%, 94%, 1);
-  --color--sky-97: hsla(195, 86%, 97%, 1);
+  --color--sky-80: hsla(194, 66%, 80%, var(--hsla-opacity));
+  --color--sky-86: hsla(194, 54%, 86%, var(--hsla-opacity));
+  --color--sky-90: hsla(193, 65%, 90%, var(--hsla-opacity));
+  --color--sky-94: hsla(195, 67%, 94%, var(--hsla-opacity));
+  --color--sky-97: hsla(195, 86%, 97%, var(--hsla-opacity));
 
   // Ocean
-  --color--ocean-10: hsla(200, 59%, 13%, 1);
-  --color--ocean-15: hsla(201, 100%, 16%, 1);
-  --color--ocean-30: hsla(201, 100%, 29%, 1);
-  --color--ocean-40: hsla(202, 100%, 42%, 1);
-  --color--ocean-55: hsla(201, 100%, 55%, 1);
+  --color--ocean-10: hsla(200, 59%, 13%, var(--hsla-opacity));
+  --color--ocean-15: hsla(201, 100%, 16%, var(--hsla-opacity));
+  --color--ocean-30: hsla(201, 100%, 29%, var(--hsla-opacity));
+  --color--ocean-40: hsla(202, 100%, 42%, var(--hsla-opacity));
+  --color--ocean-55: hsla(201, 100%, 55%, var(--hsla-opacity));
 
   // Sun
-  --color--sun-30: hsla(18, 95%, 30%, 1);
-  --color--sun-45: hsla(18, 95%, 46%, 1);
-  --color--sun-55: hsla(19, 95%, 55%, 1);
-  --color--sun-70: hsla(18, 95%, 71%, 1);
-  --color--sun-80: hsla(18, 95%, 83%, 1);
-  --color--sun-90: hsla(18, 96%, 91%, 1);
+  --color--sun-30: hsla(18, 95%, 30%, var(--hsla-opacity));
+  --color--sun-45: hsla(18, 95%, 46%, var(--hsla-opacity));
+  --color--sun-55: hsla(19, 95%, 55%, var(--hsla-opacity));
+  --color--sun-70: hsla(18, 95%, 71%, var(--hsla-opacity));
+  --color--sun-80: hsla(18, 95%, 83%, var(--hsla-opacity));
+  --color--sun-90: hsla(18, 96%, 91%, var(--hsla-opacity));
 
   // Named colors
   --color--white: #fff;

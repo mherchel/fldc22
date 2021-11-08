@@ -3,7 +3,7 @@
 .site-hero {
   padding-bottom: 48px;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .site-hero {
     padding-bottom: 64px;
   }
@@ -25,7 +25,7 @@
   height: 56px;
   white-space: nowrap;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .site-hero__details {
     grid-column: 1/6;
   }
@@ -60,7 +60,7 @@
 .site-hero__main {
   margin: 48px 0 32px;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .site-hero__main {
     grid-row: 2;
     grid-column: 1/6;
@@ -80,7 +80,7 @@
   letter-spacing: -0.02em;
   color: var(--color--night-5);
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .site-hero__title {
     font-size: 56px;
   }
@@ -99,7 +99,7 @@
 .site-hero__media {
   position: relative;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .site-hero__media {
     grid-column: 7/-1;
     grid-row: span 2;

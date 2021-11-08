@@ -76,7 +76,7 @@
   letter-spacing: -0.02em;
   color: var(--color--night-5);
 
-  @media ($md) {
+  @media (min-width: 800px) {
     font-size: 56px;
   }
 

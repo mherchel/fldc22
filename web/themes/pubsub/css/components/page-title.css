@@ -4,7 +4,7 @@
  */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .page-title {
     grid-column: var(--sidebar-grid-start, 1)/var(--sidebar-grid-divider, -1);
   }

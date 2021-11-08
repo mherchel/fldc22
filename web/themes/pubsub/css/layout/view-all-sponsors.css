@@ -70,7 +70,7 @@
   grid-template-columns: 1fr;
   grid-gap: var(--grid-gap);
 }
-@media (min-width: 450px) {
+@media (min-width: 600px) {
   .views-sponsor-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -86,7 +86,7 @@
   content: "";
   background: var(--color--sun-90);
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .text-content blockquote,
 .cke_editable blockquote {
     font-size: 32px;
@@ -100,7 +100,7 @@
     line-height: calc(3.5 * var(--sp));
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .text-content,
 .cke_editable {
     font-size: 18px;

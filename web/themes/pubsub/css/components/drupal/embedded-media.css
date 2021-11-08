@@ -35,7 +35,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .align-right {
     float: inline-end;
     max-width: 50%;
@@ -55,7 +55,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .align-left {
     float: inline-start;
     max-width: 50%;

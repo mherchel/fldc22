@@ -20,7 +20,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .layout-sidebar .site-main {
     grid-column: var(--sidebar-grid-start)/var(--sidebar-grid-divider);
   }
@@ -30,7 +30,7 @@
     grid-column: 2/-2;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .layout-sidebar .region--sidebar {
     grid-column: var(--sidebar-grid-divider)/-1;
     position: sticky;
@@ -41,7 +41,7 @@
 .layout-sidebar .region--sidebar > * {
   margin-bottom: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .layout-sidebar .region--sidebar > * {
     margin-bottom: var(--sp2);
   }

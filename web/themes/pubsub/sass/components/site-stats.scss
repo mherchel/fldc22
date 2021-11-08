@@ -1,13 +1,14 @@
 @import "../global/variables";
 @import "../global/mixins";
 
-$stats-switch: $grid-md;
+$stats-layout-switch: $grid-md;
+$stats-label-layout-switch: $md;
 
 .site-stats {
   position: relative;
   padding: 48px 0 0;
 
-  @media ($stats-switch) {
+  @media ($stats-layout-switch) {
     padding: 64px 0;
   }
 
@@ -23,7 +24,7 @@ $stats-switch: $grid-md;
 }
 
 .site-stats__label {
-  @media ($stats-switch) {
+  @media ($stats-label-layout-switch) {
     grid-row: 1;
     grid-column: 10 / span 3;
   }
@@ -32,7 +33,7 @@ $stats-switch: $grid-md;
 .site-stats__title {
   @include left-border-title;
 
-  @media ($stats-switch) {
+  @media ($stats-layout-switch) {
     margin-top: 39px;
   }
 }
@@ -42,15 +43,18 @@ $stats-switch: $grid-md;
   margin: 0;
   list-style: none;
 
-  @media ($stats-switch) {
-    grid-row: 1;
-    grid-column: 1 / span 9;
+  @media ($stats-layout-switch) {
     display: flex;
     gap: var(--grid-gap);
 
     > * {
       flex: 1;
     }
+  }
+
+  @media ($stats-label-layout-switch) {
+    grid-row: 1;
+    grid-column: 1 / span 9;
   }
 
   @media ($grid-max) {
@@ -71,7 +75,7 @@ $stats-switch: $grid-md;
     flex: 1;
   }
 
-  @media ($stats-switch) {
+  @media ($stats-layout-switch) {
     display: block;
     border-bottom: none;
   }
