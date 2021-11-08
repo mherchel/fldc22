@@ -24,7 +24,12 @@
   }
 
   .primary-nav__menu-link {
+    flex-grow: 1;
     text-decoration: none;
+  }
+
+  .primary-nav__button-toggle {
+    color: var(--mobile-menu-hightlight-color);
   }
 
   //
@@ -37,7 +42,7 @@
     font-size: 24px;
 
     @supports (height: -webkit-fill-available) {
-      height: calc(#{'-webkit-fill-available'} - var(--menu-top-padding));
+      height: -webkit-fill-available;
     }
   }
 
@@ -81,7 +86,9 @@
   //
   // Level 2 Nav
   //
-   .primary-nav__menu--level-2 {
+  .primary-nav__menu--level-2 {
+    display: flex;
+    flex-direction: column;
     flex-basis: 100%;
     margin-left: 16px;
     padding-left: 20px;
@@ -95,6 +102,10 @@
       margin-block-start: var(--sp1-5);
       opacity: 1;
     }
+  }
+
+  .primary-nav__menu-item--level-2 {
+    margin: var(--sp0-5) 0;
   }
 
   .primary-nav__menu-link--level-2 {
