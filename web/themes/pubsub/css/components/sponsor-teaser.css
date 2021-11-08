@@ -71,7 +71,8 @@
 
 .sponsor-teaser__img-wrapper {
   display: grid;
-  place-content: center;
+  align-items: center;
+  justify-items: center;
   padding: var(--grid-gap);
   aspect-ratio: 256/200;
   filter: grayscale(100%);

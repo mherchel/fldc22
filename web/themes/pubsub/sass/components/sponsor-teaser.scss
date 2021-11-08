@@ -78,7 +78,8 @@
 
 .sponsor-teaser__img-wrapper {
   display: grid;
-	place-content: center;
+	align-items: center; // place-content not working properly in mobile Safari.
+  justify-items: center;
   padding: var(--grid-gap);
   aspect-ratio: 256 / 200;
   filter: grayscale(100%);
