@@ -6,7 +6,7 @@
 /* Grid related breakpoints */
 .breadcrumb {
   position: relative;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   line-height: var(--sp1);
   /* Shadow on the right side of breadcrumbs for narrow screens. */

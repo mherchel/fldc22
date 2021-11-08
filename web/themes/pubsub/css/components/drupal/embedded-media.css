@@ -15,7 +15,7 @@ figcaption {
   color: var(--color--gray-10);
   background: var(--color--gray-95);
   font-family: var(--font-serif);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: italic;
   line-height: var(--sp);
 }

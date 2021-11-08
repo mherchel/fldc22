@@ -20,7 +20,8 @@
   border: none;
   background: var(--color--sun-55);
   color: var(--color--white);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 .mobile-nav-button:active {
   color: inherit;
@@ -67,7 +68,7 @@
     height: auto;
     margin-inline-end: 12px;
     letter-spacing: 0.05em;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
   }
 }

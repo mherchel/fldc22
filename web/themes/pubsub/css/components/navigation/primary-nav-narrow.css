@@ -34,7 +34,7 @@
     overflow: auto;
     height: calc(100vh - var(--menu-top-padding));
     padding-bottom: var(--sp2);
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   @supports (height: -webkit-fill-available) {
     .primary-nav__menu--level-1 {
@@ -98,6 +98,6 @@
   }
 
   .primary-nav__menu-link--level-2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }

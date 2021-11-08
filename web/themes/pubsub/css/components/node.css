@@ -9,7 +9,7 @@
   align-items: center;
   margin-block-end: var(--sp1);
   color: var(--color--gray-20);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: var(--sp);
 }
 .node__meta a {

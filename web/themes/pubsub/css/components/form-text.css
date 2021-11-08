@@ -31,7 +31,8 @@ textarea {
   background-color: var(--form-element-bg);
   font-family: inherit;
   font-size: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 [type=color][disabled],
 [type=date][disabled],

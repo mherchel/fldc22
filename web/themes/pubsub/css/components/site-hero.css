@@ -36,10 +36,10 @@
   padding: 16px 24px;
   text-transform: uppercase;
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0.06em;
   background: var(--color--sky-94);
 }
@@ -74,7 +74,7 @@
 }
 
 .site-hero__title {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -82,18 +82,18 @@
 }
 @media (min-width: 800px) {
   .site-hero__title {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 1000px) {
   .site-hero__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 }
 
 .site-hero__desc {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .site-hero__media {
@@ -169,9 +169,9 @@
   left: 0;
   padding: 24px 32px;
   background: var(--color--white);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-decoration: none;
   color: var(--color--ocean-30);
 }

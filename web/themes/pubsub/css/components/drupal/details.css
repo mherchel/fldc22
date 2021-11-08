@@ -27,7 +27,8 @@
   cursor: pointer;
   transition: var(--details-summary-transition);
   word-wrap: break-word;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
   color: inherit;
   background-color: var(--color--gray-95);
   font-size: var(--line-height-s);

@@ -21,7 +21,8 @@ input[type=radio] {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: var(--sp1) var(--sp1);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   /* Specific pseudo-element to apply red borders for IE11 bool elements in case of error */
 }
 input[type=checkbox]:hover,

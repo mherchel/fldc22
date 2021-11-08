@@ -14,7 +14,8 @@
 .cke_editable a:where(:not(.button)) {
   color: var(--color--sun-45);
   text-decoration-thickness: 4px;
-  text-decoration-color: var(--color--sun-80);
+  -webkit-text-decoration-color: var(--color--sun-80);
+          text-decoration-color: var(--color--sun-80);
   overflow-wrap: break-word;
   transition: color 0.2s;
 }
@@ -63,7 +64,7 @@
   padding-inline-start: var(--sp4);
   letter-spacing: -0.01em;
   font-family: var(--font-serif);
-  font-size: 21px;
+  font-size: 1.3125rem;
   line-height: 1.5;
   color: var(--color--night-30);
 }
@@ -75,7 +76,7 @@
   font-family: "georgia";
   content: "“";
   color: var(--color--sun-90);
-  font-size: 150px;
+  font-size: 9.375rem;
   line-height: 1;
 }
 .text-content blockquote:after,
@@ -92,13 +93,13 @@
 @media (min-width: 600px) {
   .text-content blockquote,
 .cke_editable blockquote {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 @media (min-width: 600px) {
   .text-content,
 .cke_editable {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: var(--sp2);
   }
 }

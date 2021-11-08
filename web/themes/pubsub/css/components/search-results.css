@@ -22,7 +22,7 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   color: var(--color--gray-0);
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: var(--line-height-base);
 }
 .search-result__title a {
@@ -43,7 +43,7 @@
 @media (min-width: 1000px) {
   .search-result__title {
     margin-block-end: var(--sp1);
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: var(--sp3);
   }
 }
@@ -66,7 +66,7 @@
   align-items: center;
   margin-block-end: var(--sp1);
   color: var(--color--gray-20);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: var(--sp);
 }
 .search-result__meta a {

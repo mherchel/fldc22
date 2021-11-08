@@ -14,7 +14,7 @@
 
   .primary-nav__menu--level-1 {
     color: var(--color--ocean-10);
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .primary-nav__menu-item {

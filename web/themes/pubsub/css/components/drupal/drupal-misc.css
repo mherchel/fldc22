@@ -43,13 +43,14 @@ input.field-add-more-submit {
   font-size: var(--font-size-l);
   font-weight: 700;
   line-height: var(--button-line-height);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   -webkit-font-smoothing: antialiased;
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
   height: var(--sp2-5);
   padding-inline: var(--sp);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: normal;
 }
 input.field-add-more-submit:hover, input.field-add-more-submit:focus {
@@ -106,11 +107,12 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   font-size: var(--font-size-l);
   font-weight: 700;
   line-height: var(--button-line-height);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   -webkit-font-smoothing: antialiased;
   height: var(--sp2-5);
   padding-inline: var(--sp);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: normal;
 }
 .tabledrag-toggle-weight:hover, .tabledrag-toggle-weight:focus {

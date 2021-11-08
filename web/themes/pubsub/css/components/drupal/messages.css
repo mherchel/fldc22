@@ -87,7 +87,8 @@
   vertical-align: top;
   border: 0;
   background: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 .messages__close:before, .messages__close:after {
   position: absolute;
