@@ -1,3 +1,26 @@
-<div class="block block--footer-text">
+<div class="block block-footer">
   {{ content }}
+
+  <nav class="block-footer__social" aria-label="social menu">
+    <ul class="block-footer__social-menu">
+      <li class="block-footer__social-menu-item">
+        <a class="block-footer__social-menu-link" target="_blank" href="https://twitter.com/fldrupalcamp">
+        <span class="visually-hidden">Twitter</span>
+        {% include('@pubsub/../images/twitter.svg') %}
+        </a>
+      </li>
+      <li class="block-footer__social-menu-item">
+        <a class="block-footer__social-menu-link" target="_blank" href="https://facebook.com/fldrupalcamp">
+        <span class="visually-hidden">Facebook</span>
+        {% include('@pubsub/../images/facebook-f.svg') %}
+        </a>
+      </li>
+      <li class="block-footer__social-menu-item">
+        <a class="block-footer__social-menu-link" target="_blank" href="https://www.drupal.org/project/fldc">
+        <span class="visually-hidden">Drupal.org</span>
+        {% include('@pubsub/../images/drupal.svg') %}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

@@ -40,21 +40,42 @@
   }
 }
 @media (min-width: 700px) {
-  .site-footer .block--footer-text {
+  .site-footer .block-footer {
     grid-column: 2/-2;
   }
 }
 @media (min-width: 1000px) {
-  .site-footer .block--footer-text {
+  .site-footer .block-footer {
     grid-column: 11/-1;
   }
 }
 @media (min-width: 1300px) {
-  .site-footer .block--footer-text {
+  .site-footer .block-footer {
     grid-column: 11/-2;
   }
 }
 
-.block--footer-text .text-content {
+.block-footer .text-content {
   font-size: 16px;
+}
+
+.block-footer__social {
+  margin: var(--sp2) 0;
+}
+
+.block-footer__social-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block-footer__social-menu-link svg {
+  width: 30px;
+  max-height: 30px;
+}
+.block-footer__social-menu-link path {
+  fill: currentColor;
 }
