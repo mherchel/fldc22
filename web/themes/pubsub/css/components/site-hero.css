@@ -113,6 +113,8 @@
 .site-hero__media img,
 .site-hero__media video {
   width: 100%;
+  aspect-ratio: 544/480;
+  object-fit: cover;
 }
 
 .site-hero__play-pause {

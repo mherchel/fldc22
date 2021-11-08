@@ -105,6 +105,8 @@
   img,
   video {
     width: 100%;
+    aspect-ratio: 544 / 480;
+    object-fit: cover;
   }
 }
 
