@@ -1,0 +1,29 @@
+uuid: e58b9595-51c1-45c6-90a2-7fdcafe743c9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  description: 'Florida DrupalCamp 2022 will be held February 18-20th, 2022 at Florida Technical College in Orlando, FL'
+  canonical_url: '[current-page:url:absolute]'
+  title: '[current-page:title] | [site:name]'
+  shortlink: '[current-page:url:unaliased]'
+  og_title: '[current-page:title]'
+  og_email: info@fldrupalcamp.org
+  og_type: Article
+  og_url: '[current-page:url:absolute]'
+  og_site_name: '[site:name]'
+  og_image: 'https://www.fldrupal.camp/sites/default/files/logo-general.png'
+  og_region: Florida
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_image_width: '632'
+  twitter_cards_site: '@fldrupalcamp'
+  twitter_cards_image: 'https://www.fldrupal.camp/sites/default/files/logo-general.png'
+  twitter_cards_type: summary
+  twitter_cards_image_height: '541'
+  twitter_cards_image_alt: 'Florida DrupalCamp Logo'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_description: '[site:slogan]'
