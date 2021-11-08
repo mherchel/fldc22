@@ -5,6 +5,9 @@
 
 @import "../../global/variables";
 
+$breakpoint-enable-label-text: $sm;
+$breakpoint-change-button-bg: $grid-md;
+
 .mobile-nav-button {
   --line-color: var(--color--white);
 
@@ -19,7 +22,8 @@
   padding-block: 0;
   cursor: pointer;
   border: none;
-  background: var(--color--sun-45);
+  background: var(--color--sun-55);
+  color: var(--color--white);
   appearance: none;
 
 
@@ -28,12 +32,18 @@
   }
 
   @media ($sm) {
-    --line-color: var(--color--sun-45);
+    width: auto;
+    padding: 0 var(--sp2);
+  }
+
+  @media ($breakpoint-change-button-bg) {
+    --line-color: var(--color--sun-55);
 
     display: inline-flex;
     margin-right: 0;
-    padding-inline-start: var(--sp);
+    padding: 0 0 0 var(--sp2);
     background: transparent;
+    color: inherit;
   }
 
   @media ($nav) {
@@ -51,7 +61,7 @@
   height: 1px;
   word-wrap: normal;
 
-  @media ($sm) {
+  @media ($breakpoint-enable-label-text) {
     position: static;
     overflow: visible;
     clip: auto;
