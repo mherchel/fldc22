@@ -1,12 +1,15 @@
 favicon:
-  use_default: true
+  use_default: 0
+  path: themes/pubsub/favicon.svg
+  mimetype: image/svg+xml
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: true
-  node_user_picture: false
+  favicon: 1
+  node_user_picture: 0
 logo:
-  use_default: false
+  use_default: 0
+  path: ''
 third_party_settings:
   shortcut:
     module_link: true
