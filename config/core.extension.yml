@@ -36,6 +36,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quicklink: 0
   r4032login: 0
   registration_role: 0
   search: 0
