@@ -23,4 +23,5 @@
 
 .view-sponsors-sidebar__title {
   @include left-border-title;
+  margin: 48px 0 var(--grid-gap);
 }

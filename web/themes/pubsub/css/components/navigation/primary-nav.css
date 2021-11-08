@@ -2,6 +2,7 @@
 /* Grid related breakpoints */
 .primary-nav__menu-item {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .primary-nav__menu-link {

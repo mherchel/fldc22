@@ -33,11 +33,7 @@
 }
 
 .views-category-grid__label {
-  grid-column: 1 / -1;
-
-  @media ($md) {
-    grid-column: 2 / -2;
-  }
+  grid-column: 2 / -2;
 
   @media ($label-format-switch) {
     grid-column: 2 / 4;
@@ -51,7 +47,7 @@
 
 
 .views-sponsor-grid {
-  grid-column: 1 / -1;
+  grid-column: 2 / -2;
   margin: calc(var(--grid-gap) / 2) 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -59,10 +55,6 @@
 
   @media ($grid-1-2) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media ($md) {
-    grid-column: 2 / -2;
   }
 
   @media ($label-format-switch) {

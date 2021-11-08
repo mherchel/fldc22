@@ -29,6 +29,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
+  margin: 48px 0 var(--grid-gap);
 }
 @media (min-width: 1300px) {
   .view-sponsors-sidebar__title {

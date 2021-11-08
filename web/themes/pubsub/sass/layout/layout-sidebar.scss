@@ -33,6 +33,9 @@
 
     @media ($grid-md) {
       grid-column: var(--sidebar-grid-divider) / -1;
+      position: sticky;
+      top: var(--sp2);
+      align-self: start;
     }
 
     > * {

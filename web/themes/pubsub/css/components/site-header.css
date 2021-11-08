@@ -13,10 +13,6 @@
   }
 }
 
-.site-header--logo-link {
-  flex-shrink: 0;
-}
-
 .site-header__action {
   display: flex;
 }
