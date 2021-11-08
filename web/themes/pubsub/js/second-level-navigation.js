@@ -151,7 +151,7 @@
     });
   }
 
-  // Drupal.pubsub.closeAllSubNav = closeAllSubNav;
+  Drupal.pubsub.closeAllSubNav = closeAllSubNav;
 
   /**
    * Checks if any sub navigation items are currently active.

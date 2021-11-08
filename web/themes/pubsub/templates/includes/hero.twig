@@ -21,7 +21,8 @@
     <p class="site-hero__desc text-content">1 day of <a href="/trainings">trainings</a>, followed by 2 days of fun and Drupal learning with peers from around the world.</p>
   </div>
   <div class="site-hero__media">
-    <img src="{{ pubsub_path }}/images/hero-placeholder.jpg" alt="Students sitting in a classroom">
+    <button class="site-hero__play-pause" type="button" aria-pressed="false">Pause</button>
+    <video loop autoplay muted playsinline src="{{ pubsub_path }}/videos/fldc22-promo.mp4" poster="{{ pubsub_path }}/videos/fldc22-promo.webp"></video>
     <a href="/" class="site-hero__media-cta">
       Submit a session
       {% include '@pubsub/../images/arrow-right-orange.svg' %}

@@ -49,6 +49,8 @@ site-hero:
   css:
     component:
       css/components/site-hero.css: {}
+  js:
+    js/video.js: {}
 
 site-stats:
   css:
