@@ -57,27 +57,30 @@
     margin-block: var(--sp2);
     margin-inline-start: 0;
     margin-inline-end: 0;
-    padding-inline-start: var(--sp2);
+    padding-inline-start: var(--sp4);
     letter-spacing: -0.01em;
     font-family: var(--font-serif);
     font-size: 21px;
-    line-height: var(--sp2);
+    line-height: 1.5;
+    color: var(--color--night-30);
 
     &:before {
       position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: 0;
+      inset-block-start: -10px;
+      inset-inline-start: -10px;
+      font-family: 'georgia';
       content: "“";
-      color: var(--color--sun-55);
-      font-size: 54px;
+      color: var(--color--sun-90);
+      font-size: 150px;
+      line-height: 1;
     }
 
     &:after {
       position: absolute;
       inset-block-end: 0;
-      inset-inline-start: 0;
+      inset-inline-start: 10px;
       width: var(--sp0-5);
-      height: calc(100% - 30px);
+      height: calc(100% - 70px);
       margin-inline-start: 4px;
       content: "";
       background: var(--color--sun-90);
@@ -85,12 +88,6 @@
 
     @media ($grid-md) {
       font-size: 32px;
-      line-height: var(--sp3);
-    }
-
-    @media ($lg) {
-      font-size: 40px;
-      line-height: calc(3.5 * var(--sp));
     }
   }
 
