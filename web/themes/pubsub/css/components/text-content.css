@@ -23,6 +23,21 @@
 .cke_editable a:where(:not(.button)):hover {
   color: var(--color--sun-55);
 }
+.text-content ul .text-content ol,
+.text-content ul .cke_editable ol,
+.cke_editable ul .text-content ol,
+.cke_editable ul .cke_editable ol {
+  margin-top: var(--sp2);
+  margin-bottom: var(--sp2);
+}
+.text-content li,
+.cke_editable li {
+  margin-bottom: var(--sp0-5);
+}
+.text-content li::marker,
+.cke_editable li::marker {
+  color: var(--color--sun-55);
+}
 .text-content p,
 .cke_editable p {
   margin-block-start: var(--sp);

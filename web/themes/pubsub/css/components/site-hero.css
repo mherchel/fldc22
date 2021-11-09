@@ -74,11 +74,17 @@
 }
 
 .site-hero__title {
+  margin-block: var(--sp);
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--color--night-5);
+}
+@media (min-width: 700px) {
+  .site-hero__title {
+    margin-block: var(--sp2);
+  }
 }
 @media (min-width: 800px) {
   .site-hero__title {

@@ -16,3 +16,11 @@
     margin-block-end: var(--sp3);
   }
 }
+
+.region--content-above {
+  margin-top: var(--sp3);
+
+  @media ($md) {
+    margin-top: 0;
+  }
+}

@@ -17,3 +17,12 @@
     margin-block-end: var(--sp3);
   }
 }
+
+.region--content-above {
+  margin-top: var(--sp3);
+}
+@media (min-width: 700px) {
+  .region--content-above {
+    margin-top: 0;
+  }
+}

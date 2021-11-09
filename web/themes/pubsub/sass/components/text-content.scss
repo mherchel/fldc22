@@ -22,6 +22,20 @@
     }
   }
 
+  & ul
+  & ol {
+    margin-top: var(--sp2);
+    margin-bottom: var(--sp2);
+  }
+
+  & li {
+    margin-bottom: var(--sp0-5);
+
+    &::marker {
+      color: var(--color--sun-55);
+    }
+  }
+
   & p {
     margin-block-start: var(--sp);
     margin-block-end: var(--sp);

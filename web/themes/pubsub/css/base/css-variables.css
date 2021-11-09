@@ -50,12 +50,12 @@
   --color--gold: gold;
   --color--green: green;
   --color--blue: blue;
-  --grid-gap: 24px;
+  --grid-gap: var(--sp1-5);
   --form-element-border: var(--color--night-50);
   --focus-ring-color: currentColor;
 }
 @media (min-width: 1300px) {
   :root {
-    --grid-gap: 32px;
+    --grid-gap: var(--sp2);
   }
 }
