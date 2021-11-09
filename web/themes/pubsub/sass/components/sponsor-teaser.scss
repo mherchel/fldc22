@@ -16,7 +16,7 @@
     background-color: var(--color--sky-86);
     border-radius: 0 16px 0 0;
 
-    a {
+    .sponsor-teaser__link {
       grid-template-columns: 1fr;
       grid-column-gap: var(--grid-gap);
 
@@ -52,37 +52,61 @@
     }
   }
 
-  a {
-    display: grid;
-    align-self: stretch;
-    flex-basis: 100%;
-    text-decoration: none;
-    color: var(--color--night-30);
-
-    &:hover {
-      color: var(--color--night-30);
-    }
-  }
-
   .field--name-body {
     display: none;
   }
 }
 
+.sponsor-teaser__link {
+  display: grid;
+  align-self: stretch;
+  flex-basis: 100%;
+  text-decoration: none;
+  color: var(--color--night-30);
+
+  &:hover {
+    color: var(--color--night-30);
+  }
+}
+
 .sponsor-teaser__first {
+  position: relative; // Anchor hover effect psuedo-element.
   display: grid;
   align-items: center;
   background-color: var(--color--white);
   border-radius: 0 16px 0 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--color--sun-55);
+    transform: scalex(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+
+    .sponsor-teaser__link:hover & {
+      transform: scalex(1);
+    }
+  }
 }
 
 .sponsor-teaser__img-wrapper {
+  position: relative;
   display: grid;
 	align-items: center; // place-content not working properly in mobile Safari.
   justify-items: center;
   padding: var(--grid-gap);
   aspect-ratio: 256 / 200;
   filter: grayscale(100%);
+  transition: filter 0.2s;
+
+  .sponsor-teaser__link:hover & {
+    filter: grayscale(0%);
+  }
 
   @supports not (aspect-ratio: 1 / 1) {
     min-height: 200px;

@@ -2,7 +2,7 @@
 {{ attach_library('pubsub/sponsor-teaser') }}
 
 <article{{ attributes.addClass('sponsor-teaser') }}>
-  <a target="_blank" href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
+  <a class="sponsor-teaser__link" target="_blank" href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
     <div class="sponsor-teaser__first">
       <div class="sponsor-teaser__img-wrapper">
         {{ content.field_sponsor_logo }}

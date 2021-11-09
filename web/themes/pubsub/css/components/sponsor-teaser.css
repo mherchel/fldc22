@@ -13,17 +13,17 @@
   background-color: var(--color--sky-86);
   border-radius: 0 16px 0 0;
 }
-.views-category-grid:first-child .sponsor-teaser a {
+.views-category-grid:first-child .sponsor-teaser .sponsor-teaser__link {
   grid-template-columns: 1fr;
   grid-column-gap: var(--grid-gap);
 }
 @media (min-width: 600px) {
-  .views-category-grid:first-child .sponsor-teaser a {
+  .views-category-grid:first-child .sponsor-teaser .sponsor-teaser__link {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 800px) {
-  .views-category-grid:first-child .sponsor-teaser a {
+  .views-category-grid:first-child .sponsor-teaser .sponsor-teaser__link {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -48,34 +48,56 @@
     grid-column: 2/-1;
   }
 }
-.sponsor-teaser a {
+.sponsor-teaser .field--name-body {
+  display: none;
+}
+
+.sponsor-teaser__link {
   display: grid;
   align-self: stretch;
   flex-basis: 100%;
   text-decoration: none;
   color: var(--color--night-30);
 }
-.sponsor-teaser a:hover {
+.sponsor-teaser__link:hover {
   color: var(--color--night-30);
-}
-.sponsor-teaser .field--name-body {
-  display: none;
 }
 
 .sponsor-teaser__first {
+  position: relative;
   display: grid;
   align-items: center;
   background-color: var(--color--white);
   border-radius: 0 16px 0 0;
 }
+.sponsor-teaser__first:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: var(--color--sun-55);
+  transform: scalex(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.sponsor-teaser__link:hover .sponsor-teaser__first:after {
+  transform: scalex(1);
+}
 
 .sponsor-teaser__img-wrapper {
+  position: relative;
   display: grid;
   align-items: center;
   justify-items: center;
   padding: var(--grid-gap);
   aspect-ratio: 256/200;
   filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+.sponsor-teaser__link:hover .sponsor-teaser__img-wrapper {
+  filter: grayscale(0%);
 }
 @supports not (aspect-ratio: 1/1) {
   .sponsor-teaser__img-wrapper {
