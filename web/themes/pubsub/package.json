@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.4.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-postcss": "^9.0.1",
