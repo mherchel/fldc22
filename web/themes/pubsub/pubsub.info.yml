@@ -31,6 +31,9 @@ libraries-override:
       theme:
         css/system.admin.css: false
   core/drupal.checkbox: false
+  core/drupal.element.matches: false
+  core/drupal.element.closest: false
+  core/css.escape: false
   core/drupal.dropbutton:
     css:
       component:

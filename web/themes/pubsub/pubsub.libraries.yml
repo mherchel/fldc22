@@ -30,8 +30,6 @@ global-styling:
       css/components/form-text.css: {}
       css/components/form-textarea.css: {}
       css/components/form-select.css: {}
-      css/components/node.css: {}
-      css/components/node-teaser.css: {}
       css/components/page-title.css: {}
       css/components/skip-link.css: {}
       css/components/site-footer.css: {}
