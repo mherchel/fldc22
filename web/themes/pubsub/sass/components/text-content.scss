@@ -5,8 +5,7 @@
 
 @import "../global/variables";
 
-.text-content,
-.cke_editable {
+.text-content {
   color: var(--color--gray-10);
   line-height: var(--sp1-5);
 
@@ -22,7 +21,7 @@
     }
   }
 
-  & ul
+  & ul,
   & ol {
     margin-top: var(--sp2);
     margin-bottom: var(--sp2);
