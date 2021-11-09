@@ -1,7 +1,16 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+@keyframes show-session-details {
+  from {
+    opacity: 0;
+  }
+}
 .session-teaser {
   padding: 40px 0;
+}
+
+.session-teaser__details[open] > *:not(.session-teaser__summary) {
+  animation: show-session-details 0.2s linear;
 }
 
 .session-teaser__summary {

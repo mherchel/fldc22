@@ -1,7 +1,15 @@
 @import "../global/variables";
 
+@keyframes show-session-details {
+  from { opacity:0; }
+}
+
 .session-teaser {
   padding: 40px 0;
+}
+
+.session-teaser__details[open] > *:not(.session-teaser__summary) {
+  animation: show-session-details 0.2s linear;
 }
 
 .session-teaser__summary {
@@ -33,7 +41,7 @@
     border-right: solid 4px currentColor;
     transition: transform 0.2s;
 
-    .session-teaser__details#{["open"]} & {
+    .session-teaser__details[open] & {
       transform: translatey(-6px) rotate(135deg);
     }
   }
