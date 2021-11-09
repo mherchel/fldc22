@@ -40,6 +40,7 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+    <meta name="theme-color" content="#2bacd4">
     {% include '@pubsub/includes/preload.twig' with { pubsub_path: pubsub_path } only %}
     {{ noscript_styles }}
   </head>
