@@ -43,13 +43,13 @@
            <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
             <div class="messages__icon">
               {% if type == 'error' %}
-                {% include "@pubsub/../images/error.svg" %}
+                {% include "@pubsub/includes/svg/error.svg" %}
               {% elseif type == 'warning' %}
-                {% include "@pubsub/../images/warning.svg" %}
+                {% include "@pubsub/includes/svg/warning.svg" %}
               {% elseif type == 'status' %}
-                {% include "@pubsub/../images/status.svg" %}
+                {% include "@pubsub/includes/svg/status.svg" %}
               {% elseif type == 'info' %}
-                {% include "@pubsub/../images/info.svg" %}
+                {% include "@pubsub/includes/svg/info.svg" %}
               {% endif %}
             </div>
           </div>
