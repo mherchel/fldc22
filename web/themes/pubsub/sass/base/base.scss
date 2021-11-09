@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--color--ocean-30);
+  color: var(--color--white);
+}
+
 html {
   font-family: var(--font-sans);
   font-size: 100%;

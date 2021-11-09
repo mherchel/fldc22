@@ -5,7 +5,8 @@ $schedule_layout_shift: $lg;
 .view-session-schedule {
   .view-content {
     display: grid;
-    grid-gap: var(--grid-gap);
+    grid-column-gap: var(--grid-gap);
+    grid-row-gap: 40px;
     grid-template-columns: 1fr;
 
     @media ($schedule_layout_shift) {
@@ -18,6 +19,27 @@ $schedule_layout_shift: $lg;
   @media ($schedule_layout_shift) {
     grid-column: 2 / -1
   }
+
+  &:not(.view-session-schedule__title + &) {
+    margin-top: var(--grid-gap);
+  }
+}
+
+.view-session-schedule__divider {
+  display: none;
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border-top: solid 2px var(--color--sky-86);
+
+  @media ($schedule_layout_shift) {
+    display: block;
+  }
+
+  &:first-child {
+    display: none;
+  }
 }
 
 .view-session-schedule__title {
@@ -25,7 +47,7 @@ $schedule_layout_shift: $lg;
   z-index: 1; // Appear above content when it scrolls above.
   top: 0;
   align-self: start;
-  margin: 40px 0 0;
+  margin: 0;
   padding: 24px;
   background-color: var(--color--sky-94);
   color: var(--color--ocean-15);

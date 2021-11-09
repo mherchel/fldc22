@@ -1,6 +1,7 @@
 {{ attach_library('pubsub/view-session-schedule') }}
 
 {% if title %}
+  <hr class="view-session-schedule__divider">
   <h2 class="view-session-schedule__title">{{ title }}</h2>
 {% endif %}
 {% for row in rows %}
