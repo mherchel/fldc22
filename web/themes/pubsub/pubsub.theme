@@ -63,43 +63,11 @@ function pubsub_preprocess_maintenance_page(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-function pubsub_preprocess_node(&$variables) {
-  // Remove the "Add new comment" link on teasers or when the comment form is
-  // displayed on the page.
-  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
-    unset($variables['content']['links']['comment']['#links']['comment-add']);
-  }
-
-  // Apply custom date formatter to "date" field.
-  if (!empty($variables['date']) && !empty($variables['display_submitted']) && $variables['display_submitted'] === TRUE) {
-    $variables['date'] = \Drupal::service('date.formatter')->format($variables['node']->getCreatedTime(), 'pubsub_medium');
-  }
-
-  // Pass layout variable to template if content type is article in full view
-  // mode. This is then used in the template to create a BEM style CSS class to
-  // control the layout.
-  if ($variables['node']->bundle() === 'article' && $variables['view_mode'] === 'full') {
-    $variables['layout'] = 'content-narrow';
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter() for menu.
  */
 function pubsub_theme_suggestions_menu_alter(&$suggestions, array $variables) {
   if (isset($variables['attributes']['region'])) {
     $suggestions[] = 'menu__' . $variables['attributes']['region'];
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
- */
-function pubsub_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if ($variables['element']['#form_id'] === 'search_block_form') {
-    $suggestions[] = 'form__search_block_form';
   }
 }
 
@@ -262,65 +230,6 @@ function pubsub_preprocess_field(&$variables) {
   if (in_array($variables['field_type'], $rich_field_types, TRUE)) {
     $variables['attributes']['class'][] = 'text-content';
   }
-
-  if ($variables['field_type'] == 'image' && $variables['element']['#view_mode'] == 'full' && !$variables["element"]["#is_multiple"]) {
-    $variables['attributes']['class'][] = 'wide-image';
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function pubsub_preprocess_field_multiple_value_form(&$variables) {
-  // Make disabled available for the template.
-  $variables['disabled'] = !empty($variables['element']['#disabled']);
-
-  if (!empty($variables['multiple'])) {
-    // Add an additional CSS class for the field label table cell.
-    // This repeats the logic of template_preprocess_field_multiple_value_form()
-    // without using '#prefix' and '#suffix' for the wrapper element.
-    //
-    // If the field is multiple, we don't have to check the existence of the
-    // table header cell.
-    //
-    // @see template_preprocess_field_multiple_value_form().
-    $header_attributes = ['class' => ['form-item__label', 'form-item__label--multiple-value-form']];
-    if (!empty($variables['element']['#required'])) {
-      $header_attributes['class'][] = 'js-form-required';
-      $header_attributes['class'][] = 'form-required';
-    }
-    // Using array_key_first() for addressing the first header cell would be
-    // more elegant here, but we can rely on the related theme.inc preprocess.
-    // @todo change this after https://www.drupal.org/node/3099026 has landed.
-    $variables['table']['#header'][0]['data'] = [
-      '#type' => 'html_tag',
-      '#tag' => 'h4',
-      '#value' => $variables['element']['#title'],
-      '#attributes' => $header_attributes,
-    ];
-
-    if ($variables['disabled']) {
-      $variables['table']['#attributes']['class'][] = 'tabledrag-disabled';
-      $variables['table']['#attributes']['class'][] = 'js-tabledrag-disabled';
-
-      // We will add the 'is-disabled' CSS class to the disabled table header
-      // cells.
-      $header_attributes['class'][] = 'is-disabled';
-      foreach ($variables['table']['#header'] as &$cell) {
-        if (is_array($cell) && isset($cell['data'])) {
-          $cell = $cell + ['class' => []];
-          $cell['class'][] = 'is-disabled';
-        }
-        else {
-          // We have to modify the structure of this header cell.
-          $cell = [
-            'data' => $cell,
-            'class' => ['is-disabled'],
-          ];
-        }
-      }
-    }
-  }
 }
 
 /**
@@ -388,42 +297,6 @@ function pubsub_theme_suggestions_user_alter(&$suggestions, $variables) {
 function pubsub_preprocess_field__node__created(&$variables) {
   foreach (Element::children($variables['items']) as $item) {
     unset($variables['items'][$item]['content']['#prefix']);
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function pubsub_preprocess_field__node__field_image__article(&$variables) {
-  if ($variables['element']['#view_mode'] == 'full') {
-    $image_style = \Drupal::entityTypeManager()->getStorage('image_style')->load('wide');
-    if ($image_style) {
-      foreach (Element::children($variables['items']) as $key) {
-        $variables['items'][$key]['content']['#image_style'] = 'wide';
-      }
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK() for setting classes.
- */
-function pubsub_preprocess_filter_caption(&$variables) {
-  $variables['classes'] = isset($variables['classes']) && !empty($variables['classes']) ? $variables['classes'] . ' caption' : 'caption';
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function pubsub_form_comment_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $comment = $form_state->getFormObject()
-    ->getEntity();
-  /** @var \Drupal\comment\Entity\Comment $comment */
-  if ($comment->hasParentComment()) {
-    $form['actions']['submit']['#value'] = t('Reply to comment');
-  }
-  else {
-    $form['actions']['submit']['#value'] = t('Post comment');
   }
 }
 
