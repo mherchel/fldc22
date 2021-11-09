@@ -24,7 +24,7 @@ body {
   background-image: url("../../images/bg-florida.svg");
   background-repeat: no-repeat;
   background-position: top -5vw left 25%;
-  background-size: min(100%, 1130px);
+  background-size: min(100%, 70.625rem);
 }
 body.is-fixed {
   position: fixed;
@@ -82,12 +82,12 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.02em;
 }
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
   h1 {
     font-size: 3.5rem;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 81.25rem) {
   h1 {
     font-size: 5rem;
   }
@@ -98,7 +98,7 @@ h2 {
   font-size: 1.5rem;
   line-height: var(--sp2);
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   h2 {
     font-size: 2.25rem;
     line-height: var(--sp3);
@@ -109,7 +109,7 @@ h3 {
   font-size: 1.25rem;
   line-height: var(--sp1-5);
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   h3 {
     font-size: 1.5rem;
     line-height: var(--sp2);
@@ -142,7 +142,7 @@ h6 {
   font-family: var(--font-sans);
   font-weight: bold;
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   h1,
 h2,
 h3,

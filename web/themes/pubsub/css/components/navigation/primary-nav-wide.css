@@ -1,15 +1,15 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-@media (min-width: 1100px) {
+@media (min-width: 68.75rem) {
   .primary-nav__menu--level-1 {
     position: relative;
     z-index: 105;
     display: flex;
     list-style: none;
-    padding: 10px;
+    padding: 0.625rem;
   }
   .primary-nav__menu--level-1 > * {
-    margin: 20px;
+    margin: 1.25rem;
   }
 
   .primary-nav__menu--level-1 {
@@ -29,21 +29,21 @@
     display: block;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 20px 0;
+    padding: 1.25rem 0;
   }
 
   .primary-nav__menu-link--button.primary-nav__menu-link--has-children {
     position: relative;
-    padding-inline-end: 9px;
+    padding-inline-end: 0.5625rem;
     /* Chevron icon for desktop navigation. */
   }
   .primary-nav__menu-link--button.primary-nav__menu-link--has-children:after {
     content: "";
     position: absolute;
     inset-block-start: 50%;
-    inset-inline-start: calc(100% - 3px);
-    width: 8px;
-    height: 8px;
+    inset-inline-start: calc(100% - 0.1875rem);
+    width: 0.5rem;
+    height: 0.5rem;
     margin-block-start: -2px;
     transform: translateY(-50%) rotate(45deg);
     border-top: 0;
@@ -56,21 +56,21 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    width: 200px;
+    width: 12.5rem;
     background: var(--color--white);
     border-top: solid 10px var(--color--sun-45);
     list-style: none;
     padding: var(--sp2) var(--sp) var(--sp);
     margin: 0;
     opacity: 0.5;
-    transform: translate(-50%, -10px);
+    transform: translate(-50%, -0.625rem);
     box-shadow: 0 5px 5px 2px var(--color--night-60);
-    border-radius: 9px 9px 0 0;
+    border-radius: 0.5625rem 0.5625rem 0 0;
   }
   .primary-nav__menu--level-2:before {
     content: "";
     position: absolute;
-    top: -20px;
+    top: -1.25rem;
     left: 50%;
     transform: translatex(-50%);
     width: 0;

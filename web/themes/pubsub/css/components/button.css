@@ -10,8 +10,8 @@
   --button-color-bg: var(--color--white);
   --button-color-primary: var(--color--ocean-15);
   --button-color-primary-dark: var(--color--ocean-10);
-  --button-border-radius: 3px;
-  --button-line-height: 18px;
+  --button-border-radius: 0.1875rem;
+  --button-line-height: 1.125rem;
   display: inline-flex;
   align-items: center;
   height: var(--sp3);
@@ -70,8 +70,8 @@
   --button-color-bg: var(--color--white);
   --button-color-primary: var(--color--ocean-15);
   --button-color-primary-dark: var(--color--ocean-10);
-  --button-border-radius: 3px;
-  --button-line-height: 18px;
+  --button-border-radius: 0.1875rem;
+  --button-line-height: 1.125rem;
   display: inline-flex;
   align-items: center;
   height: var(--sp3);

@@ -7,7 +7,7 @@
 .fieldset {
   --fieldset-border-color: var(--color--sky-94);
   --fieldset-summary-text-color: var(--color--night-20);
-  --fieldset-border-radius: 5px;
+  --fieldset-border-radius: 0.3125rem;
   min-width: 0;
   margin-block: var(--sp1);
   margin-inline-start: 0;

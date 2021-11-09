@@ -30,7 +30,7 @@
   box-shadow: none;
 }
 #drupal-off-canvas .pubsub-details__wrapper {
-  padding: 20px;
+  padding: 1.25rem;
 }
 #drupal-off-canvas .pubsub-details__summary {
   display: block;

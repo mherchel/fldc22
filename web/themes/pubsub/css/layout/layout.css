@@ -6,24 +6,24 @@
 /* Grid related breakpoints */
 .container {
   width: 94%;
-  max-width: 1400px;
+  max-width: 87.5rem;
   margin: 0 auto;
 }
 
 .grid {
-  --grid-gap: 24px;
+  --grid-gap: 1.5rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: var(--grid-gap);
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .grid {
     grid-template-columns: repeat(12, 1fr);
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 81.25rem) {
   .grid {
-    --grid-gap: 32px;
+    --grid-gap: 2rem;
     grid-template-columns: repeat(14, 1fr);
   }
 }

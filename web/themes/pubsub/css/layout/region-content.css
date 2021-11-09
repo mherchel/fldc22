@@ -7,12 +7,12 @@
 .region--content {
   margin-block-end: var(--sp);
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   .region--content {
     margin-block-end: var(--sp2);
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
   .region--content {
     margin-block-end: var(--sp3);
   }

@@ -5,7 +5,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 :root {
-  --messages-icon-size: 32px;
+  --messages-icon-size: 2rem;
 }
 
 .messages-list {
@@ -67,19 +67,19 @@
   overflow: auto;
   /* Ensure large code blocks can be scrolled to. */
   flex: 1;
-  padding-block-start: 3px;
+  padding-block-start: 0.1875rem;
 }
 
 .messages__button {
   flex-shrink: 0;
   margin-inline-start: var(--sp1);
-  padding-block-start: 3px;
+  padding-block-start: 0.1875rem;
 }
 
 .messages__close {
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   padding-block: 0;
   padding-inline-start: 0;
   padding-inline-end: 0;
@@ -95,7 +95,7 @@
   top: 50%;
   left: 50%;
   display: block;
-  width: 33px;
+  width: 2.0625rem;
   height: 0;
   content: "";
   border-top: solid 2px var(--color--night-60);
@@ -144,5 +144,5 @@
 
 .js-form-managed-file .messages {
   margin-block-end: var(--sp1);
-  border-inline-start: solid 6px var(--color--red);
+  border-inline-start: solid 0.375rem var(--color--red);
 }

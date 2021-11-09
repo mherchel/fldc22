@@ -19,7 +19,7 @@ figcaption {
   font-style: italic;
   line-height: var(--sp);
 }
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   figcaption {
     padding-block: var(--sp);
     padding-inline-start: var(--sp);
@@ -35,7 +35,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .align-right {
     float: inline-end;
     max-width: 50%;
@@ -55,7 +55,7 @@ figcaption {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .align-left {
     float: inline-start;
     max-width: 50%;

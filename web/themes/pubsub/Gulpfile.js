@@ -12,7 +12,23 @@ gulp.task('sass', function () {
     .pipe(postcss([
       autoprefixer(),
       pxtorem({
-        replace: true
+        replace: true,
+        propList: [
+          '*',
+          '!background-position',
+          '!border',
+          '!border-width',
+          '!box-shadow',
+          '!border-top*',
+          '!border-right*',
+          '!border-bottom*',
+          '!border-left*',
+          '!border-start*',
+          '!border-end*',
+          '!outline*',
+        ],
+        mediaQuery: true,
+        minPixelValue: 3,
       })
     ]))
     .pipe(gulp.dest('./css'));

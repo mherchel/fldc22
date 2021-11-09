@@ -15,9 +15,9 @@
   --dropbutton--height: var(--sp1-5);
   --dropbutton--bg-color: var(--color--night-90);
   --dropbutton--border-color: var(--color--sun-55);
-  --dropbutton-border-radius: 3px;
+  --dropbutton-border-radius: 0.1875rem;
   position: relative;
-  width: 200px;
+  width: 12.5rem;
   height: var(--dropbutton--height);
   padding-inline-end: var(--dropbutton--height);
   border-radius: var(--dropbutton-border-radius);
@@ -86,7 +86,7 @@
   align-items: center;
   margin-bottom: -2px;
   /* Account for borders. */
-  padding: 0 9px;
+  padding: 0 0.5625rem;
   text-decoration: none;
   color: var(--color--gray-10);
 }

@@ -35,7 +35,7 @@
   color: var(--pager--text-color);
   background-color: var(--pager--background);
 }
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .pager__item {
     width: var(--sp3);
     height: var(--sp3);

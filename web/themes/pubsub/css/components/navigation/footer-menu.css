@@ -13,7 +13,7 @@
   font-weight: 700;
   line-height: 1.5rem;
 }
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .footer-menu--level-1 {
     display: flex;
     justify-content: space-between;
@@ -24,23 +24,23 @@
 .footer-menu__heading {
   margin-top: 0;
   border-left: solid 4px var(--color--sun-55);
-  padding-left: 20px;
+  padding-left: 1.25rem;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin: 48px 0 32px;
+  margin: 3rem 0 2rem;
   color: inherit;
 }
-@media (min-width: 1300px) {
+@media (min-width: 81.25rem) {
   .footer-menu__heading {
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .footer-menu__heading {
     margin-top: 0;
   }
@@ -51,5 +51,5 @@
 }
 
 .footer-menu__item--level-2 {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }

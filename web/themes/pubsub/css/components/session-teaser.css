@@ -6,7 +6,7 @@
   }
 }
 .session-teaser {
-  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 
 .session-teaser__details[open] > *:not(.session-teaser__summary) {
@@ -30,22 +30,22 @@
 .session-teaser__summary:after {
   content: "";
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 0.625rem;
+  top: 0.625rem;
   transform: rotate(45deg);
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-top: solid 4px currentColor;
   border-right: solid 4px currentColor;
   transition: transform 0.2s;
 }
 .session-teaser__details[open] .session-teaser__summary:after {
-  transform: translatey(-6px) rotate(135deg);
+  transform: translatey(-0.375rem) rotate(135deg);
 }
 
 .session-teaser__title {
-  margin: 0 0 24px;
-  padding-right: 40px;
+  margin: 0 0 1.5rem;
+  padding-right: 2.5rem;
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 2rem;
@@ -60,8 +60,8 @@
   margin-right: 1em;
 }
 .session__field svg {
-  max-width: 20px;
-  max-height: 20px;
+  max-width: 1.25rem;
+  max-height: 1.25rem;
   vertical-align: text-bottom;
 }
 .session__field path {
@@ -70,13 +70,13 @@
 
 .session__field--field-session-category svg {
   margin-bottom: 2px;
-  max-width: 18px;
-  max-height: 18px;
+  max-width: 1.125rem;
+  max-height: 1.125rem;
 }
 .session__field--field-session-category path {
   fill: var(--color--night-60);
 }
 
 .session-teaser__desc {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }

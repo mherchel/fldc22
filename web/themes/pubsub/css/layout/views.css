@@ -10,7 +10,7 @@
 .view > *:last-child {
   margin-block-end: 0;
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   .view > * {
     margin-block-end: var(--sp3);
   }

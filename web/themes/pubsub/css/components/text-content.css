@@ -13,7 +13,7 @@
 .text-content a:where(:not(.button)),
 .cke_editable a:where(:not(.button)) {
   color: var(--color--sun-45);
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 0.25rem;
   -webkit-text-decoration-color: var(--color--sun-80);
           text-decoration-color: var(--color--sun-80);
   overflow-wrap: break-word;
@@ -51,7 +51,7 @@
 .cke_editable p:last-child {
   margin-block-end: 0;
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   .text-content p,
 .cke_editable p {
     margin-block-start: var(--sp2);
@@ -86,8 +86,8 @@
 .text-content blockquote:before,
 .cke_editable blockquote:before {
   position: absolute;
-  inset-block-start: -10px;
-  inset-inline-start: -10px;
+  inset-block-start: -0.625rem;
+  inset-inline-start: -0.625rem;
   font-family: "georgia";
   content: "“";
   color: var(--color--sun-90);
@@ -98,20 +98,20 @@
 .cke_editable blockquote:after {
   position: absolute;
   inset-block-end: 0;
-  inset-inline-start: 10px;
+  inset-inline-start: 0.625rem;
   width: var(--sp0-5);
-  height: calc(100% - 70px);
-  margin-inline-start: 4px;
+  height: calc(100% - 4.375rem);
+  margin-inline-start: 0.25rem;
   content: "";
   background: var(--color--sun-90);
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .text-content blockquote,
 .cke_editable blockquote {
     font-size: 2rem;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .text-content,
 .cke_editable {
     font-size: 1.125rem;
