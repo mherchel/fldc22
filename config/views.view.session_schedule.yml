@@ -216,67 +216,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_date_time_value:
-          id: field_date_time_value
-          table: taxonomy_term__field_date_time
-          field: field_date_time_value
-          relationship: field_time_slot
-          group_type: group
-          admin_label: ''
-          operator: between
-          value:
-            min: '2022-02-18 00:00:00'
-            max: '2022-02-18 23:59:59'
-            value: ''
-            type: date
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_date_time_value_op
-            label: 'Date Time (field_date_time)'
-            description: null
-            use_operator: false
-            operator: field_date_time_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_date_time_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: null
-            min_placeholder: null
-            max_placeholder: null
-          is_grouped: true
-          group_info:
-            label: Day
-            description: ''
-            identifier: field_date_time_value
-            optional: true
-            widget: radios
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Friday
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2022-02-18 00:00:00'
-                  max: '2022-02-18 23:59:59'
-              2:
-                title: Saturday
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2022-02-19 00:00:00'
-                  max: '2022-02-19 23:59:59'
-          plugin_id: datetime
       sorts:
         field_date_time_value:
           id: field_date_time_value
@@ -319,13 +258,12 @@ display:
       arguments: {  }
       display_extenders: {  }
       title: 'Session Schedule'
-      use_ajax: true
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -358,7 +296,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:

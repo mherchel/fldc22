@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Include for theme override for session fields
+ *
+ * Additional variables:
+ * - icon: name of icon passed in (eg: '@pubsub/includes/svg/session-level.svg')
+ */
+#}
+
+<span class="session__field session__field--{{ field_name|clean_class }}">
+    <span class="{{ icon ? 'visually-hidden' }} session__icon-label session__icon-label--{{ field_name|clean_class }}">
+      {{ label }}
+    </span>
+    {% if icon %}
+      {% include icon %}
+    {% endif %}
+
+  {% if multiple %}
+    <span class="session__field-items">
+  {% endif %}
+
+  {% for item in items %}
+    <span class="session__field-item session__field-item--{{ field_name|clean_class }}">
+      {{ item.content }}
+    </span>
+  {% endfor %}
+
+  {% if multiple %}
+    </span>
+  {% endif %}
+</span>

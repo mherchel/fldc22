@@ -1,0 +1,84 @@
+@import "../global/variables";
+
+.session-teaser {
+  padding: 40px 0;
+}
+
+.session-teaser__summary {
+  position: relative;
+  cursor: pointer;
+
+  &:focus {
+    outline-offset: var(--sp0-5);
+    outline-color: currentColor;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::marker {
+    content: "";
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+    border-top: solid 4px currentColor;
+    border-right: solid 4px currentColor;
+    transition: transform 0.2s;
+
+    .session-teaser__details#{["open"]} & {
+      transform: translatey(-6px) rotate(135deg);
+    }
+  }
+}
+
+.session-teaser__title {
+  margin: 0 0 24px;
+  padding-right: 40px; // Room for the summary chevron.
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color--ocean-10);
+}
+
+.session__field {
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  svg {
+    max-width: 20px;
+    max-height: 20px;
+    vertical-align: text-bottom;
+  }
+
+  path {
+    fill: var(--color--night-50);
+  }
+}
+
+.session__field--field-session-category {
+  svg {
+    margin-bottom: 2px;
+    max-width: 18px;
+    max-height: 18px;
+  }
+
+  path {
+    fill: var(--color--night-60);
+  }
+}
+
+.session-teaser__desc {
+  margin-top: 40px;
+}

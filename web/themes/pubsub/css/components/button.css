@@ -33,6 +33,7 @@
   -webkit-appearance: none;
           appearance: none;
   -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
 }
 .button:hover, .button:focus {
   text-decoration: none;
@@ -92,6 +93,7 @@
   -webkit-appearance: none;
           appearance: none;
   -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 }

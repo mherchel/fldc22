@@ -57,6 +57,7 @@ button {
   background: 0;
   appearance: none;
   cursor: pointer;
+  touch-action: manipulation;
 
   &:focus {
     outline: solid 2px var(--focus-ring-color);

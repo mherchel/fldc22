@@ -1,0 +1,73 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.session-teaser {
+  padding: 40px 0;
+}
+
+.session-teaser__summary {
+  position: relative;
+  cursor: pointer;
+}
+.session-teaser__summary:focus {
+  outline-offset: var(--sp0-5);
+  outline-color: currentColor;
+}
+.session-teaser__summary::-webkit-details-marker {
+  display: none;
+}
+.session-teaser__summary::marker {
+  content: "";
+}
+.session-teaser__summary:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: rotate(45deg);
+  width: 16px;
+  height: 16px;
+  border-top: solid 4px currentColor;
+  border-right: solid 4px currentColor;
+  transition: transform 0.2s;
+}
+.session-teaser__details[open] .session-teaser__summary:after {
+  transform: translatey(-6px) rotate(135deg);
+}
+
+.session-teaser__title {
+  margin: 0 0 24px;
+  padding-right: 40px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+  letter-spacing: -0.01em;
+  color: var(--color--ocean-10);
+}
+
+.session__field {
+  align-items: center;
+}
+.session__field:not(:last-child) {
+  margin-right: 1em;
+}
+.session__field svg {
+  max-width: 20px;
+  max-height: 20px;
+  vertical-align: text-bottom;
+}
+.session__field path {
+  fill: var(--color--night-50);
+}
+
+.session__field--field-session-category svg {
+  margin-bottom: 2px;
+  max-width: 18px;
+  max-height: 18px;
+}
+.session__field--field-session-category path {
+  fill: var(--color--night-60);
+}
+
+.session-teaser__desc {
+  margin-top: 40px;
+}

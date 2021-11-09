@@ -150,10 +150,20 @@ view-sponsors-sidebar:
     layout:
       css/layout/view-sidebar-sponsors.css: {}
 
+view-session-schedule:
+  css:
+    layout:
+      css/layout/view-session-schedule.css: {}
+
 sponsor-teaser:
   css:
     component:
       css/components/sponsor-teaser.css: {}
+
+session-teaser:
+  css:
+    component:
+      css/components/session-teaser.css: {}
 
 footer-menu:
   css:

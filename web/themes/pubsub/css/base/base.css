@@ -53,6 +53,7 @@ button {
   -webkit-appearance: none;
           appearance: none;
   cursor: pointer;
+  touch-action: manipulation;
 }
 button:focus {
   outline: solid 2px var(--focus-ring-color);

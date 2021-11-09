@@ -1,0 +1,47 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.view-session-schedule .view-content {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1000px) {
+  .view-session-schedule .view-content {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .view-session-schedule__item {
+    grid-column: 2/-1;
+  }
+}
+
+.view-session-schedule__title {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  align-self: start;
+  margin: 40px 0 0;
+  padding: 24px;
+  background-color: var(--color--sky-94);
+  color: var(--color--ocean-15);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1rem;
+  box-shadow: -3vw 0 0 var(--color--sky-94), 3vw 0 0 var(--color--sky-94);
+}
+@media (min-width: 600px) {
+  .view-session-schedule__title {
+    top: var(--sp);
+    box-shadow: -3vw 0 0 var(--color--sky-94);
+  }
+}
+@media (min-width: 1000px) {
+  .view-session-schedule__title {
+    grid-column: 1;
+    padding: 16px 24px;
+    box-shadow: none;
+  }
+}

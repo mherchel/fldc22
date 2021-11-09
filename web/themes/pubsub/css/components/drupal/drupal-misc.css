@@ -46,6 +46,7 @@ input.field-add-more-submit {
   -webkit-appearance: none;
           appearance: none;
   -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
   height: var(--sp2-5);
@@ -110,6 +111,7 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   -webkit-appearance: none;
           appearance: none;
   -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
   height: var(--sp2-5);
   padding-inline: var(--sp);
   font-size: 1rem;

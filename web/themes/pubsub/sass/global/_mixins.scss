@@ -44,6 +44,7 @@
   line-height: var(--button-line-height);
   appearance: none;
   -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
 
   &:hover,
   &:focus {
