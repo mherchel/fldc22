@@ -7,6 +7,7 @@
   --schedule-tabs--bottom-border-width: 0.5rem;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -27,11 +28,23 @@
 
 .schedule-tabs__link {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: var(--sp);
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   color: var(--schedule-tabs--text);
   text-decoration: none;
+}
+@media (min-width: 21.875rem) {
+  .schedule-tabs__link {
+    padding: 0.75rem 1.25rem;
+  }
+}
+@media (min-width: 56.25rem) {
+  .schedule-tabs__link {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
 }
 .schedule-tabs__link:hover {
   color: var(--schedule-tabs--text);
@@ -43,16 +56,40 @@
 }
 
 .schedule-tabs__link-title {
-  font-size: 2.25rem;
+  font-size: 1.125rem;
   font-weight: 800;
   line-height: 2.5rem;
   letter-spacing: -0.01em;
 }
+@media (min-width: 31.25rem) {
+  .schedule-tabs__link-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 56.25rem) {
+  .schedule-tabs__link-title {
+    font-size: 2.25rem;
+  }
+}
 
 .schedule-tabs__link-date {
-  border-left: solid 1px rgba(255, 255, 255, 0.4);
-  margin-left: 1rem;
-  padding-left: 1rem;
   font-size: 0.875rem;
-  line-height: 1rem;
+}
+@media (min-width: 56.25rem) {
+  .schedule-tabs__link-date {
+    border-left: solid 1px rgba(255, 255, 255, 0.4);
+    margin-top: 0;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    line-height: 1rem;
+  }
+}
+
+.schedule-tabs__link-date-date {
+  display: none;
+}
+@media (min-width: 31.25rem) {
+  .schedule-tabs__link-date-date {
+    display: block;
+  }
 }

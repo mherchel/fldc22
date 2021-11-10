@@ -1,5 +1,7 @@
 @import "../../global/variables";
 
+$schedule_layout_switch: 'min-width: 900px';
+
 .schedule-tabs {
   --schedule-tabs--background: var(--color--ocean-15);
   --schedule-tabs--highlight: var(--color--sun-45);
@@ -8,6 +10,7 @@
 
   position: relative; // Anchor :before pseudo-element.
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -29,11 +32,21 @@
 
 .schedule-tabs__link {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: var(--sp);
-  padding: 24px 32px;
+  padding: 16px 24px;
   color: var(--schedule-tabs--text);
   text-decoration: none;
+
+  @media (min-width: 350px) {
+    padding: 12px 20px;
+  }
+
+  @media ($schedule_layout_switch) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 32px;
+  }
 
   &:hover {
     color: var(--schedule-tabs--text);
@@ -46,17 +59,36 @@
 }
 
 .schedule-tabs__link-title {
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 40px;
   letter-spacing: -0.01em;
 
+  @media ($sm) {
+    font-size: 24px;
+  }
+
+  @media ($schedule_layout_switch) {
+    font-size: 36px;
+  }
 }
 
 .schedule-tabs__link-date {
-  border-left: solid 1px rgba(white, 0.4);
-  margin-left: 16px;
-  padding-left: 16px;
   font-size: 14px;
-  line-height: 16px;
+
+  @media ($schedule_layout_switch) {
+    border-left: solid 1px rgba(white, 0.4);
+    margin-top: 0;
+    margin-left: 16px;
+    padding-left: 16px;
+    line-height: 16px;
+  }
+}
+
+.schedule-tabs__link-date-date {
+  display: none;
+
+  @media ($sm) {
+    display: block;
+  }
 }
