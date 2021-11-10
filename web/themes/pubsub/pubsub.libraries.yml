@@ -121,11 +121,6 @@ progress:
     component:
       css/components/drupal/progress.css: {}
 
-search-results:
-  css:
-    theme:
-      css/components/search-results.css: {}
-
 sidebar:
   css:
     layout:
