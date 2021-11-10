@@ -68,7 +68,9 @@ function pubsub_preprocess_maintenance_page(&$variables) {
  */
 function pubsub_preprocess_menu__schedule_tabs(&$variables) {
   foreach ($variables['items'] as $idx => &$item) {
-    $item['date_data_attribute'] = $item['attributes']->storage()['data-date']->value();
+    if (!empty($item['attributes']->storage()) && !empty($item['attributes']->storage()['data-date'])) {
+      $item['date_data_attribute'] = $item['attributes']->storage()['data-date']->value();
+    }
   }
 }
 

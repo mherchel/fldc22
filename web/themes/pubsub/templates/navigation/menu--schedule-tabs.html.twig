@@ -19,8 +19,10 @@
       <li{{ item.attributes.addClass(item_classes) }}>
           {% set link_title %}
               <div>{{ item.title }}</div>
-              <div>{{ item.date_data_attribute|date('l') }}</div>
-              <div>{{ item.date_data_attribute|date('M j, Y') }}</div>
+              {%  if item.date_data_attribute %}
+                  <div>{{ item.date_data_attribute|date('l') }}</div>
+                  <div>{{ item.date_data_attribute|date('M j, Y') }}</div>
+              {%  endif %}
           {% endset %}
 
         {{ link(link_title, item.url, { 'class': link_classes }) }}

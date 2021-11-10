@@ -25,5 +25,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/session-schedule\r\n/session/schedule/*"
+    pages: "/schedule\r\n/schedule/*"
     negate: false
