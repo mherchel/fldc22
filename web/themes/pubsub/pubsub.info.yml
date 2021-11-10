@@ -1,15 +1,3 @@
-# This theme is marked as @internal. It is intended to evolve and change over
-# minor releases.
-# As the UI of Drupal improves between minor versions, the markup and assets in
-# the pubsub theme will change. The pubsub theme is not backwards compatible
-# If you wish to modify the output or assets of pubsub you can:
-# 1. Copy the whole of pubsub and rename it as your own theme. You will need to
-# manually manage your own updates if you want to stay up to date with pubsub's
-# bug fixes and feature support.
-#
-# 2. Sub-theme pubsub. This is only recommended if you want to make minor
-# tweaks and understand that pubsub could break your modifications as it
-# changes.
 name: pubsub
 type: theme
 base theme: false
