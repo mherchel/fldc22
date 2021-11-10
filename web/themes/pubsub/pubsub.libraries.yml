@@ -23,7 +23,6 @@ global-styling:
       css/components/navigation/nav-button-mobile.css: {}
       css/components/navigation/primary-nav-button-toggle.css: {}
       css/components/overlay.css: {}
-      css/components/footer.css: {}
       css/components/button.css: {}
       css/components/drupal/form.css: {}
       css/components/form-boolean.css: {}
