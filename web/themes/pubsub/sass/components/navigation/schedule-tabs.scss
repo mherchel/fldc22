@@ -59,6 +59,11 @@ $schedule_layout_switch: 'min-width: 950px';
   &:hover {
     background-color: var(--color--ocean-30);
     color: var(--schedule-tabs--text);
+
+    // Override default a:focus behavior.
+    &:focus {
+      border-radius: 0 16px 0 0;
+    }
   }
 }
 
