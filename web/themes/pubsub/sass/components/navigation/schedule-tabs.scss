@@ -1,6 +1,11 @@
 @import "../../global/variables";
 
-$schedule_layout_switch: 'min-width: 900px';
+$schedule_layout_switch: 'min-width: 950px';
+
+// Parent <nav> element.
+.menu--schedule-tabs {
+  grid-column-start: var(--sidebar-grid-start);
+}
 
 .schedule-tabs {
   --schedule-tabs--background: var(--color--ocean-15);
@@ -34,9 +39,12 @@ $schedule_layout_switch: 'min-width: 900px';
   display: flex;
   flex-direction: column;
   margin-top: var(--sp);
+  margin-right: 8px;
   padding: 16px 24px;
+  border-radius: 0 16px 0 0;
   color: var(--schedule-tabs--text);
   text-decoration: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
 
   @media (min-width: 350px) {
     padding: 12px 20px;
@@ -49,13 +57,19 @@ $schedule_layout_switch: 'min-width: 900px';
   }
 
   &:hover {
+    background-color: var(--color--ocean-30);
     color: var(--schedule-tabs--text);
   }
 }
 
 .schedule-tabs__link--active-trail {
-  border-radius: 0 16px 0 0;
+  position: relative;
   background-color: var(--schedule-tabs--highlight);
+
+  &:hover {
+    background-color: var(--schedule-tabs--highlight);
+    box-shadow: none;
+  }
 }
 
 .schedule-tabs__link-title {
