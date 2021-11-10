@@ -1,0 +1,62 @@
+@import "../../global/variables";
+
+.schedule-tabs {
+  --schedule-tabs--background: var(--color--ocean-15);
+  --schedule-tabs--highlight: var(--color--sun-45);
+  --schedule-tabs--text: var(--color--white);
+  --schedule-tabs--bottom-border-width: 8px;
+
+  position: relative; // Anchor :before pseudo-element.
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 16px 0 0;
+  background-color: var(--schedule-tabs--background);
+  border-bottom: solid var(--schedule-tabs--bottom-border-width) var(--schedule-tabs--highlight);
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 50vw;
+    height: calc(100% + var(--schedule-tabs--bottom-border-width));
+    background-color: var(--schedule-tabs--background);
+    border-bottom: solid var(--schedule-tabs--bottom-border-width) var(--schedule-tabs--highlight);
+  }
+}
+
+.schedule-tabs__link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--sp);
+  padding: 24px 32px;
+  color: var(--schedule-tabs--text);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--schedule-tabs--text);
+  }
+}
+
+.schedule-tabs__link--active-trail {
+  border-radius: 0 16px 0 0;
+  background-color: var(--schedule-tabs--highlight);
+}
+
+.schedule-tabs__link-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+
+}
+
+.schedule-tabs__link-date {
+  border-left: solid 1px rgba(white, 0.4);
+  margin-left: 16px;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 16px;
+}

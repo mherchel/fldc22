@@ -161,3 +161,8 @@ footer-menu:
   css:
     component:
       css/components/navigation/footer-menu.css: {}
+
+schedule-tabs:
+  css:
+    component:
+      css/components/navigation/schedule-tabs.css: {}

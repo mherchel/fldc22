@@ -1,0 +1,58 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.schedule-tabs {
+  --schedule-tabs--background: var(--color--ocean-15);
+  --schedule-tabs--highlight: var(--color--sun-45);
+  --schedule-tabs--text: var(--color--white);
+  --schedule-tabs--bottom-border-width: 0.5rem;
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 1rem 0 0;
+  background-color: var(--schedule-tabs--background);
+  border-bottom: solid var(--schedule-tabs--bottom-border-width) var(--schedule-tabs--highlight);
+}
+.schedule-tabs:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 50vw;
+  height: calc(100% + var(--schedule-tabs--bottom-border-width));
+  background-color: var(--schedule-tabs--background);
+  border-bottom: solid var(--schedule-tabs--bottom-border-width) var(--schedule-tabs--highlight);
+}
+
+.schedule-tabs__link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--sp);
+  padding: 1.5rem 2rem;
+  color: var(--schedule-tabs--text);
+  text-decoration: none;
+}
+.schedule-tabs__link:hover {
+  color: var(--schedule-tabs--text);
+}
+
+.schedule-tabs__link--active-trail {
+  border-radius: 0 1rem 0 0;
+  background-color: var(--schedule-tabs--highlight);
+}
+
+.schedule-tabs__link-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+.schedule-tabs__link-date {
+  border-left: solid 1px rgba(255, 255, 255, 0.4);
+  margin-left: 1rem;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}

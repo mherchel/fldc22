@@ -1,8 +1,9 @@
+{{ attach_library('pubsub/schedule-tabs') }}
+
 {% if items %}
   <ul {{ attributes.addClass('schedule-tabs') }}>
     {% set attributes = attributes %}
     {% for item in items %}
-      {# {{ item.date_data_attribute }} #}
 
       {% set item_classes = [
           'schedule-tabs__item',
@@ -17,13 +18,17 @@
       %}
 
       <li{{ item.attributes.addClass(item_classes) }}>
-          {% set link_title %}
-              <div>{{ item.title }}</div>
-              {%  if item.date_data_attribute %}
-                  <div>{{ item.date_data_attribute|date('l') }}</div>
-                  <div>{{ item.date_data_attribute|date('M j, Y') }}</div>
-              {%  endif %}
-          {% endset %}
+        {% set link_title %}
+          <div class="schedule-tabs__link-title">
+            {{- item.title -}}
+          </div>
+          {% if item.date_data_attribute %}
+            <div class="schedule-tabs__link-date">
+              <div class="schedule-tabs__link-date-day">{{ item.date_data_attribute|date('l') }}</div>
+              <div class="schedule-tabs__link-date-date">{{ item.date_data_attribute|date('M j, Y') }}</div>
+            </div>
+          {% endif %}
+        {% endset %}
 
         {{ link(link_title, item.url, { 'class': link_classes }) }}
       </li>
