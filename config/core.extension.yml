@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  antibot: 0
   auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
@@ -24,6 +25,7 @@ module:
   filter: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   link: 0
   menu_link_content: 0
@@ -47,6 +49,8 @@ module:
   user: 0
   user_registrationpassword: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   pathauto: 1
   views: 10
   login_redirect_per_role: 1000
