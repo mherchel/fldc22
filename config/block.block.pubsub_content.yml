@@ -11,7 +11,7 @@ _core:
 id: pubsub_content
 theme: pubsub
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: system_main_block
 settings:

@@ -216,6 +216,51 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_date_time_value:
+          id: field_date_time_value
+          table: taxonomy_term__field_date_time
+          field: field_date_time_value
+          relationship: field_time_slot
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: '2022-02-18 00:00:00'
+            max: '2022-02-18 11:59:59'
+            value: ''
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
       sorts:
         field_date_time_value:
           id: field_date_time_value
@@ -277,11 +322,11 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: 'Day 1'
     position: 1
     display_options:
       display_extenders: {  }
-      path: session-schedule
+      path: schedule/day-1
       menu:
         type: normal
         title: 'Session Schedule'
@@ -291,6 +336,229 @@ display:
         weight: -49
         context: '0'
         menu_name: main
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
+        - 'config:field.storage.taxonomy_term.field_date_time'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Day 2'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: schedule/day-2
+      menu:
+        type: none
+        title: 'Session Schedule'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
+        weight: -49
+        context: '0'
+        menu_name: main
+      display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_date_time_value:
+          id: field_date_time_value
+          table: taxonomy_term__field_date_time
+          field: field_date_time_value
+          relationship: field_time_slot
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: '2022-02-19 00:00:00'
+            max: '2022-02-19 11:59:59'
+            value: ''
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
+        - 'config:field.storage.taxonomy_term.field_date_time'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: 'Day 3'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: schedule/day-3
+      menu:
+        type: none
+        title: 'Session Schedule'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
+        weight: -49
+        context: '0'
+        menu_name: main
+      display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_date_time_value:
+          id: field_date_time_value
+          table: taxonomy_term__field_date_time
+          field: field_date_time_value
+          relationship: field_time_slot
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: '2022-02-20 00:00:00'
+            max: '2022-02-20 11:59:59'
+            value: ''
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

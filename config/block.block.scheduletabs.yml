@@ -1,0 +1,29 @@
+uuid: f81c1f04-2c63-4a40-ba7e-d9f2783291fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.schedule-tabs
+  module:
+    - system
+  theme:
+    - pubsub
+id: scheduletabs
+theme: pubsub
+region: content_above
+weight: -4
+provider: null
+plugin: 'system_menu_block:schedule-tabs'
+settings:
+  id: 'system_menu_block:schedule-tabs'
+  label: 'Schedule Tabs'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/session-schedule\r\n/session/schedule/*"
+    negate: false

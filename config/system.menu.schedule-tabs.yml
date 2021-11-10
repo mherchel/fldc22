@@ -1,0 +1,8 @@
+uuid: c02bbd9e-c17b-45b6-ab4b-fecb447f926c
+langcode: en
+status: true
+dependencies: {  }
+id: schedule-tabs
+label: 'Schedule Tabs'
+description: 'These show as tabs on the session schedule pages.'
+locked: false

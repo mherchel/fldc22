@@ -1,0 +1,5 @@
+attributes:
+  container_data-date:
+    container: true
+    label: 'Date for session schedule tabs'
+    description: 'Machine readable date (eg <code>2022-02-19</code>). This is used by the session schedule''s tab navigation.'

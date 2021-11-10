@@ -1,0 +1,30 @@
+{% if items %}
+  <ul {{ attributes.addClass('schedule-tabs') }}>
+    {% set attributes = attributes %}
+    {% for item in items %}
+      {# {{ item.date_data_attribute }} #}
+
+      {% set item_classes = [
+          'schedule-tabs__item',
+          item.in_active_trail ? 'schedule-tabs__item--active-trail',
+        ]
+      %}
+
+      {% set link_classes = [
+          'schedule-tabs__link',
+          item.in_active_trail ? 'schedule-tabs__link--active-trail',
+        ]
+      %}
+
+      <li{{ item.attributes.addClass(item_classes) }}>
+          {% set link_title %}
+              <div>{{ item.title }}</div>
+              <div>{{ item.date_data_attribute|date('l') }}</div>
+              <div>{{ item.date_data_attribute|date('M j, Y') }}</div>
+          {% endset %}
+
+        {{ link(link_title, item.url, { 'class': link_classes }) }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
