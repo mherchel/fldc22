@@ -49,17 +49,35 @@
       z-index: -1;
     }
   }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 }
 
-.site-header__register-arrow {
-  margin: 5px;
+.site-header__register-link {
+  display: flex;
+  align-items: center;
+  padding: var(--sp) var(--sp2);
+  text-decoration: none;
+  color: inherit;
 
   @media ($nav) {
-    order: -1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &:hover {
+    color: var(--color--white);
+  }
+
+  &:focus {
+    border-radius: 0;
+  }
+
+  svg {
+    margin-left: 10px;
+    fill: currentColor;
+
+    @media ($nav) {
+      margin: 0 0 15px;
+      order: -1;
+    }
   }
 }

@@ -18,7 +18,12 @@
     {% if camp_details.field_camp_name.0 %}
       <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
     {% endif %}
-    <p class="site-hero__desc text-content">1 day of <a href="/trainings">trainings</a>, followed by 2 days of fun and Drupal learning with peers from around the world.</p>
+
+     {% if camp_details.field_hompage_description_text.0 %}
+      <div class="site-hero__desc">
+        {{ camp_details_homepage_description_text }}
+      </div>
+     {% endif %}
   </div>
   <div class="site-hero__media">
     <button class="site-hero__play-pause" type="button" aria-pressed="false">Pause</button>
@@ -33,9 +38,11 @@
       height="480"
     >
     </video>
-    <a href="/" class="site-hero__media-cta">
-      Submit a session
-      {% include '@pubsub/includes/svg/arrow-right-orange.svg' %}
-    </a>
+    {% if camp_details.field_homepage_media_cta.0 %}
+      <a href="{{ camp_details.field_homepage_media_cta.0.url }}" class="site-hero__media-cta">
+        {{ camp_details.field_homepage_media_cta.title }}
+        {% include '@pubsub/includes/svg/arrow-right.svg' %}
+      </a>
+    {% endif %}
   </div>
 </section>

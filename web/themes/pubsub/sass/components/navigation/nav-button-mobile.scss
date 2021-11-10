@@ -9,7 +9,8 @@ $breakpoint-enable-label-text: $sm;
 $breakpoint-change-button-bg: $grid-md;
 
 .mobile-nav-button {
-  --line-color: var(--color--white);
+  --mobile-nav-button--highlight-color: var(--color--sun-55);
+  --mobile-nav-button--line-color: var(--color--white);
 
   position: relative;
   z-index: 110; /* Appear above mobile nav. */
@@ -22,9 +23,15 @@ $breakpoint-change-button-bg: $grid-md;
   padding-block: 0;
   cursor: pointer;
   border: none;
-  background: var(--color--sun-55);
+  background: var(--mobile-nav-button--highlight-color);
   color: var(--color--white);
   appearance: none;
+
+  &:focus {
+    border-radius: 0;
+    outline-offset: -4px;
+    outline-color: var(--mobile-nav-button--line-color);
+  }
 
 
   &:active {
@@ -37,11 +44,11 @@ $breakpoint-change-button-bg: $grid-md;
   }
 
   @media ($breakpoint-change-button-bg) {
-    --line-color: var(--color--sun-55);
+    --mobile-nav-button--line-color: var(--mobile-nav-button--highlight-color);
 
     display: inline-flex;
-    margin-right: 0;
-    padding: 0 0 0 var(--sp2);
+    margin-right: calc(-1 * var(--sp2));
+    padding: 0 var(--sp2) 0 var(--sp2);
     background: transparent;
     color: inherit;
   }
@@ -79,7 +86,7 @@ $breakpoint-change-button-bg: $grid-md;
   display: block;
   width: var(--sp2);
   height: 3px;
-  background-color: var(--line-color);
+  background-color: var(--mobile-nav-button--line-color);
 
   &:before {
     position: absolute;
@@ -89,7 +96,7 @@ $breakpoint-change-button-bg: $grid-md;
     height: 3px;
     content: "";
     transition: all 0.2s;
-    background-color: var(--line-color);
+    background-color: var(--mobile-nav-button--line-color);
   }
 
   &:after {
@@ -100,7 +107,7 @@ $breakpoint-change-button-bg: $grid-md;
     height: 3px;
     content: "";
     transition: all 0.2s;
-    background-color: var(--line-color);
+    background-color: var(--mobile-nav-button--line-color);
   }
 }
 

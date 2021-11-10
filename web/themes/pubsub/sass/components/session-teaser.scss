@@ -25,7 +25,12 @@
 
   &:focus {
     outline-offset: var(--sp0-5);
-    outline-color: currentColor;
+    outline: solid 2px currentColor;
+    border-radius: 1px;
+
+    &:not(:focus-visible) {
+      outline: 0;
+    }
   }
 
   &::-webkit-details-marker {

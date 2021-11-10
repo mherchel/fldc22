@@ -24,7 +24,11 @@
 }
 .session-teaser__summary:focus {
   outline-offset: var(--sp0-5);
-  outline-color: currentColor;
+  outline: solid 2px currentColor;
+  border-radius: 1px;
+}
+.session-teaser__summary:focus:not(:focus-visible) {
+  outline: 0;
 }
 .session-teaser__summary::-webkit-details-marker {
   display: none;

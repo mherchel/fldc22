@@ -51,16 +51,33 @@
     z-index: -1;
   }
 }
-.site-header__register a {
+
+.site-header__register-link {
+  display: flex;
+  align-items: center;
+  padding: var(--sp) var(--sp2);
   text-decoration: none;
   color: inherit;
 }
-
-.site-header__register-arrow {
-  margin: 0.3125rem;
+@media (min-width: 68.75rem) {
+  .site-header__register-link {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.site-header__register-link:hover {
+  color: var(--color--white);
+}
+.site-header__register-link:focus {
+  border-radius: 0;
+}
+.site-header__register-link svg {
+  margin-left: 0.625rem;
+  fill: currentColor;
 }
 @media (min-width: 68.75rem) {
-  .site-header__register-arrow {
+  .site-header__register-link svg {
+    margin: 0 0 0.9375rem;
     order: -1;
   }
 }

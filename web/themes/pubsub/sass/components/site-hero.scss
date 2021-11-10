@@ -177,10 +177,32 @@
   line-height: 24px;
   text-decoration: none;
   color: var(--color--ocean-30);
+  transition: color 0.2s;
 
   &:focus {
     outline: solid 2px currentColor;
     border-radius: 0;
     outline-offset: -6px;
+  }
+
+  &:hover {
+    color: var(--color--ocean-10);
+
+    svg {
+      transform: translatex(5px);
+    }
+
+    path {
+      fill: var(--color--ocean-55);
+    }
+  }
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  path {
+    fill: var(--color--sun-55);
+    transition: fill 0.2s;
   }
 }

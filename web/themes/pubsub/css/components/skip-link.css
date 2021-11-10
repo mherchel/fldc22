@@ -22,7 +22,7 @@
   transition: opacity 0.2s;
 }
 .skip-link:hover {
-  text-decoration: none;
+  color: var(--color--white);
 }
 .skip-link:after {
   content: " ➔";

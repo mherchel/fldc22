@@ -21,6 +21,7 @@ function pubsub_preprocess(array &$variables, $hook) {
 
   $camp_details = \Drupal\config_pages\Entity\ConfigPages::config('camp_details');
   $variables['camp_details'] = $camp_details;
+  $variables['camp_details_homepage_description_text'] = $camp_details->field_hompage_description_text->view('full');
   $variables['#cache']['tags'][] = 'config_pages:' . $camp_details ->id();
 }
 

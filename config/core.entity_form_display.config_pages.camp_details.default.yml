@@ -8,8 +8,13 @@ dependencies:
     - field.field.config_pages.camp_details.field_camp_name
     - field.field.config_pages.camp_details.field_camp_year
     - field.field.config_pages.camp_details.field_dates
+    - field.field.config_pages.camp_details.field_header_cta
+    - field.field.config_pages.camp_details.field_homepage_media_cta
+    - field.field.config_pages.camp_details.field_hompage_description_text
   module:
     - datetime_range
+    - link
+    - text
 id: config_pages.camp_details.default
 targetEntityType: config_pages
 bundle: camp_details
@@ -44,6 +49,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_header_cta:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_homepage_media_cta:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_hompage_description_text:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
 hidden:
   label: true

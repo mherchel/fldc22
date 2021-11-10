@@ -5,7 +5,8 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .mobile-nav-button {
-  --line-color: var(--color--white);
+  --mobile-nav-button--highlight-color: var(--color--sun-55);
+  --mobile-nav-button--line-color: var(--color--white);
   position: relative;
   z-index: 110;
   /* Appear above mobile nav. */
@@ -18,10 +19,15 @@
   padding-block: 0;
   cursor: pointer;
   border: none;
-  background: var(--color--sun-55);
+  background: var(--mobile-nav-button--highlight-color);
   color: var(--color--white);
   -webkit-appearance: none;
           appearance: none;
+}
+.mobile-nav-button:focus {
+  border-radius: 0;
+  outline-offset: -4px;
+  outline-color: var(--mobile-nav-button--line-color);
 }
 .mobile-nav-button:active {
   color: inherit;
@@ -35,10 +41,10 @@
 }
 @media (min-width: 37.5rem) {
   .mobile-nav-button {
-    --line-color: var(--color--sun-55);
+    --mobile-nav-button--line-color: var(--mobile-nav-button--highlight-color);
     display: inline-flex;
-    margin-right: 0;
-    padding: 0 0 0 var(--sp2);
+    margin-right: calc(-1 * var(--sp2));
+    padding: 0 var(--sp2) 0 var(--sp2);
     background: transparent;
     color: inherit;
   }
@@ -78,7 +84,7 @@
   display: block;
   width: var(--sp2);
   height: 0.1875rem;
-  background-color: var(--line-color);
+  background-color: var(--mobile-nav-button--line-color);
 }
 .mobile-nav-button__icon:before {
   position: absolute;
@@ -88,7 +94,7 @@
   height: 0.1875rem;
   content: "";
   transition: all 0.2s;
-  background-color: var(--line-color);
+  background-color: var(--mobile-nav-button--line-color);
 }
 .mobile-nav-button__icon:after {
   position: absolute;
@@ -98,7 +104,7 @@
   height: 0.1875rem;
   content: "";
   transition: all 0.2s;
-  background-color: var(--line-color);
+  background-color: var(--mobile-nav-button--line-color);
 }
 
 .mobile-nav-button[aria-expanded=true] .mobile-nav-button__icon {

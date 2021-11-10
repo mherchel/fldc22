@@ -1,0 +1,23 @@
+uuid: 5458ab96-c966-4d89-a9ed-c21e09772cf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.storage.config_pages.field_header_cta
+  module:
+    - link
+id: config_pages.camp_details.field_header_cta
+field_name: field_header_cta
+entity_type: config_pages
+bundle: camp_details
+label: 'Header CTA'
+description: 'This link appears in the header'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

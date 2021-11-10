@@ -22,7 +22,7 @@
   transition: opacity 0.2s;
 
   &:hover {
-    text-decoration: none;
+    color: var(--color--white);
   }
 
   &:after {

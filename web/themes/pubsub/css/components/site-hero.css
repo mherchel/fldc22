@@ -180,9 +180,26 @@
   line-height: 1.5rem;
   text-decoration: none;
   color: var(--color--ocean-30);
+  transition: color 0.2s;
 }
 .site-hero__media-cta:focus {
   outline: solid 2px currentColor;
   border-radius: 0;
   outline-offset: -6px;
+}
+.site-hero__media-cta:hover {
+  color: var(--color--ocean-10);
+}
+.site-hero__media-cta:hover svg {
+  transform: translatex(0.3125rem);
+}
+.site-hero__media-cta:hover path {
+  fill: var(--color--ocean-55);
+}
+.site-hero__media-cta svg {
+  transition: transform 0.2s;
+}
+.site-hero__media-cta path {
+  fill: var(--color--sun-55);
+  transition: fill 0.2s;
 }

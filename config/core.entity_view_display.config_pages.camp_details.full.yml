@@ -1,9 +1,10 @@
-uuid: 48b03874-6ef2-47ed-a1d1-719405c77f22
+uuid: 46d874ec-2edc-4713-b1b9-e39d88e8d431
 langcode: en
 status: true
 dependencies:
   config:
     - config_pages.type.camp_details
+    - core.entity_view_mode.config_pages.full
     - field.field.config_pages.camp_details.field_camp_location_short_
     - field.field.config_pages.camp_details.field_camp_name
     - field.field.config_pages.camp_details.field_camp_year
@@ -15,10 +16,10 @@ dependencies:
     - datetime_range
     - link
     - text
-id: config_pages.camp_details.default
+id: config_pages.camp_details.full
 targetEntityType: config_pages
 bundle: camp_details
-mode: default
+mode: full
 content:
   field_camp_location_short_:
     weight: 2
