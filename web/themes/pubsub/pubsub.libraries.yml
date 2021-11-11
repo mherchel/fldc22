@@ -172,3 +172,8 @@ schedule-tabs:
   css:
     component:
       css/components/navigation/schedule-tabs.css: {}
+
+user-full:
+  css:
+    component:
+      css/components/user-full.css: {}

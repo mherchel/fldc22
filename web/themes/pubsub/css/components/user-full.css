@@ -1,0 +1,73 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.user-full__floater {
+  margin: var(--sp3) 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 62.5rem) {
+  .user-full__floater {
+    float: right;
+    margin-left: var(--sp2);
+    margin-bottom: var(--sp);
+  }
+}
+.user-full__floater img {
+  border-top-right-radius: 16px;
+}
+@media (min-width: 62.5rem) {
+  .user-full__floater img {
+    max-width: 30vw;
+  }
+}
+
+.user-full__location {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.user-full__location svg {
+  margin-right: 0.5em;
+}
+
+.user-full__bio {
+  margin: var(--sp2) 0;
+}
+
+.user-full__work {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color--night-50);
+  text-transform: uppercase;
+}
+
+.user-social {
+  display: flex;
+  align-items: center;
+  gap: var(--sp2);
+  padding: var(--sp2);
+  background: var(--color--sky-90);
+}
+
+.user-social__item {
+  display: flex;
+  align-items: center;
+}
+
+.user-social__icon {
+  display: flex;
+}
+.user-social__icon:hover path {
+  fill: var(--color--sun-55);
+}
+.user-social__icon svg {
+  width: 1.875rem;
+}
+.user-social__icon path {
+  fill: var(--color--sun-45);
+  transition: fill 0.2s;
+}
+
+.user-social__icon--field-drupal-org-profile svg {
+  margin-top: -2px;
+}

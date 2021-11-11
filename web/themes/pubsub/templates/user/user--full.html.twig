@@ -1,6 +1,20 @@
+{{ attach_library('pubsub/user-full') }}
+
 <article{{ attributes.addClass('user-full') }}>
   <h1 class="user-full__title">{{ content.field_first_name }} {{ content.field_last_name }}</h1>
-  {{ content.user_picture }}
+  {% if content.user_picture.0 %}
+    <div class="user-full__floater">
+      {{ content.user_picture }}
+      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+        <div class="user-social">
+          {{ content.field_drupal_org_profile }}
+          {{ content.field_personal_website_link }}
+          {{ content.field_twitter_profile_link }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
   <p class="user-full__work">
     {{ content.field_title }}
     {% if content.field_title.0 and content.field_organization.0 %}
@@ -8,11 +22,25 @@
     {% endif %}
     {{ content.field_organization }}
   </p>
-  {{ content.field_home_town }}
-  <div class="user-full__bio">{{ content.field_biography }}</div>
-  <div class="user-full__social">
-    {{ content.field_drupal_org_profile }}
-    {{ content.field_personal_website_link }}
-    {{ content.field_twitter_profile_link }}
+
+  {% if content.field_home_town.0 %}
+    <p class="user-full__location">
+    {% include '@pubsub/includes/svg/pin.svg' %}
+      {{ content.field_home_town }}
+    </p>
+  {% endif %}
+
+  <div class="user-full__bio">
+    {{ content.field_biography }}
   </div>
+
+  {% if not content.user_picture.0 %}
+    {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+      <div class="user-social">
+        {{ content.field_drupal_org_profile }}
+        {{ content.field_personal_website_link }}
+        {{ content.field_twitter_profile_link }}
+      </div>
+    {% endif %}
+  {% endif %}
 </article>

@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Include for theme override for user profile social fields
+ *
+ * Additional variables:
+ * - icon: name of icon passed in (eg: '@pubsub/includes/svg/drupal.svg')
+ */
+#}
+
+{% for item in items %}
+  <a href="{{ item.content }}" class="user-social__item">
+    <span class="visually-hidden user-social__label">
+      {{ label }}
+    </span>
+
+    {% if icon %}
+      <span class="user-social__icon user-social__icon--{{ field_name|clean_class }}" aria-hidden="true">
+        {% include icon %}
+      </span>
+    {% endif %}
+  </a>
+{% endfor %}
