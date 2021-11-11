@@ -38,14 +38,6 @@
   {% import _self as menus %}
   {% if items %}
 
-    {#
-      Place the menu arrow (caret) outside of the submenu because the submenu
-      has the overflow:hidden CSS rule applied.
-    #}
-    {% if menu_level == 1 %}
-      <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
-    {% endif %}
-
     <ul {{ attributes.addClass('primary-nav__menu', primary_nav_level).setAttribute('data-drupal-selector', drupal_selector_primary_nav_level) }}>
       {% set attributes = attributes.removeClass(primary_nav_level) %}
       {% for item in items %}

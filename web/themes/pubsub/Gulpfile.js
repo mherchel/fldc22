@@ -38,6 +38,6 @@ gulp.task('sass:watch', function (done) {
   done();
 });
 
-gulp.task('clean:css', function (done) {
+gulp.task('clean:css', function () {
   return del('css/**', { force: true });
 });
