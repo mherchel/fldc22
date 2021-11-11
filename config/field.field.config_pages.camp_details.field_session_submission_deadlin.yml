@@ -1,0 +1,21 @@
+uuid: 4ea6a281-2ac3-4751-b864-7967f8f6e16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.camp_details
+    - field.storage.config_pages.field_session_submission_deadlin
+  module:
+    - datetime
+id: config_pages.camp_details.field_session_submission_deadlin
+field_name: field_session_submission_deadlin
+entity_type: config_pages
+bundle: camp_details
+label: 'Session Submission Deadline'
+description: 'Controls visibility and text of "Submit Session" button on the Session List view. Possibly does other things. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

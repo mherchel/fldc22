@@ -11,10 +11,31 @@ dependencies:
     - field.field.config_pages.camp_details.field_header_cta
     - field.field.config_pages.camp_details.field_homepage_media_cta
     - field.field.config_pages.camp_details.field_hompage_description_text
+    - field.field.config_pages.camp_details.field_session_submission_deadlin
   module:
+    - datetime
     - datetime_range
+    - field_group
     - link
     - text
+third_party_settings:
+  field_group:
+    group_homepage_data:
+      children:
+        - field_header_cta
+        - field_hompage_description_text
+        - field_homepage_media_cta
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: 'Website Info'
 id: config_pages.camp_details.default
 targetEntityType: config_pages
 bundle: camp_details
@@ -51,7 +72,7 @@ content:
     type: daterange_default
     region: content
   field_header_cta:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -59,7 +80,7 @@ content:
     type: link_default
     region: content
   field_homepage_media_cta:
-    weight: 5
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -73,6 +94,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_session_submission_deadlin:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
 hidden:
   label: true

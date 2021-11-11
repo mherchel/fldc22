@@ -25,6 +25,10 @@
   @include button--primary;
 }
 
+.button--highlight {
+  @include button--highlight;
+}
+
 .button--icon-back {
   display: inline-flex;
   align-items: center;

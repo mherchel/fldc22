@@ -127,6 +127,15 @@
   background-color: var(--color--night-90);
 }
 
+.button--highlight {
+  background-color: var(--color--sun-45);
+  border-color: transparent;
+}
+.button--highlight:hover {
+  background-color: var(--color--sun-55);
+  border-color: transparent;
+}
+
 .button--icon-back {
   display: inline-flex;
   align-items: center;

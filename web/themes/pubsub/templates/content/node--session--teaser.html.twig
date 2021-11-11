@@ -20,6 +20,14 @@
       </summary>
       <div class="session-teaser__desc">
         {{ content.field_description }}
+
+        <div class="session-teaser__desc-meta">
+          <a href="{{ url }}">
+            <span>View Session Page</span>
+            <span class="visually-hidden">for {{ label }}</span>
+            {% include '@pubsub/includes/svg/arrow-right.svg' %}
+          </a>
+        </div>
       </div>
   </details>
 

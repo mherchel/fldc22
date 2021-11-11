@@ -1,0 +1,9 @@
+.arrow-right {
+  transition: transform 0.2s;
+}
+.button .arrow-right {
+  margin: 0.3125rem;
+}
+.button:hover .arrow-right {
+  transform: translatex(0.3125rem);
+}

@@ -22,6 +22,13 @@ function pubsub_preprocess(array &$variables, $hook) {
   $camp_details = \Drupal\config_pages\Entity\ConfigPages::config('camp_details');
   $variables['camp_details'] = $camp_details;
   $variables['camp_details_homepage_description_text'] = $camp_details->field_hompage_description_text->view('full');
+
+  // Used on the session list page to display session submission button.
+  if ($camp_details->field_session_submission_deadlin->value) {
+    $variables['camp_details_session_submission_deadline'] = strtotime($camp_details->field_session_submission_deadlin->value);
+    $variables['camp_details_now'] = strtotime('now');
+  }
+
   $variables['#cache']['tags'][] = 'config_pages:' . $camp_details ->id();
 }
 

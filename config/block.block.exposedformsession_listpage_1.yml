@@ -1,0 +1,28 @@
+uuid: 15d3908e-408e-435c-80da-7edc57cc083d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_list
+  module:
+    - system
+    - views
+  theme:
+    - pubsub
+id: exposedformsession_listpage_1
+theme: pubsub
+region: content_above
+weight: -3
+provider: null
+plugin: 'views_exposed_filter_block:session_list-page_1'
+settings:
+  id: 'views_exposed_filter_block:session_list-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/session-list\r\n/session-list/*"
+    negate: false

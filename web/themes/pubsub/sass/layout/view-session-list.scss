@@ -1,0 +1,36 @@
+@import "../global/variables";
+
+// The exposed form block.
+.block-views-exposed-filter-blocksession-list-page-1 {
+  grid-column-start: var(--sidebar-grid-start);
+
+  .block__content {
+    display: block;
+  }
+}
+
+#views-exposed-form-session-list-page-1 > * {
+  display: inline-block;
+}
+
+.view-session-list__submit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--sp4);
+  padding: var(--sp0-5) var(--sp2);
+  background-color: var(--color--sky-94);
+
+  .button {
+    margin-left: auto;
+  }
+}
+
+.view-session-list__item {
+  margin-bottom: 72px;
+
+  // Don't show room field on this view.
+  .session__field--field-r {
+    display: none;
+  }
+}

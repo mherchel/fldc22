@@ -1,0 +1,26 @@
+{{ attach_library('pubsub/view-session-list') }}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+{% if camp_details_session_submission_deadline and camp_details_session_submission_deadline >= camp_details_now %}
+  <div class="view-session-list__submit">
+    Session submissions are open until {{ camp_details_session_submission_deadline|date('F jS') }}!
+    <a href="/submit-session" class="button button--primary button--highlight">
+      Submit Session
+      {% include '@pubsub/includes/svg/arrow-right.svg' %}
+    </a>
+  </div>
+{% endif %}
+
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}

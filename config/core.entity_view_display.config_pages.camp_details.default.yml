@@ -11,7 +11,9 @@ dependencies:
     - field.field.config_pages.camp_details.field_header_cta
     - field.field.config_pages.camp_details.field_homepage_media_cta
     - field.field.config_pages.camp_details.field_hompage_description_text
+    - field.field.config_pages.camp_details.field_session_submission_deadlin
   module:
+    - datetime
     - datetime_range
     - link
     - text
@@ -84,5 +86,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_session_submission_deadlin:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
 hidden: {  }

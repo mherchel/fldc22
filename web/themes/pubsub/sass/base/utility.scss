@@ -1,0 +1,11 @@
+.arrow-right {
+  transition: transform 0.2s;
+
+  .button & {
+    margin: 5px;
+  }
+
+  .button:hover & {
+    transform: translatex(5px);
+  }
+}

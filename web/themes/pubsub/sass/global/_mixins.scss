@@ -98,3 +98,13 @@
     background-color: var(--color--night-90);
   }
 }
+
+@mixin button--highlight {
+  background-color: var(--color--sun-45);
+  border-color: transparent;
+
+  &:hover {
+    background-color: var(--color--sun-55);
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,24 @@
+uuid: d5107bbe-8693-4d8a-aed2-722425fa0347
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - datetime
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: config_pages.field_session_submission_deadlin
+field_name: field_session_submission_deadlin
+entity_type: config_pages
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

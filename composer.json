@@ -19,7 +19,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/config_pages": "^2.9",
         "drupal/devel": "^4.1",
-        "drupal/field_group": "^3.1",
+        "drupal/field_group": "^3.2",
         "drupal/field_permissions": "^1.1",
         "drupal/gin": "^3.0@alpha",
         "drupal/honeypot": "^2.0",

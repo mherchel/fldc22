@@ -4,6 +4,7 @@ global-styling:
       css/base/css-variables.css: {}
       css/base/fonts.css: {}
       css/base/base.css: {}
+      css/base/utility.css: {}
     layout:
       css/layout/layout.css: {}
       css/layout/region.css: {}
@@ -146,6 +147,11 @@ view-session-schedule:
   css:
     layout:
       css/layout/view-session-schedule.css: {}
+
+view-session-list:
+  css:
+    layout:
+      css/layout/view-session-list.css: {}
 
 sponsor-teaser:
   css:
