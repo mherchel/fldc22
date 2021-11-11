@@ -23,14 +23,22 @@
     }
   }
 
+  // Mobile Safari *always* shows :focus for the <summary>, so we try to make
+  // it a little less jarring, and then apply more prominent focus styles to
+  // modern browsers that support :focus-visible.
   &:focus {
-    outline-offset: var(--sp0-5);
-    outline: solid 2px currentColor;
-    border-radius: 1px;
+    outline: solid 1px var(--color--night-50);
+    outline-offset: 4px;
 
     &:not(:focus-visible) {
       outline: 0;
     }
+  }
+
+  &:focus:focus-visible {
+    outline-offset: var(--sp0-5);
+    outline: solid 2px currentColor;
+    border-radius: 0 16px 0 0;
   }
 
   &::-webkit-details-marker {

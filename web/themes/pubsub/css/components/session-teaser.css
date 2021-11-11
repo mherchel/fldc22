@@ -23,12 +23,16 @@
   color: var(--session-teaser-hover-color);
 }
 .session-teaser__summary:focus {
-  outline-offset: var(--sp0-5);
-  outline: solid 2px currentColor;
-  border-radius: 1px;
+  outline: solid 1px var(--color--night-50);
+  outline-offset: 4px;
 }
 .session-teaser__summary:focus:not(:focus-visible) {
   outline: 0;
+}
+.session-teaser__summary:focus:focus-visible {
+  outline-offset: var(--sp0-5);
+  outline: solid 2px currentColor;
+  border-radius: 0 1rem 0 0;
 }
 .session-teaser__summary::-webkit-details-marker {
   display: none;

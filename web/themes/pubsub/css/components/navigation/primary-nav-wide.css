@@ -82,7 +82,7 @@
   html.js .primary-nav__menu--level-2 {
     transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
   }
-  .primary-nav__menu--level-2.is-active-menu-parent {
+  .primary-nav__menu--level-2.is-active-menu-parent, html:not(.js) .primary-nav__menu-item--level-1:focus-within .primary-nav__menu--level-2 {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, 0);

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * @file
  * Skip link
@@ -9,14 +8,11 @@
 /* Grid related breakpoints */
 .skip-link {
   display: block;
-  width: 100%;
-  max-width: var(--max-bg-color);
-  padding-block: var(--sp0-5);
-  padding-inline-start: var(--sp);
-  padding-inline-end: var(--sp);
-  text-decoration: underline;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
   color: var(--color--white);
-  outline: 0;
   background-color: var(--color--ocean-30);
   opacity: 0;
   transition: opacity 0.2s;
@@ -24,16 +20,22 @@
 .skip-link:hover {
   color: var(--color--white);
 }
-.skip-link:after {
-  content: " ➔";
+.skip-link svg {
+  margin-left: 0.3125rem;
+  transition: transform 0.2s;
+}
+.skip-link:hover svg {
+  transform: translatex(0.3125rem);
 }
 
 .skip-link.focusable:focus {
   position: absolute !important;
   /* Override position from module file. */
   z-index: 503;
-  width: 100%;
-  height: 2.5rem;
-  outline: none;
+  display: flex;
+  align-items: center;
   opacity: 1;
+  outline: solid 2px currentColor;
+  outline-offset: -4px;
+  border-radius: 0;
 }

@@ -89,7 +89,8 @@
       transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
     }
 
-    &.is-active-menu-parent {
+    &.is-active-menu-parent,
+    html:not(.js) .primary-nav__menu-item--level-1:focus-within & {
       visibility: visible;
       opacity: 1;
       transform: translate(-50%, 0);
