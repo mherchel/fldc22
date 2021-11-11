@@ -9,10 +9,7 @@
     filter: drop-shadow(0 0 5px var(--color--sky-80));
   }
 
-  // I can't figure out how to add a CSS class to the Platinum
-  // sponsors in Views, so I hacked it in CSS.
-  .views-category-grid:first-child & {
-    grid-column: 1 / -1;
+  .views-all-sponsors__sponsor.Platinum & {
     background-color: var(--color--sky-86);
     border-radius: 0 16px 0 0;
 

@@ -45,7 +45,6 @@
   margin: 48px 0 0;
 }
 
-
 .views-sponsor-grid {
   grid-column: 2 / -2;
   margin: calc(var(--grid-gap) / 2) 0;
@@ -64,4 +63,9 @@
   @media ($grid-2-3) {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+// Platinum sponsors take up a full row.
+.views-all-sponsors__sponsor.Platinum {
+  grid-column: 1 / -1;
 }

@@ -9,7 +9,9 @@
 
   <div class="views-sponsor-grid">
     {% for row in rows %}
-      {{- row.content -}}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{- row.content -}}
+      </div>
     {% endfor %}
   </div>
 </div>

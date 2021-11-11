@@ -85,3 +85,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.views-all-sponsors__sponsor.Platinum {
+  grid-column: 1/-1;
+}
