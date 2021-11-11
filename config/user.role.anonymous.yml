@@ -12,5 +12,6 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
