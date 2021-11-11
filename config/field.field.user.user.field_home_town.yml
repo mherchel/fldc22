@@ -1,0 +1,20 @@
+uuid: 7b223c57-2614-4253-8981-6c98884793a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_home_town
+  module:
+    - user
+id: user.user.field_home_town
+field_name: field_home_town
+entity_type: user
+bundle: user
+label: 'Home Town'
+description: 'Where are you from (eg "Gainesville, FL")'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

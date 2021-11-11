@@ -1,0 +1,18 @@
+<article{{ attributes.addClass('user-full') }}>
+  <h1 class="user-full__title">{{ content.field_first_name }} {{ content.field_last_name }}</h1>
+  {{ content.user_picture }}
+  <p class="user-full__work">
+    {{ content.field_title }}
+    {% if content.field_title.0 and content.field_organization.0 %}
+      at
+    {% endif %}
+    {{ content.field_organization }}
+  </p>
+  {{ content.field_home_town }}
+  <div class="user-full__bio">{{ content.field_biography }}</div>
+  <div class="user-full__social">
+    {{ content.field_drupal_org_profile }}
+    {{ content.field_personal_website_link }}
+    {{ content.field_twitter_profile_link }}
+  </div>
+</article>

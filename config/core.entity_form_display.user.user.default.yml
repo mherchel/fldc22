@@ -6,7 +6,9 @@ dependencies:
     - field.field.user.user.field_biography
     - field.field.user.user.field_drupal_org_profile
     - field.field.user.user.field_first_name
+    - field.field.user.user.field_home_town
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_organization
     - field.field.user.user.field_personal_website_link
     - field.field.user.user.field_title
     - field.field.user.user.field_twitter_profile_link
@@ -27,7 +29,7 @@ third_party_settings:
         - field_twitter_profile_link
         - field_personal_website_link
       parent_name: ''
-      weight: 8
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -42,9 +44,11 @@ third_party_settings:
         - field_last_name
         - user_picture
         - field_biography
+        - field_home_town
         - field_title
+        - field_organization
       parent_name: ''
-      weight: 7
+      weight: 2
       format_type: fieldset
       region: content
       format_settings:
@@ -90,8 +94,24 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_home_town:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_last_name:
     weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organization:
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -107,7 +127,7 @@ content:
     type: link_default
     region: content
   field_title:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -129,7 +149,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

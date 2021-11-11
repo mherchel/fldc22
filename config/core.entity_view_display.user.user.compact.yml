@@ -7,7 +7,9 @@ dependencies:
     - field.field.user.user.field_biography
     - field.field.user.user.field_drupal_org_profile
     - field.field.user.user.field_first_name
+    - field.field.user.user.field_home_town
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_organization
     - field.field.user.user.field_personal_website_link
     - field.field.user.user.field_title
     - field.field.user.user.field_twitter_profile_link
@@ -36,7 +38,9 @@ hidden:
   field_biography: true
   field_drupal_org_profile: true
   field_first_name: true
+  field_home_town: true
   field_last_name: true
+  field_organization: true
   field_personal_website_link: true
   field_title: true
   field_twitter_profile_link: true

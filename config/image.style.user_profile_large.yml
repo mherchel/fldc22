@@ -1,0 +1,29 @@
+uuid: d887f5bb-2496-4113-a2bc-ac95ebf775ce
+langcode: en
+status: true
+dependencies: {  }
+name: user_profile_large
+label: 'User Profile Large'
+effects:
+  62edf60b-9f93-4497-b585-e02a3aca59de:
+    uuid: 62edf60b-9f93-4497-b585-e02a3aca59de
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 350
+      height: 400
+      anchor: center-center
+  79a201ea-ed39-4d40-b1c3-3bbb1e25eb2c:
+    uuid: 79a201ea-ed39-4d40-b1c3-3bbb1e25eb2c
+    id: image_convert
+    weight: -8
+    data:
+      extension: webp
+  559efa6d-df8b-4b80-84f3-015e36a24f43:
+    uuid: 559efa6d-df8b-4b80-84f3-015e36a24f43
+    id: image_scale
+    weight: -10
+    data:
+      width: 350
+      height: null
+      upscale: false
