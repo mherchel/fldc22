@@ -100,8 +100,7 @@ tr .form-item,
 .form-item__description {
   margin-block: var(--sp0-5);
   max-width: 60ch;
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font-size: 0.875rem;
 }
 
 .field-multiple-table + .form-item__description {
@@ -120,8 +119,7 @@ tr .form-item,
   background-position: left top;
   /* LTR */
   background-size: var(--sp1) var(--sp1);
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font-size: 0.875rem;
 }
 @media screen and (-ms-high-contrast: active) {
   .form-item--error-message {

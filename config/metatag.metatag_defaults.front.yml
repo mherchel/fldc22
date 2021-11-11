@@ -7,21 +7,15 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  description: 'Florida DrupalCamp 2021 will be held on February 18-20th, 2022 at Florida Technical College in Orlando, FL'
-  canonical_url: '[site:url]'
-  title: 'Florida Drupalcamp | February 18-20th, 2022'
   shortlink: '[site:url]'
-  og_title: '[site:name]'
-  og_email: info@fldrupalcamp.org
-  og_country_name: 'United States'
-  og_url: '[site:url]'
-  og_site_name: '[site:name]'
-  og_image: 'https://www.fldrupal.camp/sites/default/files/logo-general.png'
+  title: 'Florida Drupalcamp | February 18-20th, 2022'
+  canonical_url: '[site:url]'
   og_region: Florida
-  twitter_cards_page_url: '[site:url]'
-  twitter_cards_image_width: '632'
+  og_url: '[site:url]'
+  og_country_name: 'United States'
+  og_site_name: '[site:name]'
+  og_email: info@fldrupalcamp.org
+  og_title: '[site:name]'
   twitter_cards_site: '@fldrupalcamp'
-  twitter_cards_image: 'https://www.fldrupal.camp/sites/default/files/logo-general.png'
+  twitter_cards_page_url: '[site:url]'
   twitter_cards_type: summary
-  twitter_cards_image_height: '541'
-  twitter_cards_image_alt: 'Florida DrupalCamp Logo'

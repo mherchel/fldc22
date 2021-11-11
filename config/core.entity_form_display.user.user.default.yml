@@ -16,6 +16,7 @@ dependencies:
     - field_group
     - image
     - link
+    - path
     - text
     - user
 third_party_settings:
@@ -26,7 +27,7 @@ third_party_settings:
         - field_twitter_profile_link
         - field_personal_website_link
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -35,6 +36,24 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Links
+    group_about_you:
+      children:
+        - field_first_name
+        - field_last_name
+        - user_picture
+        - field_biography
+        - field_title
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'About You'
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -88,7 +107,7 @@ content:
     type: link_default
     region: content
   field_title:
-    weight: 4
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -108,6 +127,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 3
     region: content
@@ -119,7 +144,7 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
 hidden:
   contact: true
