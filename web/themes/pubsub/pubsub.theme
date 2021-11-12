@@ -7,6 +7,8 @@
 
 use Drupal\pubsub\pubsubPreRender;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Render\Element;
@@ -96,6 +98,19 @@ function pubsub_theme_suggestions_menu_alter(&$suggestions, array $variables) {
 function pubsub_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+  }
+
+  if ($form_id == 'user_login_form' ) {
+    unset($form['name']['#description']);
+    unset($form['pass']['#description']);
+
+    $form['actions']['submit']['#value'] = 'Login';
+    $form['#attached']['library'][] = 'pubsub/user-login-form';
+
+    $password_link = Link::fromTextAndUrl(t('Forgot password?'), Url::fromRoute('user.pass'))->toString();
+    $register_link = Link::fromTextAndUrl(t('Register'), Url::fromRoute('user.register'))->toString();
+
+    $form['#suffix'] = '<div class="user-login-form__links"><div class="user-login-form__register-link">'. $register_link . '</div><div class="user-login-form__pass-link">' . $password_link . '</div></div>';
   }
 }
 
@@ -336,3 +351,13 @@ function pubsub_form_node_preview_form_select_alter(&$form, FormStateInterface $
 function pubsub_form_views_exposed_form_alter(&$form) {
   $form['#attributes']['class'][] = 'form--inline';
 }
+
+
+/**
+ * Implements hook_form_alter for the bookworm theme page template.
+ */
+
+/* User Login Form */
+// function pubsub_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+// }

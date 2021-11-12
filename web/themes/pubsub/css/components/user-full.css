@@ -8,8 +8,7 @@
 @media (min-width: 62.5rem) {
   .user-full__floater {
     float: right;
-    margin-left: var(--sp2);
-    margin-bottom: var(--sp);
+    margin: 0 0 var(--sp) var(--sp2);
   }
 }
 .user-full__floater img {
@@ -62,6 +61,7 @@
 }
 .user-social__icon svg {
   width: 1.875rem;
+  height: 1.875rem;
 }
 .user-social__icon path {
   fill: var(--color--sun-45);

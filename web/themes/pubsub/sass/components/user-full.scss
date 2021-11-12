@@ -6,8 +6,7 @@
 
   @media ($lg) {
     float: right;
-    margin-left: var(--sp2);
-    margin-bottom: var(--sp);
+    margin: 0 0 var(--sp) var(--sp2);
   }
 
   img {
@@ -64,6 +63,7 @@
 
   svg {
     width: 30px;
+    height: 30px;
   }
 
   path {
