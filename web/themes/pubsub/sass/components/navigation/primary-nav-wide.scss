@@ -100,4 +100,24 @@
   .primary-nav__menu-item--level-2 {
     margin-bottom: var(--sp);
   }
+
+  // Only shows for authenticated users.
+  .account-menu-item {
+    border-left: solid 1px var(--color--ocean-55);
+    padding: 0 var(--sp2);
+
+    button {
+      min-width: 15px;
+      text-indent: -999px;
+      background-image: url('../../../images/user.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      overflow: hidden;
+
+      &:after {
+        content: none !important;
+      }
+    }
+  }
 }

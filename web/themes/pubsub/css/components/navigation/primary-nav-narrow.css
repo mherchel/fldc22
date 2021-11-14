@@ -100,4 +100,23 @@
   .primary-nav__menu-link--level-2 {
     font-size: 1.25rem;
   }
+
+  .account-menu-item button {
+    display: none;
+  }
+  .account-menu-item .primary-nav__menu--level-2 {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: flex-start;
+    max-height: none;
+    margin-top: var(--sp3);
+    margin-left: 0;
+    border-left: 0;
+  }
+  .account-menu-item .primary-nav__menu-link {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
 }

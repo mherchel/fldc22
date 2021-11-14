@@ -11,5 +11,17 @@ definitions:
     parent: ''
     expanded: false
     weight: 0
+  user__page:
+    parent: 'menu_link_content:3fda3d21-8eb9-4fc6-9596-c7bfc720f61b'
+    menu_name: main
+    enabled: true
+    expanded: false
+    weight: -50
+  user__logout:
+    parent: 'menu_link_content:3fda3d21-8eb9-4fc6-9596-c7bfc720f61b'
+    menu_name: main
+    weight: -49
+    expanded: false
+    enabled: true
 _core:
   default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

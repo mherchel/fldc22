@@ -8,3 +8,10 @@
 .primary-nav__menu-link {
   color: var(--color--night-5);
 }
+
+// Only show for authenticated users.
+.account-menu-item {
+  body:not(.user-logged-in) & {
+    display: none;
+  }
+}

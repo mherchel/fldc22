@@ -8,3 +8,7 @@
 .primary-nav__menu-link {
   color: var(--color--night-5);
 }
+
+body:not(.user-logged-in) .account-menu-item {
+  display: none;
+}

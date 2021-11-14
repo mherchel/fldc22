@@ -1,4 +1,8 @@
 attributes:
+  container_class:
+    container: true
+    label: ''
+    description: ''
   container_data-date:
     container: true
     label: 'Date for session schedule tabs'
