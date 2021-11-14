@@ -182,3 +182,8 @@ user-login-form:
   css:
     component:
       css/components/user-login-form.css: {}
+  js:
+    js/user-login-form.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
