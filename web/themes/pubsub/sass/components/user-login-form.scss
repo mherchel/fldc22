@@ -1,5 +1,76 @@
 @import "../global/variables";
+@import "../global/mixins";
+
+.path-user .site-main {
+  @media ($grid-md) {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: var(--grid-gap);
+
+    > *:not(#main-content) {
+      grid-row: 1;
+      grid-column: 2 / -1;
+    }
+  }
+}
 
 .user-login-form {
+  max-width: 500px;
 
+  .form-item {
+    position: relative; // Anchor label on hover.
+
+    &:focus-within label {
+      top: 0;
+      transform: translate(-16px, calc(-100% - 5px));
+      padding: 5px 10px;
+      background-color: var(--color--night-15);
+      color: var(--color--white);
+      font-size: 14px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: var(--sp);
+        border-top: solid 5px var(--color--night-15);
+        border-left: solid 5px transparent;
+        border-right: solid 5px transparent;
+      }
+    }
+  }
+
+  .form-item__label.form-required:after {
+    content: "*";
+    background-image: none;
+    color: currentColor;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: var(--sp);
+    transform: translatey(-50%);
+    margin: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+
+  .button--primary {
+    @include button--highlight;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.user-login-form__links {
+  max-width: 500px;
+  margin-top: var(--sp);
+}
+
+.user-login-form__register-link a {
+  @include button;
+  @include button--primary;
+  width: 100%;
+  margin: 0 0 var(--sp);
 }

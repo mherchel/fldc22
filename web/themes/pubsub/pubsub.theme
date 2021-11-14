@@ -108,8 +108,9 @@ function pubsub_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $form['#attached']['library'][] = 'pubsub/user-login-form';
 
     $password_link = Link::fromTextAndUrl(t('Forgot password?'), Url::fromRoute('user.pass'))->toString();
-    $register_link = Link::fromTextAndUrl(t('Register'), Url::fromRoute('user.register'))->toString();
+    $register_link = Link::fromTextAndUrl(t('Create Account'), Url::fromRoute('user.register'))->toString();
 
+    $form['#prefix'] = '<h1>Login</h1>';
     $form['#suffix'] = '<div class="user-login-form__links"><div class="user-login-form__register-link">'. $register_link . '</div><div class="user-login-form__pass-link">' . $password_link . '</div></div>';
   }
 }

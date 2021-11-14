@@ -1,2 +1,175 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+@media (min-width: 37.5rem) {
+  .path-user .site-main {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: var(--grid-gap);
+  }
+  .path-user .site-main > *:not(#main-content) {
+    grid-row: 1;
+    grid-column: 2/-1;
+  }
+}
+
+.user-login-form {
+  max-width: 31.25rem;
+}
+.user-login-form .form-item {
+  position: relative;
+}
+.user-login-form .form-item:focus-within label {
+  top: 0;
+  transform: translate(-1rem, calc(-100% - 0.3125rem));
+  padding: 0.3125rem 0.625rem;
+  background-color: var(--color--night-15);
+  color: var(--color--white);
+  font-size: 0.875rem;
+}
+.user-login-form .form-item:focus-within label:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: var(--sp);
+  border-top: solid 5px var(--color--night-15);
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
+.user-login-form .form-item__label.form-required:after {
+  content: "*";
+  background-image: none;
+  color: currentColor;
+}
+.user-login-form label {
+  position: absolute;
+  top: 50%;
+  left: var(--sp);
+  transform: translatey(-50%);
+  margin: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.user-login-form .button--primary {
+  background-color: var(--color--sun-45);
+  border-color: transparent;
+  width: 100%;
+  margin: 0;
+}
+.user-login-form .button--primary:hover {
+  background-color: var(--color--sun-55);
+  border-color: transparent;
+}
+
+.user-login-form__links {
+  max-width: 31.25rem;
+  margin-top: var(--sp);
+}
+
+.user-login-form__register-link a {
+  --button-color-bg: var(--color--white);
+  --button-color-primary: var(--color--ocean-15);
+  --button-color-primary-dark: var(--color--ocean-10);
+  --button-border-radius: 0.1875rem;
+  --button-line-height: 1.125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--sp3);
+  margin-block: var(--sp1);
+  margin-inline-start: 0;
+  margin-inline-end: var(--sp1);
+  padding: 1px var(--sp1-5);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-color-primary);
+  border: solid 2px var(--button-color-primary);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-color-bg);
+  font-family: inherit;
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  line-height: var(--button-line-height);
+  -webkit-appearance: none;
+          appearance: none;
+  -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
+  --button-color-bg: var(--color--white);
+  --button-color-primary: var(--color--ocean-15);
+  --button-color-primary-dark: var(--color--ocean-10);
+  --button-border-radius: 3px;
+  --button-line-height: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--sp3);
+  margin-block: var(--sp1);
+  margin-inline-start: 0;
+  margin-inline-end: var(--sp1);
+  padding: 1px var(--sp1-5);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-color-primary);
+  border: solid 2px var(--button-color-primary);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-color-bg);
+  font-family: inherit;
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  line-height: var(--button-line-height);
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
+  color: var(--button-color-bg);
+  background-color: var(--button-color-primary);
+  width: 100%;
+  margin: 0 0 var(--sp);
+}
+.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+  text-decoration: none;
+  color: var(--button-color-primary-dark);
+  border: solid 2px var(--button-color-primary-dark);
+  background: none;
+  font-weight: 700;
+}
+.user-login-form__register-link a:active {
+  color: var(--button-color-primary);
+  border-color: var(--button-color-primary);
+}
+.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+  cursor: default;
+  color: var(--color--gray-70);
+  border-color: var(--color--gray-70);
+}
+.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+  text-decoration: none;
+  color: var(--button-color-primary-dark);
+  border: solid 2px var(--button-color-primary-dark);
+  background: none;
+  font-weight: 700;
+}
+.user-login-form__register-link a:active {
+  color: var(--button-color-primary);
+  border-color: var(--button-color-primary);
+}
+.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+  cursor: default;
+  color: var(--color--gray-70);
+  border-color: var(--color--gray-70);
+}
+.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+  color: var(--button-color-bg);
+  border-color: var(--button-color-primary-dark);
+  background-color: var(--button-color-primary-dark);
+}
+.user-login-form__register-link a:active {
+  color: var(--button-color-bg);
+  background-color: var(--button-color-primary);
+}
+.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+  color: var(--color--night-35);
+  background-color: var(--color--night-90);
+}

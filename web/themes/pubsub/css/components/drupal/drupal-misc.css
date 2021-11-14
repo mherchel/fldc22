@@ -26,6 +26,7 @@ input.field-add-more-submit {
   --button-border-radius: 0.1875rem;
   --button-line-height: 1.125rem;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   height: var(--sp3);
   margin-block: var(--sp1);
@@ -91,6 +92,7 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   --button-border-radius: 0.1875rem;
   --button-line-height: 1.125rem;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   height: var(--sp3);
   margin-block: var(--sp1);
