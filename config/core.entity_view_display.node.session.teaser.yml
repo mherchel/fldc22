@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
+    - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_speakers
@@ -59,5 +60,6 @@ content:
       link: true
     third_party_settings: {  }
 hidden:
+  field_is_training: true
   field_time_slot: true
   links: true

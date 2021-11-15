@@ -1,0 +1,23 @@
+uuid: 5dce4313-c9da-41d6-8822-42d8a6e98400
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_training
+    - node.type.session
+id: node.session.field_is_training
+field_name: field_is_training
+entity_type: node
+bundle: session
+label: 'Is Training'
+description: 'Check this if this session is a training. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

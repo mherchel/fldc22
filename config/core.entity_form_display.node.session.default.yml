@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
+    - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_speakers
@@ -20,7 +21,7 @@ third_party_settings:
         - field_time_slot
         - field_r
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -35,7 +36,7 @@ third_party_settings:
         - field_session_category
         - field_speakers
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       region: content
       format_settings:
@@ -56,12 +57,19 @@ content:
     type: options_select
     region: content
   field_description:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_is_training:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_r:
     weight: 11
@@ -95,7 +103,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:

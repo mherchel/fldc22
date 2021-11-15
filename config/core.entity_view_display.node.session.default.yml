@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
+    - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_speakers
@@ -32,6 +33,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_is_training:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_r:
     weight: 2

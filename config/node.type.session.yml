@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Session
 type: session
-description: ''
+description: 'Sessions OR trainings'
 help: ''
 new_revision: true
 preview_mode: 1
