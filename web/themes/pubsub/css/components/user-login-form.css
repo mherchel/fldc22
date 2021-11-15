@@ -20,15 +20,19 @@
 .user-login-form .form-item {
   position: relative;
 }
-.user-login-form .form-item.is-filled label, .user-login-form .form-item:focus-within label {
+.user-login-form .form-item:where(.is-filled) label {
+  opacity: 0;
+}
+.user-login-form .form-item:focus-within label {
   top: 0;
   transform: translate(-1rem, calc(-100% - 0.3125rem));
   padding: 0.3125rem 0.625rem;
   background-color: var(--color--night-15);
   color: var(--color--white);
   font-size: 0.875rem;
+  opacity: 1;
 }
-.user-login-form .form-item.is-filled label:before, .user-login-form .form-item:focus-within label:before {
+.user-login-form .form-item:focus-within label:before {
   content: "";
   position: absolute;
   top: 100%;

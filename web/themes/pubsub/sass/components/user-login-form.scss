@@ -20,25 +20,27 @@
   .form-item {
     position: relative; // Anchor label on hover.
 
-    &.is-filled, // `.is-filled` CSS class is created by JS to let us know if inputs have preexisting filled input.
-    &:focus-within {
-      label {
-        top: 0;
-        transform: translate(-16px, calc(-100% - 5px));
-        padding: 5px 10px;
-        background-color: var(--color--night-15);
-        color: var(--color--white);
-        font-size: 14px;
+    &:where(.is-filled) label { // `.is-filled` CSS class is created by JS to let us know if inputs have preexisting filled input.
+      opacity: 0;
+    }
 
-        &:before {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: var(--sp);
-          border-top: solid 5px var(--color--night-15);
-          border-left: solid 5px transparent;
-          border-right: solid 5px transparent;
-        }
+    &:focus-within label {
+      top: 0;
+      transform: translate(-16px, calc(-100% - 5px));
+      padding: 5px 10px;
+      background-color: var(--color--night-15);
+      color: var(--color--white);
+      font-size: 14px;
+      opacity: 1;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: var(--sp);
+        border-top: solid 5px var(--color--night-15);
+        border-left: solid 5px transparent;
+        border-right: solid 5px transparent;
       }
     }
   }
