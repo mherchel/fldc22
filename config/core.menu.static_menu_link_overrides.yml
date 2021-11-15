@@ -12,13 +12,13 @@ definitions:
     expanded: false
     weight: 0
   user__page:
-    parent: 'menu_link_content:3fda3d21-8eb9-4fc6-9596-c7bfc720f61b'
+    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
     menu_name: main
     enabled: true
     expanded: false
     weight: -50
   user__logout:
-    parent: 'menu_link_content:3fda3d21-8eb9-4fc6-9596-c7bfc720f61b'
+    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
     menu_name: main
     weight: -49
     expanded: false
