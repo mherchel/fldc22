@@ -1,0 +1,8 @@
+uuid: 94e05b93-ae8e-4211-8c8f-507764ba42ac
+langcode: en
+status: true
+dependencies: {  }
+id: sites-from-years-past
+label: 'Sites from years past'
+description: 'Links to previous year''s camp websites'
+locked: false
