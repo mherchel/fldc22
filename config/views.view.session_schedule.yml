@@ -226,7 +226,7 @@ display:
           operator: between
           value:
             min: '2022-02-18 00:00:00'
-            max: '2022-02-18 11:59:59'
+            max: '2022-02-18 23:59:59'
             value: ''
             type: date
           group: 1
@@ -289,7 +289,18 @@ display:
           plugin_id: standard
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'There are currently no sessions scheduled for this day.'
+          plugin_id: text_custom
       relationships:
         field_time_slot:
           id: field_time_slot
@@ -406,7 +417,7 @@ display:
           operator: between
           value:
             min: '2022-02-19 00:00:00'
-            max: '2022-02-19 11:59:59'
+            max: '2022-02-19 23:59:59'
             value: ''
             type: date
           group: 1
@@ -517,7 +528,7 @@ display:
           operator: between
           value:
             min: '2022-02-20 00:00:00'
-            max: '2022-02-20 11:59:59'
+            max: '2022-02-20 23:59:59'
             value: ''
             type: date
           group: 1

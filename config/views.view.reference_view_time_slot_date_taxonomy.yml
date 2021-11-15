@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_date_time
     - taxonomy.vocabulary.time_slot
   module:
+    - datetime
     - datetime_range
     - taxonomy
     - user
@@ -202,7 +203,20 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
-      sorts: {  }
+      sorts:
+        field_date_time_value:
+          id: field_date_time_value
+          table: taxonomy_term__field_date_time
+          field: field_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
       header: {  }
       footer: {  }
       empty: {  }
