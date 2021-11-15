@@ -1,25 +1,49 @@
-{#
-/**
- * @file
- * Theme override to present all user data.
- *
- * This template is used when viewing a registered user's page,
- * e.g., example.com/user/123. 123 being the user's ID.
- *
- * Available variables:
- * - content: A list of content items. Use 'content' to print all content, or
- *   print a subset such as 'content.field_example'. Fields attached to a user
- *   such as 'user_picture' are available as 'content.user_picture'.
- * - attributes: HTML attributes for the container element.
- * - user: A Drupal User entity.
- *
- * @see template_preprocess_user()
- *
- * @ingroup themeable
- */
-#}
-<div{{ attributes }}>
-  {% if content %}
-    {{- content -}}
+{{ attach_library('pubsub/user-compact' )}}
+
+<article{{ attributes.addClass('user-compact') }}>
+  {% if content.user_picture.0 %}
+    <div class="user-compact__media">
+      {{ content.user_picture }}
+      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+        <div class="user-social">
+          {{ content.field_drupal_org_profile }}
+          {{ content.field_personal_website_link }}
+          {{ content.field_twitter_profile_link }}
+        </div>
+      {% endif %}
+    </div>
   {% endif %}
-</div>
+
+  <div class="user-compact__right">
+    <h3 class="user-compact__title">{{ content.field_first_name }} {{ content.field_last_name }}</h3>
+
+    <p class="user-compact__work">
+      {{ content.field_title }}
+      {% if content.field_title.0 and content.field_organization.0 %}
+        at
+      {% endif %}
+      {{ content.field_organization }}
+    </p>
+
+    {% if content.field_home_town.0 %}
+      <p class="user-compact__location">
+      {% include '@pubsub/includes/svg/pin.svg' %}
+        {{ content.field_home_town }}
+      </p>
+    {% endif %}
+
+    <div class="user-compact__bio">
+      {{ content.field_biography }}
+    </div>
+
+    {% if not content.user_picture.0 %}
+      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+        <div class="user-social">
+          {{ content.field_drupal_org_profile }}
+          {{ content.field_personal_website_link }}
+          {{ content.field_twitter_profile_link }}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</article>

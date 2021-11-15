@@ -1,0 +1,82 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.user-compact {
+  margin-bottom: var(--sp2);
+  background-color: var(--color--sky-97);
+  padding: var(--sp2);
+  border-top-right-radius: 16px;
+}
+@media (min-width: 37.5rem) {
+  .user-compact {
+    display: flex;
+    gap: var(--grid-gap);
+  }
+}
+
+.user-compact__media {
+  grid-column: 1/span 2;
+}
+.user-compact__media img {
+  border-top-right-radius: 16px;
+}
+
+.user-compact__title {
+  margin: 0 0 var(--sp);
+}
+
+.user-compact__location {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.user-compact__location svg {
+  margin-right: 0.5em;
+}
+
+.user-compact__bio {
+  margin: var(--sp) 0;
+}
+.user-compact__bio .text-content {
+  font-size: 1rem;
+}
+.user-compact__bio .text-content p {
+  margin: var(--sp) 0;
+}
+
+.user-compact__work {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color--night-50);
+  text-transform: uppercase;
+}
+
+.user-social {
+  display: flex;
+  align-items: center;
+  gap: var(--sp);
+  padding: var(--sp) 0;
+}
+
+.user-social__item {
+  display: flex;
+  align-items: center;
+}
+
+.user-social__icon {
+  display: flex;
+}
+.user-social__icon:hover path {
+  fill: var(--color--sun-55);
+}
+.user-social__icon svg {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.user-social__icon path {
+  fill: var(--color--sun-45);
+  transition: fill 0.2s;
+}
+
+.user-social__icon--field-drupal-org-profile svg {
+  margin-top: -2px;
+}

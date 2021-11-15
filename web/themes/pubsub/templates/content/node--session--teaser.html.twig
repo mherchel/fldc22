@@ -7,6 +7,8 @@
   ]
 %}
 
+{% set is_training = node.field_is_training.value %}
+
 <article{{ attributes.addClass(classes) }}>
   <details class="session-teaser__details">
     <summary class="session-teaser__summary">
@@ -32,4 +34,5 @@
   </details>
 
   {{ title_suffix }}
+
 </article>

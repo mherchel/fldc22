@@ -1,5 +1,15 @@
 @import "../global/variables";
 
+.session {
+  .session__field--field-speakers {
+    display: block;
+
+    > svg {
+      display: none;
+    }
+  }
+}
+
 .session__meta {
   padding: var(--sp);
   background: var(--color--sky-97);

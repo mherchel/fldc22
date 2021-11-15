@@ -178,6 +178,11 @@ user-full:
     component:
       css/components/user-full.css: {}
 
+user-compact:
+  css:
+    component:
+      css/components/user-compact.css: {}
+
 user-login-form:
   css:
     component:

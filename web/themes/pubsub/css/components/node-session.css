@@ -1,5 +1,12 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+.session .session__field--field-speakers {
+  display: block;
+}
+.session .session__field--field-speakers > svg {
+  display: none;
+}
+
 .session__meta {
   padding: var(--sp);
   background: var(--color--sky-97);
