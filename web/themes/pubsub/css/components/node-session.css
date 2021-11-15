@@ -1,0 +1,35 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.session__meta {
+  padding: var(--sp);
+  background: var(--color--sky-97);
+}
+
+.session__field {
+  display: inline-flex;
+  align-items: center;
+}
+.session__field:not(:last-child) {
+  margin-right: 1em;
+}
+.session__field svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.4em;
+}
+.session__field path {
+  fill: var(--color--sky-50);
+}
+
+.session__field--field-session-category svg {
+  margin-bottom: 2px;
+}
+
+.session__field--field-audience svg {
+  width: 1.625rem;
+  height: 1.5625rem;
+}
+
+.session__desc {
+  margin: var(--sp3) 0;
+}

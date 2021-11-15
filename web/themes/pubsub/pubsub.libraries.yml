@@ -187,3 +187,8 @@ user-login-form:
   dependencies:
     - core/drupal
     - core/once
+
+session-full:
+  css:
+    component:
+      css/components/node-session.css: {}

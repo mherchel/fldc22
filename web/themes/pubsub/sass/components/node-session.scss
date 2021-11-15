@@ -1,0 +1,38 @@
+@import "../global/variables";
+
+.session__meta {
+  padding: var(--sp);
+  background: var(--color--sky-97);
+}
+
+.session__field {
+  display: inline-flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.4em;
+  }
+
+  path {
+    fill: var(--color--sky-50);
+  }
+}
+
+.session__field--field-session-category svg {
+  margin-bottom: 2px;
+}
+
+.session__field--field-audience svg {
+  width: 26px;
+  height: 25px;
+}
+
+.session__desc {
+  margin: var(--sp3) 0;
+}
