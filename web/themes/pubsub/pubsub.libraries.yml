@@ -156,12 +156,12 @@ view-session-list:
 sponsor-teaser:
   css:
     component:
-      css/components/sponsor-teaser.css: {}
+      css/components/node-teaser-sponsor.css: {}
 
 session-teaser:
   css:
     component:
-      css/components/session-teaser.css: {}
+      css/components/node-teaser-session.css: {}
 
 footer-menu:
   css:

@@ -314,7 +314,7 @@ display:
       path: trainings
       menu:
         type: normal
-        title: 'Proposed Sessions'
+        title: Trainings
         description: ''
         expanded: false
         parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
