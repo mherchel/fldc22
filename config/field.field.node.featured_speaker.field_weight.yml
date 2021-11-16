@@ -1,0 +1,25 @@
+uuid: a8430ae7-24ce-4693-880a-247efe623c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.featured_speaker
+id: node.featured_speaker.field_weight
+field_name: field_weight
+entity_type: node
+bundle: featured_speaker
+label: Weight
+description: 'Determines the order in which the speakers are listed. Lower numbers come first. '
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,29 @@
+uuid: af6c943a-859e-446f-8918-20c34c363114
+langcode: en
+status: true
+dependencies: {  }
+name: featured_speaker
+label: 'Featured Speaker'
+effects:
+  1ffeca0b-db6f-4dd0-bf02-c0d75770a582:
+    uuid: 1ffeca0b-db6f-4dd0-bf02-c0d75770a582
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false
+  fd338125-1bef-4c36-9e60-0c81e8c4808b:
+    uuid: fd338125-1bef-4c36-9e60-0c81e8c4808b
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
+  9c568edb-cd8d-497c-be8e-0907317d7980:
+    uuid: 9c568edb-cd8d-497c-be8e-0907317d7980
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

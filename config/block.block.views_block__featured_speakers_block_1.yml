@@ -1,0 +1,29 @@
+uuid: a6f26c16-3e1d-4211-97f9-1a69a33848a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_speakers
+  module:
+    - system
+    - views
+  theme:
+    - pubsub
+id: views_block__featured_speakers_block_1
+theme: pubsub
+region: content_above
+weight: 0
+provider: null
+plugin: 'views_block:featured_speakers-block_1'
+settings:
+  id: 'views_block:featured_speakers-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

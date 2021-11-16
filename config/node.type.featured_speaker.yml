@@ -1,0 +1,17 @@
+uuid: 1d929272-8560-44e2-8ce9-d1c5f4b1537d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Featured Speaker'
+type: featured_speaker
+description: 'This block will show on the homepage.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
