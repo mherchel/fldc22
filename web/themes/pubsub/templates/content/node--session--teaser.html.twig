@@ -25,7 +25,7 @@
 
       <div class="session-teaser__desc-meta">
         <a href="{{ url }}">
-          <span>View Session Page</span>
+          <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
           <span class="visually-hidden">for {{ label }}</span>
           {% include '@pubsub/includes/svg/arrow-right.svg' %}
         </a>
