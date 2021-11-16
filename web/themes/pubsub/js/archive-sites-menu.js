@@ -8,7 +8,7 @@
     const url = e.target.querySelectorAll('option')[selectedIndex].dataset.url;
 
     if (url) {
-      window.open(url, '_blank').focus();
+      window.location.href = url;
     }
   }
 
