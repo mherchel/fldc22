@@ -197,3 +197,10 @@ session-full:
   css:
     component:
       css/components/node-session.css: {}
+
+archive-sites-menu:
+  css:
+    component:
+      css/components/navigation/archive-sites-menu.css: {}
+  js:
+    js/archive-sites-menu.js: {}

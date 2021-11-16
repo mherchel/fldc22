@@ -1,0 +1,35 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.archive-sites-menu {
+  background-color: transparent;
+  background-image: url("../../../images/archive-site-menu-arrows.svg");
+  background-position: center right 10px;
+  height: 2.5rem;
+  min-width: 16rem;
+  padding: 0 2rem 0 1rem;
+  border: solid 1px #94BFCC;
+  border-radius: 0.5rem 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: border-color 0.2s;
+}
+@media (forced-colors: active) {
+  .archive-sites-menu {
+    background-image: none;
+    -webkit-appearance: listbox;
+            appearance: listbox;
+    /* Default <select> appearance value for modern browsers. */
+  }
+  @supports ((-webkit-appearance: revert) or (appearance: revert)) {
+    .archive-sites-menu {
+      -webkit-appearance: revert;
+              appearance: revert;
+    }
+  }
+}
+.archive-sites-menu:focus {
+  outline-offset: 2px;
+}
+.archive-sites-menu:hover {
+  border-color: var(--color--white);
+}

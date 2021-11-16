@@ -352,13 +352,3 @@ function pubsub_form_node_preview_form_select_alter(&$form, FormStateInterface $
 function pubsub_form_views_exposed_form_alter(&$form) {
   $form['#attributes']['class'][] = 'form--inline';
 }
-
-
-/**
- * Implements hook_form_alter for the bookworm theme page template.
- */
-
-/* User Login Form */
-// function pubsub_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
-// }

@@ -1,0 +1,32 @@
+@import "../../global/variables";
+
+.archive-sites-menu {
+  background-color: transparent;
+  background-image: url('../../../images/archive-site-menu-arrows.svg');
+  background-position: center right 10px;;
+  height: 40px;
+  min-width: 256px;
+  padding: 0 32px 0 16px;
+  border: solid 1px #94BFCC;
+  border-radius: 8px 0 8px 0;
+  font-size: 16px;
+  line-height: 24px;
+  transition: border-color 0.2s;
+
+  @media (forced-colors: active) {
+    background-image: none;
+    appearance: listbox; /* Default <select> appearance value for modern browsers. */
+
+    @supports (appearance: revert) {
+      appearance: revert;
+    }
+  }
+
+  &:focus {
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    border-color: var(--color--white);
+  }
+}

@@ -29,6 +29,7 @@
   .menu--footer {
     @media ($md) {
       grid-column: 2 / -2;
+      grid-row: 1 / span 4; // Ensure that it always takes up entire column.
     }
 
     @media ($lg) {
@@ -41,7 +42,23 @@
   }
 
   .block-footer {
+    margin-bottom: 0;
+
     @media ($md) {
+      grid-column: 2 / -2;
+    }
+
+    @media ($lg) {
+      grid-column: 11 / -1;
+    }
+
+    @media ($grid-max) {
+      grid-column: 11 / -2;
+    }
+  }
+
+  .menu--sites-from-years-past {
+     @media ($md) {
       grid-column: 2 / -2;
     }
 

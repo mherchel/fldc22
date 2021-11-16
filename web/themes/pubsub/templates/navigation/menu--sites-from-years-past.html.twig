@@ -1,0 +1,12 @@
+{{ attach_library('pubsub/archive-sites-menu') }}
+
+  {% if items %}
+    <select {{ attributes.addClass('archive-sites-menu', primary_nav_level) }}>
+      <option selected>Sites from years past</option>
+      {% for item in items %}
+        <option data-url="{{ item.url }}">
+          {{ item.title }}
+        </option>
+      {% endfor %}
+    </select>
+  {% endif %}

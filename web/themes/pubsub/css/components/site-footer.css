@@ -27,6 +27,7 @@
 @media (min-width: 43.75rem) {
   .site-footer .menu--footer {
     grid-column: 2/-2;
+    grid-row: 1/span 4;
   }
 }
 @media (min-width: 62.5rem) {
@@ -38,6 +39,9 @@
   .site-footer .menu--footer {
     grid-column: 2/10;
   }
+}
+.site-footer .block-footer {
+  margin-bottom: 0;
 }
 @media (min-width: 43.75rem) {
   .site-footer .block-footer {
@@ -51,6 +55,21 @@
 }
 @media (min-width: 81.25rem) {
   .site-footer .block-footer {
+    grid-column: 11/-2;
+  }
+}
+@media (min-width: 43.75rem) {
+  .site-footer .menu--sites-from-years-past {
+    grid-column: 2/-2;
+  }
+}
+@media (min-width: 62.5rem) {
+  .site-footer .menu--sites-from-years-past {
+    grid-column: 11/-1;
+  }
+}
+@media (min-width: 81.25rem) {
+  .site-footer .menu--sites-from-years-past {
     grid-column: 11/-2;
   }
 }
