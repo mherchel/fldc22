@@ -1,3 +1,5 @@
+@import "../global/variables";
+
 .arrow-right {
   transition: transform 0.2s;
 
@@ -7,5 +9,22 @@
 
   .button:hover & {
     transform: translatex(5px);
+  }
+}
+
+.highlight-box {
+  padding: var(--sp0-5) var(--sp);
+  background-color: var(--color--sky-94);
+
+  @media ($lg) {
+    padding: var(--sp) var(--sp2);
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

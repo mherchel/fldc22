@@ -45,6 +45,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
@@ -52,12 +53,14 @@ settings:
             - Source
   plugins:
     stylescombo:
-      styles: ''
+      styles: 'div.highlight-box|Highlight Box'
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

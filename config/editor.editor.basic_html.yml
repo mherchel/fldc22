@@ -37,6 +37,7 @@ settings:
         -
           name: 'Block Formatting'
           items:
+            - Styles
             - Format
         -
           name: Tools
@@ -44,7 +45,7 @@ settings:
             - Source
   plugins:
     stylescombo:
-      styles: ''
+      styles: 'div.highlight-box|Highlight Box'
     language:
       language_list: un
 image_upload:

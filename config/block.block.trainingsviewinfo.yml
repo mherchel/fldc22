@@ -19,7 +19,7 @@ settings:
   id: 'block_content:d7542943-7c0c-40ad-acd1-54fd61c51ecd'
   label: 'Trainings View Info'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

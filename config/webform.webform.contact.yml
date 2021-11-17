@@ -16,7 +16,7 @@ elements: |-
   processed_text:
     '#type': processed_text
     '#text': |
-      <p>Email us at <a href="mailto:info@fldrupalcamp.org">info@fldrupalcamp.org</a>, tweet us at <a href="https://twitter.com/fldrupalcamp">@fldrupalcamp</a>, post to us on Facebook at <a href="https://www.facebook.com/FLDrupalCamp/">FLDrupalcamp</a>, or you can use the contact form below.</p>
+      <div class="highlight-box">Email us at <a href="mailto:info@fldrupalcamp.org">info@fldrupalcamp.org</a>, tweet us at <a href="https://twitter.com/fldrupalcamp">@fldrupalcamp</a>, post to us on Facebook at <a href="https://www.facebook.com/FLDrupalCamp/">FLDrupalcamp</a>, or you can use the contact form below.</div>
     '#format': basic_html
   your_name:
     '#type': textfield

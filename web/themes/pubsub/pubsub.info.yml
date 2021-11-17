@@ -42,3 +42,8 @@ libraries-extend:
     - pubsub/progress
   node/drupal.node.preview:
     - pubsub/drupal.node.preview
+ckeditor_stylesheets:
+  - css/base/css-variables.css
+  - css/base/fonts.css
+  - css/base/base.css
+  - css/base/utility.css

@@ -26,10 +26,12 @@ html {
 body {
   margin: 0;
   color: var(--color--night-5);
-  background-image: url("../../images/bg-florida.svg");
   background-repeat: no-repeat;
-  background-position: top -5vw left 25%;
+  background-position: top -50px left 25%;
   background-size: min(100%, 70.625rem);
+}
+body:where(:not(.cke_editable)) {
+  background-image: url("../../images/bg-florida.svg");
 }
 body.is-fixed {
   position: fixed;

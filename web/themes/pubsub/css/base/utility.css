@@ -1,3 +1,5 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
 .arrow-right {
   transition: transform 0.2s;
 }
@@ -6,4 +8,20 @@
 }
 .button:hover .arrow-right {
   transform: translatex(0.3125rem);
+}
+
+.highlight-box {
+  padding: var(--sp0-5) var(--sp);
+  background-color: var(--color--sky-94);
+}
+@media (min-width: 62.5rem) {
+  .highlight-box {
+    padding: var(--sp) var(--sp2);
+  }
+}
+.highlight-box:first-child {
+  margin-top: 0;
+}
+.highlight-box:last-child {
+  margin-bottom: 0;
 }
