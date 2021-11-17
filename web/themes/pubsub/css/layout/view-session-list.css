@@ -13,14 +13,16 @@
 
 .view-session-list__submit {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: var(--sp0-5);
   margin-bottom: var(--sp4);
-  padding: var(--sp0-5) var(--sp2);
+  padding: var(--sp) var(--sp2);
   background-color: var(--color--sky-94);
 }
 .view-session-list__submit .button {
-  margin-left: auto;
+  margin: 0;
 }
 
 .view-session-list__item {

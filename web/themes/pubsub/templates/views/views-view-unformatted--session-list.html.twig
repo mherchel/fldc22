@@ -6,7 +6,9 @@
 
 {% if camp_details_session_submission_deadline and camp_details_session_submission_deadline >= camp_details_now %}
   <div class="view-session-list__submit">
-    Session submissions are open until {{ camp_details_session_submission_deadline|date('F jS') }}!
+    <span class="view-session-list__submit-text">
+      Session submissions are open until {{ camp_details_session_submission_deadline|date('F jS') }}!
+    </span>
     <a href="/submit-session" class="button button--primary button--highlight">
       Submit Session
       {% include '@pubsub/includes/svg/arrow-right.svg' %}
