@@ -1,7 +1,7 @@
 {{ attach_library('pubsub/archive-sites-menu') }}
 
   {% if items %}
-    <select {{ attributes.addClass('archive-sites-menu', primary_nav_level) }}>
+    <select aria-label="Sites from years past" {{ attributes.addClass('archive-sites-menu', primary_nav_level) }}>
       <option selected>Sites from years past</option>
       {% for item in items %}
         <option data-url="{{ item.url }}">

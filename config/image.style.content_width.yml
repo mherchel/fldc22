@@ -1,0 +1,21 @@
+uuid: 7b91861b-b5ac-41c3-87b4-3fc13fc9b991
+langcode: en
+status: true
+dependencies: {  }
+name: content_width
+label: 'Content Width'
+effects:
+  d6091eb9-8ed2-42d1-ae8d-753f8f985110:
+    uuid: d6091eb9-8ed2-42d1-ae8d-753f8f985110
+    id: image_scale
+    weight: 1
+    data:
+      width: 900
+      height: null
+      upscale: false
+  8a997867-f6a8-454d-85ad-3c798b68d568:
+    uuid: 8a997867-f6a8-454d-85ad-3c798b68d568
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
