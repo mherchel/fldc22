@@ -1,0 +1,14 @@
+uuid: c69a523e-7114-4755-89da-baaf22cde916
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_path
+label: 'User Path'
+type: 'canonical_entities:user'
+pattern: '/u/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

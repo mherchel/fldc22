@@ -1,0 +1,30 @@
+uuid: a97da821-201c-4de1-be6b-13be07cc8213
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f7b360c5-5cb9-4f6f-9108-fc270dbafca4'
+  module:
+    - block_content
+    - system
+  theme:
+    - pubsub
+id: day2scheduleinfo
+theme: pubsub
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:f7b360c5-5cb9-4f6f-9108-fc270dbafca4'
+settings:
+  id: 'block_content:f7b360c5-5cb9-4f6f-9108-fc270dbafca4'
+  label: 'Day 2 Schedule Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /schedule/day-2
+    negate: false

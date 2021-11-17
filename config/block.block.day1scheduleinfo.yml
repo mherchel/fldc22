@@ -1,0 +1,30 @@
+uuid: 688bff36-3351-4f9f-b900-7555cd3021de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:64667164-146a-469a-b4c1-f2b20416b054'
+  module:
+    - block_content
+    - system
+  theme:
+    - pubsub
+id: day1scheduleinfo
+theme: pubsub
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:64667164-146a-469a-b4c1-f2b20416b054'
+settings:
+  id: 'block_content:64667164-146a-469a-b4c1-f2b20416b054'
+  label: 'Day 1 Schedule Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /schedule/day-1
+    negate: false
