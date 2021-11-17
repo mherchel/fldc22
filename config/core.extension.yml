@@ -1,4 +1,5 @@
 module:
+  action: 0
   admin_toolbar: 0
   antibot: 0
   auto_entitylabel: 0
@@ -6,6 +7,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  bulk_update_fields: 0
   ckeditor: 0
   config: 0
   config_pages: 0

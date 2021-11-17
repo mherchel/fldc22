@@ -1,0 +1,11 @@
+uuid: c56af9a5-7acc-440d-babc-46b81466543a
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_image_style
+label: 'Bulk Update Image style Fields'
+type: image_style
+plugin: bulk_update_fields_action_base
+configuration: {  }

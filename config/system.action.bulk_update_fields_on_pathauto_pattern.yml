@@ -1,0 +1,11 @@
+uuid: fda90832-f7f0-442c-9e90-41b8563f86c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_pathauto_pattern
+label: 'Bulk Update Pathauto pattern Fields'
+type: pathauto_pattern
+plugin: bulk_update_fields_action_base
+configuration: {  }

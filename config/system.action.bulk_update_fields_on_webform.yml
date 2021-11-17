@@ -1,0 +1,11 @@
+uuid: ce4ed10a-6cf7-4ac4-8ac0-b0c4a5b5ac56
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_webform
+label: 'Bulk Update Webform Fields'
+type: webform
+plugin: bulk_update_fields_action_base
+configuration: {  }

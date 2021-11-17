@@ -1,0 +1,11 @@
+uuid: e2221351-0681-4886-b29d-67a42a5b3db2
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_date_format
+label: 'Bulk Update Date format Fields'
+type: date_format
+plugin: bulk_update_fields_action_base
+configuration: {  }

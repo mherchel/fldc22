@@ -1,0 +1,11 @@
+uuid: 2d868624-8a4c-4686-b4c4-4e1cd91bb56c
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_config_pages_type
+label: 'Bulk Update Config page type Fields'
+type: config_pages_type
+plugin: bulk_update_fields_action_base
+configuration: {  }
