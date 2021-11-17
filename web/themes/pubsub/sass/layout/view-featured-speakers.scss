@@ -32,6 +32,7 @@
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+    column-gap: var(--grid-gap);
     padding: var(--sp4) 0;
 
     > *:nth-child(1) {
