@@ -1,6 +1,11 @@
+.featured-speaker img {
+  border-top-right-radius: 16px;
+}
+
 .featured-speaker__title {
   margin: var(--sp) 0;
   font-size: 1.25rem;
+  line-height: 1.2;
 }
 
 .featured-speaker__desc {
@@ -16,4 +21,5 @@
 }
 .featured-speaker__cta a {
   color: var(--color--sun-55);
+  font-weight: bold;
 }
