@@ -2,16 +2,14 @@
 /* Grid related breakpoints */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-@media (min-width: 37.5rem) {
-  .block-views-blockfeatured-speakers-block-1 {
-    grid-column: 2/-2;
-  }
+.block-views-blockfeatured-speakers-block-1 {
+  grid-column: 2/-2;
 }
 
 .view-featured-speakers__content {
   display: flex;
   flex-wrap: wrap;
-  column-gap: calc(2 * var(--grid-gap));
+  column-gap: calc(4 * var(--grid-gap));
   row-gap: var(--grid-gap);
   padding: var(--sp3) 0;
 }

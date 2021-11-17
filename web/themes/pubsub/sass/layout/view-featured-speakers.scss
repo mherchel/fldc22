@@ -3,15 +3,13 @@
 
 // Block containing the view.
 .block-views-blockfeatured-speakers-block-1 {
-  @media ($grid-md) {
-    grid-column: 2 / -2;
-  }
+  grid-column: 2 / -2;
 }
 
 .view-featured-speakers__content {
   display: flex;
   flex-wrap: wrap;
-  column-gap: calc(2 * var(--grid-gap));
+  column-gap: calc(4 * var(--grid-gap));
   row-gap: var(--grid-gap);
   padding: var(--sp3) 0;
 
