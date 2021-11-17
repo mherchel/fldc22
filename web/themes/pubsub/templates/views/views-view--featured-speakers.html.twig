@@ -6,7 +6,9 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  <h2 class="view-featured-speakers__title">Featured Speakers</h2>
   {{ title_suffix }}
-  {{ rows }}
+  <div class="view-featured-speakers__content">
+    <h2 class="view-featured-speakers__title">Featured Speakers</h2>
+    {{ rows }}
+  </div>
 </div>

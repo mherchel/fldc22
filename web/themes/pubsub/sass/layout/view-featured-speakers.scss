@@ -8,7 +8,7 @@
   }
 }
 
-.view-featured-speakers {
+.view-featured-speakers__content {
   display: flex;
   flex-wrap: wrap;
   column-gap: calc(2 * var(--grid-gap));
@@ -48,6 +48,7 @@
   }
 
   @media ($lg) {
+    margin-top: var(--sp3);
     padding: var(--sp5) 0;
 
     > *:nth-child(1) {

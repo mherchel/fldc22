@@ -5,7 +5,7 @@ $stats-layout-switch: $grid-md;
 $stats-label-layout-switch: $md;
 
 .site-stats {
-  position: relative;
+  position: relative; // Anchor the top border.
   padding: 48px 0 0;
 
   @media ($stats-layout-switch) {
