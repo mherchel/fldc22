@@ -327,6 +327,24 @@ function pubsub_theme_suggestions_user_alter(&$suggestions, $variables) {
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function pubsub_theme_suggestions_field_alter(&$suggestions, $variables) {
+  $field_name = $variables['element']['#field_name'];
+
+  $bare_fields = [
+    'field_sponsor_logo',
+    'user_picture',
+    'field_image',
+    'field_cta_link'
+  ];
+
+  if (in_array($field_name, $bare_fields)) {
+    $suggestions[] = 'field__bare';
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function pubsub_preprocess_field__node__created(&$variables) {

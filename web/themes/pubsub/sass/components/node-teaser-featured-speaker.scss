@@ -1,0 +1,21 @@
+.featured-speaker__title {
+  margin: var(--sp) 0;
+  font-size: 20px;
+}
+
+.featured-speaker__desc {
+  font-size: 14px;
+
+  .text-content {
+    font-size: inherit;
+    line-height: 1.5;
+  }
+}
+
+.featured-speaker__cta {
+  margin-top: var(--sp);
+
+  a {
+    color: var(--color--sun-55);
+  }
+}

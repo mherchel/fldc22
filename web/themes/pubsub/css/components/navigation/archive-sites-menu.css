@@ -5,7 +5,8 @@
   background-image: url("../../../images/archive-site-menu-arrows.svg");
   background-position: center right 10px;
   height: 2.5rem;
-  min-width: 16rem;
+  width: 16rem;
+  max-width: 100%;
   padding: 0 2rem 0 1rem;
   border: solid 1px #94BFCC;
   border-radius: 0.5rem 0 0.5rem 0;

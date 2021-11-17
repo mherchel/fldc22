@@ -1,0 +1,5 @@
+{% for row in rows %}
+  <div{{ row.attributes.addClass('view-featured-speakers__item') }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}

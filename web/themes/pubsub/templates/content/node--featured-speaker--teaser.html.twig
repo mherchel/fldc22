@@ -1,0 +1,25 @@
+{{ attach_library('pubsub/node-teaser-featured-speaker') }}
+
+{%
+  set classes = [
+    'node',
+    'featured-speaker',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+
+  {{ content.field_image }}
+  <h3 class="featured-speaker__title">{{ label }}</h3>
+  <div class="featured-speaker__desc">
+    {{ content.body }}
+  </div>
+  <div class="featured-speaker__cta">
+    {{ content.field_cta_link }}
+  </div>
+</article>

@@ -204,3 +204,16 @@ archive-sites-menu:
       css/components/navigation/archive-sites-menu.css: {}
   js:
     js/archive-sites-menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+node-teaser-featured-speaker:
+  css:
+    component:
+      css/components/node-teaser-featured-speaker.css: {}
+
+view-featured-speakers:
+  css:
+    layout:
+      css/layout/view-featured-speakers.css: {}

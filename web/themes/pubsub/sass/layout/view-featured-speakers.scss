@@ -1,0 +1,44 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+// Block containing the view.
+.block-views-blockfeatured-speakers-block-1 {
+  @media ($grid-md) {
+    grid-column: 2 / -2;
+  }
+}
+
+.view-featured-speakers {
+  display: grid;
+  gap: var(--grid-gap);
+  padding: var(--sp4) 0;
+
+  @media ($grid-md) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  @media ($grid-max) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.view-featured-speakers__title {
+  @include left-border-title;
+  align-self: flex-start;
+
+  @media ($grid-md) {
+    grid-column: auto / span 4;
+  }
+}
+
+.view-featured-speakers__item {
+  @media ($grid-md) {
+    grid-column: auto / span 3;
+  }
+
+  &:last-child {
+    @media ($grid-md) {
+      grid-column-start: 9;
+    }
+  }
+}
