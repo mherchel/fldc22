@@ -13,11 +13,6 @@
     padding-bottom: 6rem;
   }
 }
-@media (min-width: 81.25rem) {
-  .site-hero {
-    padding-bottom: 7.5rem;
-  }
-}
 
 .site-hero__details {
   grid-column: 1/-2;

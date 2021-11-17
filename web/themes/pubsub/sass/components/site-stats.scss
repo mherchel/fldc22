@@ -5,17 +5,16 @@ $stats-layout-switch: $grid-md;
 $stats-label-layout-switch: $md;
 
 .site-stats {
-  position: relative; // Anchor the top border.
-  padding: 48px 0 0;
+  position: relative; // Anchor the border.
 
   @media ($stats-layout-switch) {
-    padding: 64px 0;
+    padding: 0 0 64px;
   }
 
   &:before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     width: calc(100% + 50vw);
     height: 0;
