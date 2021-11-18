@@ -12,7 +12,6 @@ global-styling:
       css/layout/views.css: {}
     component:
       css/components/drupal/block.css: {}
-      css/components/drupal/breadcrumb.css: {}
       css/components/drupal/embedded-media.css: {}
       css/components/drupal/container-inline.module.css: {}
       css/components/drupal/field.css: {}
@@ -30,6 +29,7 @@ global-styling:
       css/components/form-text.css: {}
       css/components/form-textarea.css: {}
       css/components/form-select.css: {}
+      css/components/node-basic-page.css: {}
       css/components/page-title.css: {}
       css/components/skip-link.css: {}
       css/components/site-footer.css: {}
