@@ -8,6 +8,7 @@ module:
   block_content: 0
   breakpoint: 0
   bulk_update_fields: 0
+  business_rules: 0
   ckeditor: 0
   config: 0
   config_pages: 0
@@ -16,6 +17,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dbug: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0

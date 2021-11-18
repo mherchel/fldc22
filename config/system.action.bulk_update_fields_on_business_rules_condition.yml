@@ -1,0 +1,11 @@
+uuid: 060838c4-89a1-47b1-bbaf-fc024210614e
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_business_rules_condition
+label: 'Bulk Update Business Rules Condition Fields'
+type: business_rules_condition
+plugin: bulk_update_fields_action_base
+configuration: {  }

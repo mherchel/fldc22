@@ -1,0 +1,22 @@
+uuid: f19b357e-7d60-4388-aac7-7655105b92ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - business_rules.variable.current_user
+id: send_email
+label: 'Send email'
+description: 'Send email'
+settings:
+  use_site_mail_as_sender: true
+  from: ''
+  to: '{{current_user->mail}}'
+  subject: 'Florida DrupalCamp: Session submitted'
+  format: text
+  body:
+    value: "<p>Thank for you for submitting a session to Florida DrupalCamp&nbsp;[config_pages:field_camp_year]!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Your session is available at&nbsp;{{url_variable}}</p>\r\n"
+    format: full_html
+tags: {  }
+type: send_email
+target_entity_type: null
+target_bundle: null

@@ -1,0 +1,11 @@
+uuid: 9a5fe4c7-1187-47a6-b9e7-2c178f126d54
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_business_rules_schedule
+label: 'Bulk Update Schedule Fields'
+type: business_rules_schedule
+plugin: bulk_update_fields_action_base
+configuration: {  }
