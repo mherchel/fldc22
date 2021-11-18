@@ -1,0 +1,23 @@
+{#
+ /*
+  * We're just co-opting the markup from the sessions list because I'm
+  * lazy.
+  */
+ #}
+
+{{ attach_library('pubsub/view-details-list') }}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'view-details-list__item',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}

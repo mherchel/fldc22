@@ -1,12 +1,12 @@
-{{ attach_library('pubsub/view-session-list') }}
+{{ attach_library('pubsub/view-details-list') }}
 
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
 
 {% if camp_details_session_submission_deadline and camp_details_session_submission_deadline >= camp_details_now %}
-  <div class="view-session-list__submit">
-    <span class="view-session-list__submit-text">
+  <div class="view-details-list__submit">
+    <span class="view-details-list__submit-text">
       Session submissions are open until {{ camp_details_session_submission_deadline|date('F jS') }}!
     </span>
     <a href="/submit-session" class="button button--primary button--highlight">
@@ -19,7 +19,7 @@
 {% for row in rows %}
   {%
     set row_classes = [
-      default_row_class ? 'views-row',
+      'view-details-list__item',
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>

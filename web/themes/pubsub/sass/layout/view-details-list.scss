@@ -1,17 +1,23 @@
-/* Navigation related breakpoints */
-/* Grid related breakpoints */
+//
+// Used by "session list" and "training list" views.
+//
+
+@import "../global/variables";
+
+// The exposed form block.
 .block-views-exposed-filter-blocksession-list-page-1 {
   grid-column-start: var(--sidebar-grid-start);
-}
-.block-views-exposed-filter-blocksession-list-page-1 .block__content {
-  display: block;
+
+  .block__content {
+    display: block;
+  }
 }
 
 #views-exposed-form-session-list-page-1 > * {
   display: inline-block;
 }
 
-.view-session-list__submit {
+.view-details-list__submit {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,14 +26,17 @@
   margin-bottom: var(--sp4);
   padding: var(--sp) var(--sp2);
   background-color: var(--color--sky-94);
-}
-.view-session-list__submit .button {
-  margin: 0;
+
+  .button {
+    margin: 0;
+  }
 }
 
-.view-session-list__item {
-  margin-bottom: 4.5rem;
-}
-.view-session-list__item .session__field--field-r {
-  display: none;
+.view-details-list__item {
+  margin-bottom: 72px;
+
+  // Don't show room field on this view.
+  .session__field--field-r {
+    display: none;
+  }
 }

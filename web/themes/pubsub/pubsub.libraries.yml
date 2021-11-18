@@ -148,10 +148,10 @@ view-session-schedule:
     layout:
       css/layout/view-session-schedule.css: {}
 
-view-session-list:
+view-details-list:
   css:
     layout:
-      css/layout/view-session-list.css: {}
+      css/layout/view-details-list.css: {}
 
 sponsor-teaser:
   css:
