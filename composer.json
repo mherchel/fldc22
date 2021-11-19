@@ -19,6 +19,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/bulk_update_fields": "^2.0@alpha",
         "drupal/config_pages": "^2.9",
+        "drupal/dbug": "^2.0",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.2",
         "drupal/field_permissions": "^1.1",
