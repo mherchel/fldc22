@@ -18,7 +18,6 @@
         "drupal/antibot": "^1.4",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/bulk_update_fields": "^2.0@alpha",
-        "drupal/business_rules": "^2.0@beta",
         "drupal/config_pages": "^2.9",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.2",
