@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.featured_speaker.body
+    - field.field.node.featured_speaker.field_badge
     - field.field.node.featured_speaker.field_cta_link
     - field.field.node.featured_speaker.field_image
     - field.field.node.featured_speaker.field_weight
@@ -27,6 +28,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_badge:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_cta_link:
     type: link
     weight: 2

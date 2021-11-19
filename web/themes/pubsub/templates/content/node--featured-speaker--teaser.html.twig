@@ -13,13 +13,16 @@
 
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-
-  {{ content.field_image }}
-  <h3 class="featured-speaker__title">{{ label }}</h3>
-  <div class="featured-speaker__desc">
-    {{ content.body }}
-  </div>
-  <div class="featured-speaker__cta">
-    {{ content.field_cta_link }}
-  </div>
+  <a class="featured-speaker__link" href="{{ node.field_cta_link.0.url }}">
+    <div class="featured-speaker__img">
+      {{ content.field_image }}
+      <div class="featured-speaker__badge">
+      {{ content.field_badge }}
+      </div>
+    </div>
+    <h3 class="featured-speaker__title">{{ label }}</h3>
+    <div class="featured-speaker__desc">
+      {{ content.body }}
+    </div>
+  </a>
 </article>

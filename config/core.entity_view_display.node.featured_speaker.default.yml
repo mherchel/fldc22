@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.featured_speaker.body
+    - field.field.node.featured_speaker.field_badge
     - field.field.node.featured_speaker.field_cta_link
     - field.field.node.featured_speaker.field_image
     - field.field.node.featured_speaker.field_weight
@@ -24,6 +25,14 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_badge:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_cta_link:
     weight: 2

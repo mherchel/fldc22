@@ -336,6 +336,7 @@ function pubsub_theme_suggestions_field_alter(&$suggestions, $variables) {
     'field_sponsor_logo',
     'user_picture',
     'field_image',
+    'field_badge',
     'field_cta_link'
   ];
 

@@ -30,7 +30,7 @@
   outline-color: var(--mobile-nav-button--line-color);
 }
 .mobile-nav-button:active {
-  color: inherit;
+  color: var(--color--white);
   /* Override Safari's default UA styles. */
 }
 @media (min-width: 31.25rem) {

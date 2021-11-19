@@ -35,7 +35,7 @@ $breakpoint-change-button-bg: $grid-md;
 
 
   &:active {
-    color: inherit; /* Override Safari's default UA styles. */
+    color: var(--color--white); /* Override Safari's default UA styles. */
   }
 
   @media ($sm) {

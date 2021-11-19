@@ -1,0 +1,21 @@
+uuid: 3448bea2-c147-4c86-9af8-e687ef642b88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_badge
+    - node.type.featured_speaker
+id: node.featured_speaker.field_badge
+field_name: field_badge
+entity_type: node
+bundle: featured_speaker
+label: Badge
+description: 'Badge that appears to the bottom left of the speaker''s image (ex. "Speaker")'
+required: false
+translatable: false
+default_value:
+  -
+    value: Speaker
+default_value_callback: ''
+settings: {  }
+field_type: string

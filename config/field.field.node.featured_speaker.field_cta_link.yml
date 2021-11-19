@@ -11,13 +11,13 @@ id: node.featured_speaker.field_cta_link
 field_name: field_cta_link
 entity_type: node
 bundle: featured_speaker
-label: 'CTA Link'
-description: 'Link text below the image and description. '
+label: Link
+description: 'Link to session description or speaker'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 2
+  title: 0
 field_type: link
