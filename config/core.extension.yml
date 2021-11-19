@@ -8,7 +8,6 @@ module:
   block_content: 0
   breakpoint: 0
   bulk_update_fields: 0
-  business_rules: 0
   ckeditor: 0
   config: 0
   config_pages: 0
