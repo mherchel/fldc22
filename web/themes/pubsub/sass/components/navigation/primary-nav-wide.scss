@@ -1,9 +1,12 @@
 @import "../../global/variables";
 
 @media ($nav) {
-  .primary-nav__menu--level-1 {
+  .primary-nav {
     position: relative;
     z-index: 105;
+  }
+
+  .primary-nav__menu--level-1 {
     display: flex;
     list-style: none;
     padding: 10px;

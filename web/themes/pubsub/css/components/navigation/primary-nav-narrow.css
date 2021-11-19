@@ -30,16 +30,18 @@
     color: var(--mobile-menu-hightlight-color);
   }
 
-  .primary-nav__menu--level-1 {
+  .primary-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: auto;
+    height: -webkit-fill-available;
     height: calc(100vh - var(--menu-top-padding));
     padding-bottom: var(--sp2);
-    font-size: 1.5rem;
   }
-  @supports (height: -webkit-fill-available) {
-    .primary-nav__menu--level-1 {
-      height: -webkit-fill-available;
-    }
+
+  .primary-nav__menu--level-1 {
+    font-size: 1.5rem;
   }
 
   .primary-nav__menu-link--level-1 {

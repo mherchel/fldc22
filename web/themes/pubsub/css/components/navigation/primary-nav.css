@@ -12,3 +12,24 @@
 body:not(.user-logged-in) .account-menu-item {
   display: none;
 }
+
+.primary-nav__register-link {
+  display: block;
+  margin-top: var(--sp2);
+  width: 100%;
+  padding: var(--sp2) var(--sp3);
+  color: var(--color--white);
+  background-color: var(--color--sun-55);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+@media (min-width: 68.75rem) {
+  .primary-nav__register-link {
+    display: none;
+  }
+}
+.primary-nav__register-link:hover {
+  color: var(--color--white);
+}

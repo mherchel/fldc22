@@ -15,3 +15,24 @@
     display: none;
   }
 }
+
+.primary-nav__register-link {
+  display: block;
+  margin-top: var(--sp2);
+  width: 100%;
+  padding: var(--sp2) var(--sp3);
+  color: var(--color--white);
+  background-color: var(--color--sun-55);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+
+  @media ($nav) {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--color--white);
+  }
+}

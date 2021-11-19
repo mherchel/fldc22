@@ -33,17 +33,23 @@
   }
 
   //
+  // Wrapper element
+  //
+  .primary-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    height: -webkit-fill-available;
+    height: calc(100vh - var(--menu-top-padding));
+    padding-bottom: var(--sp2);
+  }
+
+  //
   // Level 1 Nav
   //
   .primary-nav__menu--level-1 {
-    overflow: auto;
-    height: calc(100vh - var(--menu-top-padding));
-    padding-bottom: var(--sp2);
     font-size: 24px;
-
-    @supports (height: -webkit-fill-available) {
-      height: -webkit-fill-available;
-    }
   }
 
   .primary-nav__menu-link--level-1 {

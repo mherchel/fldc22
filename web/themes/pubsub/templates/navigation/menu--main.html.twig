@@ -29,7 +29,20 @@
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {% set attributes = attributes.addClass('menu') %}
-{{ menus.menu_links(items, attributes, 0, 'primary-menu-item-') }}
+
+<div class="primary-nav">
+  {{ menus.menu_links(items, attributes, 0, 'primary-menu-item-') }}
+
+  {#
+    Register link shows shows at very narrow widths.
+  #}
+  {% if camp_details.field_header_cta.0 %}
+    <a class="primary-nav__register-link" href="{{ camp_details.field_header_cta.0.url }}" target="_blank">
+      {{ camp_details.field_header_cta.title }}
+      {% include '@pubsub/includes/svg/arrow-right.svg' %}
+    </a>
+  {% endif %}
+</div>
 
 {% macro menu_links(items, attributes, menu_level, aria_id) %}
   {% set primary_nav_level = 'primary-nav__menu--level-' ~ (menu_level + 1) %}
