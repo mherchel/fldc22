@@ -25,13 +25,13 @@
 
 .site-hero__details-item {
   display: block;
-  padding: 16px 24px;
+  padding: var(--sp) var(--sp1-5);
   text-transform: uppercase;
   font-family: var(--font-sans);
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
+  line-height: var(--sp1-5);
   letter-spacing: 0.06em;
   background: var(--color--sky-94);
 
@@ -166,11 +166,11 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 24px var(--sp2);
+  padding: var(--sp1-5) var(--sp2);
   background: var(--color--white);
   font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: var(--sp1-5);
   text-decoration: none;
   color: var(--color--ocean-30);
   transition: color 0.2s;

@@ -48,7 +48,7 @@ $schedule_layout_shift: $lg;
   top: 0;
   align-self: start;
   margin: 0;
-  padding: 24px;
+  padding: var(--sp1-5);
   background-color: var(--color--sky-94);
   color: var(--color--ocean-15);
   text-transform: uppercase;
@@ -64,7 +64,7 @@ $schedule_layout_shift: $lg;
 
   @media ($schedule_layout_shift) {
     grid-column: 1;
-    padding: 16px 24px;
+    padding: var(--sp) var(--sp1-5);
     box-shadow: none;
   }
 }

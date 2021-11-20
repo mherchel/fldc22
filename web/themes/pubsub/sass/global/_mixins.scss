@@ -13,7 +13,7 @@
 
   @media ($grid-max) {
     font-size: 14px;
-    line-height: 24px;
+    line-height: var(--sp1-5);
   }
 }
 

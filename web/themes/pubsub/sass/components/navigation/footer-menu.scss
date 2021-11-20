@@ -10,7 +10,7 @@
 .footer-menu--level-1 {
   font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: var(--sp1-5);
 
   @media ($sm) {
     display: flex;
@@ -34,5 +34,5 @@
 }
 
 .footer-menu__item--level-2 {
-  margin-bottom: 24px;
+  margin-bottom: var(--sp1-5);
 }

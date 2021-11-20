@@ -40,7 +40,7 @@ $schedule_layout_switch: 'min-width: 950px';
   flex-direction: column;
   margin-top: var(--sp);
   margin-right: 8px;
-  padding: 16px 24px;
+  padding: 16px var(--sp1-5);
   border-radius: 0 16px 0 0;
   color: var(--schedule-tabs--text);
   text-decoration: none;
@@ -53,7 +53,7 @@ $schedule_layout_switch: 'min-width: 950px';
   @media ($schedule_layout_switch) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px var(--sp2);
+    padding: var(--sp1-5) var(--sp2);
   }
 
   &:hover {
@@ -84,7 +84,7 @@ $schedule_layout_switch: 'min-width: 950px';
   letter-spacing: -0.01em;
 
   @media ($sm) {
-    font-size: 24px;
+    font-size: var(--sp1-5);
   }
 
   @media ($schedule_layout_switch) {
