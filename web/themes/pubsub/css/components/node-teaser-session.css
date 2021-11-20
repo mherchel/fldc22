@@ -46,8 +46,8 @@
   right: 0.625rem;
   top: 0.625rem;
   transform: rotate(45deg);
-  width: 1rem;
-  height: 1rem;
+  width: var(--sp);
+  height: var(--sp);
   border-top: solid 4px currentColor;
   border-right: solid 4px currentColor;
   transition: transform 0.2s, color 0.2s;

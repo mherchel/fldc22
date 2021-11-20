@@ -40,7 +40,7 @@ $schedule_layout_switch: 'min-width: 950px';
   flex-direction: column;
   margin-top: var(--sp);
   margin-right: 8px;
-  padding: 16px var(--sp1-5);
+  padding: var(--sp) var(--sp1-5);
   border-radius: 0 16px 0 0;
   color: var(--schedule-tabs--text);
   text-decoration: none;
@@ -101,9 +101,9 @@ $schedule_layout_switch: 'min-width: 950px';
   @media ($schedule_layout_switch) {
     border-left: solid 1px rgba(white, 0.4);
     margin-top: 0;
-    margin-left: 16px;
-    padding-left: 16px;
-    line-height: 16px;
+    margin-left: var(--sp);
+    padding-left: var(--sp);
+    line-height: var(--sp);
   }
 }
 

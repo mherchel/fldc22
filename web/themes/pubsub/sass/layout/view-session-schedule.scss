@@ -54,7 +54,7 @@ $schedule_layout_shift: $lg;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
-  line-height: 16px;
+  line-height: var(--sp);
   box-shadow: -3vw 0 0 var(--color--sky-94), 3vw 0 0 var(--color--sky-94);
 
   @media ($grid-md) {  // Sidebar exists to the right.

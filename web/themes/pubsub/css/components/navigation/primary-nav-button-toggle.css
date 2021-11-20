@@ -87,7 +87,7 @@
     top: 50%;
     left: 0.1875rem;
     width: 1.125rem;
-    height: 1rem;
+    height: var(--sp);
     transition: background-color 0.2s;
     transform: translateY(-50%);
     border-radius: 0.25rem;
