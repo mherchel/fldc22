@@ -8,7 +8,10 @@
     position: fixed;
     top: 0;
     left: 100%;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    height: -webkit-fill-available;
     width: 100%;
     max-width: 500px;
     padding: var(--menu-top-padding) var(--sp2) var(--sp2);
@@ -40,8 +43,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
-    height: -webkit-fill-available;
-    height: calc(100vh - var(--menu-top-padding));
+    height: 100%;
     padding-bottom: var(--sp2);
   }
 
