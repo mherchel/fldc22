@@ -34,6 +34,7 @@
         "drupal/token": "^1.9",
         "drupal/user_registrationpassword": "^1.0@alpha",
         "drupal/webform": "^6.1",
+        "drupal/workbench_email": "^2.2",
         "drush/drush": "^10",
         "pantheon-upstreams/upstream-configuration": "*"
     },
