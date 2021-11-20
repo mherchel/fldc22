@@ -1,0 +1,23 @@
+uuid: 99d4e5d0-e93e-40c7-8a62-9519b15e9ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+id: session_submitted
+label: 'Session Submitted'
+subject: 'Session successfully Submitted to Florida DrupalCamp'
+body:
+  value: "Your \"[node:title]\" session was successfully submitted to Florida DrupalCamp.\r\nURL: [node:url]\r\nEdit URL: [node:edit-url]"
+  format: plain_text
+bundles: {  }
+recipient_types:
+  entity_reference_user:
+    id: entity_reference_user
+    provider: workbench_email
+    status: true
+    settings:
+      fields:
+        - 'node:uid'
+        - 'node:field_speakers'
+replyTo: info@fldrupalcamp.org

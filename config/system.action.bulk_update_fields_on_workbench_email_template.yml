@@ -1,0 +1,11 @@
+uuid: 471b084e-a0e1-4cbe-a8ce-d9d7fcb052a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_workbench_email_template
+label: 'Bulk Update Email Template Fields'
+type: workbench_email_template
+plugin: bulk_update_fields_action_base
+configuration: {  }

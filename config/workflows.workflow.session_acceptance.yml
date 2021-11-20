@@ -1,0 +1,78 @@
+uuid: 6de63ab7-3cc4-4b6c-9ff3-f475f4cafb30
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.session
+  module:
+    - content_moderation
+    - workbench_email
+  enforced:
+    config:
+      - workbench_email.workbench_email_template.session_submitted
+third_party_settings:
+  workbench_email:
+    workbench_email_templates:
+      propose_session:
+        session_submitted: session_submitted
+      accept_session: {  }
+      reject_session: {  }
+id: session_acceptance
+label: 'Session Acceptance'
+type: content_moderation
+type_settings:
+  states:
+    accepted:
+      published: false
+      default_revision: false
+      label: Accepted
+      weight: -2
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 1
+    proposed:
+      published: false
+      default_revision: false
+      label: Proposed
+      weight: -3
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    rejected:
+      published: false
+      default_revision: false
+      label: Rejected
+      weight: -1
+  transitions:
+    accept_session:
+      label: 'Accept Session'
+      from:
+        - accepted
+        - proposed
+        - rejected
+      to: accepted
+      weight: 1
+    propose_session:
+      label: 'Propose Session'
+      from:
+        - accepted
+        - proposed
+        - rejected
+      to: proposed
+      weight: 0
+    reject_session:
+      label: 'Reject Session'
+      from:
+        - accepted
+        - proposed
+        - rejected
+      to: rejected
+      weight: 2
+  entity_types:
+    node:
+      - session
+  default_moderation_state: proposed
