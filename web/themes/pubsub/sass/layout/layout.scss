@@ -7,7 +7,7 @@
 
 .container {
   width: 94%;
-  max-width: 1400px;
+  max-width: var(--layout--max-width);
   margin: 0 auto;
 }
 

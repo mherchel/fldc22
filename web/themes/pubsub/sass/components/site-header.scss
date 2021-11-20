@@ -45,7 +45,13 @@
       top: 0;
       background-color: var(--color--sun-55);
       height: calc(100% + 100px);
-      width: max(calc(100% + 3vw), calc(100% + 50vw - 707px));
+      width: max(
+          calc(100% + 3vw),
+          calc(
+            100% + 50vw -
+            (var(--layout--max-width) + var(--scrollbar-width)) / 2
+          )
+        );
       z-index: -1;
     }
   }

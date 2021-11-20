@@ -6,6 +6,9 @@
   --toolbar-height: 2.4375rem;
   --toolbar-tray-height: 2.5rem;
   --toolbar-tray-vertical-width: 14.9375rem;
+  /* Layout */
+  --layout--max-width: 87.5rem;
+  --scrollbar-width: 1rem;
   /* Layout helpers */
   --sp: 1rem;
   --sp0-25: calc(0.25 * var(--sp));

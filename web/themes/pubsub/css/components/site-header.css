@@ -47,7 +47,7 @@
     top: 0;
     background-color: var(--color--sun-55);
     height: calc(100% + 6.25rem);
-    width: max(100% + 3vw, 100% + 50vw - 44.1875rem);
+    width: max(100% + 3vw, 100% + 50vw - (var(--layout--max-width) + var(--scrollbar-width)) / 2);
     z-index: -1;
   }
 }

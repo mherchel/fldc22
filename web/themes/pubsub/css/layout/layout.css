@@ -6,7 +6,7 @@
 /* Grid related breakpoints */
 .container {
   width: 94%;
-  max-width: 87.5rem;
+  max-width: var(--layout--max-width);
   margin: 0 auto;
 }
 
