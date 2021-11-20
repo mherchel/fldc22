@@ -28,7 +28,7 @@ body {
   margin: 0;
   color: var(--color--night-5);
   background-repeat: no-repeat;
-  background-position: top -50px left 25%;
+  background-position: top -100px left 25%;
   background-size: min(100%, 1130px);
 
   &:where(:not(.cke_editable)) {
@@ -37,6 +37,7 @@ body {
 
   &.is-fixed {
     position: fixed;
+    width: 100%;
   }
 }
 
