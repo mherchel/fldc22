@@ -51,8 +51,9 @@
   --color--ocean-55: hsla(201, 100%, 55%, 1);
 
   // Sun
-  --color--sun-30: hsla(18, 95%, 30%, 1);
-  --color--sun-45: hsla(18, 95%, 46%, 1);
+  --color--sun-30: hsla(18, 95%, 30%, 1); // 7.81 against white.
+  --color--sun-40: hsla(18, 95%, 41%, 1); // 4.85 against white.
+  --color--sun-45: hsla(18, 95%, 46%, 1); // 3.97 against white.
   --color--sun-55: hsla(19, 95%, 55%, 1);
   --color--sun-70: hsla(18, 95%, 71%, 1);
   --color--sun-80: hsla(18, 95%, 83%, 1);
