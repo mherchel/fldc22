@@ -4,7 +4,7 @@
 
 
 .view-sponsors-sidebar {
-  padding: 48px;
+  padding: var(--sp3);
   background-color: var(--color--sky-94);
   box-shadow: 50vw 0 0 var(--color--sky-94), -50vw 0 0 var(--color--sky-94);
 
@@ -23,7 +23,7 @@
 
 .view-sponsors-sidebar__title {
   @include left-border-title;
-  margin: 48px 0 var(--grid-gap);
+  margin: var(--sp3) 0 var(--grid-gap);
 
   &:first-of-type {
     margin-top: 0;

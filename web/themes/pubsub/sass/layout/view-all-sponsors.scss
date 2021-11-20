@@ -6,7 +6,7 @@
 }
 
 .view-all-sponsors {
-  padding: 48px 0;
+  padding: var(--sp3) 0;
   background-color: var(--color--sky-94);
   box-shadow: 20vw 0 0 var(--color--sky-94), -20vw 0 0 var(--color--sky-94);
 
@@ -42,7 +42,7 @@
 
 .views-category-grid__title {
   @include left-border-title;
-  margin: 48px 0 0;
+  margin: var(--sp3) 0 0;
 }
 
 .views-sponsor-grid {

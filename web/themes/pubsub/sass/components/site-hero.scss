@@ -1,7 +1,7 @@
 @import "../global/variables";
 
 .site-hero {
-  padding-bottom: 48px;
+  padding-bottom: var(--sp3);
 
   @media ($grid-md) {
      padding-bottom: 64px;
@@ -52,7 +52,7 @@
 }
 
 .site-hero__main {
-  margin: 48px 0 var(--sp2);
+  margin: var(--sp3) 0 var(--sp2);
 
   @media ($grid-md) {
     grid-row: 2;
