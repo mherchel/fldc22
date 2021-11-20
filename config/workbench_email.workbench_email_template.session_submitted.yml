@@ -1,23 +1,18 @@
 uuid: 99d4e5d0-e93e-40c7-8a62-9519b15e9ae9
 langcode: en
 status: true
-dependencies:
-  config:
-    - field.storage.node.field_speakers
+dependencies: {  }
 id: session_submitted
 label: 'Session Submitted'
-subject: 'Session successfully Submitted to Florida DrupalCamp'
+subject: 'Session "[node:title]" submitted to Florida DrupalCamp [config_page:camp_details:field_camp_year]'
 body:
-  value: "Your \"[node:title]\" session was successfully submitted to Florida DrupalCamp.\r\nURL: [node:url]\r\nEdit URL: [node:edit-url]"
+  value: "Hello,\r\n\r\nOn behalf of the FLDC team, THANK YOU for submitting your \"[node:title]\" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.\r\n\r\nYour session is viewable at [node:url] and you may edit it at [node:edit-url].\r\n\r\nImportant: Please be sure to fill out all fields (including photo, bio, etc) in your user profile at [current-user:edit-url].\r\n\r\nA speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team\r\n\r\n"
   format: plain_text
 bundles: {  }
 recipient_types:
-  entity_reference_user:
-    id: entity_reference_user
+  author:
+    id: author
     provider: workbench_email
     status: true
-    settings:
-      fields:
-        - 'node:uid'
-        - 'node:field_speakers'
+    settings: {  }
 replyTo: info@fldrupalcamp.org

@@ -4,26 +4,30 @@ status: true
 dependencies:
   config:
     - node.type.session
+  enforced:
+    config:
+      0: workbench_email.workbench_email_template.session_submitted
+      2: workbench_email.workbench_email_template.session_accepted
+      5: workbench_email.workbench_email_template.session_rejected
   module:
     - content_moderation
     - workbench_email
-  enforced:
-    config:
-      - workbench_email.workbench_email_template.session_submitted
 third_party_settings:
   workbench_email:
     workbench_email_templates:
       propose_session:
         session_submitted: session_submitted
-      accept_session: {  }
-      reject_session: {  }
+      accept_session:
+        session_accepted: session_accepted
+      reject_session:
+        session_rejected: session_rejected
 id: session_acceptance
 label: 'Session Acceptance'
 type: content_moderation
 type_settings:
   states:
     accepted:
-      published: false
+      published: true
       default_revision: false
       label: Accepted
       weight: -2
@@ -33,7 +37,7 @@ type_settings:
       default_revision: false
       weight: 1
     proposed:
-      published: false
+      published: true
       default_revision: false
       label: Proposed
       weight: -3
@@ -43,7 +47,7 @@ type_settings:
       default_revision: true
       weight: 0
     rejected:
-      published: false
+      published: true
       default_revision: false
       label: Rejected
       weight: -1
@@ -60,7 +64,9 @@ type_settings:
       label: 'Propose Session'
       from:
         - accepted
+        - draft
         - proposed
+        - published
         - rejected
       to: proposed
       weight: 0

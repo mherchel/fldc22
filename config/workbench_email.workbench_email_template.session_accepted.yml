@@ -1,0 +1,18 @@
+uuid: 80709f06-ee43-4eca-b9c8-361480d056c8
+langcode: en
+status: true
+dependencies: {  }
+id: session_accepted
+label: 'Session Accepted'
+subject: '🎉 [node:title] Session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]'
+body:
+  value: "Hello,\r\n\r\nCongratulations! Your \"[node:title]\" session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session. \r\n\r\nPlease reply to this email indicating that you are are able to do this session in person. You can find a speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team\r\n\r\n"
+  format: plain_text
+bundles: {  }
+recipient_types:
+  author:
+    id: author
+    provider: workbench_email
+    status: true
+    settings: {  }
+replyTo: info@fldrupalcamp.org

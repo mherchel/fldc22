@@ -20,12 +20,12 @@
     </div>
   </header>
 
+  {{ page.highlighted }}
+
   {% if is_front %}
     {% include '@pubsub/includes/hero.twig' %}
     {% include '@pubsub/includes/stats.twig' %}
   {% endif %}
-
-  {{ page.highlighted }}
 
   {{ page.content_above }}
 

@@ -10,4 +10,5 @@ permissions:
   - 'create session content'
   - 'edit own session content'
   - 'revert session revisions'
+  - 'use session_acceptance transition propose_session'
   - 'view session revisions'

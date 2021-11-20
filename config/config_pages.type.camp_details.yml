@@ -14,4 +14,4 @@ menu:
   path: /admin/camp-details
   weight: 0
   description: 'Camp Details'
-token: false
+token: true
