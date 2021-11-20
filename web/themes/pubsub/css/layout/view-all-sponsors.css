@@ -7,7 +7,7 @@
 }
 
 .view-all-sponsors {
-  padding: 3rem 0;
+  padding: var(--sp3) 0;
   background-color: var(--color--sky-94);
   box-shadow: 20vw 0 0 var(--color--sky-94), -20vw 0 0 var(--color--sky-94);
 }
@@ -54,12 +54,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin: 3rem 0 0;
+  margin: var(--sp3) 0 0;
 }
 @media (min-width: 81.25rem) {
   .views-category-grid__title {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: var(--sp1-5);
   }
 }
 

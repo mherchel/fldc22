@@ -87,6 +87,6 @@
 @media (min-width: 81.25rem) {
   .view-featured-speakers__title {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: var(--sp1-5);
   }
 }

@@ -1,7 +1,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .site-hero {
-  padding-bottom: 3rem;
+  padding-bottom: var(--sp3);
 }
 @media (min-width: 37.5rem) {
   .site-hero {
@@ -28,13 +28,13 @@
 
 .site-hero__details-item {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: var(--sp) var(--sp1-5);
   text-transform: uppercase;
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
   letter-spacing: 0.06em;
   background: var(--color--sky-94);
 }
@@ -53,7 +53,7 @@
 }
 
 .site-hero__main {
-  margin: 3rem 0 var(--sp2);
+  margin: var(--sp3) 0 var(--sp2);
 }
 @media (min-width: 37.5rem) {
   .site-hero__main {
@@ -168,11 +168,11 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1.5rem var(--sp2);
+  padding: var(--sp1-5) var(--sp2);
   background: var(--color--white);
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
   text-decoration: none;
   color: var(--color--ocean-30);
   transition: color 0.2s;

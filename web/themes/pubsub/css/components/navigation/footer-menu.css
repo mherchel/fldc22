@@ -11,7 +11,7 @@
 .footer-menu--level-1 {
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
 }
 @media (min-width: 31.25rem) {
   .footer-menu--level-1 {
@@ -31,13 +31,13 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin: 3rem 0 var(--sp2);
+  margin: var(--sp3) 0 var(--sp2);
   color: inherit;
 }
 @media (min-width: 81.25rem) {
   .footer-menu__heading {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: var(--sp1-5);
   }
 }
 @media (min-width: 31.25rem) {
@@ -51,5 +51,5 @@
 }
 
 .footer-menu__item--level-2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--sp1-5);
 }

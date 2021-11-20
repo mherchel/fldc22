@@ -41,7 +41,7 @@
 @media (min-width: 81.25rem) {
   .site-stats__title {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: var(--sp1-5);
   }
 }
 @media (min-width: 37.5rem) {
@@ -108,5 +108,5 @@
 .site-stats__desc {
   font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
 }

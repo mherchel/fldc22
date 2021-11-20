@@ -35,7 +35,7 @@
   flex-direction: column;
   margin-top: var(--sp);
   margin-right: 0.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem var(--sp1-5);
   border-radius: 0 1rem 0 0;
   color: var(--schedule-tabs--text);
   text-decoration: none;
@@ -50,7 +50,7 @@
   .schedule-tabs__link {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem var(--sp2);
+    padding: var(--sp1-5) var(--sp2);
   }
 }
 .schedule-tabs__link:hover {
@@ -79,7 +79,7 @@
 }
 @media (min-width: 31.25rem) {
   .schedule-tabs__link-title {
-    font-size: 1.5rem;
+    font-size: var(--sp1-5);
   }
 }
 @media (min-width: 59.375rem) {

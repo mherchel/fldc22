@@ -44,7 +44,7 @@
   top: 0;
   align-self: start;
   margin: 0;
-  padding: 1.5rem;
+  padding: var(--sp1-5);
   background-color: var(--color--sky-94);
   color: var(--color--ocean-15);
   text-transform: uppercase;
@@ -62,7 +62,7 @@
 @media (min-width: 62.5rem) {
   .view-session-schedule__title {
     grid-column: 1;
-    padding: 1rem 1.5rem;
+    padding: var(--sp) var(--sp1-5);
     box-shadow: none;
   }
 }

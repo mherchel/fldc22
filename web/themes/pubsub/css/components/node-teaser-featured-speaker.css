@@ -29,7 +29,7 @@
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: bold;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
   letter-spacing: 0.08em;
 }
 
@@ -37,7 +37,7 @@
   margin: var(--sp1-5) 0 var(--sp0-5);
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
   text-align: left;
   color: var(--color--ocean-15);
 }
@@ -48,5 +48,5 @@
 }
 .featured-speaker__desc .text-content {
   font-size: inherit;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
 }

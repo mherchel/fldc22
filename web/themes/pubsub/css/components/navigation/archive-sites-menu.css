@@ -11,7 +11,7 @@
   border: solid 1px #94BFCC;
   border-radius: 0.5rem 0 0.5rem 0;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
   transition: border-color 0.2s;
 }
 @media (forced-colors: active) {

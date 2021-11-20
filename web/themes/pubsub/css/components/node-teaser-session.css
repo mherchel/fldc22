@@ -57,9 +57,9 @@
 }
 
 .session-teaser__title {
-  margin: 0 0 1.5rem;
+  margin: 0 0 var(--sp1-5);
   padding-right: 2.5rem;
-  font-size: 1.5rem;
+  font-size: var(--sp1-5);
   font-weight: 800;
   line-height: var(--sp2);
   letter-spacing: -0.01em;
@@ -95,5 +95,5 @@
 }
 
 .session-teaser__desc {
-  margin-top: 1.5rem;
+  margin-top: var(--sp1-5);
 }

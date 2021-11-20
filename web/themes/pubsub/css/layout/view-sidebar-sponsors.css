@@ -3,7 +3,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .view-sponsors-sidebar {
-  padding: 3rem;
+  padding: var(--sp3);
   background-color: var(--color--sky-94);
   box-shadow: 50vw 0 0 var(--color--sky-94), -50vw 0 0 var(--color--sky-94);
 }
@@ -29,12 +29,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin: 3rem 0 var(--grid-gap);
+  margin: var(--sp3) 0 var(--grid-gap);
 }
 @media (min-width: 81.25rem) {
   .view-sponsors-sidebar__title {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: var(--sp1-5);
   }
 }
 .view-sponsors-sidebar__title:first-of-type {

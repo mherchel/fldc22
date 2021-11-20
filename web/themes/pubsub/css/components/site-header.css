@@ -24,7 +24,7 @@
   background-color: var(--color--sun-55);
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: var(--sp1-5);
 }
 @media (min-width: 37.5rem) {
   .site-header__register {

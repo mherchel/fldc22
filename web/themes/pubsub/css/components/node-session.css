@@ -22,8 +22,8 @@
   margin-right: 1em;
 }
 .session__field svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--sp1-5);
+  height: var(--sp1-5);
   margin-right: 0.4em;
 }
 .session__field path {
