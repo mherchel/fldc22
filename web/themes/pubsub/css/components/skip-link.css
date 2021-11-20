@@ -10,7 +10,7 @@
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem var(--sp2);
   text-decoration: none;
   color: var(--color--white);
   background-color: var(--color--ocean-30);

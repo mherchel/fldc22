@@ -52,7 +52,7 @@
 }
 
 .site-hero__main {
-  margin: 48px 0 32px;
+  margin: 48px 0 var(--sp2);
 
   @media ($grid-md) {
     grid-row: 2;
@@ -88,7 +88,7 @@
 
 .site-hero__desc {
   font-size: 16px;
-  line-height: 32px;
+  line-height: var(--sp2);
 }
 
 .site-hero__media {
@@ -166,7 +166,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 24px 32px;
+  padding: 24px var(--sp2);
   background: var(--color--white);
   font-size: 20px;
   font-weight: 700;

@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   padding: var(--grid-gap);
-  line-height: 2rem;
+  line-height: var(--sp2);
 }
 @media (min-width: 37.5rem) {
   .views-all-sponsors__sponsor.Platinum .sponsor-teaser .field--name-body {

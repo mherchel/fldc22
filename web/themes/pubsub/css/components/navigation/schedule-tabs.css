@@ -50,7 +50,7 @@
   .schedule-tabs__link {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem var(--sp2);
   }
 }
 .schedule-tabs__link:hover {

@@ -21,7 +21,7 @@
 
 .footer-menu__heading {
   @include left-border-title;
-  margin: 48px 0 32px;
+  margin: 48px 0 var(--sp2);
   color: inherit;
 
   @media ($sm) {

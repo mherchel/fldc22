@@ -53,7 +53,7 @@
 }
 
 .site-hero__main {
-  margin: 3rem 0 2rem;
+  margin: 3rem 0 var(--sp2);
 }
 @media (min-width: 37.5rem) {
   .site-hero__main {
@@ -94,7 +94,7 @@
 
 .site-hero__desc {
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: var(--sp2);
 }
 
 .site-hero__media {
@@ -168,7 +168,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem var(--sp2);
   background: var(--color--white);
   font-size: 1.25rem;
   font-weight: 700;

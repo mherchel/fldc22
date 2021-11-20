@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: var(--sp2);
   margin-bottom: 1.25rem;
 }
 @media (min-width: 37.5rem) {
@@ -19,7 +19,7 @@
 
 .site-header__register {
   display: none;
-  padding: 0 2rem;
+  padding: 0 var(--sp2);
   color: var(--color--white);
   background-color: var(--color--sun-55);
   font-size: 1.25rem;
@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: min-content;
-    padding: 2rem;
+    padding: var(--sp2);
   }
   .site-header__register:before {
     content: "";

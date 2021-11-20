@@ -31,7 +31,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
-  margin: 3rem 0 2rem;
+  margin: 3rem 0 var(--sp2);
   color: inherit;
 }
 @media (min-width: 81.25rem) {
