@@ -9,6 +9,7 @@
     filter: drop-shadow(0 0 5px var(--color--sky-80));
   }
 
+  // Special full width and text treatment for platinum sponsors within the sponsors view.
   .views-all-sponsors__sponsor.Platinum & {
     background-color: var(--color--sky-86);
     border-radius: 0 16px 0 0;
@@ -94,7 +95,7 @@
 .sponsor-teaser__img-wrapper {
   position: relative;
   display: grid;
-	align-items: center; // place-content not working properly in mobile Safari.
+  align-items: center; // place-content not working properly in mobile Safari.
   justify-items: center;
   padding: var(--grid-gap);
   aspect-ratio: 256 / 200;

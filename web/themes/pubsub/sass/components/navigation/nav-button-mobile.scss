@@ -1,6 +1,6 @@
 /**
  * @file
- * Nav Button Mobile.
+ * Mobile navigation disclosure button.
  */
 
 @import "../../global/variables";
@@ -53,7 +53,7 @@ $breakpoint-change-button-bg: $grid-md;
     color: inherit;
   }
 
-  @media ($nav) {
+  @media ($wide-nav) {
     display: none;
   }
 }
