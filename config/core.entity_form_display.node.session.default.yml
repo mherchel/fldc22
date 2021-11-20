@@ -116,7 +116,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  moderation_state: true
   path: true
   promote: true
+  revision_log: true
   sticky: true
   uid: true
