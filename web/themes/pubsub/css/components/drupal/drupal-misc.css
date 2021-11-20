@@ -144,6 +144,13 @@ abbr.warning {
   text-decoration: none;
 }
 
+.field-multiple-table th {
+  text-align: left;
+}
+.field-multiple-table th h4 {
+  margin: 0;
+}
+
 .js input.form-autocomplete,
 .js input.form-autocomplete.ui-autocomplete-loading {
   background-position: right 20px center;
@@ -159,11 +166,4 @@ abbr.warning {
   z-index: -1;
   opacity: 0.01;
   pointer-events: none;
-}
-
-.field-multiple-table th {
-  text-align: left;
-}
-.field-multiple-table th h4 {
-  margin: 0;
 }

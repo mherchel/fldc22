@@ -43,6 +43,16 @@ abbr.warning {
   text-decoration: none;
 }
 
+.field-multiple-table {
+  th {
+    text-align: left;
+
+    h4 {
+      margin: 0;
+    }
+  }
+}
+
 //
 // Autocomplete
 //
@@ -64,22 +74,4 @@ abbr.warning {
   z-index: -1;
   opacity: 0.01;
   pointer-events: none;
-}
-
-
-//
-// Node add session form.
-//
-
-.field-multiple-table {
-  th {
-    text-align: left;
-
-    h4 {
-      margin: 0;
-    }
-  }
-}
-.node-session-form {
-
 }
