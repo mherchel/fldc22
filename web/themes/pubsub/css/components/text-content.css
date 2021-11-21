@@ -10,7 +10,7 @@
   line-height: var(--sp1-5);
 }
 .text-content a:where(:not(.button)) {
-  color: var(--color--sun-45);
+  color: var(--color--sun-40);
   text-decoration-thickness: 0.25rem;
   -webkit-text-decoration-color: var(--color--sun-80);
           text-decoration-color: var(--color--sun-80);
@@ -18,7 +18,7 @@
   transition: color 0.2s;
 }
 .text-content a:where(:not(.button)):hover {
-  color: var(--color--sun-55);
+  color: var(--color--sun-45);
 }
 .text-content ul, .text-content ol {
   margin-top: var(--sp2);
@@ -28,7 +28,7 @@
   margin-bottom: var(--sp0-5);
 }
 .text-content li::marker {
-  color: var(--color--sun-55);
+  color: var(--color--sun-40);
 }
 .text-content p {
   margin-block-start: var(--sp);
