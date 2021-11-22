@@ -11,7 +11,9 @@ dependencies:
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
     - node.type.session
+    - workflows.workflow.session_acceptance
   module:
+    - content_moderation
     - field_group
     - text
 third_party_settings:
@@ -20,16 +22,18 @@ third_party_settings:
       children:
         - field_time_slot
         - field_r
+        - moderation_state
       parent_name: ''
       weight: 4
       format_type: fieldset
       region: content
       format_settings:
-        id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: Scheduling
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: 'Admin Functions'
     group_session_metadata:
       children:
         - field_audience
@@ -99,6 +103,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -116,7 +126,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  moderation_state: true
   path: true
   promote: true
   revision_log: true
