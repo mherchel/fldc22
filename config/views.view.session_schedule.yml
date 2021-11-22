@@ -346,9 +346,10 @@ display:
         description: ''
         expanded: false
         parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
-        weight: -49
+        weight: -48
         context: '0'
         menu_name: main
+        enabled: false
       display_description: ''
     cache_metadata:
       max-age: -1
