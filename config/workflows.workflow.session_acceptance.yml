@@ -28,7 +28,7 @@ type_settings:
   states:
     accepted:
       published: true
-      default_revision: false
+      default_revision: true
       label: Accepted
       weight: -2
     draft:
@@ -38,7 +38,7 @@ type_settings:
       weight: 1
     proposed:
       published: true
-      default_revision: false
+      default_revision: true
       label: Proposed
       weight: -3
     published:
@@ -48,7 +48,7 @@ type_settings:
       weight: 0
     rejected:
       published: true
-      default_revision: false
+      default_revision: true
       label: Rejected
       weight: -1
   transitions:
