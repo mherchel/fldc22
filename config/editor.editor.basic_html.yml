@@ -33,16 +33,15 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
         -
           name: 'Block Formatting'
           items:
-            - Styles
             - Format
         -
           name: Tools
           items:
             - Source
+            - Maximize
   plugins:
     stylescombo:
       styles: 'div.highlight-box|Highlight Box'
