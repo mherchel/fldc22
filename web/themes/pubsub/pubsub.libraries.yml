@@ -49,6 +49,9 @@ site-hero:
       css/components/site-hero.css: {}
   js:
     js/video.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
 
 site-stats:
   css:
