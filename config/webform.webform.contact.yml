@@ -136,7 +136,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: "Thank you for contacting Florida DrupalCamp!<br />\r\n<br />\r\nWe have received your message and, if appropriate, will contact you as soon as possible.<br />\r\n<br />\r\n<br />\r\nThanks,<br />\r\n-- The Florida DrupalCamp team"
+  confirmation_message: "Thank you for contacting Florida DrupalCamp!<br />\r\n<br />\r\nWe have received your message and, if appropriate, will contact you as soon as possible.<br />\r\n<br />\r\n<br />\r\nThanks,<br />\r\n&mdash; The Florida DrupalCamp team"
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -235,12 +235,9 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'Thank you for contacting Florida DrupalCamp!'
-      body: "Thanks for contacting Florida DrupalCamp!<br />\r\n<br />\r\nThis is just an email to let you know that we received your message and (if appropriate) will contact you as soon as possible.<br />\r\n<br />\r\n<br />\r\nThanks,<br />\r\n-- The Florida DrupalCamp Team"
+      body: "Thanks for contacting Florida DrupalCamp!<br />\r\n<br />\r\nThis is just an email to let you know that we received your message and (if appropriate) will contact you as soon as possible.<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\n<br />\r\nThanks,<br />\r\n&mdash; The Florida DrupalCamp Team"
       excluded_elements:
         processed_text: processed_text
-        your_name: your_name
-        your_email: your_email
-        how_can_we_help_you_: how_can_we_help_you_
       ignore_access: false
       exclude_empty: false
       exclude_empty_checkbox: false
@@ -276,7 +273,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'FLDC Website Contact Request'
-      body: "Contact request from the FLDC Website:<br />\r\n<br />\r\n&nbsp;"
+      body: "Contact request from the FLDC Website:<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\n&nbsp;"
       excluded_elements:
         processed_text: processed_text
       ignore_access: true
@@ -287,7 +284,7 @@ handlers:
       attachments: false
       twig: false
       debug: false
-      reply_to: ''
+      reply_to: '[webform_submission:values:your_email:raw]'
       return_path: ''
       sender_mail: ''
       sender_name: ''
