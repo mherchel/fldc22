@@ -3,7 +3,7 @@
 @media (min-width: 68.75rem) {
   .primary-nav {
     position: relative;
-    z-index: 105;
+    z-index: 102;
   }
 
   .primary-nav__menu--level-1 {

@@ -25,6 +25,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  gin_toolbar: 0
   help: 0
   history: 0
   honeypot: 0

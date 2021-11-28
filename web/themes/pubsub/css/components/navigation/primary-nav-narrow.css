@@ -21,7 +21,7 @@
   .menu--main.is-active {
     visibility: visible;
     transform: translateX(-100%);
-    z-index: 105;
+    z-index: 102;
   }
 
   .primary-nav__menu-link {

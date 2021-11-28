@@ -371,3 +371,18 @@ function pubsub_form_node_preview_form_select_alter(&$form, FormStateInterface $
 function pubsub_form_views_exposed_form_alter(&$form) {
   $form['#attributes']['class'][] = 'form--inline';
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * This is necessary for proper CSS classes for the Gin Admin Toolbar module.
+ */
+function pubsub_theme_suggestions_container_alter(&$suggestions, $variables) {
+  if (!empty($variables["element"]) && !empty($variables["element"]["administration_menu"])) {
+    $menu_name = $variables["element"]["administration_menu"]["#menu_name"];
+
+    if (!empty($menu_name)) {
+      $suggestions[] = 'container__' . $menu_name . '_menu';
+    }
+  }
+}

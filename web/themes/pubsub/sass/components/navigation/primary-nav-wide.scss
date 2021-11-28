@@ -3,7 +3,7 @@
 @media ($wide-nav) {
   .primary-nav {
     position: relative;
-    z-index: 105;
+    z-index: 102; // Appear below Gin Horizontal toolbar, which has value of 103.
   }
 
   .primary-nav__menu--level-1 {

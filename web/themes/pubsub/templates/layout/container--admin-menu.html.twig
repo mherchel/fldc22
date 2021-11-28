@@ -1,0 +1,13 @@
+{#
+ /**
+  * Specific container for Gin Toolbar module, which relies on this markup.
+  */
+ #}
+
+{%
+  set classes = [
+    has_parent ? 'js-form-wrapper',
+    has_parent ? 'form-wrapper',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>
