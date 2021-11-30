@@ -15,3 +15,4 @@ permissions:
   - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view field_time_slot'
