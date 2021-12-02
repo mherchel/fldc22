@@ -1,0 +1,22 @@
+uuid: 260ef28b-a375-4e4f-940c-9b35a36a4a5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: job_listing
+label: 'Job Listing'
+type: 'canonical_entities:node'
+pattern: '/job/[node:field_company]/[node:title]'
+selection_criteria:
+  4f1c929b-179c-47a9-8a98-ec8dd49af33e:
+    id: node_type
+    bundles:
+      job_listing: job_listing
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4f1c929b-179c-47a9-8a98-ec8dd49af33e
+selection_logic: and
+weight: -5
+relationships: {  }
