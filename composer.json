@@ -33,6 +33,7 @@
         "drupal/quicklink": "^2",
         "drupal/r4032login": "^2.1",
         "drupal/registration_role": "^1.1",
+        "drupal/stage_file_proxy": "^1.2",
         "drupal/token": "^1.9",
         "drupal/user_registrationpassword": "^1.0@alpha",
         "drupal/webform": "^6.1",
