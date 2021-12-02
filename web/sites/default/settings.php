@@ -38,3 +38,10 @@ $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+
+// Don't enable devel or stage_file_proxy on the live environment.
+if (
+  isset($_ENV['PANTHEON_ENVIRONMENT']) && (($_ENV['PANTHEON_ENVIRONMENT'] == 'live'))
+) {
+  $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+}
