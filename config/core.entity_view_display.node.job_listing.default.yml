@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.job_listing.body
     - field.field.node.job_listing.field_company
+    - field.field.node.job_listing.field_location
     - field.field.node.job_listing.field_url
     - node.type.job_listing
   module:
@@ -19,21 +20,30 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_company:
-    weight: 102
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      link: true
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_location:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_url:
-    weight: 103
-    label: above
+    weight: 3
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -43,9 +53,5 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  links: true

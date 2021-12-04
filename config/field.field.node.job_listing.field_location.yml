@@ -1,0 +1,19 @@
+uuid: 866733d7-ed3b-4f77-aaed-11f8018da793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.job_listing
+id: node.job_listing.field_location
+field_name: field_location
+entity_type: node
+bundle: job_listing
+label: Location
+description: 'Job location (ex. "Remote", "Gainesville, FL")'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
