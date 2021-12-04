@@ -216,7 +216,17 @@ node-teaser-featured-speaker:
     component:
       css/components/node-teaser-featured-speaker.css: {}
 
+node-full-job-listing:
+  css:
+    component:
+      css/components/node-full-job-listing.css: {}
+
 view-featured-speakers:
   css:
     layout:
       css/layout/view-featured-speakers.css: {}
+
+meta-field:
+  css:
+    layout:
+      css/components/meta-field.css: {}

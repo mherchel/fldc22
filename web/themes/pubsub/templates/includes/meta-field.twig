@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Include for theme override for metadata fields
+ *
+ * Additional variables:
+ * - icon: name of icon passed in (eg: '@pubsub/includes/svg/pin
+ .svg')
+ */
+#}
+
+{{ attach_library('pubsub/meta-field') }}
+
+<span class="meta-field meta-field--{{ field_name|clean_class }}">
+    <span class="{{ icon ? 'visually-hidden' }} meta__icon-label meta__icon-label--{{ field_name|clean_class }}">
+      {{ label }}
+    </span>
+    {% if icon %}
+      {% include icon %}
+    {% endif %}
+
+  {% if multiple %}
+    <span class="meta-field__items">
+  {% endif %}
+
+  {% for item in items %}
+    <span class="meta-field__item meta-field__item--{{ field_name|clean_class }}">
+      {{ item.content }}
+    </span>
+  {% endfor %}
+
+  {% if multiple %}
+    </span>
+  {% endif %}
+</span>

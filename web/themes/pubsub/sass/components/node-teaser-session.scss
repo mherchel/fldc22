@@ -82,35 +82,6 @@
   }
 }
 
-.session__field {
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-right: 1em;
-  }
-
-  svg {
-    max-width: 20px;
-    max-height: 20px;
-    vertical-align: text-bottom;
-  }
-
-  path {
-    fill: var(--color--night-50);
-  }
-}
-
-.session__field--field-session-category {
-  svg {
-    margin-bottom: 2px;
-    max-width: 18px;
-    max-height: 18px;
-  }
-
-  path {
-    fill: var(--color--night-60);
-  }
-}
 
 .session-teaser__desc {
   margin-top: var(--sp1-5);

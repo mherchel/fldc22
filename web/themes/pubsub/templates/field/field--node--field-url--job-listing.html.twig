@@ -1,0 +1,6 @@
+{% for item in items %}
+  <a class="button button--primary button--action button--large" href="{{ item.content['#url'].uri }}">
+    Apply Now!
+    {% include '@pubsub/includes/svg/arrow-right.svg' %}
+  </a>
+{% endfor %}

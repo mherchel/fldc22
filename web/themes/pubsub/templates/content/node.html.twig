@@ -67,14 +67,10 @@
  */
 #}
 
-{% set layout = layout ? 'layout--' ~ layout|clean_class %}
-
 {%
   set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
-    layout ? 'grid-full',
-    layout ? 'ie11-autorow',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
@@ -82,7 +78,7 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  <header class="{{ layout }}">
+  <header class="{ }}">
     {{ title_prefix }}
       {% if label and not page %}
       <h2{{ title_attributes.addClass('node__title') }}>
@@ -104,12 +100,12 @@
       </div>
     {% endif %}
   </header>
-  <div{{ content_attributes.addClass('node__content', layout) }}>
+  <div{{ content_attributes.addClass('node__content') }}>
     {# Comments not part of content, so they won't inherit .text-content styles. #}
     {{ content|without('comment') }}
   </div>
   {% if content.comment %}
-    <div id="comments" class="{{ layout }}">
+    <div id="comments">
       {{ content.comment }}
     </div>
   {% endif %}

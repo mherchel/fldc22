@@ -17,14 +17,11 @@
   margin-inline-end: 0;
 }
 
-.button--small {
-  @include button--small;
-}
-
 .button--primary {
   @include button--primary;
 }
 
+.button--action,
 .button--highlight {
   @include button--highlight;
 }
@@ -43,4 +40,12 @@
     border-block-end: solid 2px currentColor;
     border-inline-start: solid 2px currentColor;
   }
+}
+
+.button--small {
+  @include button--small;
+}
+
+.button--large {
+  @include button--large;
 }

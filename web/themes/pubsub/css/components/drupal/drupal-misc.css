@@ -41,7 +41,7 @@ input.field-add-more-submit {
   border-radius: var(--button-border-radius);
   background-color: var(--button-color-bg);
   font-family: inherit;
-  font-size: var(--font-size-l);
+  font-size: 1rem;
   font-weight: 700;
   line-height: var(--button-line-height);
   -webkit-appearance: none;
@@ -52,7 +52,7 @@ input.field-add-more-submit {
   background-color: var(--button-color-primary);
   height: var(--sp2-5);
   padding-inline: var(--sp);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: normal;
 }
 input.field-add-more-submit:hover, input.field-add-more-submit:focus {
@@ -107,7 +107,7 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   border-radius: var(--button-border-radius);
   background-color: var(--button-color-bg);
   font-family: inherit;
-  font-size: var(--font-size-l);
+  font-size: 1rem;
   font-weight: 700;
   line-height: var(--button-line-height);
   -webkit-appearance: none;
@@ -116,7 +116,7 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   touch-action: manipulation;
   height: var(--sp2-5);
   padding-inline: var(--sp);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: normal;
 }
 .tabledrag-toggle-weight:hover, .tabledrag-toggle-weight:focus {

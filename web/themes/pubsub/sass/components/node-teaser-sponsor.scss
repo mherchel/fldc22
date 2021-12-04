@@ -10,8 +10,9 @@
   }
 
   // Special full width and text treatment for platinum sponsors within the sponsors view.
-  .views-all-sponsors__sponsor.Platinum & {
+  :is(.job-listing-full &, .views-all-sponsors__sponsor.Platinum &) {
     background-color: var(--color--sky-86);
+    border: solid 1px var(--color--sky-86);
     border-radius: 0 16px 0 0;
 
     .sponsor-teaser__link {

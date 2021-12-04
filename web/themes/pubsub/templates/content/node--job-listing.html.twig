@@ -1,0 +1,23 @@
+{{ attach_library('pubsub/node-full-job-listing') }}
+
+{%
+  set classes = [
+    'job-listing-full',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+
+  {% if content.field_location.0 %}
+    <div class="job-listing-full__meta">
+      {{ content.field_location }}
+    </div>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_location', 'field_url') }}
+  </div>
+  <footer class="job-listing-full__sticky-footer">
+    {{ content.field_url }}
+  </footer>
+</article>
