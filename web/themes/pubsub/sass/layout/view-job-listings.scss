@@ -1,0 +1,6 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+.view-job-listings__title {
+  @include left-border-title;
+}

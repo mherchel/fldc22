@@ -1,0 +1,30 @@
+{{ attach_library('pubsub/node-teaser-job-listing') }}
+
+{% set company = node.field_company.entity.title.value %}
+{% set sponsor_level = node.field_company.entity.field_sponsor_level.entity.name.value|replace({'Sponsors': 'Sponsor'}) %}
+
+<article{{ attributes.addClass('job-listing-teaser') }}>
+  {{ title_suffix }}
+  {{ content.field_company }}
+
+  {% if content.field_location.0 %}
+    <div class="job-listing-full__meta">
+      <span class="meta-field">
+        {% include '@pubsub/includes/svg/briefcase.svg' %}
+        {{ company }}
+      </span>
+
+      {{ content.field_location }}
+
+      <span class="meta-field">
+        {% include '@pubsub/includes/svg/heart.svg' %}
+        {{ sponsor_level }}
+      </span>
+    </div>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_location', 'field_url', 'field_company') }}
+  </div>
+
+</article>

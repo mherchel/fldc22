@@ -1,0 +1,13 @@
+{{ attach_library('pubsub/view-job-listings') }}
+<h2 class="view-job-listings__title">{{ title }}</h2>
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'view-job-listings__item',
+      title|render|striptags('<drupal-render-placeholder>')|clean_class,
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}

@@ -1,0 +1,21 @@
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+.view-job-listings__title {
+  margin-top: 0;
+  border-left: solid 4px var(--color--sun-55);
+  padding-left: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: var(--sp);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color--night-20);
+}
+@media (min-width: 81.25rem) {
+  .view-job-listings__title {
+    font-size: 0.875rem;
+    line-height: var(--sp1-5);
+  }
+}

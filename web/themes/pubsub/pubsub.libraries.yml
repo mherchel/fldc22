@@ -230,3 +230,13 @@ meta-field:
   css:
     layout:
       css/components/meta-field.css: {}
+
+view-job-listings:
+  css:
+    layout:
+      css/layout/view-job-listings.css: {}
+
+node-teaser-job-listing:
+  css:
+    component:
+      css/components/node-teaser-job-listing.css: {}
