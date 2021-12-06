@@ -1,3 +1,57 @@
 .job-listing-teaser {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: var(--grid-gap);
 
+  > * {
+    grid-column: 1 / -1;
+  }
+
+  // Hide the company node teaser by default (gets shown for platinum sponsors).
+  .field--name-field-company {
+    display: none;
+  }
+
+  .job-listing-teaser__meta {
+    margin-bottom: var(--sp);
+  }
+}
+
+.job-listing-teaser__title {
+  margin: 0 0 var(--sp);
+}
+
+.view-job-listings__item--platinum-sponsors {
+  // Show the company node teaser on platinum sponsors at medium widths.
+  @media (min-width: 500px) {
+    .field--name-field-company {
+      display: block;
+      grid-column: 1 / span 3;
+    }
+
+    .job-listing-teaser__content {
+      grid-row: 1;
+      grid-column-start: 4;
+    }
+  }
+}
+
+// Do not show the body field on bronze sponsor teasers.
+.view-job-listings__item--bronze-sponsors {
+  .field--name-body  {
+    display: none;
+  }
+}
+
+// Bronze sponsors' listings are organized into columns at medium widths.
+.view-job-listings__sponsor-group--bronze-sponsors {
+  column-count: auto;
+  column-width: 300px;
+  column-gap: calc(2 * var(--grid-gap));
+
+  .view-job-listings__item {
+    break-inside: avoid-column;
+    margin-bottom: 0;
+    padding-bottom: var(--sp2);
+  }
 }

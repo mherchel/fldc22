@@ -10,7 +10,6 @@
 }
 :is(.job-listing-full .sponsor-teaser, .views-all-sponsors__sponsor.Platinum .sponsor-teaser) {
   background-color: var(--color--sky-86);
-  border: solid 1px var(--color--sky-86);
   border-radius: 0 1rem 0 0;
 }
 :is(.job-listing-full .sponsor-teaser, .views-all-sponsors__sponsor.Platinum .sponsor-teaser) .sponsor-teaser__link {
@@ -68,6 +67,7 @@
   display: grid;
   align-items: center;
   background-color: var(--color--white);
+  border: solid 1px var(--color--sky-86);
   border-radius: 0 1rem 0 0;
 }
 .sponsor-teaser__first:after {

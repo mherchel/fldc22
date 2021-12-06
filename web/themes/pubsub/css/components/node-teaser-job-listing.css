@@ -1,0 +1,44 @@
+.job-listing-teaser {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: var(--grid-gap);
+}
+.job-listing-teaser > * {
+  grid-column: 1/-1;
+}
+.job-listing-teaser .field--name-field-company {
+  display: none;
+}
+.job-listing-teaser .job-listing-teaser__meta {
+  margin-bottom: var(--sp);
+}
+
+.job-listing-teaser__title {
+  margin: 0 0 var(--sp);
+}
+
+@media (min-width: 31.25rem) {
+  .view-job-listings__item--platinum-sponsors .field--name-field-company {
+    display: block;
+    grid-column: 1/span 3;
+  }
+  .view-job-listings__item--platinum-sponsors .job-listing-teaser__content {
+    grid-row: 1;
+    grid-column-start: 4;
+  }
+}
+
+.view-job-listings__item--bronze-sponsors .field--name-body {
+  display: none;
+}
+
+.view-job-listings__sponsor-group--bronze-sponsors {
+  column-count: auto;
+  column-width: 18.75rem;
+  column-gap: calc(2 * var(--grid-gap));
+}
+.view-job-listings__sponsor-group--bronze-sponsors .view-job-listings__item {
+  break-inside: avoid-column;
+  margin-bottom: 0;
+  padding-bottom: var(--sp2);
+}

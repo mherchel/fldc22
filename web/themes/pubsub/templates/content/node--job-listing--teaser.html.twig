@@ -7,8 +7,11 @@
   {{ title_suffix }}
   {{ content.field_company }}
 
-  {% if content.field_location.0 %}
-    <div class="job-listing-full__meta">
+  <div{{ content_attributes.addClass('job-listing-teaser__content') }}>
+    <h3 class="job-listing-teaser__title">
+      <a href="{{ url }}">{{ label }}</a>
+    </h3>
+    <div class="job-listing-teaser__meta">
       <span class="meta-field">
         {% include '@pubsub/includes/svg/briefcase.svg' %}
         {{ company }}
@@ -21,10 +24,7 @@
         {{ sponsor_level }}
       </span>
     </div>
-  {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without('field_location', 'field_url', 'field_company') }}
   </div>
-
 </article>
