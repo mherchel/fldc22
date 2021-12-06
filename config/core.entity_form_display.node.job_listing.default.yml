@@ -24,9 +24,9 @@ content:
     weight: 9
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
-      show_summary: false
+      summary_rows: 3
+      show_summary: true
     third_party_settings: {  }
     region: content
   created:
