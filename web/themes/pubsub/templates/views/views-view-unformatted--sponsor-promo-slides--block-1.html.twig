@@ -1,0 +1,61 @@
+{#
+/**
+* @file
+* Theme override to display a view of unformatted rows.
+*
+* Available variables:
+* - title: The title of this group of rows. May be empty.
+* - rows: A list of the view's row items.
+* - attributes: The row's HTML attributes.
+* - content: The row's content.
+* - view: The view object.
+* - default_row_class: A flag indicating whether default classes should be
+* used on rows.
+*
+* @see template_preprocess_views_view_unformatted()
+*/
+#}
+{{ attach_library('pubsub/slick') }}
+{%
+set data = {}
+%}
+{% block grid_content %}
+	{% for row in rows %}
+		{% set data = data|merge([{
+			'title': row.content['#row']._entity.title.value,
+			'img_src':
+			file_url(row.content['#row']._entity.field_sponsor_logo.entity.uri.value),
+			'img_alt': row.content['#row']._entity.field_sponsor_logo.entity.field_media_image.alt,
+			'width': row.content['#row']._entity.field_sponsor_logo.entity.field_media_image.width,
+			'height': row.content['#row']._entity.field_sponsor_logo.entity.field_media_image.height,
+			'description': row.content['#row']._entity.body.value|striptags|render|length > 200 ? row.content['#row']._entity.body.value|striptags|render|slice(0, 200) ~ '...' : row.content['#row']._entity.body.value|striptags|render,
+		}]) %}
+{% endfor %}
+
+{% set config = {
+	"block": "grid-5",
+	technologies: data
+} %}
+
+
+<!-- Complete Sponsor Promo Slider -->
+<div class="section container-fluid p-0">
+	<div class="col-12">
+		<div class="sponsor-slider-new-design slick-block-slider swiper-container">
+			<div class="swiper-wrapper">
+			{% for sponsor in config.technologies %}
+				<div class="swiper-slide">
+						<img src="{{ sponsor.img_src }}" alt="{{ sponsor.img_alt }}" width="162" height="170">
+						<h6>{{ sponsor.title }}</h6>
+						<p>{{ sponsor.description }}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,29 @@
+uuid: ecc29593-e336-4f41-aad9-117faa90ccec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsor_promo_slides
+  module:
+    - system
+    - views
+  theme:
+    - pubsub
+id: views_block__sponsor_promo_slides_block_1
+theme: pubsub
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:sponsor_promo_slides-block_1'
+settings:
+  id: 'views_block:sponsor_promo_slides-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

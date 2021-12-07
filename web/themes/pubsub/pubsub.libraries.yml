@@ -35,13 +35,25 @@ global-styling:
       css/components/site-footer.css: {}
       css/components/site-header.css: {}
       css/components/text-content.css: {}
+      css/slick/slick.css: {}
+    slick:
+      css/slick/slider.css: {}
   js:
     js/checkbox.js: {}
     js/navigation-utils.js: {}
+    js/slick.min.js: {}
   dependencies:
+    - core/jquery
     - core/drupal
     - core/once
     - core/tabbable
+
+slick:
+  js:
+    js/slider.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
 
 site-hero:
   css:
