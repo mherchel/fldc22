@@ -43,7 +43,7 @@ a {
   transition: color 0.2s;
 }
 a:hover {
-  color: var(--color--ocean-55);
+  color: var(--color--ocean-37);
 }
 a:focus {
   outline: solid 2px var(--focus-ring-color);

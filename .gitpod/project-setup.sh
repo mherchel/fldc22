@@ -16,4 +16,5 @@ fi
 
 cd "$GITPOD_REPO_ROOT" && ddev drush updb -y
 cd "$GITPOD_REPO_ROOT" && ddev drush cim -y
+cd "$GITPOD_REPO_ROOT"/web/themes/pubsub && yarn && yarn gulp sass
 cd "$GITPOD_REPO_ROOT" && ddev drush cr
