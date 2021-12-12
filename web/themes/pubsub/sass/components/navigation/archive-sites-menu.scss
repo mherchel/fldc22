@@ -1,7 +1,11 @@
 @import "../../global/variables";
 
 .archive-sites-menu {
-  background-color: transparent;
+  // Note we cannot use `transparent` for the background-color. This is a fix
+  // for MS Edge (and maybe FF) where when in "dark mode", the browsers
+  // change the background-color of the <option> descendent elements to white.
+  // Since the text is white, it will not show. Therefore we need to be explicit.
+  background-color: var(--color--ocean-10);
   background-image: url('../../../images/archive-site-menu-arrows.svg');
   background-position: center right 10px;;
   height: 40px;
