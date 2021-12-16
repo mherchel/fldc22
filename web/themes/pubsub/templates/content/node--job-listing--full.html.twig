@@ -33,7 +33,9 @@
   </p>
   {{ content.field_company }}
 
-  <footer class="job-listing-full__sticky-footer">
-    {{ content.field_url }}
-  </footer>
+  {% if content.field_url.0 %}
+    <footer class="job-listing-full__sticky-footer">
+      {{ content.field_url }}
+    </footer>
+  {% endif %}
 </article>
