@@ -12,7 +12,7 @@ dependencies:
 id: day1scheduleinfo
 theme: pubsub
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: 'block_content:64667164-146a-469a-b4c1-f2b20416b054'
 settings:

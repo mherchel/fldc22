@@ -1,23 +1,23 @@
-uuid: 362e362f-8f7f-4c8e-9fe9-d235e4708d31
+uuid: 2130e841-737f-4339-8adc-6a3859672df1
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:85361dcf-6755-4ab3-a15f-6868282f6b1d'
+    - 'block_content:basic:0494773d-8857-4aa0-8104-6eda9fc628d4'
   module:
     - block_content
     - system
   theme:
     - pubsub
-id: day3scheduleinfo
+id: jobpostinginfo
 theme: pubsub
 region: content
-weight: -7
+weight: -6
 provider: null
-plugin: 'block_content:85361dcf-6755-4ab3-a15f-6868282f6b1d'
+plugin: 'block_content:0494773d-8857-4aa0-8104-6eda9fc628d4'
 settings:
-  id: 'block_content:85361dcf-6755-4ab3-a15f-6868282f6b1d'
-  label: 'Day 3 Schedule Info'
+  id: 'block_content:0494773d-8857-4aa0-8104-6eda9fc628d4'
+  label: 'Job Posting Info'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,5 +26,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /schedule/day-3
+    pages: /job-listings
     negate: false

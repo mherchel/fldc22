@@ -6,7 +6,7 @@ id: session_submitted
 label: 'Session Submitted'
 subject: 'Session "[node:title]" submitted to Florida DrupalCamp [config_page:camp_details:field_camp_year]'
 body:
-  value: "Hello,\r\n\r\nOn behalf of the FLDC team, THANK YOU for submitting your \"[node:title]\" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.\r\n\r\nYour session is viewable at [node:url] and you may edit it at [node:edit-url].\r\n\r\nImportant: Please be sure to fill out all fields (including photo, bio, etc) in your user profile at [current-user:edit-url].\r\n\r\nA speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team\r\n\r\n"
+  value: "Hello,\r\n\r\nOn behalf of the FLDC team, THANK YOU for submitting your \"[node:title]\" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.\r\n\r\nKeep in mind, we are IN PERSON this year in Orlando, Florida. We expect all attendees to be vaccinated against Covid.\r\n\r\nYour session is viewable at [node:url] and you may edit it at [node:edit-url].\r\n\r\nImportant: Please be sure to fill out all fields (including photo, bio, etc) in your user profile at [current-user:edit-url].\r\n\r\nA speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team\r\n\r\n"
   format: plain_text
 bundles: {  }
 recipient_types:
