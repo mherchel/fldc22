@@ -1,20 +1,20 @@
+_core:
+  default_config_hash: oLgmGR2Jq98YjM80b7XIU7o_u9PTxwj0P23G60FQiaE
+ignore_admin_paths: true
+ignore_ajax_links: true
+ignore_hashes: true
+ignore_file_ext: true
+url_patterns_to_ignore: ''
+ignore_selectors: ''
+selector: ''
+allowed_domains: ''
+prefetch_only_paths: ''
 no_load_when_authenticated: true
 no_load_when_session: true
 no_load_content_types: {  }
-ignore_admin_paths: true
-ignore_hashes: true
-ignore_ajax_links: true
-ignore_file_ext: true
-ignore_selectors: ''
 load_polyfill: false
-selector: ''
-url_patterns_to_ignore: ''
-prefetch_only_paths: ''
-allowed_domains: ''
 enable_debug_mode: false
 total_request_limit: 0
 concurrency_throttle_limit: 0
 idle_wait_timeout: 2000
 viewport_delay: 0
-_core:
-  default_config_hash: oLgmGR2Jq98YjM80b7XIU7o_u9PTxwj0P23G60FQiaE

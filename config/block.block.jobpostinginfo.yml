@@ -18,13 +18,13 @@ plugin: 'block_content:0494773d-8857-4aa0-8104-6eda9fc628d4'
 settings:
   id: 'block_content:0494773d-8857-4aa0-8104-6eda9fc628d4'
   label: 'Job Posting Info'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /job-listings
     negate: false
+    pages: /job-listings

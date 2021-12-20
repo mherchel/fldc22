@@ -19,20 +19,20 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: content_width
       image_link: ''
+      image_style: content_width
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
 hidden:
   links: true

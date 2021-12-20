@@ -21,25 +21,23 @@ bundle: sponsor
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_sponsor_logo:
     type: image
-    weight: 1
-    region: content
     label: hidden
     settings:
-      image_style: sponsor_logo
       image_link: ''
+      image_style: sponsor_logo
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_website_address:
     type: link
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -48,6 +46,8 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   field_sponsor_level: true
   links: true

@@ -20,62 +20,62 @@ bundle: session
 mode: default
 content:
   field_audience:
-    weight: 2
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_description:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_is_training:
-    weight: 0
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 0
     region: content
   field_r:
-    weight: 1
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   field_session_category:
-    weight: 4
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 4
     region: content
   field_speakers:
-    weight: 6
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: compact
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 6
     region: content
   field_time_slot:
     type: entity_reference_label
-    weight: 5
-    region: content
     label: above
     settings:
       link: false
     third_party_settings: {  }
+    weight: 5
+    region: content
 hidden:
   links: true

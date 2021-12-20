@@ -1,7 +1,13 @@
 uuid: 7faaad47-26cc-46a6-b1a3-f09ac7c212ee
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - field_permissions
+    - filter
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
@@ -9,13 +15,7 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access shortcuts'
-  - 'access site-wide contact form'
   - 'access user profiles'
-  - 'post comments'
-  - 'search content'
-  - 'skip comment approval'
   - 'use text format basic_html'
   - 'view field_time_slot'

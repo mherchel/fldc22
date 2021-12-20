@@ -17,12 +17,12 @@ plugin: local_tasks_block
 settings:
   id: local_tasks_block
   label: 'Primary tabs'
-  provider: core
   label_display: '0'
+  provider: core
   primary: true
   secondary: false
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/user/login\r\n"
     negate: true
+    pages: "<front>\r\n/user/login\r\n"

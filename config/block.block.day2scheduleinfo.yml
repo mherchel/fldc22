@@ -18,13 +18,13 @@ plugin: 'block_content:f7b360c5-5cb9-4f6f-9108-fc270dbafca4'
 settings:
   id: 'block_content:f7b360c5-5cb9-4f6f-9108-fc270dbafca4'
   label: 'Day 2 Schedule Info'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /schedule/day-2
     negate: false
+    pages: /schedule/day-2

@@ -4,6 +4,7 @@ status: true
 dependencies: {  }
 id: camp_details
 label: 'Camp Details'
+token: true
 context:
   show_warning: true
   group:
@@ -14,4 +15,3 @@ menu:
   path: /admin/camp-details
   weight: 0
   description: 'Camp Details'
-token: true

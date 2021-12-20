@@ -5,14 +5,14 @@ dependencies: {  }
 id: session_rejected
 label: 'Session Rejected'
 subject: 'Florida DrupalCamp Session, [node:title]'
-body:
-  value: "On behalf of the FLDC team, THANK YOU for submitting your \"[node:title]\" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.\r\n\r\nUnfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut. \r\n\r\nNevertheless, we still hope to see you in Orlando this year. Please reach out and let us know if you have any questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team"
-  format: plain_text
-bundles: {  }
 recipient_types:
   author:
     id: author
     provider: workbench_email
     status: true
     settings: {  }
+bundles: {  }
+body:
+  value: "On behalf of the FLDC team, THANK YOU for submitting your \"[node:title]\" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.\r\n\r\nUnfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut. \r\n\r\nNevertheless, we still hope to see you in Orlando this year. Please reach out and let us know if you have any questions. \r\n\r\nThanks again,\r\n\r\nThe Florida DrupalCamp planning team"
+  format: plain_text
 replyTo: info@fldrupalcamp.org

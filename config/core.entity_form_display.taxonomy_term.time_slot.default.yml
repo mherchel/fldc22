@@ -13,14 +13,14 @@ bundle: time_slot
 mode: default
 content:
   field_date_time:
+    type: daterange_datelist
     weight: 4
+    region: content
     settings:
+      increment: 15
       date_order: MDY
       time_type: '12'
-      increment: 15
     third_party_settings: {  }
-    type: daterange_datelist
-    region: content
   name:
     type: string_textfield
     weight: 3
@@ -31,10 +31,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 2
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   description: true

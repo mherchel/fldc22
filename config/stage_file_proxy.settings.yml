@@ -1,7 +1,7 @@
+_core:
+  default_config_hash: wB2h-QBawANCiCVEXy6bJjiDfvZY6EONZ6-wRB_RYQc
 hotlink: false
 origin: 'https://www.fldrupal.camp'
 origin_dir: sites/default/files
 use_imagecache_root: true
 verify: false
-_core:
-  default_config_hash: wB2h-QBawANCiCVEXy6bJjiDfvZY6EONZ6-wRB_RYQc

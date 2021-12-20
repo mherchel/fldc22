@@ -29,59 +29,57 @@ mode: compact
 content:
   field_biography:
     type: text_default
-    weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_drupal_org_profile:
     type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
     weight: 2
     region: content
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: true
-      url_plain: true
-      rel: '0'
-      target: '0'
-    third_party_settings: {  }
   field_first_name:
     type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 4
     region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_home_town:
     type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 3
     region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_last_name:
     type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 6
     region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_organization:
     type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 5
     region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_personal_website_link:
     type: link
-    weight: 7
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -90,18 +88,18 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
+    weight: 7
+    region: content
   field_title:
     type: string
-    weight: 8
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 8
+    region: content
   field_twitter_profile_link:
     type: link
-    weight: 9
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -110,14 +108,16 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
+    weight: 9
+    region: content
   user_picture:
     type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: user_profile_large
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings:
-      image_style: user_profile_large
-      image_link: ''
-    third_party_settings: {  }
-    label: hidden
 hidden:
   member_for: true

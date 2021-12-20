@@ -18,13 +18,13 @@ plugin: 'block_content:d7542943-7c0c-40ad-acd1-54fd61c51ecd'
 settings:
   id: 'block_content:d7542943-7c0c-40ad-acd1-54fd61c51ecd'
   label: 'Trainings View Info'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /trainings
     negate: false
+    pages: /trainings

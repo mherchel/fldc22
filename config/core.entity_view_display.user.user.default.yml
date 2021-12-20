@@ -27,14 +27,14 @@ bundle: user
 mode: default
 content:
   field_biography:
-    weight: 7
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 7
     region: content
   field_drupal_org_profile:
-    weight: 8
+    type: link
     label: inline
     settings:
       trim_length: 80
@@ -43,42 +43,42 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 8
     region: content
   field_first_name:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_home_town:
-    weight: 5
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_last_name:
-    weight: 3
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
   field_organization:
-    weight: 6
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_personal_website_link:
-    weight: 10
+    type: link
     label: inline
     settings:
       trim_length: 80
@@ -87,18 +87,18 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 10
     region: content
   field_title:
-    weight: 4
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_twitter_profile_link:
-    weight: 9
+    type: link
     label: inline
     settings:
       trim_length: 80
@@ -107,20 +107,20 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 9
     region: content
   member_for:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   user_picture:
     type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: user_profile_large
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings:
-      image_style: user_profile_large
-      image_link: ''
-    third_party_settings: {  }
-    label: hidden
 hidden: {  }

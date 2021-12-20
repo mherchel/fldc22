@@ -1,27 +1,27 @@
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
 definitions:
   contact__site_page:
-    enabled: true
     menu_name: footer
     parent: ''
     weight: 0
     expanded: false
+    enabled: true
   standard__front_page:
-    enabled: false
     menu_name: main
     parent: ''
-    expanded: false
     weight: 0
-  user__page:
-    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
-    menu_name: main
-    enabled: true
     expanded: false
-    weight: -50
-  user__logout:
-    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
+    enabled: false
+  user__page:
     menu_name: main
+    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
+    weight: -50
+    expanded: false
+    enabled: true
+  user__logout:
+    menu_name: main
+    parent: 'menu_link_content:b3b2d33f-e0bf-4f06-bd4d-6aea69f9f4a0'
     weight: -49
     expanded: false
     enabled: true
-_core:
-  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

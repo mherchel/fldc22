@@ -23,41 +23,41 @@ bundle: camp_details
 mode: full
 content:
   field_camp_location_short_:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_camp_name:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_camp_year:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_dates:
-    weight: 3
+    type: daterange_default
     label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 3
     region: content
   field_header_cta:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -66,10 +66,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_homepage_media_cta:
-    weight: 5
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -78,14 +78,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 5
     region: content
   field_hompage_description_text:
-    weight: 6
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 6
     region: content
 hidden:
   field_session_submission_deadlin: true

@@ -1,7 +1,13 @@
 uuid: a0f7085b-1313-4973-bab5-a8ddf157a493
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.session
+    - workflows.workflow.session_acceptance
+  module:
+    - content_moderation
+    - node
 id: speaker
 label: Speaker
 weight: -8

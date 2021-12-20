@@ -18,13 +18,13 @@ plugin: 'block_content:64667164-146a-469a-b4c1-f2b20416b054'
 settings:
   id: 'block_content:64667164-146a-469a-b4c1-f2b20416b054'
   label: 'Day 1 Schedule Info'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /schedule/day-1
     negate: false
+    pages: /schedule/day-1
