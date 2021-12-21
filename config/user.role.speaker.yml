@@ -13,7 +13,6 @@ label: Speaker
 weight: -8
 is_admin: null
 permissions:
-  - 'create session content'
   - 'edit own session content'
   - 'revert session revisions'
   - 'use session_acceptance transition propose_session'
