@@ -1,0 +1,11 @@
+uuid: b39a37e9-0845-4936-ac6d-28dcb12a2880
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_rest_resource_config
+label: 'Bulk Update REST resource configuration Fields'
+type: rest_resource_config
+plugin: bulk_update_fields_action_base
+configuration: {  }

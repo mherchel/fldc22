@@ -15,6 +15,7 @@ module:
   config_pages: 0
   content_moderation: 0
   contextual: 0
+  csv_serialization: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
@@ -47,6 +48,8 @@ module:
   quicklink: 0
   r4032login: 0
   registration_role: 0
+  rest: 0
+  serialization: 0
   stage_file_proxy: 0
   system: 0
   taxonomy: 0
@@ -55,6 +58,7 @@ module:
   toolbar: 0
   user: 0
   user_registrationpassword: 0
+  views_data_export: 0
   views_ui: 0
   webform: 0
   webform_ui: 0
