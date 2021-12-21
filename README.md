@@ -9,7 +9,7 @@
 3. Browse through all of the content and update the basic pages as needed.
 4. Unpublish (don't delete) all of the sponsors.
 5. Delete all of the sessions and trainings as necessary
-6. Review and edit all transactional emails at `admin/structure/workbench-moderation/workbench-email-template`
+6. Review and edit all transactional emails at `/admin/structure/workbench-moderation/workbench-email-template`
 7. Update config with the transactional email changes.
 
 
@@ -19,3 +19,10 @@
 2. Edit all the taxonomy term fields within the "Session Time Slot" vocabulary at `/admin/structure/taxonomy/manage/time_slot/overview`
 3. Edit the Views Filters in the "Session Schedule" view at `/admin/structure/views/view/session_schedule`. You'll see a min value and max value. You'll need to update them both to reflect the new date.
 4. Repeat the last step on each of the page displays within the "Session Schedule" view.
+
+## Enable / Disable session submissions
+
+1. Check/uncheck the checkbox for "Session: Create new content" next to the speaker role.
+2. Enable/disable the menu item for "Submit a session" under main menu.
+3. Change the "Homepage Media CTA" text and URL at `/admin/camp-details`. The URL for the session submission is  `/submit-session`.
+4. Change the "Who can register accounts?" setting at `/admin/config/people/accounts`. Enable the "Visitors" option if session submissions are opening.
