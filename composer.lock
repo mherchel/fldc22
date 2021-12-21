@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "550efd8c278fec167e48ea594a70645a",
+    "content-hash": "43b9eded3d2bb3585acf1df691f13583",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2819,30 +2819,27 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-alpha34",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-alpha34"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-alpha34.zip",
-                "reference": "8.x-3.0-alpha34",
-                "shasum": "9ef1388695e371b0c5239088ab19aa746a02173b"
+                "reference": "759e2b0c7a3d4fc0431ed75d99ea0d4813824522"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^8.8 || ^9 || ^10",
                 "drupal/gin_toolbar": "^1.0@beta"
             },
             "type": "drupal-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.0-alpha34",
-                    "datestamp": "1620747333",
+                    "version": "8.x-3.0-alpha37+32-dev",
+                    "datestamp": "1639989973",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -8588,7 +8585,7 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/bulk_update_fields": 15,
-        "drupal/gin": 15,
+        "drupal/gin": 20,
         "drupal/gin_toolbar": 10,
         "drupal/user_registrationpassword": 15
     },
