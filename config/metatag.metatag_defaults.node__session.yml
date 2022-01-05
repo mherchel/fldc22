@@ -1,0 +1,7 @@
+uuid: 4cbe8097-39cc-46ce-94f6-ca2d3d3d0bf6
+langcode: en
+status: true
+dependencies: {  }
+id: node__session
+label: 'Content: Session'
+tags: {  }

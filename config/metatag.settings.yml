@@ -1,0 +1,10 @@
+entity_type_groups:
+  node:
+    session:
+      basic: basic
+      open_graph: open_graph
+      twitter_cards: twitter_cards
+    sponsor:
+      basic: basic
+      open_graph: open_graph
+      twitter_cards: twitter_cards
