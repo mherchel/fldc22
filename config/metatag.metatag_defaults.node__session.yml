@@ -4,4 +4,11 @@ status: true
 dependencies: {  }
 id: node__session
 label: 'Content: Session'
-tags: {  }
+tags:
+  description: '[node:summary]'
+  og_image: '[node:field_social_media_card:twitter_summary_card_with_large_image:url]'
+  og_image_alt: '[config_page:camp_details:field_camp_name] session, "[node:title]" by [node:field_speakers]'
+  twitter_cards_image: '[node:field_social_media_card:twitter_summary_card_with_large_image:url]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image_alt: '[config_page:camp_details:field_camp_name] session, "[node:title]" by [node:field_speakers]'
+  twitter_cards_type: summary_large_image

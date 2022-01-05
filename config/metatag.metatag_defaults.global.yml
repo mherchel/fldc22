@@ -18,11 +18,9 @@ tags:
   og_email: info@fldrupalcamp.org
   og_title: '[current-page:title]'
   twitter_cards_image: /themes/pubsub/images/social-media-logo.png
-  twitter_cards_image_width: '1656'
   twitter_cards_site: '@fldrupalcamp'
   twitter_cards_page_url: '[current-page:url:absolute]'
   twitter_cards_description: '[site:slogan]'
   twitter_cards_image_alt: 'Florida DrupalCamp Logo'
   twitter_cards_type: summary
-  twitter_cards_image_height: '1305'
   twitter_cards_title: '[current-page:title]'

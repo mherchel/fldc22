@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
+    - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
     - node.type.session
@@ -19,20 +20,25 @@ targetEntityType: node
 bundle: session
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_audience:
     type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_is_training:
     type: boolean
@@ -42,7 +48,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_r:
     type: entity_reference_label
@@ -50,7 +56,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_session_category:
     type: entity_reference_label
@@ -58,7 +64,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_speakers:
     type: entity_reference_entity_view
@@ -67,7 +73,7 @@ content:
       view_mode: compact
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_time_slot:
     type: entity_reference_label
@@ -75,7 +81,8 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
 hidden:
+  field_social_media_card: true
   links: true

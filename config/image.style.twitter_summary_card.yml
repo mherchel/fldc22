@@ -1,0 +1,21 @@
+uuid: e40ba065-346d-4feb-b8f7-10e341b4b2ef
+langcode: en
+status: true
+dependencies: {  }
+name: twitter_summary_card
+label: 'Twitter Summary Card'
+effects:
+  49b4a919-378a-4d14-bef3-083bfdf9edb2:
+    uuid: 49b4a919-378a-4d14-bef3-083bfdf9edb2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      anchor: center-center
+  f1af9c5a-8e14-4565-a152-4b28af7f4c18:
+    uuid: f1af9c5a-8e14-4565-a152-4b28af7f4c18
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

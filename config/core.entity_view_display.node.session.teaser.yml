@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
+    - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
     - node.type.session
@@ -66,5 +67,6 @@ content:
     region: content
 hidden:
   field_is_training: true
+  field_social_media_card: true
   field_time_slot: true
   links: true
