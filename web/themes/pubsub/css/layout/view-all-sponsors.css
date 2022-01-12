@@ -86,6 +86,9 @@
   }
 }
 
+.views-all-sponsors__sponsor {
+  display: grid;
+}
 .views-all-sponsors__sponsor.Platinum {
   grid-column: 1/-1;
 }

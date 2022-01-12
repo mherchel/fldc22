@@ -65,7 +65,11 @@
   }
 }
 
-// Platinum sponsors take up a full row.
-.views-all-sponsors__sponsor.Platinum {
-  grid-column: 1 / -1;
+.views-all-sponsors__sponsor {
+  display: grid; // Ensure all items in row have equal height.
+
+  // Platinum sponsors take up a full row.
+  &.Platinum {
+    grid-column: 1 / -1;
+  }
 }
