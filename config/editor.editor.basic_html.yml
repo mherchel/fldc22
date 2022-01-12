@@ -37,6 +37,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - HorizontalRule
         -
           name: Tools
           items:
