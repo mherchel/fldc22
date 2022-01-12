@@ -30,3 +30,23 @@
     fill: var(--color--night-60);
   }
 }
+
+// Add commas for multiple speakers.
+.meta-field--field-speakers .meta-field__items {
+  .meta-field__item {
+    &:after {
+      content: ", ";
+      margin-left: -0.25em;
+      white-space: pre;
+    }
+
+    &:nth-last-child(2):after {
+      content: ", and";
+    }
+
+    &:first-child:last-child:after,
+    &:last-child:after {
+      content: none;
+    }
+  }
+}
