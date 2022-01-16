@@ -18,4 +18,5 @@ permissions:
   - 'access content'
   - 'access user profiles'
   - 'use text format restricted_html'
+  - 'view field_r'
   - 'view field_time_slot'
