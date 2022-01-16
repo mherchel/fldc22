@@ -327,6 +327,8 @@ display:
       tags:
         - 'config:core.entity_view_display.node.featured_speaker.default'
         - 'config:core.entity_view_display.node.featured_speaker.teaser'
+        - 'config:core.entity_view_display.node.job_listing.default'
+        - 'config:core.entity_view_display.node.job_listing.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'
@@ -341,7 +343,12 @@ display:
     position: 1
     display_options:
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags:
+            description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
+            twitter_cards_type: summary
+            twitter_cards_description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
       path: schedule/day-1
       menu:
         type: normal
@@ -363,6 +370,8 @@ display:
       tags:
         - 'config:core.entity_view_display.node.featured_speaker.default'
         - 'config:core.entity_view_display.node.featured_speaker.teaser'
+        - 'config:core.entity_view_display.node.job_listing.default'
+        - 'config:core.entity_view_display.node.job_listing.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'
@@ -455,7 +464,12 @@ display:
         filters: false
         filter_groups: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags:
+            description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
+            twitter_cards_type: summary
+            twitter_cards_description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
       path: schedule/day-2
       menu:
         type: none
@@ -476,6 +490,8 @@ display:
       tags:
         - 'config:core.entity_view_display.node.featured_speaker.default'
         - 'config:core.entity_view_display.node.featured_speaker.teaser'
+        - 'config:core.entity_view_display.node.job_listing.default'
+        - 'config:core.entity_view_display.node.job_listing.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'
@@ -568,7 +584,12 @@ display:
         filters: false
         filter_groups: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags:
+            description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
+            twitter_cards_type: summary
+            twitter_cards_description: '[config_page:camp_details:field_camp_name] [config_page:camp_details:field_camp_year] Schedule'
       path: schedule/day-3
       menu:
         type: none
@@ -589,6 +610,8 @@ display:
       tags:
         - 'config:core.entity_view_display.node.featured_speaker.default'
         - 'config:core.entity_view_display.node.featured_speaker.teaser'
+        - 'config:core.entity_view_display.node.job_listing.default'
+        - 'config:core.entity_view_display.node.job_listing.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.session.default'

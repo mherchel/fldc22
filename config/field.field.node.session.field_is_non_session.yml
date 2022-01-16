@@ -1,0 +1,23 @@
+uuid: 1151865d-8caa-46f6-8383-8e8d846f8052
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_non_session
+    - node.type.session
+id: node.session.field_is_non_session
+field_name: field_is_non_session
+entity_type: node
+bundle: session
+label: 'Is Non-session / Non-training'
+description: 'Select if this is a opening session, lunch, etc. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

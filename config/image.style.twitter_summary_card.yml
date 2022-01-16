@@ -5,17 +5,25 @@ dependencies: {  }
 name: twitter_summary_card
 label: 'Twitter Summary Card'
 effects:
-  49b4a919-378a-4d14-bef3-083bfdf9edb2:
-    uuid: 49b4a919-378a-4d14-bef3-083bfdf9edb2
-    id: image_scale_and_crop
-    weight: 1
-    data:
-      width: 800
-      height: 800
-      anchor: center-center
   f1af9c5a-8e14-4565-a152-4b28af7f4c18:
     uuid: f1af9c5a-8e14-4565-a152-4b28af7f4c18
     id: image_convert
-    weight: 2
+    weight: -7
     data:
       extension: webp
+  58baa9a3-a274-4d86-a047-6cf3c380625a:
+    uuid: 58baa9a3-a274-4d86-a047-6cf3c380625a
+    id: image_scale
+    weight: -10
+    data:
+      width: 800
+      height: null
+      upscale: false
+  2d9627d7-331e-4fbd-9ea0-32d4d7b663af:
+    uuid: 2d9627d7-331e-4fbd-9ea0-32d4d7b663af
+    id: image_scale
+    weight: -9
+    data:
+      width: null
+      height: 800
+      upscale: false

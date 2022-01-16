@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
+    - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
@@ -39,6 +40,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_is_non_session:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_is_training:
     type: boolean

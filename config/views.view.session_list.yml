@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Approved Sessions'
+      title: 'Accepted Sessions'
       fields:
         title:
           id: title
@@ -327,7 +327,7 @@ display:
       path: session-list
       menu:
         type: normal
-        title: 'Approved Sessions'
+        title: 'Accepted Sessions'
         description: ''
         weight: -49
         enabled: true
