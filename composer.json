@@ -17,7 +17,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/antibot": "^1.4",
         "drupal/auto_entitylabel": "^3.0@beta",
-        "drupal/bulk_update_fields": "^2.0@alpha",
+        "drupal/bulk_update_fields": "2.x-dev@dev",
         "drupal/config_pages": "^2.9",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.2",
