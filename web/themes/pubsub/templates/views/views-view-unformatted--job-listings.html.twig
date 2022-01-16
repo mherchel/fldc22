@@ -3,7 +3,9 @@
 {% set sponsor_level = title|render|striptags('<drupal-render-placeholder>') %}
 
   <hr class="view-job-listings__divider">
-  <h2 class="view-job-listings__title">{{ sponsor_level|replace({'Sponsors': 'Sponsor'}) }} Listings</h2>
+  {% if title %}
+    <h2 class="view-job-listings__title">{{ sponsor_level|replace({'Sponsors': 'Sponsor'}) }} Listings</h2>
+  {% endif %}
   <div class="view-job-listings__sponsor-group view-job-listings__sponsor-group--{{ sponsor_level|clean_class }}">
   {% for row in rows %}
     {%

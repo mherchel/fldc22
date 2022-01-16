@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_website_address
+    - image.style.large
     - node.type.sponsor
   module:
     - image
@@ -27,24 +28,24 @@ content:
     region: content
   field_sponsor_level:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 102
     region: content
   field_sponsor_logo:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: large
     third_party_settings: {  }
     weight: 103
     region: content
   field_website_address:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
