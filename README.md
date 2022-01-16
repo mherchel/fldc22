@@ -12,7 +12,6 @@
 6. Review and edit all transactional emails at `/admin/structure/workbench-moderation/workbench-email-template`
 7. Update config with the transactional email changes.
 
-
 ## How to update the Schedule View for another year
 
 1. Edit the menu item attributes for the menu items in the "Schedule Tabs" menu at `/admin/structure/menu/manage/schedule-tabs`. To do this you'll see the "Attribute" Details element when editing the menu items. You'll need to add a machine readable date there (eg `2022-02-18`). This will affect the text to the right within the tabs.
@@ -26,3 +25,7 @@
 2. Enable/disable the menu item for "Submit a session" under main menu.
 3. Change the "Homepage Media CTA" text and URL at `/admin/camp-details`. The URL for the session submission is  `/submit-session`.
 4. Change the "Who can register accounts?" setting at `/admin/config/people/accounts`. Enable the "Visitors" option if session submissions are opening.
+
+## To fix next year
+ - Limit sponsor description text to plain text.
+ - Consolidate Session's `is_training`, `is_non_session` booleans to one taxonomy reference field. We could use more options here.
