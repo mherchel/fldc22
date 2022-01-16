@@ -33,8 +33,6 @@
 @media (min-width: 37.5rem) {
   .layout-sidebar .region--sidebar {
     grid-column: var(--sidebar-grid-divider)/-1;
-    position: sticky;
-    top: var(--sp);
     align-self: start;
   }
 }
