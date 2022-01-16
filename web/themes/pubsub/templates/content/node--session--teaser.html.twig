@@ -8,28 +8,37 @@
 %}
 
 {% set is_training = node.field_is_training.value %}
+{% set is_non_session = node.field_is_non_session.value %}
 
 <article{{ attributes.addClass(classes) }}>
   <details class="session-teaser__details">
     <summary class="session-teaser__summary">
       <h3 class="session-teaser__title">{{ label }}</h3>
       <div class="session__meta">
-        {{ content.field_session_category }}
+        {% if not is_non_session %}
+          {{ content.field_session_category }}
+        {% endif %}
+
         {{ content.field_r }}
-        {{ content.field_audience }}
-        {{ content.field_speakers }}
+
+        {% if not is_non_session %}
+          {{ content.field_audience }}
+          {{ content.field_speakers }}
+        {% endif %}
       </div>
     </summary>
     <div class="session-teaser__desc">
       {{ content.field_description }}
 
-      <div class="session-teaser__desc-meta">
-        <a href="{{ url }}">
-          <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
-          <span class="visually-hidden">for {{ label }}</span>
-          {% include '@pubsub/includes/svg/arrow-right.svg' %}
-        </a>
-      </div>
+      {% if not is_non_session %}
+        <div class="session-teaser__desc-meta">
+          <a href="{{ url }}">
+            <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
+            <span class="visually-hidden">for {{ label }}</span>
+            {% include '@pubsub/includes/svg/arrow-right.svg' %}
+          </a>
+        </div>
+      {% endif %}
     </div>
   </details>
 

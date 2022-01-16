@@ -14,7 +14,9 @@
 }
 
 .user-compact__media {
-  grid-column: 1/span 2;
+  flex-basis: 7.5rem;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .user-compact__media img {
   border-top-right-radius: 16px;

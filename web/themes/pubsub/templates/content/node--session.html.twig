@@ -2,6 +2,7 @@
 
 {% set is_training = node.field_is_training.value %}
 {% set speaker_label = is_training ? 'Trainer' : 'Speaker' %}
+{% set is_non_session = node.field_is_non_session.value %}
 
 {%
   set classes = [
@@ -17,16 +18,20 @@
 
 <article{{ attributes.addClass(classes) }}>
   <div class="session__meta">
-    {{ content.field_session_category }}
+    {% if not is_non_session %}
+      {{ content.field_session_category }}
+    {% endif %}
     {{ content.field_r }}
-    {{ content.field_audience }}
+    {% if not is_non_session %}
+      {{ content.field_audience }}
+    {% endif %}
     {{ content.field_time_slot }}
   </div>
   <div class="session__desc">
     {{ content.field_description }}
   </div>
 
-  {% if content.field_speakers.0 %}
+  {% if not is_non_session and content.field_speakers.0 %}
     <h2>About the {{ speaker_label -}} {%- if content.field_speakers.1 %}s{% endif %}</h2>
     {{ content.field_speakers }}
   {% endif %}
