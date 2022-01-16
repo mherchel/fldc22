@@ -9,7 +9,18 @@
 }
 @media (min-width: 37.5rem) {
   .view-sponsors-sidebar {
+    padding: var(--sp);
     box-shadow: none;
+  }
+}
+@media (min-width: 50rem) {
+  .view-sponsors-sidebar {
+    padding: var(--sp2);
+  }
+}
+@media (min-width: 62.5rem) {
+  .view-sponsors-sidebar {
+    padding: var(--sp3);
   }
 }
 .view-sponsors-sidebar .sponsor-teaser {

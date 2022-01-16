@@ -9,7 +9,16 @@
   box-shadow: 50vw 0 0 var(--color--sky-94), -50vw 0 0 var(--color--sky-94);
 
   @media ($grid-md) {
+    padding: var(--sp);
     box-shadow: none;
+  }
+
+  @media (min-width: 800px) {
+    padding: var(--sp2);
+  }
+
+  @media ($lg) {
+    padding: var(--sp3);
   }
 
   .sponsor-teaser {
