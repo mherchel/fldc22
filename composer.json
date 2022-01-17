@@ -23,7 +23,7 @@
         "drupal/field_group": "^3.2",
         "drupal/field_permissions": "^1.1",
         "drupal/gin": "3.x-dev",
-        "drupal/gin_toolbar": "^1.0@beta",
+        "drupal/gin_toolbar": "1.x-dev@dev",
         "drupal/hide_revision_field": "^2.2",
         "drupal/honeypot": "^2.0",
         "drupal/login_redirect_per_role": "^1.7",
