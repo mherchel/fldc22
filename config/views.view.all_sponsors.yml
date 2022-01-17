@@ -473,7 +473,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: 'https://www.fldrupal.camp{{ view_node }}'
+            text: ' - <a href="{{ view_node }}">https://www.fldrupal.camp{{ view_node }}</a>'
             make_link: false
             path: ''
             absolute: false

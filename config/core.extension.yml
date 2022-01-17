@@ -72,6 +72,6 @@ module:
   standard: 1000
 theme:
   claro: 0
-  gin: 0
   pubsub: 0
+  gin: 0
 profile: standard

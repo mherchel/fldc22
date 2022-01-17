@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: QdiqmcH9tjpstXqCQKv4G4rHYE4HjWLFkVzyqooqEWM
+  default_config_hash: ARFyNmrL4zYLc67gTFF-hWKAYDT-kE-NTHScNpPBYaE
 favicon:
   use_default: true
 features:
@@ -12,7 +12,7 @@ third_party_settings:
     module_link: true
 preset_accent_color: blue
 preset_focus_color: gin
-enable_darkmode: false
+enable_darkmode: '0'
 classic_toolbar: horizontal
 icon_default: true
 icon_path: ''
