@@ -32,11 +32,12 @@
       autoplay
       muted
       playsinline
-      src="{{ pubsub_path }}/videos/fldc22-promo.mp4"
       poster="{{ pubsub_path }}/videos/fldc22-promo.webp"
       width="544"
       height="480"
     >
+      <source src="{{ pubsub_path }}/videos/fldc22-promo.webm" type="video/webm">
+      <source src="{{ pubsub_path }}/videos/fldc22-promo.mp4" type="video/mp4">
     </video>
     {% if camp_details.field_homepage_media_cta.0 %}
       <a href="{{ camp_details.field_homepage_media_cta.0.url }}" class="site-hero__media-cta">
