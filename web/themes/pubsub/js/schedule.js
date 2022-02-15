@@ -4,45 +4,32 @@
  * the top of the schedule page.
  */
 ((Drupal) => {
-  function init() {
-    // const confDate = document.querySelector('.schedule-tabs__item--active-trail').dataset.unixtime;
+  /**
+   * Is today the day of the active tab's schedule?
+   *
+   * @returns {boolean}
+   */
+  function todayIsTheDay() {
+    // Get the date string from the active schedule tab's data attribute.
+    const dateOfActiveScheduleTab = document.querySelector('.schedule-tabs__item--active-trail').dataset.date;
 
-    const currentTime = new Date();
-    const timeSlotsElements = document.querySelectorAll('.view-session-schedule__title');
-    const timeSlots = [];
+    // Doesn't work always unless we manually specify the timezone.
+    const dateStringWithTimeZone = dateOfActiveScheduleTab + ' 00:00:00 EST';
 
-+    timeSlotsElements.forEach(el => {
-      // Split the time slot's text into two text strings. This
-      // assumes a string such as "11:00 am to 11:45 am".
-      const timeTextStrings = el.textContent.split(' to ');
+    // Generate date objects to which we can compare.
+    const campDate = new Date(dateStringWithTimeZone);
+    const todaysDate = new Date();
 
-      // Take the second (ending) time slot text string and send it to be parsed
-      // to return an actual Date object.
-      const timeSlot = parseTime(timeTextStrings[1]);
-      timeSlots.push({el, timeSlot});
-    });
-
-    // Filter out time slots that are in the past.
-    const upcomingTimeSlots = timeSlots.filter(obj => obj.timeSlot > currentTime);
-
-    // If there are upcoming time slots, add a <button>
-    if (upcomingTimeSlots.length) {
-      const jumpButton = document.createElement('div')
-      const activeTimeSlotId = upcomingTimeSlots[0].el.getAttribute('id');
-
-      jumpButton.classList.add('schedule-jump');
-      jumpButton.innerHTML = `
-          <a href="#${activeTimeSlotId}" class="schedule-jump__link">Jump to current time slot</a>
-        `;
-      document.querySelector('.region--content').prepend(jumpButton);
-    }
+    return campDate.getDate() === todaysDate.getDate() && campDate.getMonth() === todaysDate.getMonth();
   }
 
   /**
-   * Reads in a string and will parse and create a date object from any time values.
-   * @see https://stackoverflow.com/a/2188651
+   * Parses string and creates a date object.
+   *
    * @param {string} timeString - string to parse
    * @returns {object} Date object
+   *
+   * @see https://stackoverflow.com/a/2188651
    */
   function parseTime(timeString) {
     if (timeString == '') return null;
@@ -62,6 +49,34 @@
     d.setMinutes(parseInt(time[3], 10) || 0);
     d.setSeconds(0, 0);
     return d;
+  }
+
+  /**
+   * Initialize everything.
+   */
+  function init() {
+    const timeSlotsElements = document.querySelectorAll('.view-session-schedule__title');
+    const timeSlots = Array.from(timeSlotsElements).map(el => {
+      const timeTextStrings = el.textContent.split(' to ');
+      const timeSlot = parseTime(timeTextStrings[1]); // We only care about the second time slot string.
+      return { el, timeSlot };
+    });
+
+    // Filters out time slots that are in the past.
+    const upcomingTimeSlots = timeSlots.filter(obj => obj.timeSlot > new Date());
+
+    if (todayIsTheDay() && upcomingTimeSlots.length) {
+      const jumpLink = document.createElement('div')
+      const activeTimeSlotId = upcomingTimeSlots[0].el.getAttribute('id');
+
+      jumpLink.classList.add('schedule-jump');
+      jumpLink.innerHTML = `
+          <a href="#${activeTimeSlotId}" class="schedule-jump__link">
+            Jump to current time
+          </a>
+        `;
+      document.querySelector('.region--content').prepend(jumpLink);
+    }
   }
 
   Drupal.behaviors.schedule = {
