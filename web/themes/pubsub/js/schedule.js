@@ -3,7 +3,7 @@
  * Adds schedule interactivity - adds a "Jump to current time slot" button at
  * the top of the schedule page.
  */
-((Drupal) => {
+((Drupal, once) => {
   /**
    * Is today the day of the active tab's schedule?
    *
@@ -84,4 +84,4 @@
       once('schedule', 'body', context).forEach(init);
     },
   };
-}) (Drupal);
+}) (Drupal, once);

@@ -154,6 +154,9 @@ view-session-schedule:
       css/layout/view-session-schedule.css: {}
   js:
     js/schedule.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
 
 view-details-list:
   css:
