@@ -61,7 +61,7 @@
   width: 100%;
   margin: 0;
 }
-.user-login-form .button--primary:hover {
+.user-login-form .button--primary:where(:hover) {
   background-color: var(--color--sun-55);
   border-color: transparent;
 }
@@ -132,48 +132,48 @@
   width: 100%;
   margin: 0 0 var(--sp);
 }
-.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+.user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.user-login-form__register-link a:active {
+.user-login-form__register-link a:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+.user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
 }
-.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+.user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.user-login-form__register-link a:active {
+.user-login-form__register-link a:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+.user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
 }
-.user-login-form__register-link a:hover, .user-login-form__register-link a:focus {
+.user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
   color: var(--button-color-bg);
   border-color: var(--button-color-primary-dark);
   background-color: var(--button-color-primary-dark);
 }
-.user-login-form__register-link a:active {
+.user-login-form__register-link a:where(:active) {
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 }
-.user-login-form__register-link a:disabled, .user-login-form__register-link a.is-disabled {
+.user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
   color: var(--color--night-35);
   background-color: var(--color--night-90);
 }

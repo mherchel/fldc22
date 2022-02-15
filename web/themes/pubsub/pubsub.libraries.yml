@@ -148,8 +148,12 @@ view-sponsors-sidebar:
 
 view-session-schedule:
   css:
+    theme:
+      css/components/schedule-jump-button.css: {}
     layout:
       css/layout/view-session-schedule.css: {}
+  js:
+    js/schedule.js: {}
 
 view-details-list:
   css:

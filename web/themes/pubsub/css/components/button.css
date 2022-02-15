@@ -36,18 +36,18 @@
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
 }
-.button:hover, .button:focus {
+.button:where(:hover), .button:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.button:active {
+.button:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.button:disabled, .button.is-disabled {
+.button:where(:disabled), .button.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
@@ -92,32 +92,32 @@
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 }
-.button--primary:hover, .button--primary:focus {
+.button--primary:where(:hover), .button--primary:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.button--primary:active {
+.button--primary:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.button--primary:disabled, .button--primary.is-disabled {
+.button--primary:where(:disabled), .button--primary.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
 }
-.button--primary:hover, .button--primary:focus {
+.button--primary:where(:hover), .button--primary:where(:focus) {
   color: var(--button-color-bg);
   border-color: var(--button-color-primary-dark);
   background-color: var(--button-color-primary-dark);
 }
-.button--primary:active {
+.button--primary:where(:active) {
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 }
-.button--primary:disabled, .button--primary.is-disabled {
+.button--primary:where(:disabled), .button--primary.is-disabled {
   color: var(--color--night-35);
   background-color: var(--color--night-90);
 }
@@ -127,8 +127,8 @@
   background-color: var(--color--sun-45);
   border-color: transparent;
 }
-.button--action:hover,
-.button--highlight:hover {
+.button--action:where(:hover),
+.button--highlight:where(:hover) {
   background-color: var(--color--sun-55);
   border-color: transparent;
 }

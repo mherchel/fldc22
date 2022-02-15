@@ -22,6 +22,7 @@ html {
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,17 +46,17 @@ a {
   color: var(--color--ocean-30);
   transition: color 0.2s;
 
-  &:hover {
+  &:where(:hover) {
     color: var(--color--ocean-35);
   }
 
-  &:focus {
+  &:where(:focus) {
     outline: solid 2px var(--focus-ring-color);
     outline-offset: 2px;
     border-radius: 2px;
   }
 
-  &:focus:not(:focus-visible) {
+  &:where(:focus:not(:focus-visible)) {
     outline: 0;
   }
 }
@@ -68,13 +69,13 @@ button {
   cursor: pointer;
   touch-action: manipulation;
 
-  &:focus {
+  &:where(:focus) {
     outline: solid 2px var(--focus-ring-color);
     outline-offset: 2px;
     border-radius: 2px;
   }
 
-  &:focus:not(:focus-visible) {
+  &:where(:focus:not(:focus-visible)) {
     outline: 0;
   }
 }

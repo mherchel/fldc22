@@ -47,8 +47,8 @@
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
 
-  &:hover,
-  &:focus {
+  &:where(:hover),
+  &:where(:focus) {
     text-decoration: none;
     color: var(--button-color-primary-dark);
     border: solid 2px var(--button-color-primary-dark);
@@ -56,12 +56,12 @@
     font-weight: 700;
   }
 
-  &:active {
+  &:where(:active) {
     color: var(--button-color-primary);
     border-color: var(--button-color-primary);
   }
 
-  &:disabled,
+  &:where(:disabled),
   &.is-disabled {
     cursor: default;
     color: var(--color--gray-70);
@@ -91,19 +91,19 @@
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 
-  &:hover,
-  &:focus {
+  &:where(:hover),
+  &:where(:focus) {
     color: var(--button-color-bg);
     border-color: var(--button-color-primary-dark);
     background-color: var(--button-color-primary-dark);
   }
 
-  &:active {
+  &:where(:active) {
     color: var(--button-color-bg);
     background-color: var(--button-color-primary);
   }
 
-  &:disabled,
+  &:where(:disabled),
   &.is-disabled {
     color: var(--color--night-35);
     background-color: var(--color--night-90);
@@ -114,7 +114,7 @@
   background-color: var(--color--sun-45);
   border-color: transparent;
 
-  &:hover {
+  &:where(:hover) {
     background-color: var(--color--sun-55);
     border-color: transparent;
   }
