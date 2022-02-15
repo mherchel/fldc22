@@ -3,9 +3,20 @@
  * the conference.
  */
 
-.schedule-jump-button {
+@import "../global/variables";
+
+$position_switch: $wide-nav;
+
+.schedule-jump {
+  @media ($position_switch) {
+    position: relative;
+    margin: 0;
+  }
+}
+
+.schedule-jump__link {
   --background-color: var(--color--sun-55);
-  --height: 50px;
+  --height: var(--sp3);
 
   display: flex;
   justify-content: center;
@@ -22,14 +33,35 @@
   transition: transform 0.2s;
   text-decoration: none;
 
+  @media ($position_switch) {
+    position: absolute;
+    top: 0;
+    right: calc(100% + var(--sp));
+    transform: rotate(-90deg) translate(var(--height), 0);
+    transform-origin: right bottom;
+  }
+
   &:before {
-    content: "↓";
-    margin-right: 0.25em;
+    content: "";
+    width: 14px;
+    height: 24px;
+    background-image: url('../../images/arrow-right-white.svg');
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    transform: rotate(90deg);
+
+    @media ($position_switch) {
+      transform: rotate(180deg);
+    }
   }
 
   &:hover {
-    background-color: var(--color--sun-45);
     transform: translatey(2px);
+    background-color: var(--color--sun-45);
+
+    @media ($position_switch) {
+      transform: rotate(-90deg) translate(calc(var(--height) - 2px), 0);
+    }
   }
 
   &:focus {
@@ -43,6 +75,12 @@
 
   &:active {
     --background-color: var(--color--sun-30);
+
+    transform: translatey(5px);
+
+    @media ($position_switch) {
+      transform: rotate(-90deg) translate(calc(var(--height) - 5px), 0);
+    }
   }
 }
 
@@ -53,6 +91,19 @@
   }
   to {
     opacity: 1;
-    transform: translatey(0);
+    transform: translatey(0px);
+  }
+}
+
+@media ($position_switch) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      margin-top: 20px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
   }
 }

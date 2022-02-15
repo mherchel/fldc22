@@ -39,24 +39,25 @@
 }
 
 .view-session-schedule__title {
+  --background: var(--color--sky-94);
   position: sticky;
   z-index: 1;
   top: 0;
   align-self: start;
   margin: 0;
   padding: var(--sp1-5);
-  background-color: var(--color--sky-94);
+  background-color: var(--background);
   color: var(--color--ocean-15);
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 800;
   line-height: var(--sp);
-  box-shadow: -3vw 0 0 var(--color--sky-94), 3vw 0 0 var(--color--sky-94);
+  box-shadow: -3vw 0 0 var(--background), 3vw 0 0 var(--background);
 }
 @media (min-width: 37.5rem) {
   .view-session-schedule__title {
     top: var(--sp);
-    box-shadow: -3vw 0 0 var(--color--sky-94);
+    box-shadow: -3vw 0 0 var(--background);
   }
 }
 @media (min-width: 62.5rem) {

@@ -1,11 +1,19 @@
-@charset "UTF-8";
 /**
  * This gets inserted via JS into the schedule page if the date is the day of
  * the conference.
  */
-.schedule-jump-button {
+/* Navigation related breakpoints */
+/* Grid related breakpoints */
+@media (min-width: 68.75rem) {
+  .schedule-jump {
+    position: relative;
+    margin: 0;
+  }
+}
+
+.schedule-jump__link {
   --background-color: var(--color--sun-55);
-  --height: 3.125rem;
+  --height: var(--sp3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,23 +29,53 @@
   transition: transform 0.2s;
   text-decoration: none;
 }
-.schedule-jump-button:before {
-  content: "↓";
-  margin-right: 0.25em;
+@media (min-width: 68.75rem) {
+  .schedule-jump__link {
+    position: absolute;
+    top: 0;
+    right: calc(100% + var(--sp));
+    transform: rotate(-90deg) translate(var(--height), 0);
+    transform-origin: right bottom;
+  }
 }
-.schedule-jump-button:hover {
-  background-color: var(--color--sun-45);
+.schedule-jump__link:before {
+  content: "";
+  width: 0.875rem;
+  height: 1.5rem;
+  background-image: url("../../images/arrow-right-white.svg");
+  background-repeat: no-repeat;
+  margin-right: 0.5em;
+  transform: rotate(90deg);
+}
+@media (min-width: 68.75rem) {
+  .schedule-jump__link:before {
+    transform: rotate(180deg);
+  }
+}
+.schedule-jump__link:hover {
   transform: translatey(2px);
+  background-color: var(--color--sun-45);
 }
-.schedule-jump-button:focus {
+@media (min-width: 68.75rem) {
+  .schedule-jump__link:hover {
+    transform: rotate(-90deg) translate(calc(var(--height) - 2px), 0);
+  }
+}
+.schedule-jump__link:focus {
   outline: solid 2px var(--background-color);
   outline-offset: 2px;
 }
-.schedule-jump-button:focus:not(:focus-visible) {
+.schedule-jump__link:focus:not(:focus-visible) {
   outline: 0;
 }
-.schedule-jump-button:active {
+.schedule-jump__link:active {
   --background-color: var(--color--sun-30);
+  transform: translatey(0.3125rem);
+}
+@media (min-width: 68.75rem) {
+  .schedule-jump__link:active {
+    transform: rotate(-90deg) translate(calc(var(--height) - 0.3125rem), 0);
+  }
 }
 
 @keyframes fadeIn {
@@ -47,6 +85,18 @@
   }
   to {
     opacity: 1;
-    transform: translatey(0);
+    transform: translatey(0px);
+  }
+}
+@media (min-width: 68.75rem) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      margin-top: 1.25rem;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
   }
 }

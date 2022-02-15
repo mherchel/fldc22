@@ -27,12 +27,14 @@
 
     // If there are upcoming time slots, add a <button>
     if (upcomingTimeSlots.length) {
-      const myButton = document.createElement('div')
+      const jumpButton = document.createElement('div')
       const activeTimeSlotId = upcomingTimeSlots[0].el.getAttribute('id');
-      myButton.innerHTML = `
-          <a href="#${activeTimeSlotId}" class="schedule-jump-button">Jump to current time slot</a>
+
+      jumpButton.classList.add('schedule-jump');
+      jumpButton.innerHTML = `
+          <a href="#${activeTimeSlotId}" class="schedule-jump__link">Jump to current time slot</a>
         `;
-      document.querySelector('.region--content').prepend(myButton);
+      document.querySelector('.region--content').prepend(jumpButton);
     }
   }
 
