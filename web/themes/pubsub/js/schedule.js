@@ -67,7 +67,7 @@
     const upcomingTimeSlots = timeSlots.filter(obj => obj.timeSlot > new Date());
 
     if (todayIsTheDay() && upcomingTimeSlots.length) {
-      const jumpLink = document.createElement('div')
+      const jumpLink = document.createElement('div');
       const activeTimeSlotId = upcomingTimeSlots[0].el.getAttribute('id');
 
       jumpLink.classList.add('schedule-jump');

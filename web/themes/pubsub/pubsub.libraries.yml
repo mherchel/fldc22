@@ -148,15 +148,8 @@ view-sponsors-sidebar:
 
 view-session-schedule:
   css:
-    theme:
-      css/components/schedule-jump-button.css: {}
     layout:
       css/layout/view-session-schedule.css: {}
-  js:
-    js/schedule.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
 
 view-details-list:
   css:
@@ -247,3 +240,13 @@ node-teaser-job-listing:
   css:
     component:
       css/components/node-teaser-job-listing.css: {}
+
+schedule-day-of:
+  css:
+    theme:
+      css/components/schedule-jump-button.css: {}
+  js:
+    js/schedule.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
