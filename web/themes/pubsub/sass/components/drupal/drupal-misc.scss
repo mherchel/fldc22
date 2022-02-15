@@ -75,3 +75,22 @@ abbr.warning {
   opacity: 0.01;
   pointer-events: none;
 }
+
+
+// Extra styling for "region meta" that the Gin toolbar is inserting.
+.region-meta {
+  > *,
+  .region > * {
+    margin-block-end: 0;
+  }
+
+  .breadcrumb__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .breadcrumb__item {
+    display: inline;
+  }
+}

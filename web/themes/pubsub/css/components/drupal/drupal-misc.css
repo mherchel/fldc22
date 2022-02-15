@@ -55,32 +55,32 @@ input.field-add-more-submit {
   font-size: 16px;
   line-height: normal;
 }
-input.field-add-more-submit:hover, input.field-add-more-submit:focus {
+input.field-add-more-submit:where(:hover), input.field-add-more-submit:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-input.field-add-more-submit:active {
+input.field-add-more-submit:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
+input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
 }
-input.field-add-more-submit:hover, input.field-add-more-submit:focus {
+input.field-add-more-submit:where(:hover), input.field-add-more-submit:where(:focus) {
   color: var(--button-color-bg);
   border-color: var(--button-color-primary-dark);
   background-color: var(--button-color-primary-dark);
 }
-input.field-add-more-submit:active {
+input.field-add-more-submit:where(:active) {
   color: var(--button-color-bg);
   background-color: var(--button-color-primary);
 }
-input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
+input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-disabled {
   color: var(--color--night-35);
   background-color: var(--color--night-90);
 }
@@ -119,18 +119,18 @@ input.field-add-more-submit:disabled, input.field-add-more-submit.is-disabled {
   font-size: 16px;
   line-height: normal;
 }
-.tabledrag-toggle-weight:hover, .tabledrag-toggle-weight:focus {
+.tabledrag-toggle-weight:where(:hover), .tabledrag-toggle-weight:where(:focus) {
   text-decoration: none;
   color: var(--button-color-primary-dark);
   border: solid 2px var(--button-color-primary-dark);
   background: none;
   font-weight: 700;
 }
-.tabledrag-toggle-weight:active {
+.tabledrag-toggle-weight:where(:active) {
   color: var(--button-color-primary);
   border-color: var(--button-color-primary);
 }
-.tabledrag-toggle-weight:disabled, .tabledrag-toggle-weight.is-disabled {
+.tabledrag-toggle-weight:where(:disabled), .tabledrag-toggle-weight.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
@@ -166,4 +166,17 @@ abbr.warning {
   z-index: -1;
   opacity: 0.01;
   pointer-events: none;
+}
+
+.region-meta > *,
+.region-meta .region > * {
+  margin-block-end: 0;
+}
+.region-meta .breadcrumb__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.region-meta .breadcrumb__item {
+  display: inline;
 }
