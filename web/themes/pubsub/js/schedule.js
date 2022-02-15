@@ -13,8 +13,9 @@
     // Get the date string from the active schedule tab's data attribute.
     const dateOfActiveScheduleTab = document.querySelector('.schedule-tabs__item--active-trail').dataset.date;
 
-    // Doesn't work always unless we manually specify the timezone.
-    const dateStringWithTimeZone = dateOfActiveScheduleTab + ' 00:00:00 EST';
+    // Doesn't work always unless we manually specify the timezone. Safari is really picky
+    // about the format here. See https://stackoverflow.com/a/49138448
+    const dateStringWithTimeZone = dateOfActiveScheduleTab + 'T00:00:00.000-05:00';
 
     // Generate date objects to which we can compare.
     const campDate = new Date(dateStringWithTimeZone);
