@@ -35,3 +35,8 @@
 
 ## Day of
  - Enable the "jump to current time" button by enabling the library within `web/themes/pubsub/templates/navigation/menu--schedule-tabs.html.twig`. Maybe we can do this automatically with PHP at some point.
+
+## Upgrade Drupal
+```
+composer update drupal/core "drupal/core-*" --with-all-dependencies
+```
