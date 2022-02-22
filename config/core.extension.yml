@@ -57,6 +57,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  update: 0
   user: 0
   user_registrationpassword: 0
   views_data_export: 0

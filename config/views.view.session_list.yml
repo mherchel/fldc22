@@ -365,9 +365,9 @@ display:
       path: session-list
       menu:
         type: normal
-        title: 'Accepted Sessions'
+        title: 'Session List'
         description: ''
-        weight: -49
+        weight: -48
         enabled: true
         expanded: false
         menu_name: main

@@ -354,7 +354,7 @@ display:
         type: normal
         title: 'Session Schedule'
         description: ''
-        weight: -48
+        weight: -47
         enabled: false
         expanded: false
         menu_name: main
