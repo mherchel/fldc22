@@ -10,6 +10,7 @@ dependencies:
     - field.storage.node.field_session_category
     - field.storage.node.field_speakers
     - field.storage.node.field_time_slot
+    - field.storage.node.field_youtube_video
     - node.type.session
     - taxonomy.vocabulary.session_audience
     - taxonomy.vocabulary.session_category
@@ -23,6 +24,7 @@ dependencies:
     - text
     - user
     - views_data_export
+    - youtube
 _core:
   default_config_hash: P7F4DFe8BL31DRVqsvS-ix9KZZqvvaPjZ7zEvGo9yNM
 id: content
@@ -1863,6 +1865,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_youtube_video:
+          id: field_youtube_video
+          table: node__field_youtube_video
+          field: field_youtube_video
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Youtube Video'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: input
+          type: youtube_url
+          settings:
+            link: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         operations:
           id: operations
           table: node
@@ -2340,4 +2405,5 @@ display:
         - 'config:field.storage.node.field_session_category'
         - 'config:field.storage.node.field_speakers'
         - 'config:field.storage.node.field_time_slot'
+        - 'config:field.storage.node.field_youtube_video'
         - 'config:workflow_list'
