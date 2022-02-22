@@ -73,3 +73,26 @@
 .session-teaser__desc {
   margin-top: var(--sp1-5);
 }
+
+.session-teaser__footer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--sp2);
+}
+
+.session-teaser__slides-link:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  margin-top: -0.1875rem;
+  margin-right: 0.25em;
+  -webkit-mask: url("../../images/pdf.svg");
+          mask: url("../../images/pdf.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+}

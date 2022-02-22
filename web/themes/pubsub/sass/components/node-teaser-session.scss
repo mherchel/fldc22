@@ -82,7 +82,28 @@
   }
 }
 
-
 .session-teaser__desc {
   margin-top: var(--sp1-5);
+}
+
+.session-teaser__footer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--sp2);
+}
+
+.session-teaser__slides-link {
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+    margin-top: -3px;
+    margin-right: 0.25em;
+    mask: url('../../images/pdf.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+  }
 }
