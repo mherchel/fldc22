@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
+    - field.field.node.session.field_slides
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
     - node.type.session
   module:
+    - file
     - text
     - user
 id: node.session.default
@@ -76,6 +78,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_slides:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_speakers:
     type: entity_reference_entity_view

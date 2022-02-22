@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.session.field_is_training
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
+    - field.field.node.session.field_slides
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
@@ -18,6 +19,7 @@ dependencies:
   module:
     - content_moderation
     - field_group
+    - file
     - image
     - text
 third_party_settings:
@@ -98,6 +100,13 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_slides:
+    type: file_generic
+    weight: 21
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_social_media_card:
     type: image_image

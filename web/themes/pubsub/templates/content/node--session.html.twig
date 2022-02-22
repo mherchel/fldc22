@@ -16,6 +16,20 @@
   ]
 %}
 
+{# Fields that are in the display mode, but should no be printed with content variable. #}
+{% set special_field_theming = [
+    'field_session_category',
+    'field_r',
+    'field_audience',
+    'field_time_slot',
+    'field_description',
+    'field_speakers',
+    'field_is_training',
+    'field_is_non_session',
+    'field_slides',
+  ]
+%}
+
 <article{{ attributes.addClass(classes) }}>
   <div class="session__meta">
     {% if not is_non_session %}
@@ -30,6 +44,14 @@
   <div class="session__desc">
     {{ content.field_description }}
   </div>
+
+  {{ content|without(special_field_theming) }}
+
+  {% if content.field_slides.0 %}
+    <div class="highlight-box session__slides">
+      Slides <img class="session__slide-icon" width="25" height="25" loading="lazy" src="{{ pubsub_path }}/images/pdf.svg" alt="PDF format">: {{ content.field_slides }}
+    </div>
+  {% endif %}
 
   {% if not is_non_session and content.field_speakers.0 %}
     <h2>About the {{ speaker_label -}} {%- if content.field_speakers.1 %}s{% endif %}</h2>

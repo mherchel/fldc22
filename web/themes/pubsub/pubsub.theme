@@ -338,7 +338,8 @@ function pubsub_theme_suggestions_field_alter(&$suggestions, $variables) {
     'user_picture',
     'field_image',
     'field_badge',
-    'field_cta_link'
+    'field_cta_link',
+    'field_slides',
   ];
 
   if (in_array($field_name, $bare_fields)) {

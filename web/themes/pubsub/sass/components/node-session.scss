@@ -46,3 +46,13 @@
 .session__desc {
   margin: var(--sp3) 0;
 }
+
+.session__slides {
+  font-size: 18px;
+}
+
+.session__slide-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+}
