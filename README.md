@@ -29,3 +29,5 @@
 ## To fix next year
  - Limit sponsor description text to plain text.
  - Consolidate Session's `is_training`, `is_non_session` booleans to one taxonomy reference field. We could use more options here.
+ - Issue: when speakers edit their sessions after its already been accepted, it goes back to "proposed".
+ - Prevent schedule conflicts using the "allow only once" module from Steve Wirt.
