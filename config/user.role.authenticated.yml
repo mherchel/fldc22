@@ -23,3 +23,5 @@ permissions:
   - 'use text format basic_html'
   - 'view field_r'
   - 'view field_time_slot'
+  - 'view field_youtube_video'
+  - 'view own field_youtube_video'

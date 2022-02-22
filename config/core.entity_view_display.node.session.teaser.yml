@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
+    - field.field.node.session.field_youtube_video
     - node.type.session
   module:
     - file
@@ -80,4 +81,5 @@ hidden:
   field_is_training: true
   field_social_media_card: true
   field_time_slot: true
+  field_youtube_video: true
   links: true

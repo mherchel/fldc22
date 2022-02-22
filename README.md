@@ -30,7 +30,7 @@
  - Limit sponsor description text to plain text.
  - Consolidate Session's `is_training`, `is_non_session` booleans to one taxonomy reference field. We could use more options here.
  - Issue: when speakers edit their sessions after its already been accepted, it goes back to "proposed".
- - Prevent schedule conflicts using the "allow only once" module from Steve Wirt.
+ - Prevent schedule conflicts using the [Allow Only One](https://www.drupal.org/project/allow_only_one) module from Steve Wirt.
  - Move session admin admin view to its own view.
 
 ## Day of

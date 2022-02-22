@@ -8,6 +8,10 @@
       display: none;
     }
   }
+
+  .youtube-container--responsive {
+    margin: var(--sp4) 0 var(--sp2);
+  }
 }
 
 .session__meta {

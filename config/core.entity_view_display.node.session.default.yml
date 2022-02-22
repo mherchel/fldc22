@@ -13,11 +13,13 @@ dependencies:
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
+    - field.field.node.session.field_youtube_video
     - node.type.session
   module:
     - file
     - text
     - user
+    - youtube
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -103,6 +105,22 @@ content:
       link: false
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_youtube_video:
+    type: youtube_video
+    label: visually_hidden
+    settings:
+      youtube_size: responsive
+      youtube_width: ''
+      youtube_height: ''
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   field_social_media_card: true

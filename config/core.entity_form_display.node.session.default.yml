@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
     - field.field.node.session.field_time_slot
+    - field.field.node.session.field_youtube_video
     - image.style.thumbnail
     - node.type.session
     - workflows.workflow.session_acceptance
@@ -22,6 +23,7 @@ dependencies:
     - file
     - image
     - text
+    - youtube
 third_party_settings:
   field_group:
     group_scheduling:
@@ -30,6 +32,8 @@ third_party_settings:
         - moderation_state
         - field_time_slot
         - field_r
+        - field_slides
+        - field_youtube_video
       label: 'Admin Functions'
       region: content
       parent_name: ''
@@ -131,6 +135,13 @@ content:
     weight: 19
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_youtube_video:
+    type: youtube
+    weight: 22
+    region: content
+    settings:
+      placeholder_url: ''
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
