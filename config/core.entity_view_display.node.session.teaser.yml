@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.session.field_time_slot
     - node.type.session
   module:
+    - file
     - text
     - user
 id: node.session.teaser
@@ -59,6 +60,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_slides:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_speakers:
     type: entity_reference_label
     label: inline
@@ -70,7 +78,6 @@ content:
 hidden:
   field_is_non_session: true
   field_is_training: true
-  field_slides: true
   field_social_media_card: true
   field_time_slot: true
   links: true

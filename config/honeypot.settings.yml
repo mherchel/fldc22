@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw
-protect_all_forms: true
+protect_all_forms: false
 unprotected_forms:
   - user_login_form
   - search_form
@@ -14,6 +14,8 @@ expire: 300
 form_settings:
   user_register_form: true
   user_pass: true
+  node_featured_speaker_form: false
+  node_job_listing_form: false
   node_page_form: false
   node_session_form: false
   node_sponsor_form: false

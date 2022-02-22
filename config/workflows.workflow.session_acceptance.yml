@@ -21,6 +21,7 @@ third_party_settings:
         session_accepted: session_accepted
       reject_session:
         session_rejected: session_rejected
+      edit_session_transition: {  }
 id: session_acceptance
 label: 'Session Acceptance'
 type: content_moderation
@@ -36,6 +37,11 @@ type_settings:
       weight: 1
       published: false
       default_revision: false
+    edited:
+      label: Edited
+      weight: 2
+      published: true
+      default_revision: true
     proposed:
       label: Proposed
       weight: -3
@@ -60,14 +66,18 @@ type_settings:
         - rejected
       to: accepted
       weight: 1
+    edit_session_transition:
+      label: 'Edit Session Transition'
+      from:
+        - accepted
+        - edited
+      to: edited
+      weight: 3
     propose_session:
       label: 'Propose Session'
       from:
-        - accepted
         - draft
-        - proposed
         - published
-        - rejected
       to: proposed
       weight: 0
     reject_session:

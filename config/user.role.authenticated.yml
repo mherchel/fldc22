@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - workflows.workflow.session_acceptance
   module:
+    - content_moderation
     - field_permissions
     - filter
     - system
@@ -17,6 +19,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'use session_acceptance transition edit_session_transition'
   - 'use text format basic_html'
   - 'view field_r'
   - 'view field_time_slot'
