@@ -31,3 +31,6 @@
  - Consolidate Session's `is_training`, `is_non_session` booleans to one taxonomy reference field. We could use more options here.
  - Issue: when speakers edit their sessions after its already been accepted, it goes back to "proposed".
  - Prevent schedule conflicts using the "allow only once" module from Steve Wirt.
+
+## Day of
+ - Enable the "jump to current time" button by enabling the library within `web/themes/pubsub/templates/navigation/menu--schedule-tabs.html.twig`. Maybe we can do this automatically with PHP at some point.
