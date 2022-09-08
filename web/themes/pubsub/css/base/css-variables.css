@@ -60,6 +60,12 @@
   --form-element-border: var(--color--night-50);
   --focus-ring-color: currentColor;
 }
+:root ::-webkit-backdrop {
+  --color-backdrop: hsla(200, 29%, 13%, 1);
+}
+:root ::backdrop {
+  --color-backdrop: hsla(200, 29%, 13%, 1);
+}
 @media (min-width: 81.25rem) {
   :root {
     --grid-gap: var(--sp2);

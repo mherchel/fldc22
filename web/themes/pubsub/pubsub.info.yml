@@ -13,6 +13,7 @@ regions:
   content: Content
   sidebar: 'Sidebar'
   footer: 'Footer'
+  modal: 'modal'
 libraries-override:
   system/admin:
     css:

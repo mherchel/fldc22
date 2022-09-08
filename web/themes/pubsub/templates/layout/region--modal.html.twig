@@ -1,0 +1,20 @@
+{{ attach_library('pubsub/modal') }}
+
+{%
+  set classes = [
+    'region',
+    'region--modal',
+    'site-modal',
+  ]
+%}
+
+{% if content %}
+  <dialog{{ attributes.addClass(classes) }}>
+    <button class="site-modal__close">
+        {{ 'Close'|t }}
+      </button>
+    <div class="site-modal__inner">
+      {{ content }}
+    </div>
+  </dialog>
+{% endif %}

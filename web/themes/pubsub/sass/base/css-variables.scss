@@ -64,6 +64,10 @@
   --color--sun-80: hsla(18, 95%, 83%, 1);
   --color--sun-90: hsla(18, 96%, 91%, 1);
 
+  ::backdrop {
+    --color-backdrop: hsla(200, 29%, 13%, 1);
+  }
+
   // Named colors
   --color--white: #fff;
   --color--red: red;

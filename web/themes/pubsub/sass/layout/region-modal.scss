@@ -1,0 +1,73 @@
+@import "../global/variables";
+
+.site-modal {
+  inset: 0;
+  max-width: 800px;
+  padding-top: 50px;
+  border-color: transparent;
+
+  &::backdrop {
+    background: var(--color-backdrop);
+    opacity: 0.7;
+
+    @media (forced-colors: active) {
+      background: canvasText;
+    }
+  }
+
+  .block__title {
+    letter-spacing: -0.01em;
+    font-size: 24px;
+    line-height: var(--sp2);
+
+    @media ($md) {
+      font-size: 36px;
+      line-height: var(--sp3);
+    }
+  }
+}
+
+.site-modal__inner {
+  margin: 0;
+  padding: 0 var(--sp2) var(--sp2);
+}
+
+.site-modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  text-indent: -999px;
+  overflow: hidden;
+
+  &:focus {
+    border-radius: 50%;
+    outline-offset: -6px;
+  }
+
+  &:before,
+  &:after {
+    --border-width: 2px;
+    --width: 20px;
+
+    content: "";
+    position: absolute;
+    top: calc(50% - var(--border-width) / 2);
+    left: calc(var(--width) / 2);
+    height: 0;
+    width: var(--width);
+    border-top: solid var(--border-width) black;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

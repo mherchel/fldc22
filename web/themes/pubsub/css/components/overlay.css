@@ -13,3 +13,8 @@
   opacity: 0.5;
   visibility: visible;
 }
+@media (forced-colors: active) {
+  .overlay {
+    background: canvasText;
+  }
+}

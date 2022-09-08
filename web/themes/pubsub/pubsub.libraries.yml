@@ -250,3 +250,13 @@ schedule-day-of:
   dependencies:
     - core/drupal
     - core/once
+
+modal:
+  css:
+    component:
+      css/layout/region-modal.css: {}
+  js:
+    js/modal.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

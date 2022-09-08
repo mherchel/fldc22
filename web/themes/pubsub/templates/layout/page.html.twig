@@ -50,5 +50,9 @@
     {{ page.footer }}
   </footer>
 
+  {% if page.modal %}
+    {{ page.modal }}
+  {% endif %}
+
   <div class="overlay" data-drupal-selector="overlay"></div>
 </div>{# /.layout-container #}
