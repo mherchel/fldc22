@@ -1,0 +1,50 @@
+uuid: 21e04762-09e6-4083-94c8-c7261b3165a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.session
+  module:
+    - eca_content
+id: process_gwip1y7
+modeller: bpmn_io
+label: 'Send email on session creation'
+version: ''
+weight: null
+events:
+  Event_1rasplz:
+    plugin: 'content_entity:create'
+    label: 'Create session'
+    configuration:
+      type: 'node session'
+    successors:
+      -
+        id: Activity_0nm31kg
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0nm31kg:
+    plugin: action_send_email_action
+    label: 'Send email to author'
+    configuration:
+      recipient: '[node:author:mail]'
+      subject: 'Session "[node:title]" submitted to Florida DrupalCamp [config_page:camp_details:field_camp_year]'
+      message: |-
+        Hello,
+
+        On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
+
+        Keep in mind, we are IN PERSON this year in Orlando, Florida. We expect all attendees to be vaccinated against Covid.
+
+        Your session is viewable at [node:url] and you may edit it at [node:edit-url].
+
+        Important: Please be sure to fill out all fields (including photo, bio, etc) in your user profile at [current-user:edit-url].
+
+        A speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. 
+
+        Thanks again,
+
+        The Florida DrupalCamp planning team
+      replace_tokens: 'no'
+    successors: {  }

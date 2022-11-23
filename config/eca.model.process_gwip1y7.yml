@@ -1,0 +1,83 @@
+uuid: 6c4d487e-cdb4-4a71-8f75-eed400097919
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_gwip1y7
+id: process_gwip1y7
+label: 'Send email on session creation'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_gWiP1y7" name="Send email on session creation" isExecutable="true">
+      <bpmn2:startEvent id="Event_1rasplz" name="Create session" camunda:modelerTemplate="org.drupal.event.content_entity:create">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:create" />
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>node session</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1x547cx</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0nm31kg" name="Send email to author" camunda:modelerTemplate="org.drupal.action.action_send_email_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_send_email_action" />
+          </camunda:properties>
+          <camunda:field name="recipient">
+            <camunda:string>[node:author:mail]</camunda:string>
+          </camunda:field>
+          <camunda:field name="subject">
+            <camunda:string>Session "[node:title]" submitted to Florida DrupalCamp [config_page:camp_details:field_camp_year]</camunda:string>
+          </camunda:field>
+          <camunda:field name="message">
+            <camunda:string>Hello,
+
+  On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
+
+  Keep in mind, we are IN PERSON this year in Orlando, Florida. We expect all attendees to be vaccinated against Covid.
+
+  Your session is viewable at [node:url] and you may edit it at [node:edit-url].
+
+  Important: Please be sure to fill out all fields (including photo, bio, etc) in your user profile at [current-user:edit-url].
+
+  A speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. 
+
+  Thanks again,
+
+  The Florida DrupalCamp planning team
+  </camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1x547cx</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1x547cx" sourceRef="Event_1rasplz" targetRef="Activity_0nm31kg" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-19d6e1fc-1e04-4e7d-9800-6e3fbedd170d">
+      <bpmndi:BPMNPlane id="sid-4780408b-7b76-4a12-a885-232487461caf" bpmnElement="Process_gWiP1y7">
+        <bpmndi:BPMNEdge id="Flow_1x547cx_di" bpmnElement="Flow_1x547cx">
+          <di:waypoint x="288" y="110" />
+          <di:waypoint x="340" y="110" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="Event_1rasplz_di" bpmnElement="Event_1rasplz">
+          <dc:Bounds x="252" y="92" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="233" y="135" width="74" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0nm31kg_di" bpmnElement="Activity_0nm31kg">
+          <dc:Bounds x="340" y="70" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

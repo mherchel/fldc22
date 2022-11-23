@@ -8,6 +8,7 @@ module:
   automated_cron: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   bulk_update_fields: 0
   ckeditor: 0
@@ -20,6 +21,11 @@ module:
   datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
+  eca: 0
+  eca_base: 0
+  eca_content: 0
+  eca_modeller_bpmn: 0
+  eca_ui: 0
   editor: 0
   field: 0
   field_group: 0

@@ -1,0 +1,11 @@
+uuid: 25f7970a-8653-4f02-9b57-1c5ad5cdf217
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_eca
+label: 'Bulk Update ECA Fields'
+type: eca
+plugin: bulk_update_fields_action_base
+configuration: {  }
