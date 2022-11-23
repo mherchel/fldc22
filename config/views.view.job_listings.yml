@@ -162,7 +162,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'There are currently no jobs posted. Check back soon!'
+            format: full_html
+          tokenize: false
       sorts:
         field_sponsor_level_target_id:
           id: field_sponsor_level_target_id

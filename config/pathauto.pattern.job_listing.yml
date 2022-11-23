@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '/job/[node:field_company]/[node:title]'
 selection_criteria:
   4f1c929b-179c-47a9-8a98-ec8dd49af33e:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: 4f1c929b-179c-47a9-8a98-ec8dd49af33e
     context_mapping:

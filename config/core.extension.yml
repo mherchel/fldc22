@@ -41,12 +41,12 @@ module:
   metatag_open_graph: 0
   metatag_twitter_cards: 0
   metatag_views: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
-  quicklink: 0
   r4032login: 0
   registration_role: 0
   rest: 0

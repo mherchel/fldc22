@@ -43,11 +43,7 @@ settings:
           items:
             - Source
             - Maximize
-  plugins:
-    stylescombo:
-      styles: 'div.highlight-box|Highlight Box'
-    language:
-      language_list: un
+  plugins: {  }
 image_upload:
   status: true
   scheme: public

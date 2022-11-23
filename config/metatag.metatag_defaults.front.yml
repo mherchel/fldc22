@@ -7,15 +7,15 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  shortlink: '[site:url]'
-  title: 'Florida Drupalcamp | February 18-20th, 2022'
   canonical_url: '[site:url]'
-  og_region: Florida
-  og_url: '[site:url]'
   og_country_name: 'United States'
-  og_site_name: '[site:name]'
   og_email: info@fldrupalcamp.org
+  og_region: Florida
+  og_site_name: '[site:name]'
   og_title: '[site:name]'
-  twitter_cards_site: '@fldrupalcamp'
+  og_url: '[site:url]'
+  shortlink: '[site:url]'
+  title: 'Florida Drupalcamp | February 17-19th, 2023'
   twitter_cards_page_url: '[site:url]'
+  twitter_cards_site: '@fldrupalcamp'
   twitter_cards_type: summary

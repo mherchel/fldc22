@@ -54,8 +54,6 @@ settings:
   plugins:
     stylescombo:
       styles: 'div.highlight-box|Highlight Box'
-    language:
-      language_list: un
 image_upload:
   status: true
   scheme: public

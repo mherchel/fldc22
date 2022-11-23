@@ -76,8 +76,7 @@ type_settings:
     propose_session:
       label: 'Propose Session'
       from:
-        - draft
-        - published
+        - proposed
       to: proposed
       weight: 0
     reject_session:

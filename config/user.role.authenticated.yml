@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.session
     - workflows.workflow.session_acceptance
   module:
     - content_moderation
     - field_permissions
     - filter
+    - node
     - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
@@ -19,6 +21,8 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'create session content'
+  - 'edit own session content'
   - 'use session_acceptance transition edit_session_transition'
   - 'use text format basic_html'
   - 'view field_r'

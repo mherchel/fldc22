@@ -31,6 +31,8 @@ content:
     settings:
       image_link: ''
       image_style: content_width
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 0
     region: content

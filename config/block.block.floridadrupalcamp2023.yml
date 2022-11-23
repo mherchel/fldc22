@@ -1,0 +1,25 @@
+uuid: b6b45ec3-8d47-419c-9dc6-0f0b1f1acbbf
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
+  module:
+    - block_content
+  theme:
+    - pubsub
+id: floridadrupalcamp2023
+theme: pubsub
+region: modal
+weight: 0
+provider: null
+plugin: 'block_content:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
+settings:
+  id: 'block_content:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
+  label: 'Florida DrupalCamp 2023'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

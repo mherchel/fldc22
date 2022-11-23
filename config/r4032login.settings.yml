@@ -10,3 +10,4 @@ default_redirect_code: 307
 destination_parameter_override: ''
 match_noredirect_pages: ''
 redirect_to_destination: true
+throw_authenticated_404: false
