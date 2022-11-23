@@ -16,9 +16,7 @@ dependencies:
     - field.field.node.session.field_youtube_video
     - image.style.thumbnail
     - node.type.session
-    - workflows.workflow.session_acceptance
   module:
-    - content_moderation
     - field_group
     - file
     - image
@@ -143,12 +141,6 @@ content:
     settings:
       placeholder_url: ''
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 18
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 6
@@ -166,6 +158,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  moderation_state: true
   path: true
   promote: true
   revision_log: true

@@ -5,9 +5,7 @@ dependencies:
   config:
     - filter.format.basic_html
     - node.type.session
-    - workflows.workflow.session_acceptance
   module:
-    - content_moderation
     - field_permissions
     - filter
     - node
@@ -23,7 +21,6 @@ permissions:
   - 'access user profiles'
   - 'create session content'
   - 'edit own session content'
-  - 'use session_acceptance transition edit_session_transition'
   - 'use text format basic_html'
   - 'view field_r'
   - 'view field_time_slot'

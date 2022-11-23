@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.session
-    - workflows.workflow.session_acceptance
   module:
-    - content_moderation
     - node
 id: speaker
 label: Speaker
@@ -15,5 +13,4 @@ is_admin: null
 permissions:
   - 'edit own session content'
   - 'revert session revisions'
-  - 'use session_acceptance transition propose_session'
   - 'view session revisions'

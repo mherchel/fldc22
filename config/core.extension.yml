@@ -13,7 +13,6 @@ module:
   ckeditor: 0
   config: 0
   config_pages: 0
-  content_moderation: 0
   contextual: 0
   csv_serialization: 0
   ctools: 0
@@ -64,8 +63,6 @@ module:
   views_ui: 0
   webform: 0
   webform_ui: 0
-  workbench_email: 0
-  workflows: 0
   youtube: 0
   hide_revision_field: 1
   pathauto: 1
