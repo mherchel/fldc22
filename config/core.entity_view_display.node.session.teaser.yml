@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.session.field_acceptance
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_is_non_session
@@ -77,6 +78,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_acceptance: true
   field_is_non_session: true
   field_is_training: true
   field_social_media_card: true

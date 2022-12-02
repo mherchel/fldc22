@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Accepted Sessions'
+      title: 'Proposed Sessions'
       fields:
         title:
           id: title
@@ -361,7 +361,10 @@ display:
     position: 1
     display_options:
       exposed_block: true
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: session-list
       menu:
         type: normal

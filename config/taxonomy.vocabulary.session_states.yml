@@ -1,0 +1,8 @@
+uuid: fb8262a4-52db-42d9-b121-2a321ae2b615
+langcode: en
+status: true
+dependencies: {  }
+name: 'Session states'
+vid: session_states
+description: ''
+weight: 0

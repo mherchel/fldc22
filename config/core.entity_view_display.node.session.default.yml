@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.session.field_acceptance
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_is_non_session
@@ -29,6 +30,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_acceptance:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_audience:
     type: entity_reference_label

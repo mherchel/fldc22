@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.session.field_acceptance
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_is_non_session
@@ -27,7 +28,6 @@ third_party_settings:
     group_scheduling:
       children:
         - field_social_media_card
-        - moderation_state
         - field_time_slot
         - field_r
         - field_slides
@@ -48,6 +48,7 @@ third_party_settings:
         - field_audience
         - field_session_category
         - field_speakers
+        - field_acceptance
       label: 'Session Metadata'
       region: content
       parent_name: ''
@@ -63,6 +64,12 @@ targetEntityType: node
 bundle: session
 mode: default
 content:
+  field_acceptance:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_audience:
     type: options_select
     weight: 9

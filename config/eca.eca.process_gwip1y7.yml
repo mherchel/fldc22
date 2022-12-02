@@ -13,7 +13,7 @@ version: ''
 weight: null
 events:
   Event_1rasplz:
-    plugin: 'content_entity:create'
+    plugin: 'content_entity:insert'
     label: 'Create session'
     configuration:
       type: 'node session'
@@ -34,8 +34,6 @@ actions:
         Hello,
 
         On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
-
-        Keep in mind, we are IN PERSON this year in Orlando, Florida. We expect all attendees to be vaccinated against Covid.
 
         Your session is viewable at [node:url] and you may edit it at [node:edit-url].
 

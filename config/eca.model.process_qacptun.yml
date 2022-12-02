@@ -1,0 +1,89 @@
+uuid: 6dc0c89c-27da-4ae3-ab29-a32f4d7e4671
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_qacptun
+id: process_qacptun
+label: 'Send email on session acceptance'
+tags:
+  - ''
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_qACptUN" name="Send email on session acceptance" isExecutable="false">
+      <bpmn2:extensionElements/>
+      <bpmn2:startEvent id="Event_1pqmtjb" camunda:modelerTemplate="org.drupal.event.content_entity:update">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:update"/>
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>node session</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0ypan07</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0nuqafy" name="show message" camunda:modelerTemplate="org.drupal.action.action_message_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_message_action"/>
+          </camunda:properties>
+          <camunda:field name="message">
+            <camunda:string>message acceptance [node:field_acceptance:target_id]</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0ypan07</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0ypan07" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value" sourceRef="Event_1pqmtjb" targetRef="Activity_0nuqafy">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_entity_field_value"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_acceptance</camunda:string>
+          </camunda:field>
+          <camunda:field name="operator">
+            <camunda:string>equal</camunda:string>
+          </camunda:field>
+          <camunda:field name="expected_value">
+            <camunda:string>44</camunda:string>
+          </camunda:field>
+          <camunda:field name="type">
+            <camunda:string>value</camunda:string>
+          </camunda:field>
+          <camunda:field name="case">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity">
+            <camunda:string/>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-7bc49881-653e-44d5-a3a9-626a1393a38a">
+      <bpmndi:BPMNPlane id="sid-e6b8d91a-953d-4970-a546-a18876fef1a7" bpmnElement="Process_qACptUN">
+        <bpmndi:BPMNEdge id="Flow_0ypan07_di" bpmnElement="Flow_0ypan07">
+          <di:waypoint x="398" y="110"/>
+          <di:waypoint x="699" y="110"/>
+          <di:waypoint x="699" y="230"/>
+          <di:waypoint x="1000" y="230"/>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="Event_1pqmtjb_di" bpmnElement="Event_1pqmtjb">
+          <dc:Bounds x="362" y="92" width="36" height="36"/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0nuqafy_di" bpmnElement="Activity_0nuqafy">
+          <dc:Bounds x="1000" y="190" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>
