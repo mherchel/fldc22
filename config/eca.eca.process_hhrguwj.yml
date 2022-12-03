@@ -1,0 +1,147 @@
+uuid: d919eb5d-a51d-4b51-af24-ba6e52c6cbfd
+langcode: en
+status: false
+dependencies:
+  config:
+    - node.type.session
+  module:
+    - eca_content
+id: process_hhrguwj
+modeller: bpmn_io
+label: 'Send email on acceptance / rejection'
+version: ''
+weight: null
+events:
+  Event_17jybve:
+    plugin: 'content_entity:update'
+    label: 'Session entity updated'
+    configuration:
+      type: 'node session'
+    successors:
+      -
+        id: Activity_00cv6t2
+        condition: ''
+conditions:
+  Flow_0lh9vvi:
+    plugin: eca_entity_field_value_empty
+    configuration:
+      negate: false
+      field_name: field_acceptance
+      entity: originalentity
+  Flow_1qvq53b:
+    plugin: eca_entity_field_value
+    configuration:
+      negate: false
+      case: false
+      expected_value: '46'
+      field_name: field_acceptance
+      operator: equal
+      type: value
+      entity: updatedentity
+  Flow_1qr8wl6:
+    plugin: eca_entity_field_value
+    configuration:
+      negate: false
+      case: false
+      expected_value: '47'
+      field_name: field_acceptance
+      operator: equal
+      type: value
+      entity: updatedentity
+gateways: {  }
+actions:
+  Activity_00cv6t2:
+    plugin: eca_token_load_entity
+    label: 'Load entity''s old values'
+    configuration:
+      token_name: originalentity
+      from: current
+      entity_type: _none
+      entity_id: ''
+      revision_id: ''
+      properties: ''
+      langcode: _interface
+      latest_revision: false
+      unchanged: true
+      object: ''
+    successors:
+      -
+        id: Activity_0xfxpxt
+        condition: Flow_0lh9vvi
+  Activity_0xfxpxt:
+    plugin: eca_token_load_entity
+    label: 'Load entity''s new values'
+    configuration:
+      token_name: updatedentity
+      from: current
+      entity_type: _none
+      entity_id: ''
+      revision_id: ''
+      properties: ''
+      langcode: _interface
+      latest_revision: false
+      unchanged: false
+      object: ''
+    successors:
+      -
+        id: Activity_1b8cbnk
+        condition: Flow_1qvq53b
+      -
+        id: Activity_0k76xfu
+        condition: Flow_1qr8wl6
+  Activity_1b8cbnk:
+    plugin: action_send_email_action
+    label: 'Send acceptance email'
+    configuration:
+      recipient: '[node:author:mail]'
+      subject: '🎉 [node:title] Session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]'
+      message: |-
+        Hello,
+
+        Congratulations! Your "[node:title]" session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session. 
+
+        Please reply to this email indicating that you are are able to do this session in person. You can find a speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. 
+
+        Thanks again,
+
+        The Florida DrupalCamp planning team
+      replace_tokens: 'no'
+    successors:
+      -
+        id: Activity_0ptj9ye
+        condition: ''
+  Activity_0k76xfu:
+    plugin: action_send_email_action
+    label: 'Send rejection email'
+    configuration:
+      recipient: '[node:author:mail]'
+      subject: 'Florida DrupalCamp Session, [node:title]'
+      message: |-
+        On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
+
+        Unfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut. 
+
+        Nevertheless, we still hope to see you in Orlando this year! Please reach out and let us know if you have any questions. 
+
+        Thanks again,
+
+        The Florida DrupalCamp planning team
+      replace_tokens: 'no'
+    successors:
+      -
+        id: Activity_1cr12zx
+        condition: ''
+  Activity_0ptj9ye:
+    plugin: action_message_action
+    label: 'Display message'
+    configuration:
+      message: 'Acceptance email has been sent to the author of the node.'
+      replace_tokens: 'no'
+    successors: {  }
+  Activity_1cr12zx:
+    plugin: action_message_action
+    label: 'Display message'
+    configuration:
+      message: 'Rejection email has been sent to the author of the node.'
+      replace_tokens: 'no'
+    successors: {  }
