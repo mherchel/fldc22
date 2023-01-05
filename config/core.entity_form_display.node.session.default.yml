@@ -32,6 +32,7 @@ third_party_settings:
         - field_r
         - field_slides
         - field_youtube_video
+        - field_acceptance
       label: 'Admin Functions'
       region: content
       parent_name: ''
@@ -48,7 +49,6 @@ third_party_settings:
         - field_audience
         - field_session_category
         - field_speakers
-        - field_acceptance
       label: 'Session Metadata'
       region: content
       parent_name: ''
@@ -66,7 +66,7 @@ mode: default
 content:
   field_acceptance:
     type: options_select
-    weight: 12
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,7 +100,7 @@ content:
     third_party_settings: {  }
   field_r:
     type: options_select
-    weight: 20
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -112,7 +112,7 @@ content:
     third_party_settings: {  }
   field_slides:
     type: file_generic
-    weight: 21
+    weight: 20
     region: content
     settings:
       progress_indicator: throbber
@@ -137,13 +137,13 @@ content:
     third_party_settings: {  }
   field_time_slot:
     type: options_select
-    weight: 19
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_youtube_video:
     type: youtube
-    weight: 22
+    weight: 21
     region: content
     settings:
       placeholder_url: ''

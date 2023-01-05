@@ -10,7 +10,7 @@ id: process_gwip1y7
 modeller: bpmn_io
 label: 'Send email on session creation'
 version: ''
-weight: null
+weight: -10
 events:
   Event_1rasplz:
     plugin: 'content_entity:insert'

@@ -13,7 +13,7 @@ time_limit: 5
 expire: 300
 form_settings:
   user_register_form: true
-  user_pass: true
+  user_pass: false
   node_featured_speaker_form: false
   node_job_listing_form: false
   node_page_form: false

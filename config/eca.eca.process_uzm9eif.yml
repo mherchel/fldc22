@@ -1,0 +1,40 @@
+uuid: 500a4dbf-b92d-4997-b800-5c31323506ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.field_speakers
+    - field.storage.node.field_speakers
+    - node.type.session
+  module:
+    - eca_content
+id: process_uzm9eif
+modeller: bpmn_io
+label: 'Initially populate field_speakers when create a session'
+version: ''
+weight: -10
+events:
+  Event_0wn5dd7:
+    plugin: 'content_entity:create'
+    label: 'Create session entity'
+    configuration:
+      type: 'node session'
+    successors:
+      -
+        id: Activity_0xy2j38
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0xy2j38:
+    plugin: eca_set_field_value
+    label: 'Set speakers field to current user'
+    configuration:
+      field_name: field_speakers
+      field_value: '[user:uid]'
+      method: 'set:empty'
+      strip_tags: false
+      trim: false
+      save_entity: false
+      object: ''
+    successors: {  }

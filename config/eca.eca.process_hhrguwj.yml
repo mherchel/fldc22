@@ -1,6 +1,6 @@
 uuid: d919eb5d-a51d-4b51-af24-ba6e52c6cbfd
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - node.type.session
@@ -10,7 +10,7 @@ id: process_hhrguwj
 modeller: bpmn_io
 label: 'Send email on acceptance / rejection'
 version: ''
-weight: null
+weight: -10
 events:
   Event_17jybve:
     plugin: 'content_entity:update'
@@ -93,6 +93,7 @@ actions:
     plugin: action_send_email_action
     label: 'Send acceptance email'
     configuration:
+      replace_tokens: false
       recipient: '[node:author:mail]'
       subject: '🎉 [node:title] Session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]'
       message: |-
@@ -105,7 +106,6 @@ actions:
         Thanks again,
 
         The Florida DrupalCamp planning team
-      replace_tokens: 'no'
     successors:
       -
         id: Activity_0ptj9ye
@@ -114,6 +114,7 @@ actions:
     plugin: action_send_email_action
     label: 'Send rejection email'
     configuration:
+      replace_tokens: false
       recipient: '[node:author:mail]'
       subject: 'Florida DrupalCamp Session, [node:title]'
       message: |-
@@ -126,7 +127,6 @@ actions:
         Thanks again,
 
         The Florida DrupalCamp planning team
-      replace_tokens: 'no'
     successors:
       -
         id: Activity_1cr12zx
@@ -135,13 +135,13 @@ actions:
     plugin: action_message_action
     label: 'Display message'
     configuration:
+      replace_tokens: false
       message: 'Acceptance email has been sent to the author of the node.'
-      replace_tokens: 'no'
     successors: {  }
   Activity_1cr12zx:
     plugin: action_message_action
     label: 'Display message'
     configuration:
+      replace_tokens: false
       message: 'Rejection email has been sent to the author of the node.'
-      replace_tokens: 'no'
     successors: {  }

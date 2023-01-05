@@ -3,6 +3,7 @@ _core:
 module:
   action: 0
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   antibot: 0
   auto_entitylabel: 0
   automated_cron: 0
@@ -16,13 +17,11 @@ module:
   config_pages: 0
   contextual: 0
   csv_serialization: 0
-  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   eca: 0
-  eca_base: 0
   eca_content: 0
   eca_modeller_bpmn: 0
   eca_ui: 0
@@ -39,6 +38,7 @@ module:
   honeypot: 0
   image: 0
   link: 0
+  mailsystem: 0
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
@@ -55,8 +55,9 @@ module:
   r4032login: 0
   registration_role: 0
   rest: 0
+  sendgrid_integration: 0
+  sendgrid_integration_reports: 0
   serialization: 0
-  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   text: 0

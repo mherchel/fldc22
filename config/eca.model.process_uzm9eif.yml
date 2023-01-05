@@ -1,0 +1,77 @@
+uuid: 29bd4278-c465-4eaa-9671-210ada5f6089
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_uzm9eif
+id: process_uzm9eif
+label: 'Initially populate field_speakers when create a session'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_uzM9Eif" name="Initially populate field_speakers when create a session" isExecutable="true">
+      <bpmn2:startEvent id="Event_0wn5dd7" name="Create session entity" camunda:modelerTemplate="org.drupal.event.content_entity:create">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:create" />
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>node session</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0wzzl12</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0xy2j38" name="Set speakers field to current user" camunda:modelerTemplate="org.drupal.action.eca_set_field_value">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_set_field_value" />
+          </camunda:properties>
+          <camunda:field name="method">
+            <camunda:string>set:empty</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="field_name">
+            <camunda:string>field_speakers</camunda:string>
+          </camunda:field>
+          <camunda:field name="save_entity">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="field_value">
+            <camunda:string>[user:uid]</camunda:string>
+          </camunda:field>
+          <camunda:field name="object">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0wzzl12</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0wzzl12" sourceRef="Event_0wn5dd7" targetRef="Activity_0xy2j38" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-8e752f28-3733-4f39-9b22-013f54b70e6e">
+      <bpmndi:BPMNPlane id="sid-7a4b0ba4-368b-45a9-881c-be8cf8e6b00e" bpmnElement="Process_uzM9Eif">
+        <bpmndi:BPMNEdge id="Flow_0wzzl12_di" bpmnElement="Flow_0wzzl12">
+          <di:waypoint x="268" y="90" />
+          <di:waypoint x="320" y="90" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="Event_0wn5dd7_di" bpmnElement="Event_0wn5dd7">
+          <dc:Bounds x="232" y="72" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="214" y="115" width="74" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0xy2j38_di" bpmnElement="Activity_0xy2j38">
+          <dc:Bounds x="320" y="50" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

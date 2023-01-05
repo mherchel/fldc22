@@ -45,3 +45,8 @@ if (
 ) {
   $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
 }
+
+// Sendgrid settings
+$secrets_json_text = file_get_contents('/files/private/secrets.json');
+$secrets_data = json_decode($secrets_json_text, TRUE);
+$config['sendgrid_integration.settings']['apikey']  = $secrets_data['sendgrid_api_key'];
