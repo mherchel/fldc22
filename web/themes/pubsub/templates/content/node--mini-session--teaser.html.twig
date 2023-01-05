@@ -19,11 +19,11 @@
       {{ content.field_mini_session_description }}
 
       <div class="session-teaser__footer">
-      <div class="session-teaser__footer-item">
-        Speaker: {{ content.field_speakers }}
-          {% if content.field_slides.0 %}
-            <a class="session-teaser__slides-link" href="{{- content.field_slides|render|striptags|trim -}}">View Slides</a>
-          {% endif %}
+        <div class="session-teaser__footer-item">
+          Speaker: {{ content.field_speakers }}
+        </div>
+        <div class="session-teaser__footer-item">
+          Length: {{ content.field_length }}
         </div>
       </div>
     </div>

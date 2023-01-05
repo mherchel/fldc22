@@ -203,7 +203,18 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"highlight-box\">\r\nMini-sessions are short (5-15 minute) sessions on how to do something practical in Drupal (or adjacent technologies). They'll take place Sunday morning in the auditorium.\r\n<br>\r\n<a href=\"/submit-mini-session\" class=\"button button--primary  arrow-right\">\r\nSubmit a mini-session ➜\r\n</a>\r\n</div>\r\n\r\n"
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -641,10 +652,9 @@ display:
       path: mini-sessions
       menu:
         type: normal
-        title: 'Session List'
+        title: Mini-sessions
         description: ''
         weight: -48
-        enabled: true
         expanded: false
         menu_name: main
         parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'
