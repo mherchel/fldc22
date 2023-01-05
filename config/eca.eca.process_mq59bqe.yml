@@ -1,4 +1,4 @@
-uuid: 500a4dbf-b92d-4997-b800-5c31323506ea
+uuid: 65eb38e8-f596-47d6-9db5-bf50ab38dd40
 langcode: en
 status: true
 dependencies:
@@ -6,20 +6,20 @@ dependencies:
     - field.field.node.mini_session.field_speakers
     - field.field.node.session.field_speakers
     - field.storage.node.field_speakers
-    - node.type.session
+    - node.type.mini_session
   module:
     - eca_content
-id: process_uzm9eif
+id: process_mq59bqe
 modeller: bpmn_io
-label: 'Initially populate field_speakers when create a session'
+label: 'Initially populate field_speakers when create a mini-session'
 version: ''
-weight: -10
+weight: null
 events:
   Event_0wn5dd7:
     plugin: 'content_entity:create'
     label: 'Create session entity'
     configuration:
-      type: 'node session'
+      type: 'node mini_session'
     successors:
       -
         id: Activity_0xy2j38

@@ -1,0 +1,17 @@
+uuid: 9f6a61d7-c5b9-43ba-a49c-25b5d5d2f46e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Mini-session
+type: mini_session
+description: 'Like a session, but mini-er'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

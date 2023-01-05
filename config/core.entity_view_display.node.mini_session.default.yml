@@ -1,0 +1,43 @@
+uuid: edf74dbc-32e8-49e1-9be3-6069c609e12b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.mini_session.field_acceptance
+    - field.field.node.mini_session.field_length
+    - field.field.node.mini_session.field_mini_session_description
+    - field.field.node.mini_session.field_speakers
+    - node.type.mini_session
+  module:
+    - user
+id: node.mini_session.default
+targetEntityType: node
+bundle: mini_session
+mode: default
+content:
+  field_length:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_mini_session_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_acceptance: true
+  links: true

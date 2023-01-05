@@ -1,0 +1,29 @@
+uuid: 72e3e15f-66aa-486e-bd60-1891ea371730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+    - node.type.mini_session
+id: node.mini_session.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: mini_session
+label: Speaker(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

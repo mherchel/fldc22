@@ -1,0 +1,8 @@
+uuid: fdb4bbae-d6ed-41ee-b36f-b66341164b50
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mini-session length'
+vid: mini_session_length
+description: ''
+weight: 0
