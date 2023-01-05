@@ -10,6 +10,9 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.session_audience
     - taxonomy.vocabulary.session_category
+    - taxonomy.vocabulary.session_states
+  content:
+    - 'taxonomy_term:session_states:77da8865-9ffe-4350-99d0-2d41374490b7'
   module:
     - csv_serialization
     - node
@@ -32,7 +35,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Proposed Sessions'
+      title: 'Accepted Sessions'
       fields:
         title:
           id: title
@@ -328,6 +331,52 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_acceptance_target_id:
+          id: field_acceptance_target_id
+          table: node__field_acceptance
+          field: field_acceptance_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            46: 46
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: session_states
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
         options:
