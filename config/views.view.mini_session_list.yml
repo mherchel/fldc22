@@ -212,7 +212,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text_custom
-          empty: false
+          empty: true
           content: "<div class=\"highlight-box\">\r\nMini-sessions are short (5-15 minute) sessions on how to do something practical in Drupal (or adjacent technologies). They'll take place Sunday morning in the auditorium.\r\n<br>\r\n<a href=\"/submit-mini-session\" class=\"button button--primary  arrow-right\">\r\nSubmit a mini-session ➜\r\n</a>\r\n</div>\r\n\r\n"
           tokenize: false
       footer: {  }
