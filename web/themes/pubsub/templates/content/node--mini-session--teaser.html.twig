@@ -1,8 +1,8 @@
-{{ attach_library('pubsub/session-teaser') }}
+{{ attach_library('pubsub/mini-session-teaser') }}
 
 {%
   set classes = [
-    'session-teaser',
+    'mini-session-teaser',
     not node.isPublished() ? 'node--unpublished',
   ]
 %}
@@ -11,23 +11,19 @@
 {% set is_non_session = node.field_is_non_session.value %}
 
 <article{{ attributes.addClass(classes) }}>
-  <details class="session-teaser__details" open>
-    <summary class="session-teaser__summary">
-      <h3 class="session-teaser__title">{{ label }}</h3>
-    </summary>
-    <div class="session-teaser__desc">
-      {{ content.field_mini_session_description }}
+  <h3 class="mini-session-teaser__title">{{ label }}</h3>
+  <div class="mini-session-teaser__desc">
+    {{ content.field_mini_session_description }}
 
-      <div class="session-teaser__footer">
-        <div class="session-teaser__footer-item">
-          Speaker: {{ content.field_speakers }}
-        </div>
-        <div class="session-teaser__footer-item">
-          Length: {{ content.field_length }}
-        </div>
+    <div class="mini-session-teaser__footer">
+      <div class="mini-session-teaser__footer-item">
+        Speaker: {{ content.field_speakers }}
+      </div>
+      <div class="mini-session-teaser__footer-item">
+        Length: {{ content.field_length }}
       </div>
     </div>
-  </details>
+  </div>
 
   {{ title_suffix }}
 

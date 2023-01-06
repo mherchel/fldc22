@@ -1,0 +1,25 @@
+@import "../global/variables";
+
+.mini-session-teaser {
+  margin-bottom: var(--sp4);
+}
+
+.mini-session-teaser__title {
+  margin: 0 0 var(--sp1-5);
+  padding-right: 40px; // Room for the summary chevron.
+  font-size: var(--sp1-5);
+  font-weight: 800;
+  line-height: var(--sp2);
+  letter-spacing: -0.01em;
+  color: var(--color--ocean-10);
+}
+
+.mini-session-teaser__desc {
+  margin-top: var(--sp1-5);
+}
+
+.mini-session-teaser__footer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--sp);
+}

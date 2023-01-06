@@ -260,3 +260,9 @@ modal:
   dependencies:
     - core/drupal
     - core/once
+
+
+mini-session-teaser:
+  css:
+    component:
+      css/components/mini-session-teaser.css: {}
