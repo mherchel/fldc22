@@ -1,22 +1,22 @@
-uuid: d919eb5d-a51d-4b51-af24-ba6e52c6cbfd
+uuid: 0f00bbf3-ca91-4bb2-92e9-42387c2538a1
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.session
+    - node.type.mini_session
   module:
     - eca_content
-id: process_hhrguwj
+id: process_evouhuh
 modeller: bpmn_io
-label: 'Send email on session acceptance / rejection'
+label: 'Send email on mini-session acceptance / rejection'
 version: ''
-weight: -10
+weight: null
 events:
   Event_17jybve:
     plugin: 'content_entity:update'
-    label: 'Session entity updated'
+    label: 'Mini-session entity updated'
     configuration:
-      type: 'node session'
+      type: 'node mini_session'
     successors:
       -
         id: Activity_00cv6t2
@@ -95,11 +95,11 @@ actions:
     configuration:
       replace_tokens: false
       recipient: '[node:author:mail]'
-      subject: '🎉 [node:title] Session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]'
+      subject: '🎉 [node:title] Mini-session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]'
       message: |-
         Hello,
 
-        Congratulations! Your "[node:title]" session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session. 
+        Congratulations! Your "[node:title]" mini-session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this mini-session. 
 
         Please reply to this email indicating that you are are able to do this session in person. You can find a speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. 
 
@@ -116,11 +116,11 @@ actions:
     configuration:
       replace_tokens: false
       recipient: '[node:author:mail]'
-      subject: 'Florida DrupalCamp Session, [node:title]'
+      subject: 'Florida DrupalCamp Mini-session, [node:title]'
       message: |-
-        On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
+        On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" mini-session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
 
-        Unfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut. 
+        Unfortunately, we could not accept all of the excellent mini-sessions that were submitted, and this mini-session did not make this year's cut. 
 
         Nevertheless, we still hope to see you in Orlando this year! Please reach out and let us know if you have any questions. 
 

@@ -1,11 +1,11 @@
-uuid: 5381eafb-15a1-467a-9652-6d64070d8cd6
+uuid: e4630a11-9248-4a3e-92a6-c0a32d5a7f8a
 langcode: en
 status: true
 dependencies:
   config:
-    - eca.eca.process_hhrguwj
-id: process_hhrguwj
-label: 'Send email on session acceptance / rejection'
+    - eca.eca.process_evouhuh
+id: process_evouhuh
+label: 'Send email on mini-session acceptance / rejection'
 tags:
   - ''
 documentation: ''
@@ -13,15 +13,15 @@ filename: ''
 modeldata: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="Process_hHrguwj" name="Send email on session acceptance / rejection" isExecutable="true">
+    <bpmn2:process id="Process_evouhUh" name="Send email on mini-session acceptance / rejection" isExecutable="true">
       <bpmn2:extensionElements />
-      <bpmn2:startEvent id="Event_17jybve" name="Session entity updated" camunda:modelerTemplate="org.drupal.event.content_entity:update">
+      <bpmn2:startEvent id="Event_17jybve" name="Mini-session entity updated" camunda:modelerTemplate="org.drupal.event.content_entity:update">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="content_entity:update" />
           </camunda:properties>
           <camunda:field name="type">
-            <camunda:string>node session</camunda:string>
+            <camunda:string>node mini_session</camunda:string>
           </camunda:field>
         </bpmn2:extensionElements>
         <bpmn2:outgoing>Flow_1kt3cia</bpmn2:outgoing>
@@ -129,12 +129,12 @@ modeldata: |
             <camunda:string>[node:author:mail]</camunda:string>
           </camunda:field>
           <camunda:field name="subject">
-            <camunda:string>🎉 [node:title] Session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]</camunda:string>
+            <camunda:string>🎉 [node:title] Mini-session Accepted at Florida DrupalCamp [config_page:camp_details:field_camp_year]</camunda:string>
           </camunda:field>
           <camunda:field name="message">
             <camunda:string>Hello,
 
-  Congratulations! Your "[node:title]" session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session. 
+  Congratulations! Your "[node:title]" mini-session ([node:url]) was successfully accepted to Florida DrupalCamp [config_page:camp_details:field_camp_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this mini-session. 
 
   Please reply to this email indicating that you are are able to do this session in person. You can find a speaker FAQ including important dates is available at [site:url]speaker-info. Reply to this email if you have any additional questions. 
 
@@ -187,12 +187,12 @@ modeldata: |
             <camunda:string>[node:author:mail]</camunda:string>
           </camunda:field>
           <camunda:field name="subject">
-            <camunda:string>Florida DrupalCamp Session, [node:title]</camunda:string>
+            <camunda:string>Florida DrupalCamp Mini-session, [node:title]</camunda:string>
           </camunda:field>
           <camunda:field name="message">
-            <camunda:string>On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
+            <camunda:string>On behalf of the FLDC team, THANK YOU for submitting your "[node:title]" mini-session to Florida DrupalCamp [config_page:camp_details:field_camp_year]. We are beyond grateful and appreciative.
 
-  Unfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut. 
+  Unfortunately, we could not accept all of the excellent mini-sessions that were submitted, and this mini-session did not make this year's cut. 
 
   Nevertheless, we still hope to see you in Orlando this year! Please reach out and let us know if you have any questions. 
 
@@ -267,7 +267,7 @@ modeldata: |
       <bpmn2:sequenceFlow id="Flow_1vnpks6" sourceRef="Activity_0k76xfu" targetRef="Activity_1cr12zx" />
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-86f21d38-5445-44bd-83d7-3d279ae10938">
-      <bpmndi:BPMNPlane id="sid-91a65824-7b8f-471e-b65b-0bd6409904b8" bpmnElement="Process_hHrguwj">
+      <bpmndi:BPMNPlane id="sid-91a65824-7b8f-471e-b65b-0bd6409904b8" bpmnElement="Process_evouhUh">
         <bpmndi:BPMNEdge id="Flow_1vnpks6_di" bpmnElement="Flow_1vnpks6">
           <di:waypoint x="1090" y="300" />
           <di:waypoint x="1150" y="300" />
@@ -305,7 +305,7 @@ modeldata: |
         <bpmndi:BPMNShape id="Event_17jybve_di" bpmnElement="Event_17jybve">
           <dc:Bounds x="292" y="172" width="36" height="36" />
           <bpmndi:BPMNLabel>
-            <dc:Bounds x="275" y="136" width="69" height="27" />
+            <dc:Bounds x="276" y="136" width="70" height="27" />
           </bpmndi:BPMNLabel>
         </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Activity_00cv6t2_di" bpmnElement="Activity_00cv6t2">
