@@ -269,11 +269,13 @@ function pubsub_preprocess_field(&$variables) {
   // When displaying speakers within sessions and mini-sessions, display the speakers' first and last names instead of their username.
   if ($variables["field_name"] == 'field_speakers') {
     foreach ($variables["items"] as &$item) {
-      $user = user_load_by_name($item["content"]["#title"]);
-      $first_name = $user->field_first_name->value;
-      $last_name = $user->field_last_name->value;
+      if (array_key_exists("#type", $item["content"]) && $item["content"]["#type"] == 'link') {
+        $user = user_load_by_name($item["content"]["#title"]);
+        $first_name = $user->field_first_name->value;
+        $last_name = $user->field_last_name->value;
 
-      $item["content"]["#title"] = $first_name . " " . $last_name;
+        $item["content"]["#title"] = $first_name . " " . $last_name;
+      }
     }
   }
 }
