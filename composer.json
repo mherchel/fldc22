@@ -3,8 +3,7 @@
     "description": "Install Drupal 9 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
-    "repositories": [
-        {
+    "repositories": [{
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
@@ -49,7 +48,7 @@
         "pantheon-upstreams/upstream-configuration": "*"
     },
     "conflict": {
-            "drupal/drupal": "*"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -85,7 +84,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "8.1"
         },
         "allow-plugins": {
             "composer/installers": true,
