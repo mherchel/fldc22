@@ -40,6 +40,7 @@
         "drupal/sendgrid_integration": "^2.0",
         "drupal/stage_file_proxy": "^1.2",
         "drupal/token": "^1.9",
+        "drupal/upgrade_status": "^4.0",
         "drupal/user_registrationpassword": "^2.0@alpha",
         "drupal/views_data_export": "^1.0",
         "drupal/webform": "^6.1",
