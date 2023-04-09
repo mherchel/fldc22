@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d52ab6bc6c34532d3ed31f1aa679aa9d",
+    "content-hash": "912e23cc6cbc84bf4d98174cfbd30002",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -947,54 +947,6 @@
                 "source": "https://github.com/consolidation/site-process/tree/4.1.1"
             },
             "time": "2022-01-03T18:57:42+00:00"
-        },
-        {
-            "name": "cweagans/composer-patches",
-            "version": "1.7.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e9969cfc0796e6dea9b4e52f77f18e1065212871",
-                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "composer/composer": "~1.0 || ~2.0",
-                "phpunit/phpunit": "~4.6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "cweagans\\Composer\\Patches"
-            },
-            "autoload": {
-                "psr-4": {
-                    "cweagans\\Composer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Cameron Eagans",
-                    "email": "me@cweagans.net"
-                }
-            ],
-            "description": "Provides a way to patch Composer packages.",
-            "support": {
-                "issues": "https://github.com/cweagans/composer-patches/issues",
-                "source": "https://github.com/cweagans/composer-patches/tree/1.7.2"
-            },
-            "time": "2022-01-25T19:21:20+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2473,142 +2425,6 @@
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
                 "source": "https://github.com/drupal/core/tree/9.5.7"
-            },
-            "time": "2023-03-24T16:54:38+00:00"
-        },
-        {
-            "name": "drupal/core-composer-scaffold",
-            "version": "9.5.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "c78779acff7b39fc0f29ff1edd710361c15ed87b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/c78779acff7b39fc0f29ff1edd710361c15ed87b",
-                "reference": "c78779acff7b39fc0f29ff1edd710361c15ed87b",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1 || ^2",
-                "php": ">=7.3.0"
-            },
-            "conflict": {
-                "drupal-composer/drupal-scaffold": "*"
-            },
-            "require-dev": {
-                "composer/composer": "^1.8@stable"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Drupal\\Composer\\Plugin\\Scaffold\\Plugin",
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\Composer\\Plugin\\Scaffold\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "A flexible Composer project scaffold builder.",
-            "homepage": "https://www.drupal.org/project/drupal",
-            "keywords": [
-                "drupal"
-            ],
-            "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.5.7"
-            },
-            "time": "2023-03-09T21:29:23+00:00"
-        },
-        {
-            "name": "drupal/core-recommended",
-            "version": "9.5.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "4b63b8220b166ad9eca7b5ea05e485cbe1f2b4a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/4b63b8220b166ad9eca7b5ea05e485cbe1f2b4a7",
-                "reference": "4b63b8220b166ad9eca7b5ea05e485cbe1f2b4a7",
-                "shasum": ""
-            },
-            "require": {
-                "asm89/stack-cors": "~1.3.0",
-                "composer/semver": "~3.3.2",
-                "doctrine/annotations": "~1.13.3",
-                "doctrine/lexer": "~1.2.3",
-                "doctrine/reflection": "~1.2.3",
-                "drupal/core": "9.5.7",
-                "egulias/email-validator": "~3.2.1",
-                "guzzlehttp/guzzle": "~6.5.8",
-                "guzzlehttp/promises": "~1.5.2",
-                "guzzlehttp/psr7": "~1.9.0",
-                "laminas/laminas-diactoros": "~2.14.0",
-                "laminas/laminas-escaper": "~2.9.0",
-                "laminas/laminas-feed": "~2.17.0",
-                "laminas/laminas-stdlib": "~3.11.0",
-                "masterminds/html5": "~2.7.6",
-                "pear/archive_tar": "~1.4.14",
-                "pear/console_getopt": "~v1.4.3",
-                "pear/pear-core-minimal": "~v1.10.11",
-                "pear/pear_exception": "~v1.0.2",
-                "psr/cache": "~1.0.1",
-                "psr/container": "~1.1.1",
-                "psr/http-factory": "~1.0.1",
-                "psr/http-message": "~1.0.1",
-                "psr/log": "~1.1.4",
-                "ralouphie/getallheaders": "~3.0.3",
-                "stack/builder": "~v1.0.6",
-                "symfony-cmf/routing": "~2.3.4",
-                "symfony/console": "~v4.4.49",
-                "symfony/debug": "~v4.4.44",
-                "symfony/dependency-injection": "~v4.4.49",
-                "symfony/deprecation-contracts": "~v2.5.2",
-                "symfony/error-handler": "~v4.4.44",
-                "symfony/event-dispatcher": "~v4.4.44",
-                "symfony/event-dispatcher-contracts": "~v1.1.13",
-                "symfony/http-client-contracts": "~v2.5.2",
-                "symfony/http-foundation": "~v4.4.49",
-                "symfony/http-kernel": "~v4.4.50",
-                "symfony/mime": "~v5.4.13",
-                "symfony/polyfill-ctype": "~v1.27.0",
-                "symfony/polyfill-iconv": "~v1.27.0",
-                "symfony/polyfill-intl-idn": "~v1.27.0",
-                "symfony/polyfill-intl-normalizer": "~v1.27.0",
-                "symfony/polyfill-mbstring": "~v1.27.0",
-                "symfony/polyfill-php80": "~v1.27.0",
-                "symfony/process": "~v4.4.44",
-                "symfony/psr-http-message-bridge": "~v2.1.4",
-                "symfony/routing": "~v4.4.44",
-                "symfony/serializer": "~v4.4.47",
-                "symfony/service-contracts": "~v2.5.2",
-                "symfony/translation": "~v4.4.47",
-                "symfony/translation-contracts": "~v2.5.2",
-                "symfony/validator": "~v4.4.48",
-                "symfony/var-dumper": "~v5.4.19",
-                "symfony/yaml": "~v4.4.45",
-                "twig/twig": "~v2.15.4",
-                "typo3/phar-stream-wrapper": "~v3.1.7"
-            },
-            "conflict": {
-                "webflo/drupal-core-strict": "*"
-            },
-            "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
-            "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.5.7"
             },
             "time": "2023-03-24T16:54:38+00:00"
         },
@@ -6258,71 +6074,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "time": "2021-11-30T19:35:32+00:00"
-        },
-        {
-            "name": "pantheon-systems/drupal-integrations",
-            "version": "9.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pantheon-systems/drupal-integrations.git",
-                "reference": "7b31b32a0cc4311dde90ab445d4c147c7478bbb9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/drupal-integrations/zipball/7b31b32a0cc4311dde90ab445d4c147c7478bbb9",
-                "reference": "7b31b32a0cc4311dde90ab445d4c147c7478bbb9",
-                "shasum": ""
-            },
-            "conflict": {
-                "drupal/core": "<9"
-            },
-            "type": "project",
-            "extra": {
-                "drupal-scaffold": {
-                    "file-mapping": {
-                        "[project-root]/.drush-lock-update": "assets/drush-lock-update",
-                        "[web-root]/sites/default/default.services.pantheon.preproduction.yml": "assets/default.services.pantheon.preproduction.yml",
-                        "[web-root]/sites/default/settings.pantheon.php": "assets/settings.pantheon.php",
-                        "[web-root]/sites/default/settings.php": {
-                            "mode": "replace",
-                            "path": "assets/initial.settings.php",
-                            "overwrite": false
-                        }
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Add this project to any Drupal distribution based on drupal/core-composer-scaffold to enable it for use on Pantheon.",
-            "support": {
-                "issues": "https://github.com/pantheon-systems/drupal-integrations/issues",
-                "source": "https://github.com/pantheon-systems/drupal-integrations/tree/9.0.2"
-            },
-            "time": "2021-05-18T19:28:30+00:00"
-        },
-        {
-            "name": "pantheon-upstreams/upstream-configuration",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "upstream-configuration",
-                "reference": "07d637fbfe37092f9e4b8bd965b546d2af61db58"
-            },
-            "require": {
-                "composer/installers": "^1.8",
-                "cweagans/composer-patches": "^1.0",
-                "drupal/core-composer-scaffold": "^9",
-                "drupal/core-recommended": "^8.8 || ^9",
-                "pantheon-systems/drupal-integrations": "^8 || ^9",
-                "php": ">=7.3",
-                "zaporylie/composer-drupal-optimizations": "^1.2"
-            },
-            "type": "project",
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "pear/archive_tar",
@@ -10169,53 +9920,6 @@
             },
             "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
-        },
-        {
-            "name": "zaporylie/composer-drupal-optimizations",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zaporylie/composer-drupal-optimizations.git",
-                "reference": "a7f409a765164fd13ac0bd00e19109165c51b369"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zaporylie/composer-drupal-optimizations/zipball/a7f409a765164fd13ac0bd00e19109165c51b369",
-                "reference": "a7f409a765164fd13ac0bd00e19109165c51b369",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.1 || ^2.0"
-            },
-            "require-dev": {
-                "composer/composer": "^1.6",
-                "phpunit/phpunit": "^6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "zaporylie\\ComposerDrupalOptimizations\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "zaporylie\\ComposerDrupalOptimizations\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Piasecki",
-                    "email": "jakub@piaseccy.pl"
-                }
-            ],
-            "description": "Composer plugin to improve composer performance for Drupal projects",
-            "support": {
-                "issues": "https://github.com/zaporylie/composer-drupal-optimizations/issues",
-                "source": "https://github.com/zaporylie/composer-drupal-optimizations/tree/1.2.0"
-            },
-            "time": "2020-10-22T13:26:00+00:00"
         }
     ],
     "packages-dev": [],
@@ -10233,8 +9937,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.4"
-    },
     "plugin-api-version": "2.3.0"
 }
