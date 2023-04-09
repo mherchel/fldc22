@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: sites-from-years-past
 label: 'Sites from years past'
-description: 'Links to previous year''s camp websites'
+description: "Links to previous year's camp websites"
 locked: false

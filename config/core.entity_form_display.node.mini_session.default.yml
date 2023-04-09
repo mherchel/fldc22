@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.mini_session.field_speakers
     - node.type.mini_session
   module:
-    - hide_revision_field
     - path
 id: node.mini_session.default
 targetEntityType: node
@@ -64,18 +63,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  revision_log:
-    type: hide_revision_field_log_widget
-    weight: 6
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-      show: true
-      default: ''
-      permission_based: false
-      allow_user_settings: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox

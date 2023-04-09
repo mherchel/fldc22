@@ -52,7 +52,7 @@ gateways: {  }
 actions:
   Activity_00cv6t2:
     plugin: eca_token_load_entity
-    label: 'Load entity''s old values'
+    label: "Load entity's old values"
     configuration:
       token_name: originalentity
       from: current
@@ -70,7 +70,7 @@ actions:
         condition: Flow_0lh9vvi
   Activity_0xfxpxt:
     plugin: eca_token_load_entity
-    label: 'Load entity''s new values'
+    label: "Load entity's new values"
     configuration:
       token_name: updatedentity
       from: current
