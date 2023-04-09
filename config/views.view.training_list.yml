@@ -329,7 +329,7 @@ display:
         type: normal
         title: Trainings
         description: ''
-        weight: -44
+        weight: -41
         expanded: false
         menu_name: main
         parent: 'menu_link_content:30b07840-7761-479c-89a6-fd81b482b823'

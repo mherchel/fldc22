@@ -12,7 +12,6 @@ label: Speaker
 weight: -8
 is_admin: null
 permissions:
-  - 'create mini_session content'
   - 'edit own mini_session content'
   - 'edit own session content'
   - 'revert session revisions'

@@ -37,6 +37,7 @@ module:
   history: 0
   honeypot: 0
   image: 0
+  jsonapi: 0
   link: 0
   mailsystem: 0
   menu_link_attributes: 0
@@ -52,6 +53,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quicklink: 0
   r4032login: 0
   registration_role: 0
   rest: 0
@@ -65,6 +67,7 @@ module:
   token: 0
   toolbar: 0
   update: 0
+  upgrade_status: 0
   user: 0
   user_registrationpassword: 0
   views_data_export: 0
