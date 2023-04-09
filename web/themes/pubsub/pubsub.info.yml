@@ -3,7 +3,7 @@ type: theme
 base theme: false
 description: 'Florida DrupalCamp 2022 theme'
 alt text: 'chicken tendy sub'
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 libraries:
   - pubsub/global-styling
 regions:
