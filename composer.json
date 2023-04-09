@@ -85,9 +85,6 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "platform": {
-            "php": "7.4"
-        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
