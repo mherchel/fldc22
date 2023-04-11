@@ -1,0 +1,17 @@
+<article{{ attributes.addClass(classes) }}>
+  <details class="session-teaser__details">
+    <summary class="session-teaser__summary">
+      <h3 class="session-teaser__title">{{ label }}</h3>
+      <div class="session__meta">
+        {% block meta %}{% endblock %}
+      </div>
+    </summary>
+    <div class="session-teaser__desc">
+      {% block description %}{% endblock %}
+      {% block footer %}{% endblock %}
+    </div>
+  </details>
+
+  {{ title_suffix }}
+
+</article>

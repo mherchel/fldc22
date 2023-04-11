@@ -7,47 +7,46 @@
   ]
 %}
 
-{% set is_training = node.field_is_training.value %}
-{% set is_non_session = node.field_is_non_session.value %}
+{% embed 'pubsub:details' with {
+  label: label|add_suggestion('bare')|render,
+  attributes: attributes,
+  is_training: node.field_is_training.value,
+  is_non_session: node.field_is_non_session.value,
+  classes
+} only %}
 
-<article{{ attributes.addClass(classes) }}>
-  <details class="session-teaser__details">
-    <summary class="session-teaser__summary">
-      <h3 class="session-teaser__title">{{ label }}</h3>
-      <div class="session__meta">
-        {% if not is_non_session %}
-          {{ content.field_session_category }}
-        {% endif %}
+  {% block meta %}
+    {% if not is_non_session %}
+      {{ content.field_session_category }}
+    {% endif %}
 
-        {{ content.field_r }}
+    {{ content.field_r }}
 
-        {% if not is_non_session %}
-          {{ content.field_audience }}
-          {{ content.field_speakers }}
-        {% endif %}
-      </div>
-    </summary>
-    <div class="session-teaser__desc">
-      {{ content.field_description }}
+    {% if not is_non_session %}
+      {{ content.field_audience }}
+      {{ content.field_speakers }}
+    {% endif %}
+  {% endblock meta %}
 
-      <div class="session-teaser__footer">
-        {% if not is_non_session %}
-          <div class="session-teaser__desc-meta">
-            <a href="{{ url }}">
-              <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
-              <span class="visually-hidden">for {{ label }}</span>
-              {% include '@pubsub/includes/svg/arrow-right.svg' %}
-            </a>
-          </div>
-        {% endif %}
+  {% block description %}
+    {{ content.field_description }}
+  {% endblock description %}
 
-        {% if content.field_slides.0 %}
-          <a class="session-teaser__slides-link" href="{{- content.field_slides|render|striptags|trim -}}">View Slides</a>
-        {% endif %}
-      </div>
+  {% block footer %}
+    <div class="session-teaser__footer">
+      {% if not is_non_session %}
+        <div class="session-teaser__desc-meta">
+          <a href="{{ url }}">
+            <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
+            <span class="visually-hidden">for {{ label }}</span>
+            {% include '@pubsub/includes/svg/arrow-right.svg' %}
+          </a>
+        </div>
+      {% endif %}
+
+      {% if content.field_slides.0 %}
+        <a class="session-teaser__slides-link" href="{{- content.field_slides|render|striptags|trim -}}">View Slides</a>
+      {% endif %}
     </div>
-  </details>
-
-  {{ title_suffix }}
-
-</article>
+  {% endblock footer %}
+{% endembed %}
