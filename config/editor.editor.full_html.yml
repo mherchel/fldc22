@@ -14,8 +14,6 @@ settings:
       - bold
       - italic
       - strikethrough
-      - superscript
-      - subscript
       - removeFormat
       - '|'
       - link
@@ -25,7 +23,6 @@ settings:
       - '|'
       - blockQuote
       - drupalInsertImage
-      - insertTable
       - horizontalLine
       - '|'
       - heading

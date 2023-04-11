@@ -1,0 +1,65 @@
+uuid: f76ad480-cbbb-423e-9865-d59f178b4122
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_xx7lwel
+id: process_xx7lwel
+label: 'Apply speaker roles to new accounts'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_xX7LWeL" name="Apply speaker roles to new accounts" isExecutable="true">
+      <bpmn2:startEvent id="Event_0df8q3c" name="User account entity inserted" camunda:modelerTemplate="org.drupal.event.content_entity:insert">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:insert" />
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>user _all</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0amb4rj</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0hifx7v" name="Apply speaker role" camunda:modelerTemplate="org.drupal.action.user_add_role_action">
+        <bpmn2:extensionElements>
+          <camunda:field name="rid">
+            <camunda:string>speaker</camunda:string>
+          </camunda:field>
+          <camunda:field name="object">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="user_add_role_action" />
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0amb4rj</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0amb4rj" sourceRef="Event_0df8q3c" targetRef="Activity_0hifx7v" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-d5835fa3-421c-4cb0-b3ba-0e2e2aebfac6">
+      <bpmndi:BPMNPlane id="sid-3d8da845-3c5e-484a-b9ca-7abc5d1fc478" bpmnElement="Process_xX7LWeL">
+        <bpmndi:BPMNShape id="Event_0df8q3c_di" bpmnElement="Event_0df8q3c">
+          <dc:Bounds x="202" y="52" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="186" y="95" width="69" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0hifx7v_di" bpmnElement="Activity_0hifx7v">
+          <dc:Bounds x="330" y="30" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_0amb4rj_di" bpmnElement="Flow_0amb4rj">
+          <di:waypoint x="238" y="70" />
+          <di:waypoint x="330" y="70" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

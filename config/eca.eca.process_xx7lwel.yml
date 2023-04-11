@@ -1,0 +1,35 @@
+uuid: 0a87b3f2-f2c4-4191-96ae-ebf758de838f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.speaker
+  module:
+    - eca_content
+    - user
+id: process_xx7lwel
+modeller: bpmn_io
+label: 'Apply speaker roles to new accounts'
+version: ''
+weight: null
+events:
+  Event_0df8q3c:
+    plugin: 'content_entity:insert'
+    label: 'User account entity inserted'
+    configuration:
+      type: 'user _all'
+    successors:
+      -
+        id: Activity_0hifx7v
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0hifx7v:
+    plugin: user_add_role_action
+    label: 'Apply speaker role'
+    configuration:
+      replace_tokens: false
+      rid: speaker
+      object: ''
+    successors: {  }
