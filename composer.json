@@ -69,7 +69,8 @@
         },
         "patches": {
           "drupal/core": {
-            "SDC": "https://gist.githubusercontent.com/mherchel/8511f862ac229e30c625e53172a44e7d/raw/dbbf2b7e53e9a5e636c5736a039511807374dada/sdc.patch"
+            "SDC": "https://gist.githubusercontent.com/mherchel/8511f862ac229e30c625e53172a44e7d/raw/dbbf2b7e53e9a5e636c5736a039511807374dada/sdc.patch",
+            "SDC Fatal error patch": "https://git.drupalcode.org/project/drupal/-/commit/79df25002753c2f914452f8f0a2ba10580900d8f.patch"
           }
         },
         "drupal-scaffold": {
