@@ -1,22 +1,25 @@
 machineName: details
+name: Details
 status: stable
-# props:
-#   type: object
-#   required:
-#     - label
-#   properties:
-#     attributes:
-#       type: object
-#     classes:
-#       type: array
-#     is_training:
-#       type: boolean
-#     is_non_session:
-#       type: boolean
-#     label:
-#       type: string
-#     title_suffix:
-#       type: object
-# slots:
-#   meta: {}
-#   description: {}
+props:
+  type: object
+  required:
+    - label
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    content:
+      type: object
+    classes:
+      type: array
+    is_training:
+      type: boolean
+    is_non_session:
+      type: boolean
+    label:
+      type: string
+    title_suffix:
+      type: object
+slots:
+  meta: {}
+  description: {}

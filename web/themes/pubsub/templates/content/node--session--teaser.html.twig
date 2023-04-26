@@ -1,17 +1,16 @@
 {{ attach_library('pubsub/session-teaser') }}
-
 {%
   set classes = [
     'session-teaser',
     not node.isPublished() ? 'node--unpublished',
   ]
 %}
-
 {% embed 'pubsub:details' with {
   label: label|add_suggestion('bare')|render,
   attributes: attributes,
-  is_training: node.field_is_training.value,
-  is_non_session: node.field_is_non_session.value,
+  is_training: node.field_is_training.value ? true : false,
+  is_non_session: node.field_is_non_session.value ? true : false,
+  content,
   classes
 } only %}
 
