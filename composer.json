@@ -23,6 +23,7 @@
         "drupal/bulk_update_fields": "2.x-dev@dev",
         "drupal/config_pages": "^2.9",
         "drupal/core-composer-scaffold": "^10",
+        "drupal/core-dev": "^10.0",
         "drupal/core-project-message": "^10",
         "drupal/core-recommended": "^10",
         "drupal/devel": "^5.1",
@@ -95,7 +96,9 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
