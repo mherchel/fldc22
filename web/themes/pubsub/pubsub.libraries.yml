@@ -161,11 +161,6 @@ sponsor-teaser:
     component:
       css/components/node-teaser-sponsor.css: {}
 
-session-teaser:
-  css:
-    component:
-      css/components/node-teaser-session.css: {}
-
 footer-menu:
   css:
     component:
