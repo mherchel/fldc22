@@ -5,11 +5,14 @@ props:
   type: object
   required:
     - label
+    - content
+    - classes
+    - url
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
     content:
-      type: object
+      type: array
     classes:
       type: array
     is_training:
@@ -19,7 +22,9 @@ props:
     label:
       type: string
     title_suffix:
-      type: object
+      type: array
+    url:
+      type: string
 slots:
   meta: {}
   description: {}
