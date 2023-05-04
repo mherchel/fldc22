@@ -83,6 +83,7 @@ upstream/web/
 # that core/assets/vendor and any other vendor directories within contrib or
 # custom module, theme, etc., are not ignored unless you purposely do so.
 /vendor/
+/node_modules
 
 # Ignore scaffold files
 #
@@ -129,3 +130,11 @@ upstream/web/
 
 # Ignore .env files as they are personal
 #/.env
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local development
+.tarballs

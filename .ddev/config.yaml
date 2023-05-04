@@ -1,20 +1,28 @@
 name: fldc22
-type: drupal9
+type: drupal10
 docroot: "web"
-php_version: "7.4"
+php_version: "8.1"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mariadb_version: "10.3"
+mariadb_version: "10.4"
 mysql_version: ""
 nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
+
+# Storybook configuration
+nodejs_version: "14"
+web_extra_exposed_ports:
+  - name: storybook
+    container_port: 6006
+    http_port: 6005
+    https_port: 6006
 
 # Key features of ddev's config.yaml:
 

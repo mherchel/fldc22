@@ -22,10 +22,10 @@
         "drupal/bpmn_io": "^1.0",
         "drupal/bulk_update_fields": "2.x-dev@dev",
         "drupal/config_pages": "^2.9",
-        "drupal/core-composer-scaffold": "^10",
-        "drupal/core-dev": "^10.0",
-        "drupal/core-project-message": "^10",
-        "drupal/core-recommended": "^10",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-dev": "^10.1",
+        "drupal/core-project-message": "^10.1",
+        "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
         "drupal/eca": "^1.0",
         "drupal/field_group": "^3.2",
@@ -67,12 +67,6 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "patches": {
-          "drupal/core": {
-            "SDC": "https://gist.githubusercontent.com/mherchel/8511f862ac229e30c625e53172a44e7d/raw/dbbf2b7e53e9a5e636c5736a039511807374dada/sdc.patch",
-            "SDC Fatal error patch": "https://git.drupalcode.org/project/drupal/-/commit/79df25002753c2f914452f8f0a2ba10580900d8f.patch"
-          }
         },
         "drupal-scaffold": {
             "allowed-packages": [
