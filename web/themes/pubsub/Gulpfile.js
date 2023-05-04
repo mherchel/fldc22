@@ -6,7 +6,7 @@ const pxtorem = require('postcss-pxtorem');
 const del = require('del');
 
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src(['./sass/**/*.scss', './components/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
@@ -34,7 +34,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function (done) {
-  gulp.watch('./sass/**/*.scss', gulp.series(['clean:css', 'sass']));
+  gulp.watch(['./sass/**/*.scss', './components/**/*.scss'], gulp.series(['clean:css', 'sass']));
   done();
 });
 

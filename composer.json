@@ -15,6 +15,7 @@
     ],
     "require": {
         "composer/installers": "^1.11",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/antibot": "^2.0",
         "drupal/auto_entitylabel": "^3.0@beta",
@@ -22,6 +23,7 @@
         "drupal/bulk_update_fields": "2.x-dev@dev",
         "drupal/config_pages": "^2.9",
         "drupal/core-composer-scaffold": "^10",
+        "drupal/core-dev": "^10.0",
         "drupal/core-project-message": "^10",
         "drupal/core-recommended": "^10",
         "drupal/devel": "^5.1",
@@ -66,6 +68,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "patches": {
+          "drupal/core": {
+            "SDC": "https://gist.githubusercontent.com/mherchel/8511f862ac229e30c625e53172a44e7d/raw/dbbf2b7e53e9a5e636c5736a039511807374dada/sdc.patch",
+            "SDC Fatal error patch": "https://git.drupalcode.org/project/drupal/-/commit/79df25002753c2f914452f8f0a2ba10580900d8f.patch"
+          }
+        },
         "drupal-scaffold": {
             "allowed-packages": [
                 "pantheon-systems/drupal-integrations"
@@ -88,7 +96,9 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
