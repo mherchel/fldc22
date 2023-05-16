@@ -11,9 +11,9 @@
   title_suffix: title_suffix,
   is_training: node.field_is_training.value ? true : false,
   is_non_session: node.field_is_non_session.value ? true : false,
-  url: url,
+  url,
   content,
-  classes
+  classes: classes|default([])
 } only %}
 
   {% block meta %}

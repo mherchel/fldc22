@@ -1,4 +1,3 @@
-machineName: details
 name: Details
 status: stable
 props:
@@ -12,7 +11,8 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
     content:
-      type: array
+      # An associative array in PHP is an object in JSON/YML.
+      type: object
     classes:
       type: array
     is_training:
