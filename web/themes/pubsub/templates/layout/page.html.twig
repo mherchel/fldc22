@@ -24,7 +24,7 @@
 
   {% if is_front %}
     {{ include('pubsub:hero', { camp_details, camp_details_homepage_description_text }, with_context = false) }}
-    {{ include('@pubsub/includes/stats.twig') }}
+    {{ include('pubsub:stats') }}
   {% endif %}
 
   {{ page.content_above }}

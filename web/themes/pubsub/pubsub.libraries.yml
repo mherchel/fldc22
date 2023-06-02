@@ -43,11 +43,6 @@ global-styling:
     - core/once
     - core/tabbable
 
-site-stats:
-  css:
-    component:
-      css/components/site-stats.css: {}
-
 details:
   css:
     theme:
