@@ -88,8 +88,8 @@
   width: 1.5625rem;
   margin-top: -0.1875rem;
   margin-right: 0.25em;
-  -webkit-mask: url("img/pdf.svg");
-          mask: url("img/pdf.svg");
+  -webkit-mask: url("images/pdf.svg");
+          mask: url("images/pdf.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: contain;
