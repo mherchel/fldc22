@@ -1,4 +1,4 @@
-((Drupal) => {
+((Drupal, once) => {
   function init(el) {
     const video = el.querySelector('video');
     const pauseButton = el.querySelector('.site-hero__play-pause');
@@ -61,4 +61,4 @@
       once('homepage-video', '.site-hero__media', context).forEach(init);
     },
   };
-})(Drupal);
+})(Drupal, once);

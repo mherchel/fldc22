@@ -1,0 +1,48 @@
+<section class="site-hero container grid">
+  <div class="site-hero__details">
+    {% if camp_details.field_dates.0 %}
+      <span class="site-hero__details-item">
+        {{- camp_details.field_dates.value|date('M d') -}}
+        -
+        {{- camp_details.field_dates.end_value|date('d, Y') -}}
+      </span>
+    {% endif %}
+    {% if camp_details.field_camp_location_short_.0 %}
+      <span class="site-hero__details-item">
+        {{ camp_details.field_camp_location_short_.value }}
+      </span>
+    {% endif %}
+  </div>
+  <div class="site-hero__main">
+    {% if camp_details.field_camp_name.0 %}
+      <h1 class="site-hero__title">{{ camp_details.field_camp_name.value }}</h1>
+    {% endif %}
+
+     {% if camp_details.field_hompage_description_text.0 %}
+      <div class="site-hero__desc">
+        {{ camp_details_homepage_description_text }}
+      </div>
+     {% endif %}
+  </div>
+  <div class="site-hero__media">
+    <button class="site-hero__play-pause" type="button" aria-pressed="false">Pause</button>
+    <video
+      loop
+      autoplay
+      muted
+      playsinline
+      poster="{{ componentMetadata.path }}/videos/fldc22-promo.webp"
+      width="544"
+      height="480"
+    >
+      <source src="{{ componentMetadata.path }}/videos/fldc22-promo.webm" type="video/webm">
+      <source src="{{ componentMetadata.path }}/videos/fldc22-promo.mp4" type="video/mp4">
+    </video>
+    {% if camp_details.field_homepage_media_cta.0 %}
+      <a href="{{ camp_details.field_homepage_media_cta.0.url }}" class="site-hero__media-cta">
+        {{ camp_details.field_homepage_media_cta.title }}
+        {{ include(componentMetadata.path ~ '/images/arrow-right.svg') }}
+      </a>
+    {% endif %}
+  </div>
+</section>

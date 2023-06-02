@@ -26,8 +26,8 @@
     --grid-gap: 32px;
     grid-template-columns: repeat(14, 1fr);
   }
+}
 
-  :where(#{&} > *) {
-    grid-column: 1 / -1;
-  }
+:where(.grid > *) {
+  grid-column: 1 / -1;
 }

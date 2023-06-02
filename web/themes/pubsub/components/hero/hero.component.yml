@@ -1,0 +1,16 @@
+name: Hero
+status: stable
+props:
+  type: object
+  required:
+    - camp_details
+    - camp_details_homepage_description_text
+  properties:
+    camp_details:
+      type: object
+    camp_details_homepage_description_text:
+      type: string
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

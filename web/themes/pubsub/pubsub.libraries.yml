@@ -43,16 +43,6 @@ global-styling:
     - core/once
     - core/tabbable
 
-site-hero:
-  css:
-    component:
-      css/components/site-hero.css: {}
-  js:
-    js/video.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
-
 site-stats:
   css:
     component:

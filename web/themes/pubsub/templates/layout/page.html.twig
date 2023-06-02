@@ -9,7 +9,7 @@
         <div class="site-header__register">
           <a class="site-header__register-link" href="{{ camp_details.field_header_cta.0.url }}" target="_blank">
             {{ camp_details.field_header_cta.title }}
-            {% include '@pubsub/includes/svg/arrow-right.svg' %}
+            {{ include('@pubsub/includes/svg/arrow-right.svg') }}
           </a>
         </div>
       {% endif %}
@@ -23,8 +23,8 @@
   {{ page.highlighted }}
 
   {% if is_front %}
-    {% include '@pubsub/includes/hero.twig' %}
-    {% include '@pubsub/includes/stats.twig' %}
+    {{ include('pubsub:hero', { camp_details, camp_details_homepage_description_text }, with_context = false) }}
+    {{ include('@pubsub/includes/stats.twig') }}
   {% endif %}
 
   {{ page.content_above }}

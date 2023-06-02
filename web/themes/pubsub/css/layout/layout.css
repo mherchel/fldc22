@@ -27,6 +27,7 @@
     grid-template-columns: repeat(14, 1fr);
   }
 }
-.grid :where(.grid > *) {
+
+:where(.grid > *) {
   grid-column: 1/-1;
 }
