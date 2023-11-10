@@ -1,4 +1,4 @@
-uuid: 4a917dc3-e079-4415-ac45-336d5eeec8a1
+uuid: cb4eb152-fdb6-4f53-8bf2-962b2248f5ec
 langcode: en
 status: true
 dependencies:
@@ -11,50 +11,19 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - heading
       - bold
       - italic
-      - strikethrough
-      - removeFormat
-      - '|'
       - link
-      - '|'
       - bulletedList
       - numberedList
-      - '|'
-      - blockQuote
-      - drupalInsertImage
-      - horizontalLine
-      - '|'
-      - heading
-      - codeBlock
-      - style
-      - '|'
-      - sourceEditing
   plugins:
     ckeditor5_heading:
       enabled_headings:
         - heading2
         - heading3
         - heading4
-        - heading5
-        - heading6
-    ckeditor5_imageResize:
-      allow_resize: true
     ckeditor5_list:
       reversed: true
       startIndex: true
-    ckeditor5_sourceEditing:
-      allowed_tags: {  }
-    ckeditor5_style:
-      styles:
-        -
-          label: 'Highlight Box'
-          element: '<div class="highlight-box">'
-image_upload:
-  status: true
-  scheme: public
-  directory: inline-images
-  max_size: ''
-  max_dimensions:
-    width: 0
-    height: 0
+image_upload: {  }
