@@ -1,4 +1,4 @@
-uuid: cb4eb152-fdb6-4f53-8bf2-962b2248f5ec
+uuid: 4a917dc3-e079-4415-ac45-336d5eeec8a1
 langcode: en
 status: true
 dependencies:
@@ -11,19 +11,94 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
-      - heading
       - bold
       - italic
+      - strikethrough
+      - removeFormat
+      - '|'
       - link
+      - '|'
       - bulletedList
       - numberedList
+      - '|'
+      - blockQuote
+      - drupalInsertImage
+      - horizontalLine
+      - '|'
+      - heading
+      - codeBlock
+      - style
+      - '|'
+      - sourceEditing
   plugins:
     ckeditor5_heading:
       enabled_headings:
         - heading2
         - heading3
         - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       reversed: true
       startIndex: true
-image_upload: {  }
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Highlight Box'
+          element: '<div class="highlight-box">'
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0

@@ -16,7 +16,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <div class="highlight-box"> <a hreflang href> <blockquote cite> <ul type> <ol type start> <strong> <em> <code class="language-*"> <pre> <li> <hr>'
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <cite> <dl> <dt> <dd> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <div class="highlight-box"> <a hreflang href> <blockquote cite> <ul type> <ol type start> <h5 id> <h6 id> <strong> <em> <code class="language-*"> <pre> <li> <hr>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -42,4 +42,10 @@ filters:
     provider: editor
     status: true
     weight: 11
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 12
     settings: {  }

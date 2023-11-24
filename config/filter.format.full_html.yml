@@ -43,3 +43,9 @@ filters:
       allowed_html: '<div class="highlight-box">'
       filter_html_help: true
       filter_html_nofollow: false
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 12
+    settings: {  }

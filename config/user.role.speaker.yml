@@ -6,12 +6,14 @@ dependencies:
     - node.type.mini_session
     - node.type.session
   module:
+    - file
     - node
 id: speaker
 label: Speaker
 weight: -8
 is_admin: null
 permissions:
+  - 'delete own files'
   - 'edit own mini_session content'
   - 'edit own session content'
   - 'revert session revisions'

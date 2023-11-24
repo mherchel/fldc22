@@ -1,4 +1,4 @@
-uuid: 1971d474-86b7-44ea-9116-edb1b4947a12
+uuid: 812baad7-9254-435a-9230-55985d91bbc5
 langcode: en
 status: true
 dependencies:
@@ -11,26 +11,29 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
-      - heading
       - bold
       - italic
       - '|'
       - link
-      - blockQuote
+      - '|'
       - bulletedList
       - numberedList
+      - '|'
+      - blockQuote
+      - '|'
+      - heading
+      - horizontalLine
+      - '|'
+      - sourceEditing
+      - '|'
       - code
       - codeBlock
-      - horizontalLine
-      - sourceEditing
   plugins:
     ckeditor5_heading:
       enabled_headings:
         - heading2
         - heading3
         - heading4
-        - heading5
-        - heading6
     ckeditor5_list:
       reversed: false
       startIndex: true
@@ -52,4 +55,55 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
-image_upload: {  }
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

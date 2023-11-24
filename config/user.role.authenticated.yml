@@ -7,6 +7,7 @@ dependencies:
     - node.type.session
   module:
     - field_permissions
+    - file
     - filter
     - node
     - system
@@ -19,6 +20,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'delete own files'
   - 'edit own session content'
   - 'use text format basic_html'
   - 'view field_r'
