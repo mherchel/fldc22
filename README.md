@@ -9,13 +9,22 @@
 3. Browse through all of the content and update the basic pages as needed.
 4. Unpublish (don't delete) all of the sponsors.
 5. Delete all of the sessions and trainings as necessary
-6. Review and edit all transactional emails at `/admin/structure/workbench-moderation/workbench-email-template`
+6. Review and edit all transactional emails at `/admin/config/workflow/eca`.
+   This should not be needed, but better to double check.
 7. Update config with the transactional email changes.
+8. Update the camp details at `/admin/camp-details`
+9. Delete any featured speakers.
+10. Delete any job listings.
+11. Add the previous years' site to `admin/structure/menu/manage/sites-from-years-past`
+12. Edit frontpage title at `/admin/config/search/metatag/front?destination=/admin/config/search/metatag`
+13. Edit text on `/contribution-day`
+14. Ensure visitors can create accounts at `/admin/config/people/accounts`
 
 ## How to update the Schedule View for another year
 
 1. Edit the menu item attributes for the menu items in the "Schedule Tabs" menu at `/admin/structure/menu/manage/schedule-tabs`. To do this you'll see the "Attribute" Details element when editing the menu items. You'll need to add a machine readable date there (eg `2022-02-18`). This will affect the text to the right within the tabs.
-2. Edit all the taxonomy term fields within the "Session Time Slot" vocabulary at `/admin/structure/taxonomy/manage/time_slot/overview`
+2. Edit all the taxonomy term fields within the "Session Time Slot" vocabulary
+   at `/admin/structure/taxonomy/manage/time_slot/overview` // Still to do for 2024
 3. Edit the Views Filters in the "Session Schedule" view at `/admin/structure/views/view/session_schedule`. You'll see a min value and max value. You'll need to update them both to reflect the new date.
 4. Repeat the last step on each of the page displays within the "Session Schedule" view.
 
@@ -25,6 +34,7 @@
 2. Enable/disable the menu item for "Submit a session" under main menu.
 3. Change the "Homepage Media CTA" text and URL at `/admin/camp-details`. The URL for the session submission is  `/submit-session`.
 4. Change the "Who can register accounts?" setting at `/admin/config/people/accounts`. Enable the "Visitors" option if session submissions are opening.
+5. Edit text (including submission deadline) at `/submit-session`
 
 ## To fix next year
  - Limit sponsor description text to plain text.
