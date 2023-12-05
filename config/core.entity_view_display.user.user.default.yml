@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_home_town
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_mastodon_profile_link
     - field.field.user.user.field_organization
     - field.field.user.user.field_personal_website_link
     - field.field.user.user.field_title
@@ -68,6 +69,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_mastodon_profile_link:
+    type: link
+    label: above
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_organization:
     type: string

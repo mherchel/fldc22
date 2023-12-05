@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_home_town
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_mastodon_profile_link
     - field.field.user.user.field_organization
     - field.field.user.user.field_personal_website_link
     - field.field.user.user.field_title
@@ -27,6 +28,7 @@ third_party_settings:
       children:
         - field_drupal_org_profile
         - field_twitter_profile_link
+        - field_mastodon_profile_link
         - field_personal_website_link
       label: Links
       region: content
@@ -110,6 +112,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_mastodon_profile_link:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_organization:
     type: string_textfield
     weight: 8
@@ -120,7 +130,7 @@ content:
     third_party_settings: {  }
   field_personal_website_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
