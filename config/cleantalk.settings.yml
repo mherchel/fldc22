@@ -1,0 +1,32 @@
+cleantalk_authkey: y9ybaqygahetydy
+cleantalk_check_comments: true
+cleantalk_check_comments_automod: false
+cleantalk_check_comments_min_approved: 3
+cleantalk_check_register: true
+cleantalk_check_webforms: true
+cleantalk_check_contact_forms: true
+cleantalk_check_forum_topics: false
+cleantalk_check_search_form: false
+cleantalk_url_exclusions: ''
+cleantalk_url_regexp: false
+cleantalk_fields_regexp: false
+cleantalk_fields_exclusions: ''
+cleantalk_roles_exclusions:
+  administrator: administrator
+cleantalk_search_noindex: false
+cleantalk_set_cookies: true
+cleantalk_alternative_cookies_session: false
+cleantalk_check_added_content: false
+cleantalk_check_ccf: false
+cleantalk_link: false
+cleantalk_sfw: true
+cleantalk_sfw_ac: false
+cleantalk_sfw_antiflood: false
+cleantalk_sfw_antiflood_limit: 20
+_core:
+  default_config_hash: RzzMekuJsYP18beTtEiLvlKE6fkc3lyb26P4L7i7gNU
+cleantalk_check_external: 0
+cleantalk_check_external__capture_buffer: 0
+cleantalk_debug_enabled: 0
+cleantalk_show_debug_checkbox: 0
+cleantalk_salt: '1941768647425211284'

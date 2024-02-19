@@ -13,6 +13,7 @@ module:
   breakpoint: 0
   bulk_update_fields: 0
   ckeditor5: 0
+  cleantalk: 0
   config: 0
   config_pages: 0
   contextual: 0
