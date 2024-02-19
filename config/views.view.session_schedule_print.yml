@@ -518,7 +518,7 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: '2023-02-17 00:00:00'
+            min: '2024-02-17 00:00:00'
             max: '2023-02-17 23:59:59'
             value: ''
             type: date
@@ -941,6 +941,84 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            session: session
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_date_time_value:
+          id: field_date_time_value
+          table: taxonomy_term__field_date_time
+          field: field_date_time_value
+          relationship: field_time_slot
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: between
+          value:
+            min: '2024-02-23 00:00:00'
+            max: '2024-02-23 23:59:59'
+            value: ''
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -1015,8 +1093,8 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: '2023-02-18 00:00:00'
-            max: '2023-02-18 23:59:59'
+            min: '2024-02-24 00:00:00'
+            max: '2024-02-24 23:59:59'
             value: ''
             type: date
           group: 1
@@ -1130,8 +1208,8 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: '2023-02-19 00:00:00'
-            max: '2023-02-19 23:59:59'
+            min: '2024-02-25 00:00:00'
+            max: '2024-02-25 23:59:59'
             value: ''
             type: date
           group: 1

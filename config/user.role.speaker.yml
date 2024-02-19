@@ -13,7 +13,6 @@ label: Speaker
 weight: -8
 is_admin: null
 permissions:
-  - 'create session content'
   - 'delete own files'
   - 'edit own mini_session content'
   - 'edit own session content'

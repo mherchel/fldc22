@@ -2377,11 +2377,11 @@ display:
               1:
                 title: Session
                 operator: '!='
-                value: '0'
+                value: '1'
               2:
                 title: Training
                 operator: '!='
-                value: '1'
+                value: '0'
         field_acceptance_target_id:
           id: field_acceptance_target_id
           table: node__field_acceptance
