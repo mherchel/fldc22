@@ -20,6 +20,7 @@
 }
 
 .featured-speaker__link {
+  display: block; // Necessary for focus outline.
   text-decoration: none;
 }
 
