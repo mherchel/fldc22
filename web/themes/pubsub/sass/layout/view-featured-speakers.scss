@@ -9,7 +9,7 @@
 .view-featured-speakers__content {
   display: flex;
   flex-wrap: wrap;
-  column-gap: calc(4 * var(--grid-gap));
+  column-gap: calc(2 * var(--grid-gap));
   row-gap: var(--grid-gap);
   padding: var(--sp3) 0;
 
@@ -29,24 +29,22 @@
 
   @media (min-width: 800px) {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     column-gap: var(--grid-gap);
     padding: var(--sp4) 0;
 
-    > .view-featured-speakers__title {
+    .view-featured-speakers__title {
       grid-column: 1 / -1;
     }
 
-    > *:nth-child(2) {
-      grid-column: 1 / 4;
+    .view-featured-speakers__item {
+      grid-column: span 6;
     }
 
-    > *:nth-child(3) {
-      grid-column: 5 / 8;
-    }
-
-    > *:nth-child(4) {
-      grid-column: 9 / -1;
+    &:has(:nth-child(3 of .view-featured-speakers__item)) {
+      .view-featured-speakers__item {
+        grid-column: span 4;
+      }
     }
   }
 
@@ -54,40 +52,15 @@
     margin-top: var(--sp3);
     padding: var(--sp5) 0;
 
-    > .view-featured-speakers__title {
-      grid-column: 1 / -1;
+    .view-featured-speakers__title,
+    .view-featured-speakers__item {
+      grid-column: span 4;
     }
 
-    > *:nth-child(2) {
-      grid-column: 1 / 4;
-    }
-
-    > *:nth-child(3) {
-      grid-column: 5 / 8;
-    }
-
-    > *:nth-child(4) {
-      grid-column: 9 / -1;
-    }
-  }
-
-  @media ($grid-max) {
-    grid-template-columns: repeat(12, 1fr);
-
-    > .view-featured-speakers__title {
-      grid-column: 1 / -1;
-    }
-
-    > *:nth-child(2) {
-       grid-column: 1 / 4;
-    }
-
-    > *:nth-child(3) {
-      grid-column: 5 / 8;
-    }
-
-    > *:nth-child(4) {
-      grid-column: 9 / -2;
+    &:has(:nth-child(3 of .view-featured-speakers__item)) {
+      .view-featured-speakers__title {
+        grid-column: 1 / -1;
+      }
     }
   }
 }
