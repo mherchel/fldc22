@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Sponsor Level'
 vid: sponsor_level
-description: ''
+description: null
 weight: 0
+new_revision: false

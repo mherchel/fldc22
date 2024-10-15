@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
     - node.type.session
   module:
     - field_permissions
@@ -23,6 +24,7 @@ permissions:
   - 'delete own files'
   - 'edit own session content'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view field_r'
   - 'view field_time_slot'
   - 'view field_youtube_video'

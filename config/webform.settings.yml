@@ -329,7 +329,7 @@ libraries:
     - signature_pad
     - tabby
 requirements:
-  cdn: true
+  cdn: false
   clientside_validation: true
   bootstrap: true
   spam: true

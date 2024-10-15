@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Session Category'
 vid: session_category
-description: ''
+description: null
 weight: 0
+new_revision: false

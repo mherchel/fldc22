@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Featured Speaker'
 type: featured_speaker
 description: 'This block will show on the homepage.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

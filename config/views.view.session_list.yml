@@ -360,7 +360,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -881,7 +880,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1174,7 +1172,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

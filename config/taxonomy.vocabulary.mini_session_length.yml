@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Mini-session length'
 vid: mini_session_length
-description: ''
+description: null
 weight: 0
+new_revision: false

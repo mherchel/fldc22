@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Session Audience'
 vid: session_audience
-description: ''
+description: null
 weight: 0
+new_revision: false

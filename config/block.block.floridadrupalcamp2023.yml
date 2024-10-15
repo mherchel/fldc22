@@ -1,6 +1,6 @@
 uuid: b6b45ec3-8d47-419c-9dc6-0f0b1f1acbbf
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
 settings:
   id: 'block_content:b46659a2-54b6-4d89-9c2d-6b35856e5f8a'
-  label: 'Florida DrupalCamp 2024'
+  label: 'Florida DrupalCamp 2025'
   label_display: visible
   provider: block_content
   status: true

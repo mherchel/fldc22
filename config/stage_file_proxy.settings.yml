@@ -3,5 +3,6 @@ _core:
 hotlink: false
 origin: 'https://www.fldrupal.camp'
 origin_dir: sites/default/files
+proxy_headers: ''
 use_imagecache_root: true
 verify: false
