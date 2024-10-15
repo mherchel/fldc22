@@ -15,6 +15,7 @@
     ],
     "require": {
         "composer/installers": "^1.11",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/antibot": "^2.0",
         "drupal/auto_entitylabel": "^3.0@beta",
@@ -81,6 +82,12 @@
                 "[project-root]/pantheon.upstream.yml": false,
                 "[project-root]/.gitattributes": false
             }
+        },
+        "enable-patching": true,
+        "patches": {
+          "drupal/user_registrationpassword": {
+            "3467248 - TypeError: Return value must be of type array, bool returned": "https://www.drupal.org/files/issues/2024-09-03/user_registrationpassword-3467248-17.patch"
+          }
         }
     },
     "config": {
