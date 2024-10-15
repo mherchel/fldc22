@@ -1,0 +1,58 @@
+
+.featured-speaker__img {
+  position: relative; // Anchor badge field.
+  background-color: var(--color--sky-90);
+
+  .view-featured-speakers__item:nth-child(odd) & {
+    background-color: var(--color--sun-90);
+  }
+
+  img {
+    filter: grayscale(1) contrast(180%);
+    opacity: 0.6;
+    transition: filter 0.2s, opacity 0.2s;
+
+    &:hover {
+      filter: grayscale(0) contrast(150%);
+      opacity: 1;
+    }
+  }
+}
+
+.featured-speaker__link {
+  display: block; // Necessary for focus outline.
+  text-decoration: none;
+}
+
+.featured-speaker__badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 6px 12px 0 0;
+  background: var(--color--white);
+  color: var(--color--sun-40);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: var(--sp1-5);
+  letter-spacing: 0.08em;
+}
+
+.featured-speaker__title {
+  margin: var(--sp1-5) 0 var(--sp0-5);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: var(--sp1-5);
+  text-align: left;
+  color: var(--color--ocean-15);
+}
+
+.featured-speaker__desc {
+  font-size: 14px;
+  color: var(--color--night-30);
+
+  .text-content {
+    font-size: inherit;
+    line-height: var(--sp1-5);
+  }
+}

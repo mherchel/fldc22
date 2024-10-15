@@ -5,9 +5,10 @@ const autoprefixer = require('autoprefixer');
 const pxtorem = require('postcss-pxtorem');
 const del = require('del');
 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+function doSassyShit(stream) {
+  return stream
+    .pipe(sass()
+    .on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
       pxtorem({
@@ -29,15 +30,27 @@ gulp.task('sass', function () {
         mediaQuery: true,
         minPixelValue: 3,
       })
-    ]))
-    .pipe(gulp.dest('./css'));
+    ]));
+}
+
+gulp.task('compile-sass-directory-sass', function () {
+  return doSassyShit(gulp.src(['./sass/**/*.scss'])).pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', function (done) {
-  gulp.watch('./sass/**/*.scss', gulp.series(['clean:css', 'sass']));
+gulp.task('compile-component-directory-sass', function () {
+  return doSassyShit(gulp.src(['./components/**/*.scss'])).pipe(gulp.dest('./components'));
+});
+
+gulp.task('watch', function (done) {
+  gulp.watch(['./sass/**/*.scss'], gulp.series(['clean:css-directory-css', 'compile-sass-directory-sass']));
+  gulp.watch(['./components/**/*.scss'], gulp.series(['clean:component-directory-css', 'compile-component-directory-sass']));
   done();
 });
 
-gulp.task('clean:css', function () {
-  return del('css/**', { force: true });
+gulp.task('clean:css-directory-css', function () {
+  return del('./css/**', { force: true });
+});
+
+gulp.task('clean:component-directory-css', function () {
+  return del('./components/**/*.css', { force: true });
 });

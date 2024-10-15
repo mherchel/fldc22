@@ -211,11 +211,6 @@ archive-sites-menu:
     - core/drupal
     - core/once
 
-node-teaser-featured-speaker:
-  css:
-    component:
-      css/components/node-teaser-featured-speaker.css: {}
-
 node-full-job-listing:
   css:
     component:
