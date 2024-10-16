@@ -256,8 +256,12 @@ modal:
     - core/drupal
     - core/once
 
-
 mini-session-teaser:
   css:
     component:
       css/components/mini-session-teaser.css: {}
+
+node-add-session-form:
+  css:
+      component:
+        css/components/node-add-session-form.css: {}

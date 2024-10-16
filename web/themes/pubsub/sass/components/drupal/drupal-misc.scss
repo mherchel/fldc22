@@ -33,6 +33,12 @@ input.field-add-more-submit {
 .tabledrag-toggle-weight {
   @include button;
   @include button--small;
+
+  margin-bottom: 0;
+  padding-inline: var(--sp0-5);
+  height: var(--sp1-5);
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 tr.drag {

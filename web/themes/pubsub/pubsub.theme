@@ -113,6 +113,10 @@ function pubsub_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $form['#prefix'] = '<h1>Login</h1>';
     $form['#suffix'] = '<div class="user-login-form__links"><div class="user-login-form__register-link">'. $register_link . '</div><div class="user-login-form__pass-link">' . $password_link . '</div></div>';
   }
+
+  if ($form_id == 'node_session_form') {
+    $form['#attached']['library'][] = 'pubsub/node-add-session-form';
+  }
 }
 
 /**

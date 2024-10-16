@@ -1,0 +1,9 @@
+.node-session-form .form-item-field-description-0-format:has(option):not(:has(option:nth-child(2))) {
+  display: none;
+}
+.node-session-form #edit-field-description-0-format-help-about {
+  display: none;
+}
+.node-session-form .js-form-type-vertical-tabs {
+  display: none;
+}

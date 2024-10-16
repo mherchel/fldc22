@@ -1,0 +1,16 @@
+.node-session-form {
+  // Hide text formats if only one option.
+  .form-item-field-description-0-format:has(option):not(:has(option:nth-child(2))) {
+    display: none;
+  }
+
+  // Hide "About text formats" link.
+  #edit-field-description-0-format-help-about {
+    display: none;
+  }
+
+  // Hide vertical tabs with revision log message.
+  .js-form-type-vertical-tabs {
+    display: none;
+  }
+}
