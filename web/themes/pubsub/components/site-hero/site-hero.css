@@ -1,32 +1,30 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-.site-hero {
+body .site-hero {
   padding-bottom: var(--sp3);
 }
 @media (min-width: 37.5rem) {
-  .site-hero {
+  body .site-hero {
     padding-bottom: 4rem;
   }
 }
 @media (min-width: 62.5rem) {
-  .site-hero {
+  body .site-hero {
     padding-bottom: 6rem;
   }
 }
-
-.site-hero__details {
+body .site-hero__details {
   grid-column: 1/-2;
   display: flex;
   height: 3.5rem;
   white-space: nowrap;
 }
 @media (min-width: 37.5rem) {
-  .site-hero__details {
+  body .site-hero__details {
     grid-column: 1/6;
   }
 }
-
-.site-hero__details-item {
+body .site-hero__details-item {
   display: block;
   padding: var(--sp) var(--sp1-5);
   text-transform: uppercase;
@@ -38,11 +36,11 @@
   letter-spacing: 0.06em;
   background: var(--color--sky-94);
 }
-.site-hero__details-item:first-child {
+body .site-hero__details-item:first-child {
   position: relative;
   background: var(--color--sky-80);
 }
-.site-hero__details-item:first-child:after {
+body .site-hero__details-item:first-child:after {
   content: "";
   background: var(--color--sky-80);
   position: absolute;
@@ -51,24 +49,22 @@
   height: 100%;
   width: 50vw;
 }
-
-.site-hero__main {
+body .site-hero__main {
   margin: var(--sp3) 0 var(--sp2);
 }
 @media (min-width: 37.5rem) {
-  .site-hero__main {
+  body .site-hero__main {
     grid-row: 2;
     grid-column: 1/6;
     margin: 0;
   }
 }
 @media (min-width: 81.25rem) {
-  .site-hero__main {
+  body .site-hero__main {
     grid-column: 2/6;
   }
 }
-
-.site-hero__title {
+body .site-hero__title {
   margin-block: var(--sp);
   font-size: 2.5rem;
   font-weight: 800;
@@ -77,48 +73,45 @@
   color: var(--color--night-5);
 }
 @media (min-width: 43.75rem) {
-  .site-hero__title {
+  body .site-hero__title {
     margin-block: var(--sp2);
   }
 }
 @media (min-width: 50rem) {
-  .site-hero__title {
+  body .site-hero__title {
     font-size: 3.5rem;
   }
 }
 @media (min-width: 62.5rem) {
-  .site-hero__title {
+  body .site-hero__title {
     font-size: 5rem;
   }
 }
-
-.site-hero__desc {
+body .site-hero__desc {
   font-size: 1rem;
   line-height: var(--sp2);
 }
-
-.site-hero__media {
+body .site-hero__media {
   position: relative;
 }
 @media (min-width: 37.5rem) {
-  .site-hero__media {
+  body .site-hero__media {
     grid-column: 7/-1;
     grid-row: span 2;
   }
 }
 @media (min-width: 81.25rem) {
-  .site-hero__media {
+  body .site-hero__media {
     grid-column: 9/-1;
   }
 }
-.site-hero__media img,
-.site-hero__media video {
+body .site-hero__media img,
+body .site-hero__media video {
   width: 100%;
   aspect-ratio: 544/480;
   object-fit: cover;
 }
-
-.site-hero__play-pause {
+body .site-hero__play-pause {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -131,15 +124,15 @@
   overflow: hidden;
   transition: background 0.2s;
 }
-.site-hero__play-pause:hover {
+body .site-hero__play-pause:hover {
   background: rgba(255, 255, 255, 0.8);
 }
-.site-hero__play-pause:focus {
+body .site-hero__play-pause:focus {
   outline: solid 2px currentColor;
   border-radius: 0;
   outline-offset: -6px;
 }
-.site-hero__play-pause[aria-pressed=true]:before {
+body .site-hero__play-pause[aria-pressed=true]:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -152,7 +145,7 @@
   border-top: solid 10px transparent;
   border-bottom: solid 10px transparent;
 }
-.site-hero__play-pause[aria-pressed=false]:before {
+body .site-hero__play-pause[aria-pressed=false]:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -163,8 +156,7 @@
   border-left: solid 4px currentColor;
   border-right: solid 4px currentColor;
 }
-
-.site-hero__media-cta {
+body .site-hero__media-cta {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -177,24 +169,24 @@
   color: var(--color--ocean-30);
   transition: color 0.2s;
 }
-.site-hero__media-cta:focus {
+body .site-hero__media-cta:focus {
   outline: solid 2px currentColor;
   border-radius: 0;
   outline-offset: -6px;
 }
-.site-hero__media-cta:hover {
+body .site-hero__media-cta:hover {
   color: var(--color--ocean-10);
 }
-.site-hero__media-cta:hover svg {
+body .site-hero__media-cta:hover svg {
   transform: translatex(0.3125rem);
 }
-.site-hero__media-cta:hover path {
+body .site-hero__media-cta:hover path {
   fill: var(--color--ocean-55);
 }
-.site-hero__media-cta svg {
+body .site-hero__media-cta svg {
   transition: transform 0.2s;
 }
-.site-hero__media-cta path {
+body .site-hero__media-cta path {
   fill: var(--color--sun-55);
   transition: fill 0.2s;
 }

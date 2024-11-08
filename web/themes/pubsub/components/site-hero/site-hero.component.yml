@@ -1,0 +1,6 @@
+name: Site Hero
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+    - pubsub/layout
