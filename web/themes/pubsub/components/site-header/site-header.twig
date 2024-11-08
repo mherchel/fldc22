@@ -1,0 +1,20 @@
+<header class="site-header container">
+  <a class="site-header--logo-link" href="/">
+    <img width="209" height="80" src="{{ componentMetadata.path }}/images/fldc25-logo.svg" alt="Florida DrupalCamp Logo">
+  </a>
+  {{ primary_menu }}
+  <div class="site-header__action">
+    {% if camp_details.field_header_cta.0 %}
+      <div class="site-header__register">
+        <a class="site-header__register-link" href="{{ camp_details.field_header_cta.0.url }}" target="_blank">
+          {{ camp_details.field_header_cta.title }}
+          {% include componentMetadata.path ~ '/images/arrow-right.svg' %}
+        </a>
+      </div>
+    {% endif %}
+    <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="{{ 'Toggle Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
+      <span class="mobile-nav-button__label">{{ 'Menu'|t }}</span>
+      <span class="mobile-nav-button__icon"></span>
+    </button>
+  </div>
+</header>
