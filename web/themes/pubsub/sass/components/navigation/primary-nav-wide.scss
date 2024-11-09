@@ -8,11 +8,12 @@
 
   .primary-nav__menu--level-1 {
     display: flex;
+    gap: 8px;
     list-style: none;
     padding: 10px;
 
     > * {
-      margin: 20px;
+      margin: 20px 0;
     }
   }
 
@@ -32,22 +33,21 @@
   .primary-nav__menu-link--level-1 {
     display: block; // Necessary for <a> tags.
     font-weight: 700;
-    padding: 20px 0;
+    padding: 20px 16px;
   }
 
   .primary-nav__menu-link--button {
     &.primary-nav__menu-link--has-children {
-      position: relative; // Anchor chevron.
-      padding-inline-end: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
 
       /* Chevron icon for desktop navigation. */
       .primary-nav__menu-link-icon {
-        position: absolute;
-        top: 50%;
-        left: calc(100% - 4px);
+        position: relative;
         width: 16px;
         aspect-ratio: 1;
-        transform: translatey(-50%);
         background-color: var(--secondary);
         color: var(--text-on-secondary);
 
@@ -56,13 +56,23 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           margin-block-start: -2px;
           transform: translate(-50%, -50%) rotate(45deg);
           border-top: 0;
           border-right: solid 2px currentColor;
           border-bottom: solid 2px currentColor;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        background-color: var(--neutral-dark);
+        color: var(--text-on-neutral-dark);
+
+        .primary-nav__menu-link-icon {
+          background-color: var(--pink-light);
+          scale: -1;
         }
       }
     }
@@ -73,30 +83,14 @@
     visibility: hidden;
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 0;
     width: 200px;
-    background: var(--color--white);
-    border-top: solid 10px var(--color--sun-45);
+    background: var(--neutral-dark);
     list-style: none;
-    padding: var(--sp2) var(--sp) var(--sp);
+    padding: var(--sp2) 8px var(--sp);
     margin: 0;
     opacity: 0.5;
-    transform: translate(-50%, -10px);
-    box-shadow: 0 5px 5px 2px var(--color--night-60);
-    border-radius: 9px 9px 0 0;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translatex(-50%);
-      width: 0;
-      height: 0;
-      border-left: solid 15px transparent;
-      border-right: solid 15px transparent;
-      border-bottom: solid 10px var(--color--sun-45);
-    }
+    transform: translatey(-10px);
 
     html.js & {
       transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
@@ -107,12 +101,24 @@
     html:not(.js) .primary-nav__menu-item--level-1:hover & {
       visibility: visible;
       opacity: 1;
-      transform: translate(-50%, 0);
+      transform: translatey(0);
     }
   }
 
   .primary-nav__menu-item--level-2 {
     margin-bottom: var(--sp);
+  }
+
+  .primary-nav__menu-link--level-2 {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    color: var(--text-on-neutral-dark);
+
+    &:hover {
+      background: var(--secondary);
+      color: var(--text-on-secondary);
+    }
   }
 
   // Only shows for authenticated users.
