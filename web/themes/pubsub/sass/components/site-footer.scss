@@ -1,8 +1,8 @@
 @import "../global/variables";
 
 .site-footer {
-  background-color: var(--color--ocean-10);
-  color: var(--color--white);
+  background-color: var(--neutral-dark);
+  color: var(--text-on-neutral-dark);
   padding: 64px 0;
 
   @media ($lg) {
@@ -14,15 +14,15 @@
   }
 
   .path-frontpage & {
-    box-shadow: 0 -200px 0 var(--color--ocean-10);
+    box-shadow: 0 -200px 0 var(--neutral-dark);
   }
 
   a {
-    color: var(--color--sky-80);
+    color: inherit;
 
     &:hover,
     &:focus {
-      color: var(--color--white);
+      color: var(--text-on-neutral-dark-primary);
     }
   }
 

@@ -8,8 +8,7 @@
 .site-hero__content[class] {
   position: relative;
   z-index: 4;
-  grid-column-start: 2;
-  pointer-events: none;
+  grid-column: 2/-2;
 }
 
 .site-hero__details {
@@ -134,8 +133,8 @@
 .site-hero__play-pause {
   position: absolute;
   z-index: 2;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   height: 5rem;
   width: 5rem;
   background: rgba(170, 222, 238, 0.8);

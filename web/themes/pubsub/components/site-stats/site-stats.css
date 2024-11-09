@@ -18,6 +18,24 @@
     padding: 4.5rem 0;
   }
 }
+.site-stats[class]:after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - 2px);
+  right: 15%;
+  width: 15%;
+  aspect-ratio: 209/280;
+  -webkit-mask-image: url("images/palm-tree.svg");
+          mask-image: url("images/palm-tree.svg");
+  -webkit-mask-repeat: 0;
+          mask-repeat: 0;
+  -webkit-mask-position: center bottom;
+          mask-position: center bottom;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: var(--color-background);
+  pointer-events: none;
+}
 
 @media (min-width: 43.75rem) {
   .site-stats__label[class] {
@@ -28,7 +46,7 @@
 
 .site-stats__title[class] {
   margin-top: 0;
-  border-left: solid 4px var(--color--sun-55);
+  border-left: solid 4px var(--pink-dark);
   padding-left: 1.25rem;
   font-size: 0.75rem;
   font-weight: 700;

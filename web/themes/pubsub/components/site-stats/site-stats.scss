@@ -9,7 +9,7 @@ $stats-label-layout-switch: $md;
   --color-text: var(--text-on-neutral-dark);
   --color-subtext: var(--text-on-neutral-dark-primary);
 
-  position: relative; // Anchor the border.
+  position: relative; // Anchor the tree.
   background-color: var(--color-background);
   color: var(--color-text);
   border-image-source: linear-gradient(var(--color-background), var(--color-background));
@@ -18,6 +18,22 @@ $stats-label-layout-switch: $md;
 
   @media ($stats-layout-switch) {
     padding: 72px 0;
+  }
+
+  // Tree
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 2px);
+    right: 15%;
+    width: 15%;
+    aspect-ratio: 209 /280;
+    mask-image: url('images/palm-tree.svg');
+    mask-repeat: 0;
+    mask-position: center bottom;
+    mask-size: contain;
+    background-color: var(--color-background);
+    pointer-events: none;
   }
 }
 

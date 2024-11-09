@@ -4,7 +4,7 @@
 /* Grid related breakpoints */
 .view-job-listings__title {
   margin-top: 0;
-  border-left: solid 4px var(--color--sun-55);
+  border-left: solid 4px var(--pink-dark);
   padding-left: 1.25rem;
   font-size: 0.75rem;
   font-weight: 700;
