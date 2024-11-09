@@ -2,11 +2,13 @@
 /* Grid related breakpoints */
 .site-hero-details {
   --border-width: 1px;
-  container-type: inline-size;
+  --wide-width: 25rem;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 23.75rem;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-block: 2rem;
   border: solid var(--border-width) black;
   font-weight: 600;
@@ -18,7 +20,7 @@
     left: 0;
     top: 100%;
     z-index: 5;
-    width: 23.75rem;
+    width: var(--wide-width);
     margin: 0;
     rotate: -90deg;
     transform-origin: top left;
@@ -30,6 +32,7 @@
 .site-hero-details__item {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 @container (min-width: 700px) {
   .site-hero-details__item {
@@ -68,18 +71,26 @@
 .site-hero-details__flyout {
   position: absolute;
   top: 100%;
+  left: calc(-1 * var(--border-width));
+  z-index: 1;
   display: flex;
   flex-direction: column;
   visibility: hidden;
   gap: 1rem;
-  rotate: 90deg;
   padding: 1.5rem 1rem;
+  border: solid var(--border-width) var(--neutral-dark);
   background: var(--neutral-dark);
   color: var(--text-on-neutral-dark);
-  left: calc(100% + var(--border-width));
-  width: max-content;
-  height: calc(100cqw + 2 * var(--border-width));
-  transform-origin: top left;
+  min-width: calc(100% + 2 * var(--border-width));
+}
+@container (min-width: 700px) {
+  .site-hero-details__flyout {
+    left: calc(100% + var(--border-width));
+    min-width: unset;
+    height: calc(var(--wide-width) + 2 * var(--border-width));
+    rotate: 90deg;
+    transform-origin: top left;
+  }
 }
 [aria-expanded=true] + .site-hero-details__flyout {
   visibility: visible;

@@ -2,10 +2,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 6; // Appear above all hero stacks.
   visibility: hidden;
   width: 100%;
   height: 100vh;
-  background: var(--color--ocean-15);
+  background: var(--neutral-dark);
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
 

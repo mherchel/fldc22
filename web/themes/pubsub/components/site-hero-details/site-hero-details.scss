@@ -2,12 +2,13 @@
 
 .site-hero-details {
   --border-width: 1px;
+  --wide-width: 400px;
 
-  container-type: inline-size;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 380px;
+  width: fit-content;
   margin-block: 32px;
   border: solid var(--border-width) black;
   font-weight: 600;
@@ -18,7 +19,7 @@
     left: 0;
     top: 100%;
     z-index: 5; // Appear above hero title text.
-    width: 380px;
+    width: var(--wide-width);
     margin: 0;
     rotate: -90deg;
     transform-origin: top left;
@@ -30,6 +31,7 @@
 .site-hero-details__item {
   padding: 12px 16px;
   text-transform: uppercase;
+  white-space: nowrap;
 
   @container (#{$hero_break}) {
     padding: 12px 20px;
@@ -66,18 +68,25 @@
 .site-hero-details__flyout {
   position: absolute;
   top: 100%;
+  left: calc(-1 * var(--border-width));
+  z-index: 1; // Appear above video at mobile.
   display: flex;
   flex-direction: column;
   visibility: hidden;
   gap: 16px;
-  rotate: 90deg;
   padding: 24px 16px;
+  border: solid var(--border-width) var(--neutral-dark);
   background: var(--neutral-dark);
   color: var(--text-on-neutral-dark);
-  left: calc(100% + var(--border-width));
-  width: max-content;
-  height: calc(100cqw + (2 * var(--border-width)));
-  transform-origin: top left;
+  min-width: calc(100% + 2 * var(--border-width));
+
+  @container (#{$hero_break}) {
+    left: calc(100% + var(--border-width));
+    min-width: unset;
+    height: calc(var(--wide-width) + (2 * var(--border-width)));
+    rotate: 90deg;
+    transform-origin: top left;
+  }
 
   [aria-expanded="true"] + & {
     visibility: visible;

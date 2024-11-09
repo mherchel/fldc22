@@ -27,7 +27,7 @@
 }
 
 .site-hero__title {
-  font-size: clamp(4rem, 2.5rem + 10vw, 14rem);
+  font-size: clamp(4rem, 2.5rem + 10vw, 13rem);
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: 0.03em;

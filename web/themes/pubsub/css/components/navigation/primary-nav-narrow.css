@@ -3,7 +3,7 @@
 @media (max-width: 68.75rem) {
   .menu--main {
     --menu-top-padding: 7.5rem;
-    --mobile-menu-hightlight-color: var(--color--sun-55);
+    --mobile-menu-hightlight-color: var(--pink-dark);
     position: fixed;
     top: 0;
     left: 100%;
@@ -14,7 +14,8 @@
     width: 100%;
     max-width: 31.25rem;
     padding: var(--menu-top-padding) var(--sp2) var(--sp2);
-    background: white;
+    background: var(--neutral-dark);
+    color: var(--text-on-neutral-dark);
     transition: visibility 0.2s, transform 0.2s;
     visibility: hidden;
   }
@@ -27,6 +28,7 @@
   .primary-nav__menu-link {
     flex-grow: 1;
     text-decoration: none;
+    color: inherit;
   }
 
   .primary-nav__button-toggle {
