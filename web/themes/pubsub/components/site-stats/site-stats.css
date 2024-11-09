@@ -2,15 +2,15 @@
 /* Grid related breakpoints */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-.site-stats {
+.site-stats[class] {
   position: relative;
 }
 @media (min-width: 37.5rem) {
-  .site-stats {
+  .site-stats[class] {
     padding: 0 0 4rem;
   }
 }
-.site-stats:before {
+.site-stats[class]:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -21,13 +21,13 @@
 }
 
 @media (min-width: 43.75rem) {
-  .site-stats__label {
+  .site-stats__label[class] {
     grid-row: 1;
     grid-column: 10/span 3;
   }
 }
 
-.site-stats__title {
+.site-stats__title[class] {
   margin-top: 0;
   border-left: solid 4px var(--color--sun-55);
   padding-left: 1.25rem;
@@ -39,64 +39,64 @@
   color: var(--color--night-20);
 }
 @media (min-width: 81.25rem) {
-  .site-stats__title {
+  .site-stats__title[class] {
     font-size: 0.875rem;
     line-height: var(--sp1-5);
   }
 }
 @media (min-width: 37.5rem) {
-  .site-stats__title {
+  .site-stats__title[class] {
     margin-top: 2.4375rem;
   }
 }
 
-.site-stats__list {
+.site-stats__list[class] {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 @media (min-width: 37.5rem) {
-  .site-stats__list {
+  .site-stats__list[class] {
     display: flex;
     gap: var(--grid-gap);
   }
-  .site-stats__list > * {
+  .site-stats__list[class] > * {
     flex: 1;
   }
 }
 @media (min-width: 43.75rem) {
-  .site-stats__list {
+  .site-stats__list[class] {
     grid-row: 1;
     grid-column: 1/span 9;
   }
 }
 @media (min-width: 81.25rem) {
-  .site-stats__list {
+  .site-stats__list[class] {
     grid-column: 2/span 8;
   }
 }
 
-.site-stats__item {
+.site-stats__item[class] {
   display: flex;
   gap: var(--grid-gap);
   flex-wrap: wrap;
   padding: var(--sp2) 0;
   border-bottom: solid 2px var(--color--sky-86);
 }
-.site-stats__item:last-child {
+.site-stats__item[class]:last-child {
   border-bottom: none;
 }
-.site-stats__item > * {
+.site-stats__item[class] > * {
   flex: 1;
 }
 @media (min-width: 37.5rem) {
-  .site-stats__item {
+  .site-stats__item[class] {
     display: block;
     border-bottom: none;
   }
 }
 
-.site-stats__stat {
+.site-stats__stat[class] {
   margin-bottom: var(--sp);
   font-size: 3.5rem;
   font-weight: 800;
@@ -105,7 +105,7 @@
   color: var(--color--sun-55);
 }
 
-.site-stats__desc {
+.site-stats__desc[class] {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: var(--sp1-5);

@@ -45,11 +45,6 @@ layout:
       css/layout/region-content.css: {}
       css/layout/views.css: {}
 
-site-stats:
-  css:
-    component:
-      css/components/site-stats.css: {}
-
 details:
   css:
     theme:
