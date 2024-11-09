@@ -20,8 +20,8 @@
 .site-header__register {
   display: none;
   padding: 0 var(--sp2);
-  color: var(--color--white);
-  background-color: var(--color--sun-55);
+  color: var(--text-on-neutral-dark);
+  background-color: var(--neutral-dark);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: var(--sp1-5);
@@ -45,7 +45,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: var(--color--sun-55);
+    background-color: var(--neutral-dark);
     height: calc(100% + 6.25rem);
     width: max(100% + 3vw, 100% + 50vw - (var(--layout--max-width) + var(--scrollbar-width)) / 2);
     z-index: -1;

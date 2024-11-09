@@ -3,7 +3,14 @@
 
 // Block containing the view.
 .block-views-blockfeatured-speakers-block-1 {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--color-white);
+
   grid-column: 2 / -2;
+  background-color: var(--color-background);
+  border-image-source: linear-gradient(var(--color-background), var(--color-background));
+  border-image-outset: 0 50vw;
+  border-image-slice: fill 0;
 }
 
 .view-featured-speakers__content {
@@ -69,4 +76,5 @@
   @include left-border-title;
   align-self: flex-start;
   margin-bottom: 0;
+  color: var(--color-text);
 }

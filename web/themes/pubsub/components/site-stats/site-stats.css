@@ -3,21 +3,20 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .site-stats[class] {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--text-on-neutral-dark);
+  --color-subtext: var(--text-on-neutral-dark-primary);
   position: relative;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-image-source: linear-gradient(var(--color-background), var(--color-background));
+  border-image-outset: 0 50vw;
+  border-image-slice: fill 0;
 }
 @media (min-width: 37.5rem) {
   .site-stats[class] {
-    padding: 0 0 4rem;
+    padding: 4.5rem 0;
   }
-}
-.site-stats[class]:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: calc(100% + 50vw);
-  height: 0;
-  border-top: solid 8px var(--color--ocean-15);
 }
 
 @media (min-width: 43.75rem) {
@@ -37,6 +36,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color--night-20);
+  color: inherit;
 }
 @media (min-width: 81.25rem) {
   .site-stats__title[class] {
@@ -102,11 +102,12 @@
   font-weight: 800;
   line-height: 3.5rem;
   letter-spacing: -0.02em;
-  color: var(--color--sun-55);
+  color: var(--color-text);
 }
 
 .site-stats__desc[class] {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: var(--sp1-5);
+  color: var(--color-subtext);
 }

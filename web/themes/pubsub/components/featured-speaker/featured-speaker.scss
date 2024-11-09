@@ -1,16 +1,20 @@
+.featured-speaker {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--text-on-neutral-dark);
+  --color-subtext: var(--text-on-neutral-dark-primary);
+}
 
 .featured-speaker__img {
   position: relative; // Anchor badge field.
-  background-color: var(--color--sky-90);
+  background: linear-gradient(to top, var(--teal) 75%, transparent 75%);
 
   .view-featured-speakers__item:nth-child(odd) & {
-    background-color: var(--color--sun-90);
+    background: linear-gradient(to top, var(--pink-light) 75%, transparent 75%);
   }
 
   img {
     filter: grayscale(1) contrast(180%);
-    opacity: 0.6;
-    transition: filter 0.2s, opacity 0.2s;
+    transition: filter 0.2s;
 
     &:hover {
       filter: grayscale(0) contrast(150%);
@@ -29,8 +33,8 @@
   left: 0;
   bottom: 0;
   padding: 6px 12px 0 0;
-  background: var(--color--white);
-  color: var(--color--sun-40);
+  background: var(--color-background);
+  color: var(--color-subtext);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
@@ -44,12 +48,12 @@
   font-weight: 700;
   line-height: var(--sp1-5);
   text-align: left;
-  color: var(--color--ocean-15);
+  color: var(--color-text);
 }
 
 .featured-speaker__desc {
   font-size: 14px;
-  color: var(--color--night-30);
+  color: var(--color-subtext);
 
   .text-content {
     font-size: inherit;

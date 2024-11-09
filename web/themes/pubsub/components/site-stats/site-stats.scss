@@ -5,20 +5,19 @@ $stats-layout-switch: $grid-md;
 $stats-label-layout-switch: $md;
 
 .site-stats[class] {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--text-on-neutral-dark);
+  --color-subtext: var(--text-on-neutral-dark-primary);
+
   position: relative; // Anchor the border.
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-image-source: linear-gradient(var(--color-background), var(--color-background));
+  border-image-outset: 0 50vw;
+  border-image-slice: fill 0;
 
   @media ($stats-layout-switch) {
-    padding: 0 0 64px;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc(100% + 50vw);
-    height: 0;
-    border-top: solid 8px var(--color--ocean-15);
+    padding: 72px 0;
   }
 }
 
@@ -31,6 +30,7 @@ $stats-label-layout-switch: $md;
 
 .site-stats__title[class] {
   @include left-border-title;
+  color: inherit;
 
   @media ($stats-layout-switch) {
     margin-top: 39px;
@@ -88,11 +88,12 @@ $stats-label-layout-switch: $md;
   font-weight: 800;
   line-height: 56px;
   letter-spacing: -0.02em;
-  color: var(--color--sun-55);
+  color: var(--color-text);
 }
 
 .site-stats__desc[class] {
   font-size: 14px;
   font-weight: 500;
   line-height: var(--sp1-5);
+  color: var(--color-subtext);
 }

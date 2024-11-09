@@ -31,7 +31,6 @@
 
   .primary-nav__menu-link--level-1 {
     display: block; // Necessary for <a> tags.
-    text-transform: uppercase;
     font-weight: 700;
     padding: 20px 0;
   }
@@ -42,18 +41,29 @@
       padding-inline-end: 9px;
 
       /* Chevron icon for desktop navigation. */
-      &:after {
-        content: "";
+      .primary-nav__menu-link-icon {
         position: absolute;
-        inset-block-start: 50%;
-        inset-inline-start: calc(100% - 3px);
-        width: 8px;
-        height: 8px;
-        margin-block-start: -2px;
-        transform: translateY(-50%) rotate(45deg);
-        border-top: 0;
-        border-right: solid 2px currentColor;
-        border-bottom: solid 2px currentColor;
+        top: 50%;
+        left: calc(100% - 4px);
+        width: 16px;
+        aspect-ratio: 1;
+        transform: translatey(-50%);
+        background-color: var(--secondary);
+        color: var(--text-on-secondary);
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 8px;
+          height: 8px;
+          margin-block-start: -2px;
+          transform: translate(-50%, -50%) rotate(45deg);
+          border-top: 0;
+          border-right: solid 2px currentColor;
+          border-bottom: solid 2px currentColor;
+        }
       }
     }
   }

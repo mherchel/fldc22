@@ -3,7 +3,13 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .block-views-blockfeatured-speakers-block-1 {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--color-white);
   grid-column: 2/-2;
+  background-color: var(--color-background);
+  border-image-source: linear-gradient(var(--color-background), var(--color-background));
+  border-image-outset: 0 50vw;
+  border-image-slice: fill 0;
 }
 
 .view-featured-speakers__content {
@@ -67,6 +73,7 @@
   color: var(--color--night-20);
   align-self: flex-start;
   margin-bottom: 0;
+  color: var(--color-text);
 }
 @media (min-width: 81.25rem) {
   .view-featured-speakers__title {

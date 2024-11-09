@@ -1,14 +1,19 @@
+.featured-speaker {
+  --color-background: var(--neutral-dark);
+  --color-text: var(--text-on-neutral-dark);
+  --color-subtext: var(--text-on-neutral-dark-primary);
+}
+
 .featured-speaker__img {
   position: relative;
-  background-color: var(--color--sky-90);
+  background: linear-gradient(to top, var(--teal) 75%, transparent 75%);
 }
 .view-featured-speakers__item:nth-child(odd) .featured-speaker__img {
-  background-color: var(--color--sun-90);
+  background: linear-gradient(to top, var(--pink-light) 75%, transparent 75%);
 }
 .featured-speaker__img img {
   filter: grayscale(1) contrast(180%);
-  opacity: 0.6;
-  transition: filter 0.2s, opacity 0.2s;
+  transition: filter 0.2s;
 }
 .featured-speaker__img img:hover {
   filter: grayscale(0) contrast(150%);
@@ -25,8 +30,8 @@
   left: 0;
   bottom: 0;
   padding: 0.375rem 0.75rem 0 0;
-  background: var(--color--white);
-  color: var(--color--sun-40);
+  background: var(--color-background);
+  color: var(--color-subtext);
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: bold;
@@ -40,12 +45,12 @@
   font-weight: 700;
   line-height: var(--sp1-5);
   text-align: left;
-  color: var(--color--ocean-15);
+  color: var(--color-text);
 }
 
 .featured-speaker__desc {
   font-size: 0.875rem;
-  color: var(--color--night-30);
+  color: var(--color-subtext);
 }
 .featured-speaker__desc .text-content {
   font-size: inherit;

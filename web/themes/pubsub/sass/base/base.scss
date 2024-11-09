@@ -32,10 +32,6 @@ body {
   background-position: top -100px left 25%;
   background-size: min(100%, 1130px);
 
-  &:where(:not(.cke_editable)) {
-    background-image: url('../../images/bg-florida.svg');
-  }
-
   &.is-fixed {
     position: fixed;
     width: 100%;
