@@ -26,67 +26,6 @@
   }
 }
 
-.site-hero__details {
-  display: flex;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-block: 2rem;
-  border: solid 1.5px black;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.75rem;
-}
-@container (min-width: 700px) {
-  .site-hero__details {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    margin: 0;
-    rotate: -90deg;
-    transform-origin: top left;
-    font-size: 1rem;
-    letter-spacing: 1.6px;
-  }
-}
-
-.site-hero__details-item {
-  padding: 0.75rem 1rem;
-}
-@container (min-width: 700px) {
-  .site-hero__details-item {
-    padding: 0.75rem 1.25rem;
-  }
-}
-.site-hero__details-item:first-child {
-  border-right: solid 1.5px black;
-  color: var(--text-on-neutral-primary);
-}
-
-.site-hero__details-button {
-  display: flex;
-  width: 3rem;
-  padding: 0;
-  aspect-ratio: 1;
-  border-color: transparent;
-  background: var(--neutral-dark);
-  color: var(--text-on-neutral-dark-secondary);
-}
-.site-hero__details-button:after {
-  content: "";
-  width: 1.5rem;
-  aspect-ratio: 1;
-  margin: auto;
-  -webkit-mask-image: url("images/calendar.svg");
-          mask-image: url("images/calendar.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  background: currentColor;
-  rotate: 90deg;
-}
-
 .site-hero__title {
   font-size: clamp(4rem, 2.5rem + 10vw, 14rem);
   font-weight: 700;

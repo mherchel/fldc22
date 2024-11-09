@@ -1,0 +1,144 @@
+@import "../../sass/global/variables";
+
+.site-hero-details {
+  --border-width: 1px;
+
+  container-type: inline-size;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  margin-block: 32px;
+  border: solid var(--border-width) black;
+  font-weight: 600;
+  font-size: 12px;
+
+  @container (#{$hero_break}) {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5; // Appear above hero title text.
+    width: 380px;
+    margin: 0;
+    rotate: -90deg;
+    transform-origin: top left;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+}
+
+.site-hero-details__item {
+  padding: 12px 16px;
+  text-transform: uppercase;
+
+  @container (#{$hero_break}) {
+    padding: 12px 20px;
+  }
+
+  &:first-child {
+    border-right: solid 1.5px black;
+    color: var(--text-on-neutral-primary);
+  }
+}
+
+.site-hero-details__button {
+  display: flex;
+  width: 48px;
+  padding: 0;
+  aspect-ratio: 1;
+  border-color: transparent;
+  background: var(--neutral-dark);
+  color: var(--text-on-neutral-dark-secondary);
+
+  &:after {
+    content: "";
+    width: 24px;
+    aspect-ratio: 1;
+    margin: auto;
+    mask-image: url('images/calendar.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background: currentColor;
+    rotate: 90deg;
+  }
+}
+
+.site-hero-details__flyout {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  gap: 16px;
+  rotate: 90deg;
+  padding: 24px 16px;
+  background: var(--neutral-dark);
+  color: var(--text-on-neutral-dark);
+  left: calc(100% + var(--border-width));
+  width: max-content;
+  height: calc(100cqw + (2 * var(--border-width)));
+  transform-origin: top left;
+
+  [aria-expanded="true"] + & {
+    visibility: visible;
+  }
+}
+
+.site-hero-details__flyout-general {
+  padding: 0 16px;
+}
+
+.site-hero-details__flyout-general-date {
+  color: var(--text-on-neutral-dark);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.site-hero-details__flyout-general-location {
+  color: var(--text-on-neutral-dark-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5
+}
+
+.site-hero-details__flyout-day {
+  a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--secondary);
+      color: var(--text-on-secondary);
+    }
+  }
+}
+
+.site-hero-details__flyout-day-heading {
+  color: var(--text-on-neutral-dark-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+
+  a:hover & {
+    color: var(--text-on-secondary);
+  }
+}
+
+.site-hero-details__flyout-day-info {
+  color: var(--text-on-neutral-dark);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-underline-offset: 6px;
+
+  a:hover & {
+    color: var(--text-on-secondary);
+  }
+}

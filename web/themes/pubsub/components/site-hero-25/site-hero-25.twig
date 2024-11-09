@@ -15,23 +15,7 @@
         </div>
       {% endif %}
     </div>
-    <div class="site-hero__details">
-      {% if camp_details.field_dates.0 %}
-        <span class="site-hero__details-item">
-          {{- camp_details.field_dates.value|date('M  d') -}}
-          -
-          {{- camp_details.field_dates.end_value|date('d, Y') -}}
-        </span>
-      {% endif %}
-      {% if camp_details.field_camp_location_short_.0 %}
-        <span class="site-hero__details-item">
-          {{ camp_details.field_camp_location_short_.value }}
-        </span>
-      {% endif %}
-      <button class="site-hero__details-button">
-        <div class="visually-hidden">Show camp details</div>
-      </button>
-    </div>
+    {{ include('pubsub:site-hero-details') }}
     <div class="site-hero__media">
       <button class="site-hero__play-pause" type="button" aria-pressed="false">Pause</button>
       <video
