@@ -1,26 +1,117 @@
+/**
+ * General Sans
+ */
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Extralight.woff2') format('woff2');
+  font-weight: 200;
   font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-ExtralightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-display: block;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-display: block;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Regular.woff2') format('woff2');
   font-weight: 400;
-  src: local(''),
-       url('../../fonts/inter/inter-v3-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
   font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: block;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-display: block;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-SemiboldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-display: block;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Bold.woff2') format('woff2');
   font-weight: 700;
-  src: local(''),
-       url('../../fonts/inter/inter-v3-latin-700.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
   font-display: block;
-  font-weight: 800;
-  src: local(''),
-       url('../../fonts/inter/inter-v3-latin-800.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: block;
+  font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: block;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+  font-family: 'general-sans';
+  src: url('../../fonts/general-sans/GeneralSans-VariableItalic.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: block;
+  font-style: italic;
 }

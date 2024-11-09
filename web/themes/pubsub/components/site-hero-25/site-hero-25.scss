@@ -1,22 +1,29 @@
 .site-hero__container {
   position: relative; // Anchor video;
-  padding-bottom: 176px;
+  margin-bottom: 176px;
   background: var(--neutral-white);
   color: var(--text-on-neutral-white);
 }
 
 .site-hero__content[class] {
+  position: relative;
+  z-index: 4; // Appear above video 'play' button.
   grid-column-start: 2;
+  pointer-events: none; // Ensure that it passes click events to video.
 }
 
-.site-hero__details[class] {
-  grid-column: 1 / -1;
+.site-hero__details {
+  position: absolute;
+  left: 0;
+  top: 100%;
   display: flex;
   width: fit-content;
   border: solid 1.5px black;
   text-transform: uppercase;
   rotate: -90deg;
   transform-origin: top left;
+  font-weight: 600;
+  letter-spacing: 1.6px;
 }
 
 .site-hero__details-item {
@@ -30,7 +37,7 @@
 
 .site-hero__details-button {
   display: flex;
-  height: 100%;
+  width: 48px;
   padding: 0;
   aspect-ratio: 1;
   border-color: transparent;
@@ -52,7 +59,7 @@
 
 .site-hero__title {
   text-shadow: 0px 0px 88px rgba(255, 255, 255, 0.50);
-  font-size: 176px;
+  font-size: 224px;
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: -7px;
@@ -65,7 +72,8 @@
 }
 
 .site-hero__cta a {
-  display: inline-block;
+  display: inline-flex;
+  gap: 8px;
   margin-top: auto;
   font-size: 16px;
   font-weight: 600;
@@ -75,10 +83,29 @@
   color: var(--text-on-neutral-white);
 }
 
+.site-hero__media-cta-icon {
+  display: flex;
+  width: 32px;
+  aspect-ratio: 1;
+  background-color: var(--secondary);
+  color: var(--text-on-secondary);
+
+  &:after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    mask-image: url('images/arrow-right.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+  }
+}
+
 .site-hero__media {
   position: absolute;
   right: 0;
-  width: 40%;
+  height: 100%;
   aspect-ratio: 1;
   overflow: clip;
 

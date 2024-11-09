@@ -7,7 +7,7 @@
 .container {
   width: 94%;
   max-width: var(--layout--max-width);
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .grid {
