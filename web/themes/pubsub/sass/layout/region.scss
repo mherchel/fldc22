@@ -18,9 +18,5 @@
 }
 
 .region--content-above {
-  margin-top: var(--sp3);
-
-  @media ($md) {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }

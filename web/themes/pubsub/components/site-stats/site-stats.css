@@ -2,11 +2,16 @@
 /* Grid related breakpoints */
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-.site-stats[class] {
+.site-stats {
+  container-type: inline-size;
+}
+
+.site-stats__inner[class] {
   --color-background: var(--neutral-dark);
   --color-text: var(--text-on-neutral-dark);
   --color-subtext: var(--text-on-neutral-dark-primary);
   position: relative;
+  padding-block: 4rem;
   background-color: var(--color-background);
   color: var(--color-text);
   border-image-source: linear-gradient(var(--color-background), var(--color-background));
@@ -14,15 +19,15 @@
   border-image-slice: fill 0;
 }
 @media (min-width: 37.5rem) {
-  .site-stats[class] {
-    padding: 4.5rem 0;
+  .site-stats__inner[class] {
+    padding-block: 4.5rem;
   }
 }
-.site-stats[class]:after {
+.site-stats__inner[class]:after {
   content: "";
   position: absolute;
   bottom: calc(100% - 2px);
-  right: 15%;
+  right: 42.5%;
   width: 15%;
   aspect-ratio: 209/280;
   -webkit-mask-image: url("images/palm-tree.svg");
@@ -35,6 +40,11 @@
           mask-size: contain;
   background-color: var(--color-background);
   pointer-events: none;
+}
+@container (min-width: 700px) {
+  .site-stats__inner[class]:after {
+    right: 15%;
+  }
 }
 
 @media (min-width: 43.75rem) {

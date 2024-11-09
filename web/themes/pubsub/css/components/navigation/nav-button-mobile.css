@@ -5,7 +5,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .mobile-nav-button {
-  --mobile-nav-button--highlight-color: var(--color--sun-55);
+  --mobile-nav-button--highlight-color: var(--pink-dark);
   --mobile-nav-button--line-color: var(--color--white);
   position: relative;
   z-index: 110;

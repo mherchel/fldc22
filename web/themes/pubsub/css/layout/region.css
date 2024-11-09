@@ -19,10 +19,5 @@
 }
 
 .region--content-above {
-  margin-top: var(--sp3);
-}
-@media (min-width: 43.75rem) {
-  .region--content-above {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }

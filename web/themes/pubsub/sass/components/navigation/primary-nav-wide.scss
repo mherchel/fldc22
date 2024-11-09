@@ -89,19 +89,11 @@
     list-style: none;
     padding: var(--sp2) 8px var(--sp);
     margin: 0;
-    opacity: 0.5;
-    transform: translatey(-10px);
-
-    html.js & {
-      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-    }
 
     &.is-active-menu-parent,
     html:not(.js) .primary-nav__menu-item--level-1:focus-within &,
     html:not(.js) .primary-nav__menu-item--level-1:hover & {
       visibility: visible;
-      opacity: 1;
-      transform: translatey(0);
     }
   }
 
