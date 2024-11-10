@@ -24,7 +24,7 @@
   background: linear-gradient(var(--image-angle), var(--teal) var(--image-fill), transparent var(--image-fill));
   transition: --image-fill 0.2s;
 
-  &:hover {
+  .featured-speaker__link:hover & {
     --image-fill: 95%;
   }
 

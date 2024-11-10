@@ -21,7 +21,7 @@
   background: linear-gradient(var(--image-angle), var(--teal) var(--image-fill), transparent var(--image-fill));
   transition: --image-fill 0.2s;
 }
-.featured-speaker__img:hover {
+.featured-speaker__link:hover .featured-speaker__img {
   --image-fill: 95%;
 }
 .view-featured-speakers__item:nth-child(odd) .featured-speaker__img {
