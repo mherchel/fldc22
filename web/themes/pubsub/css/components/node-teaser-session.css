@@ -6,7 +6,7 @@
   }
 }
 .session-teaser {
-  --session-teaser-hover-color: var(--color--sun-55);
+  --session-teaser-hover-color: var(--text-on-neutral-primary);
 }
 
 .session-teaser__details[open] > *:not(.session-teaser__summary) {

@@ -1,3 +1,15 @@
+@property --image-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@property --image-fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 100%;
+}
+
 .featured-speaker {
   --color-background: var(--neutral-dark);
   --color-text: var(--text-on-neutral-dark);
@@ -5,11 +17,19 @@
 }
 
 .featured-speaker__img {
+  --image-angle: 0deg;
+  --image-fill: 75%;
+
   position: relative; // Anchor badge field.
-  background: linear-gradient(to top, var(--teal) 75%, transparent 75%);
+  background: linear-gradient(var(--image-angle), var(--teal) var(--image-fill), transparent var(--image-fill));
+  transition: --image-fill 0.2s;
+
+  &:hover {
+    --image-fill: 95%;
+  }
 
   .view-featured-speakers__item:nth-child(odd) & {
-    background: linear-gradient(to top, var(--pink-light) 75%, transparent 75%);
+    background: linear-gradient(var(--image-angle), var(--pink-light) var(--image-fill), transparent var(--image-fill));
   }
 
   img {

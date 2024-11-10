@@ -8,8 +8,8 @@
 /* Grid related breakpoints */
 .button {
   --button-color-bg: var(--color--white);
-  --button-color-primary: var(--color--ocean-15);
-  --button-color-primary-dark: var(--color--ocean-10);
+  --button-color-primary: var(--pink-dark);
+  --button-color-primary-dark: var(--pink-dark);
   --button-border-radius: 0.1875rem;
   --button-line-height: 1.125rem;
   display: inline-flex;
@@ -62,8 +62,8 @@
 
 .button--primary {
   --button-color-bg: var(--color--white);
-  --button-color-primary: var(--color--ocean-15);
-  --button-color-primary-dark: var(--color--ocean-10);
+  --button-color-primary: var(--pink-dark);
+  --button-color-primary-dark: var(--pink-dark);
   --button-border-radius: 0.1875rem;
   --button-line-height: 1.125rem;
   display: inline-flex;
@@ -124,12 +124,12 @@
 
 .button--action,
 .button--highlight {
-  background-color: var(--color--sun-45);
+  background-color: var(--secondary);
+  color: var(--text-on-secondary);
   border-color: transparent;
 }
 .button--action:where(:hover),
 .button--highlight:where(:hover) {
-  background-color: var(--color--sun-55);
   border-color: transparent;
 }
 
