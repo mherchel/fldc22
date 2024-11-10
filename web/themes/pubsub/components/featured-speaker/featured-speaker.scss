@@ -10,6 +10,16 @@
   initial-value: 100%;
 }
 
+@keyframes enter {
+  from {
+    --image-fill: 20%;
+  }
+
+  to {
+    --image-fill: 75%
+  }
+}
+
 .featured-speaker {
   --color-background: var(--neutral-dark);
   --color-text: var(--text-on-neutral-dark);
@@ -23,6 +33,24 @@
   position: relative; // Anchor badge field.
   background: linear-gradient(var(--image-angle), var(--teal) var(--image-fill), transparent var(--image-fill));
   transition: --image-fill 0.2s;
+  animation-name: enter;
+  animation-timeline: view();
+  animation-fill-mode: backwards;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-range: entry 90% exit -30vh;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-name: none;
+    transition: none;
+  }
+
+  .view-featured-speakers__item:nth-child(2 of .view-featured-speakers__item) & {
+    animation-range: entry calc(90% + 10vh) exit -25vh;
+  }
+
+  .view-featured-speakers__item:nth-child(3 of .view-featured-speakers__item) & {
+    animation-range: entry calc(90% + 20vh) exit -20vh;
+  }
 
   .featured-speaker__link:hover & {
     --image-fill: 95%;

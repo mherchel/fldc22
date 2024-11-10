@@ -1,5 +1,32 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
+@property --hero-percent {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+@property --color-opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+@property --hero-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 66deg;
+}
+@keyframes heading-fill {
+  0% {
+    --color-opacity: 1;
+    --hero-percent: 66%;
+    --hero-angle: 0deg;
+  }
+  20% {
+    --color-opacity: 0.5;
+    --hero-percent: 0%;
+    --hero-angle: 90deg;
+  }
+}
 .site-hero {
   container-type: inline-size;
 }
@@ -27,15 +54,34 @@
 }
 
 .site-hero__title {
+  --color-bright: rgba(231, 0, 119, var(--color-opacity));
+  --hero-percent: 66%;
+  --hero-angle: 0deg;
   font-size: clamp(4rem, 2.5rem + 10vw, 13rem);
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--text-on-neutral-white);
+  color: transparent;
+  background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent));
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation-timeline: scroll(block root);
+  animation-name: heading-fill;
+  animation-duration: 1ms;
 }
-.site-hero__title .first-word {
-  color: var(--text-on-neutral-primary);
+@supports (animation-timeline: scroll()) {
+  .site-hero__title {
+    background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent)), url("images/trees.webp");
+    background-size: auto, cover;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-hero__title {
+    animation-name: none;
+  }
 }
 
 .site-hero__cta a {

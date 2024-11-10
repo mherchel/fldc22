@@ -33,6 +33,16 @@
   color: var(--color--white);
   /* Override Safari's default UA styles. */
 }
+@media (min-width: 37.5rem) {
+  .mobile-nav-button:active {
+    color: inherit;
+  }
+}
+@media (min-width: 37.5rem) {
+  .mobile-nav-button[aria-expanded=true] {
+    color: var(--mobile-nav-button--highlight-color);
+  }
+}
 @media (min-width: 31.25rem) {
   .mobile-nav-button {
     width: auto;

@@ -1,5 +1,36 @@
 @import "../../sass/global/variables";
 
+@property --hero-percent {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --color-opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+@property --hero-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 66deg;
+}
+
+@keyframes heading-fill {
+  0% {
+    --color-opacity: 1;
+    --hero-percent: 66%;
+    --hero-angle: 0deg;
+  }
+  20% {
+    --color-opacity: 0.5;
+    --hero-percent: 0%;
+    --hero-angle: 90deg;
+  }
+}
+
 .site-hero {
   container-type: inline-size;
 }
@@ -25,15 +56,32 @@
 }
 
 .site-hero__title {
+  --color-bright: rgba(231, 0, 119, var(--color-opacity));
+  --hero-percent: 66%;
+  --hero-angle: 0deg;
+
   font-size: clamp(64px, 40px + 10vw, 208px);
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--text-on-neutral-white);
+  color: transparent;
+  background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent));
+  background-clip: text;
+  animation-timeline: scroll(block root);
+  animation-name: heading-fill;
+  animation-duration: 1ms;
 
-  .first-word {
-    color: var(--text-on-neutral-primary);
+  @supports (animation-timeline: scroll()) {
+    background:
+      linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent)),
+      url('images/trees.webp');
+    background-size: auto, cover;
+    background-clip: text;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-name: none;
   }
 }
 
