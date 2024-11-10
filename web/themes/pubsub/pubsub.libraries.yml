@@ -140,11 +140,6 @@ view-details-list:
     layout:
       css/layout/view-details-list.css: {}
 
-sponsor-teaser:
-  css:
-    component:
-      css/components/node-teaser-sponsor.css: {}
-
 session-teaser:
   css:
     component:

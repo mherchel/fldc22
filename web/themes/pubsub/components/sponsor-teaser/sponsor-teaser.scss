@@ -1,4 +1,4 @@
-@import "../global/variables";
+@import "../../sass/global/variables";
 
 .sponsor-teaser {
   display: grid;
@@ -82,7 +82,7 @@
     left: 0;
     width: 100%;
     height: 6px;
-    background-color: var(--color--sun-55);
+    background-color: var(--pink-dark);
     transform: scalex(0);
     transform-origin: left;
     transition: transform 0.3s;
@@ -105,9 +105,5 @@
 
   .sponsor-teaser__link:hover & {
     filter: grayscale(0%);
-  }
-
-  @supports not (aspect-ratio: 1 / 1) {
-    min-height: 200px;
   }
 }

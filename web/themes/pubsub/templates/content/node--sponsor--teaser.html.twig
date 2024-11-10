@@ -1,14 +1,8 @@
-
-{{ attach_library('pubsub/sponsor-teaser') }}
-
-<article{{ attributes.addClass('sponsor-teaser') }}>
-  <a class="sponsor-teaser__link" target="_blank" href="{{ node.field_website_address.uri }}" aria-label="{{ node.title.value }}">
-    <div class="sponsor-teaser__first">
-      <div class="sponsor-teaser__img-wrapper">
-        {{ content.field_sponsor_logo }}
-      </div>
-    </div>
-    {{ content.body }}
-  </a>
-  {{ title_suffix }}
-</article>
+{{ include('pubsub:sponsor-teaser', {
+  href: node.field_website_address.uri,
+  title: node.title.value,
+  logo: content.field_sponsor_logo,
+  body: content.body,
+  title_suffix,
+  attributes,
+}, with_context = false) }}
