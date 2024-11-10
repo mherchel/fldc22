@@ -46,16 +46,7 @@
   }
 }
 
-.site-hero__content[class] {
-  position: relative;
-
-  @container (#{$hero_break}) {
-    z-index: 4; // Appear above video 'play' button.
-    grid-column: 2 / -2;
-  }
-}
-
-.site-hero__title {
+.site-hero__title[class] {
   --color-bright: rgba(231, 0, 119, var(--color-opacity));
   --hero-percent: 66%;
   --hero-angle: 0deg;
@@ -72,6 +63,13 @@
   animation-name: heading-fill;
   animation-duration: 1ms;
 
+  @container (#{$hero_break}) {
+    position: relative;
+    z-index: 4; // Appear above video 'play' button.
+    grid-column: 2 / -2;
+    pointer-events: none;
+  }
+
   @supports (animation-timeline: scroll()) {
     background:
       linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent)),
@@ -85,16 +83,22 @@
   }
 }
 
-.site-hero__cta a {
-  display: inline-flex;
-  gap: 8px;
-  margin-top: auto;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 2;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--text-on-neutral-white);
+.site-hero__cta[class] {
+  @container (#{$hero_break}) {
+    grid-column: 2 / span 5;
+  }
+
+  a {
+    display: inline-flex;
+    gap: 8px;
+    margin-block: auto -5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-on-neutral-white);
+  }
 }
 
 .site-hero__media-cta-icon {

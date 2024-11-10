@@ -1,20 +1,18 @@
 <div class="site-hero">
   <div class="site-hero__container container grid">
-    <div class="site-hero__content">
-      <h1 class="site-hero__title">
-        FL<br>
-        Drupal<br>
-        Camp
-      </h1>
-      {% if camp_details.field_homepage_media_cta.0 %}
-        <div class="site-hero__cta">
-          <a href="{{ camp_details.field_homepage_media_cta.0.url }}" class="site-hero__media-cta">
-            {{ camp_details.field_homepage_media_cta.title }}
-            <div class="site-hero__media-cta-icon"></div>
-          </a>
-        </div>
-      {% endif %}
-    </div>
+    <h1 class="site-hero__title">
+      FL<br>
+      Drupal<br>
+      Camp
+    </h1>
+    {% if camp_details.field_homepage_media_cta.0 %}
+      <div class="site-hero__cta">
+        <a href="{{ camp_details.field_homepage_media_cta.0.url }}" class="site-hero__media-cta">
+          {{ camp_details.field_homepage_media_cta.title }}
+          <div class="site-hero__media-cta-icon"></div>
+        </a>
+      </div>
+    {% endif %}
     {{ include('pubsub:site-hero-details') }}
     <div class="site-hero__media">
       <button class="site-hero__play-pause" type="button" aria-pressed="false">Pause</button>

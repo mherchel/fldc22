@@ -43,17 +43,7 @@
   }
 }
 
-.site-hero__content[class] {
-  position: relative;
-}
-@container (min-width: 700px) {
-  .site-hero__content[class] {
-    z-index: 4;
-    grid-column: 2/-2;
-  }
-}
-
-.site-hero__title {
+.site-hero__title[class] {
   --color-bright: rgba(231, 0, 119, var(--color-opacity));
   --hero-percent: 66%;
   --hero-angle: 0deg;
@@ -70,8 +60,16 @@
   animation-name: heading-fill;
   animation-duration: 1ms;
 }
+@container (min-width: 700px) {
+  .site-hero__title[class] {
+    position: relative;
+    z-index: 4;
+    grid-column: 2/-2;
+    pointer-events: none;
+  }
+}
 @supports (animation-timeline: scroll()) {
-  .site-hero__title {
+  .site-hero__title[class] {
     background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent)), url("images/trees.webp");
     background-size: auto, cover;
     -webkit-background-clip: text;
@@ -79,15 +77,20 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .site-hero__title {
+  .site-hero__title[class] {
     animation-name: none;
   }
 }
 
-.site-hero__cta a {
+@container (min-width: 700px) {
+  .site-hero__cta[class] {
+    grid-column: 2/span 5;
+  }
+}
+.site-hero__cta[class] a {
   display: inline-flex;
   gap: 0.5rem;
-  margin-top: auto;
+  margin-block: auto -0.3125rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 2;
