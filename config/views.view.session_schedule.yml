@@ -325,18 +325,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.featured_speaker.default'
-        - 'config:core.entity_view_display.node.featured_speaker.teaser'
-        - 'config:core.entity_view_display.node.job_listing.default'
-        - 'config:core.entity_view_display.node.job_listing.teaser'
-        - 'config:core.entity_view_display.node.mini_session.default'
-        - 'config:core.entity_view_display.node.mini_session.teaser'
-        - 'config:core.entity_view_display.node.page.default'
-        - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.session.default'
-        - 'config:core.entity_view_display.node.session.teaser'
-        - 'config:core.entity_view_display.node.sponsor.default'
-        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'
   page_1:
     id: page_1
@@ -435,7 +423,7 @@ display:
         type: normal
         title: 'Session Schedule'
         description: ''
-        weight: -45
+        weight: -46
         enabled: false
         expanded: false
         menu_name: main
@@ -449,18 +437,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.featured_speaker.default'
-        - 'config:core.entity_view_display.node.featured_speaker.teaser'
-        - 'config:core.entity_view_display.node.job_listing.default'
-        - 'config:core.entity_view_display.node.job_listing.teaser'
-        - 'config:core.entity_view_display.node.mini_session.default'
-        - 'config:core.entity_view_display.node.mini_session.teaser'
-        - 'config:core.entity_view_display.node.page.default'
-        - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.session.default'
-        - 'config:core.entity_view_display.node.session.teaser'
-        - 'config:core.entity_view_display.node.sponsor.default'
-        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'
   page_2:
     id: page_2
@@ -571,18 +547,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.featured_speaker.default'
-        - 'config:core.entity_view_display.node.featured_speaker.teaser'
-        - 'config:core.entity_view_display.node.job_listing.default'
-        - 'config:core.entity_view_display.node.job_listing.teaser'
-        - 'config:core.entity_view_display.node.mini_session.default'
-        - 'config:core.entity_view_display.node.mini_session.teaser'
-        - 'config:core.entity_view_display.node.page.default'
-        - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.session.default'
-        - 'config:core.entity_view_display.node.session.teaser'
-        - 'config:core.entity_view_display.node.sponsor.default'
-        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'
   page_3:
     id: page_3
@@ -693,16 +657,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.featured_speaker.default'
-        - 'config:core.entity_view_display.node.featured_speaker.teaser'
-        - 'config:core.entity_view_display.node.job_listing.default'
-        - 'config:core.entity_view_display.node.job_listing.teaser'
-        - 'config:core.entity_view_display.node.mini_session.default'
-        - 'config:core.entity_view_display.node.mini_session.teaser'
-        - 'config:core.entity_view_display.node.page.default'
-        - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.session.default'
-        - 'config:core.entity_view_display.node.session.teaser'
-        - 'config:core.entity_view_display.node.sponsor.default'
-        - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.taxonomy_term.field_date_time'

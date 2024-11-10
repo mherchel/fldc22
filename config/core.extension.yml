@@ -2,9 +2,6 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   auto_entitylabel: -100
-  action: 0
-  admin_toolbar: 0
-  admin_toolbar_tools: 0
   antibot: 0
   automated_cron: 0
   block: 0
@@ -33,11 +30,11 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  gin_toolbar: 0
   help: 0
-  history: 0
   honeypot: 0
   image: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   mailsystem: 0
   menu_link_attributes: 0
@@ -48,6 +45,7 @@ module:
   metatag_twitter_cards: 0
   metatag_views: 0
   mysql: 0
+  navigation: 0
   node: 0
   options: 0
   page_cache: 0
@@ -66,7 +64,6 @@ module:
   taxonomy: 0
   text: 0
   token: 0
-  toolbar: 0
   update: 0
   user: 0
   user_registrationpassword: 0
