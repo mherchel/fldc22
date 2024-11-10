@@ -10,14 +10,15 @@
   line-height: var(--sp1-5);
 
   & a:where(:not(.button)) {
-    color: var(--color--sun-40);
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--color--sun-80);
+    color:  var(--text-on-neutral-primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--text-on-neutral-primary);
     overflow-wrap: break-word;
-    transition: color 0.2s;
+    transition: all 0.2s;
 
     &:hover {
-      color: var(--color--sun-45);
+      text-underline-offset: 6px;
     }
   }
 

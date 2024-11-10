@@ -39,11 +39,12 @@ body {
 }
 
 a {
-  color: var(--color--ocean-30);
+  color: var(--text-on-neutral-primary);
   transition: color 0.2s;
 
   &:where(:hover) {
-    color: var(--color--ocean-35);
+    color: var(--text-on-neutral-primary);
+    text-decoration-color: var(--teal);
   }
 
   &:where(:focus) {

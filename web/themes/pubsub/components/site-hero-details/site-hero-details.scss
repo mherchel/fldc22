@@ -82,8 +82,8 @@
 
   @container (#{$hero_break}) {
     left: calc(100% + var(--border-width));
-    min-width: unset;
-    height: calc(var(--wide-width) + (2 * var(--border-width)));
+    min-width: max-content;
+    height: calc(var(--wide-width) + var(--border-width));
     rotate: 90deg;
     transform-origin: top left;
   }

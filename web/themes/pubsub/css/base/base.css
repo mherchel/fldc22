@@ -37,11 +37,13 @@ body.is-fixed {
 }
 
 a {
-  color: var(--color--ocean-30);
+  color: var(--text-on-neutral-primary);
   transition: color 0.2s;
 }
 a:where(:hover) {
-  color: var(--color--ocean-35);
+  color: var(--text-on-neutral-primary);
+  -webkit-text-decoration-color: var(--teal);
+          text-decoration-color: var(--teal);
 }
 a:where(:focus) {
   outline: solid 2px var(--focus-ring-color);
