@@ -112,9 +112,9 @@
 }
 .site-footer .text-content a {
   text-decoration: underline;
-  color: inherit;
+  color: var(--text-on-neutral-dark-secondary);
 }
 .site-footer .text-content a:hover {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-on-neutral-dark-primary);
 }

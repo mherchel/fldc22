@@ -1,7 +1,7 @@
 @import "../../global/variables";
 
 .archive-sites-menu {
-  background-color: transparent;
+  background-color: var(--neutral-dark);
   background-image: url('../../../images/archive-site-menu-arrows.svg');
   background-position: center right 10px;;
   height: 40px;
@@ -9,6 +9,7 @@
   max-width: 100%;
   padding: 0 var(--sp2) 0 var(--sp);
   border: solid 1px #94BFCC;
+  color: var(--text-on-neutral-dark);
   font-size: 16px;
   line-height: var(--sp1-5);
   transition: border-color 0.2s;

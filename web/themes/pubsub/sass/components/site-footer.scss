@@ -17,8 +17,9 @@
     box-shadow: 0 -200px 0 var(--neutral-dark);
   }
 
+  .text-content a,
   a {
-    color: inherit;
+    color: var(--text-on-neutral-dark-secondary);
 
     &:hover,
     &:focus {

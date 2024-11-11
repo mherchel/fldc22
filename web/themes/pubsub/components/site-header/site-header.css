@@ -66,7 +66,7 @@
   }
 }
 .site-header__register-link:hover {
-  color: var(--color--white);
+  color: var(--text-on-neutral-dark-primary);
 }
 .site-header__register-link:focus {
   border-radius: 0;

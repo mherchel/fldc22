@@ -18,10 +18,13 @@
 .path-frontpage .site-footer {
   box-shadow: 0 -200px 0 var(--neutral-dark);
 }
+.site-footer .text-content a,
 .site-footer a {
-  color: inherit;
+  color: var(--text-on-neutral-dark-secondary);
 }
-.site-footer a:hover, .site-footer a:focus {
+.site-footer .text-content a:hover, .site-footer .text-content a:focus,
+.site-footer a:hover,
+.site-footer a:focus {
   color: var(--text-on-neutral-dark-primary);
 }
 @media (min-width: 43.75rem) {
