@@ -10,7 +10,6 @@
 
 .footer-menu--level-1 {
   font-size: 1.25rem;
-  font-weight: 700;
   line-height: var(--sp1-5);
 }
 @media (min-width: 31.25rem) {

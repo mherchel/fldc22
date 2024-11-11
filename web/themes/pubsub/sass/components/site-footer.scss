@@ -91,7 +91,9 @@
   padding: 0;
 }
 
-.block-footer__social-menu-link {
+.block-footer__social-menu-link[class] {
+  color: var(--text-on-neutral-dark-secondary);
+
   svg {
     width: 30px;
     max-height: 30px;
