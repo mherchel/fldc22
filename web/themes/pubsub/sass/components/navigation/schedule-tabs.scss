@@ -57,8 +57,8 @@ $schedule_layout_switch: 'min-width: 950px';
   }
 
   &:hover {
-    background-color: var(--color--ocean-30);
-    color: var(--schedule-tabs--text);
+    background-color: var(--secondary);
+    color: var(--text-on-secondary);
   }
 
   &:focus {

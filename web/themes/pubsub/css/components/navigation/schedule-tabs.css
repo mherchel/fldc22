@@ -54,8 +54,8 @@
   }
 }
 .schedule-tabs__link:hover {
-  background-color: var(--color--ocean-30);
-  color: var(--schedule-tabs--text);
+  background-color: var(--secondary);
+  color: var(--text-on-secondary);
 }
 .schedule-tabs__link:focus {
   outline-offset: -6px;
