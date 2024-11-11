@@ -56,14 +56,65 @@
   pointer-events: none;
 }
 .user-login-form .button--primary {
-  background-color: var(--secondary);
-  color: var(--text-on-secondary);
-  border-color: transparent;
+  --button-color-bg: var(--color--white);
+  --button-color-primary: var(--pink-dark);
+  --button-color-primary-dark: var(--pink-dark);
+  --button-border-radius: 0.1875rem;
+  --button-line-height: 1.125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--sp3);
+  margin-block: var(--sp1);
+  margin-inline-start: 0;
+  margin-inline-end: var(--sp1);
+  padding: 1px var(--sp1-5);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-color-primary);
+  border: solid 2px var(--button-color-primary);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-color-bg);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: var(--button-line-height);
+  -webkit-appearance: none;
+          appearance: none;
+  -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
+  --button-color-bg: var(--pink-dark);
+  --button-color-primary: var(--color-white);
+  --button-color-primary-dark: var(--pink-light);
   width: 100%;
   margin: 0;
 }
-.user-login-form .button--primary:where(:hover) {
-  border-color: transparent;
+.user-login-form .button--primary:where(:hover), .user-login-form .button--primary:where(:focus) {
+  text-decoration: none;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+}
+.user-login-form .button--primary:where(:active) {
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+}
+.user-login-form .button--primary:where(:disabled), .user-login-form .button--primary.is-disabled {
+  cursor: default;
+  color: var(--color--gray-70);
+  border-color: var(--color--gray-70);
+}
+.user-login-form .button--primary:where(:hover), .user-login-form .button--primary:where(:focus) {
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 80%);
+  color: var(--button-color-primary);
+  filter: saturate(400%);
+}
+.user-login-form .button--primary:where(:active) {
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: var(--button-color-primary);
+  filter: saturate(200%);
 }
 
 .user-login-form__links {
@@ -100,80 +151,20 @@
           appearance: none;
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
-  --button-color-bg: var(--color--white);
-  --button-color-primary: var(--pink-dark);
-  --button-color-primary-dark: var(--pink-dark);
-  --button-border-radius: 3px;
-  --button-line-height: 18px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: var(--sp3);
-  margin-block: var(--sp1);
-  margin-inline-start: 0;
-  margin-inline-end: var(--sp1);
-  padding: 1px var(--sp1-5);
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  color: var(--button-color-primary);
-  border: solid 2px var(--button-color-primary);
-  border-radius: var(--button-border-radius);
-  background-color: var(--button-color-bg);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: var(--button-line-height);
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  touch-action: manipulation;
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
   width: 100%;
   margin: 0 0 var(--sp);
 }
 .user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
   text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .user-login-form__register-link a:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
   cursor: default;
   color: var(--color--gray-70);
   border-color: var(--color--gray-70);
-}
-.user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
-  text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
-}
-.user-login-form__register-link a:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
-}
-.user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
-  cursor: default;
-  color: var(--color--gray-70);
-  border-color: var(--color--gray-70);
-}
-.user-login-form__register-link a:where(:hover), .user-login-form__register-link a:where(:focus) {
-  color: var(--button-color-bg);
-  border-color: var(--button-color-primary-dark);
-  background-color: var(--button-color-primary-dark);
-}
-.user-login-form__register-link a:where(:active) {
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
-}
-.user-login-form__register-link a:where(:disabled), .user-login-form__register-link a.is-disabled {
-  color: var(--color--night-35);
-  background-color: var(--color--night-90);
 }

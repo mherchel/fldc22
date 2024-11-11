@@ -18,9 +18,9 @@
 }
 
 @mixin button {
-  --button-color-bg: var(--color--white);
-  --button-color-primary: var(--pink-dark);
-  --button-color-primary-dark: var(--pink-dark);
+  --button-color-bg: var(--color--white); // background color
+  --button-color-primary: var(--pink-dark); // Text/border color
+  --button-color-primary-dark: var(--pink-dark); // hover/focus text/border color
   --button-border-radius: 3px;
   --button-line-height: 18px;
 
@@ -50,15 +50,13 @@
   &:where(:hover),
   &:where(:focus) {
     text-decoration: none;
-    color: var(--button-color-primary-dark);
-    border: solid 2px var(--button-color-primary-dark);
-    background: none;
-    font-weight: 700;
+    border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+    color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
   }
 
   &:where(:active) {
-    color: var(--button-color-primary);
-    border-color: var(--button-color-primary);
+    color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+    border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
   }
 
   &:where(:disabled),
@@ -88,25 +86,24 @@
 
 @mixin button--primary {
   @include button;
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
+
+  --button-color-bg: var(--pink-dark); // background color
+  --button-color-primary: var(--color-white); // Text/border color
+  --button-color-primary-dark: var(--pink-light); // hover/focus text/border color
 
   &:where(:hover),
   &:where(:focus) {
-    color: var(--button-color-bg);
-    border-color: var(--button-color-primary-dark);
-    background-color: var(--button-color-primary-dark);
+    border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+    background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 80%);
+    color: var(--button-color-primary);
+    filter: saturate(400%);
   }
 
   &:where(:active) {
-    color: var(--button-color-bg);
-    background-color: var(--button-color-primary);
-  }
-
-  &:where(:disabled),
-  &.is-disabled {
-    color: var(--color--night-35);
-    background-color: var(--color--night-90);
+    border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+    background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+    color: var(--button-color-primary);
+    filter: saturate(200%);
   }
 }
 

@@ -5,8 +5,8 @@
 }
 
 .schedule-tabs {
-  --schedule-tabs--background: var(--color--ocean-15);
-  --schedule-tabs--highlight: var(--color--sun-45);
+  --schedule-tabs--background: var(--neutral-dark);
+  --schedule-tabs--highlight: var(--pink-dark);
   --schedule-tabs--text: var(--color--white);
   --schedule-tabs--bottom-border-width: 0.5rem;
   position: relative;

@@ -48,8 +48,9 @@ input.field-add-more-submit {
           appearance: none;
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
+  --button-color-bg: var(--pink-dark);
+  --button-color-primary: var(--color-white);
+  --button-color-primary-dark: var(--pink-light);
   height: var(--sp2-5);
   padding-inline: var(--sp);
   font-size: 16px;
@@ -57,14 +58,12 @@ input.field-add-more-submit {
 }
 input.field-add-more-submit:where(:hover), input.field-add-more-submit:where(:focus) {
   text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 input.field-add-more-submit:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-disabled {
   cursor: default;
@@ -72,17 +71,16 @@ input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-dis
   border-color: var(--color--gray-70);
 }
 input.field-add-more-submit:where(:hover), input.field-add-more-submit:where(:focus) {
-  color: var(--button-color-bg);
-  border-color: var(--button-color-primary-dark);
-  background-color: var(--button-color-primary-dark);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 80%);
+  color: var(--button-color-primary);
+  filter: saturate(400%);
 }
 input.field-add-more-submit:where(:active) {
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
-}
-input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-disabled {
-  color: var(--color--night-35);
-  background-color: var(--color--night-90);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: var(--button-color-primary);
+  filter: saturate(200%);
 }
 
 .tabledrag-toggle-weight {
@@ -126,14 +124,12 @@ input.field-add-more-submit:where(:disabled), input.field-add-more-submit.is-dis
 }
 .tabledrag-toggle-weight:where(:hover), .tabledrag-toggle-weight:where(:focus) {
   text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .tabledrag-toggle-weight:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .tabledrag-toggle-weight:where(:disabled), .tabledrag-toggle-weight.is-disabled {
   cursor: default;

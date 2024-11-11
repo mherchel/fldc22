@@ -61,7 +61,10 @@
     mask-repeat: no-repeat;
     mask-size: contain;
     background: currentColor;
-    rotate: 90deg;
+
+    @container (#{$hero_break}) {
+      rotate: 90deg;
+    }
   }
 }
 

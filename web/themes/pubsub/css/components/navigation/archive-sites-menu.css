@@ -1,7 +1,7 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
 .archive-sites-menu {
-  background-color: var(--color--ocean-10);
+  background-color: transparent;
   background-image: url("../../../images/archive-site-menu-arrows.svg");
   background-position: center right 10px;
   height: 2.5rem;

@@ -62,7 +62,7 @@
   }
 
   .button--primary {
-    @include button--highlight;
+    @include button--primary;
     width: 100%;
     margin: 0;
   }
@@ -75,7 +75,6 @@
 
 .user-login-form__register-link a {
   @include button;
-  @include button--primary;
   width: 100%;
   margin: 0 0 var(--sp);
 }

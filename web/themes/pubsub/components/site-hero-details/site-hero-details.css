@@ -65,7 +65,11 @@
   -webkit-mask-size: contain;
           mask-size: contain;
   background: currentColor;
-  rotate: 90deg;
+}
+@container (min-width: 700px) {
+  .site-hero-details__button:after {
+    rotate: 90deg;
+  }
 }
 
 .site-hero-details__flyout {

@@ -57,7 +57,7 @@
 
   &:hover {
     path {
-      fill: var(--color--sun-55);
+      fill: var(--pink-dark);
     }
   }
 
@@ -67,7 +67,7 @@
   }
 
   path {
-    fill: var(--color--sun-45);
+    fill: var(--pink-dark);
     transition: fill 0.2s;
   }
 }

@@ -57,14 +57,14 @@
   display: flex;
 }
 .user-social__icon:hover path {
-  fill: var(--color--sun-55);
+  fill: var(--pink-dark);
 }
 .user-social__icon svg {
   width: 1.875rem;
   height: 1.875rem;
 }
 .user-social__icon path {
-  fill: var(--color--sun-45);
+  fill: var(--pink-dark);
   transition: fill 0.2s;
 }
 

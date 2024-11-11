@@ -2,7 +2,7 @@
 /* Grid related breakpoints */
 .tabs {
   --tab-active-border-size: 0.375rem;
-  --line-color: var(--color--sun-55);
+  --line-color: var(--pink-dark);
   --border-color: var(--color--sky-90);
   --background-color: var(--color--sky-97);
   --background-hover-color: var(--color--sky-80);

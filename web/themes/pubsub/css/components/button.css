@@ -38,14 +38,12 @@
 }
 .button:where(:hover), .button:where(:focus) {
   text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .button:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .button:where(:disabled), .button.is-disabled {
   cursor: default;
@@ -89,19 +87,18 @@
           appearance: none;
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
+  --button-color-bg: var(--pink-dark);
+  --button-color-primary: var(--color-white);
+  --button-color-primary-dark: var(--pink-light);
 }
 .button--primary:where(:hover), .button--primary:where(:focus) {
   text-decoration: none;
-  color: var(--button-color-primary-dark);
-  border: solid 2px var(--button-color-primary-dark);
-  background: none;
-  font-weight: 700;
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .button--primary:where(:active) {
-  color: var(--button-color-primary);
-  border-color: var(--button-color-primary);
+  color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
 }
 .button--primary:where(:disabled), .button--primary.is-disabled {
   cursor: default;
@@ -109,17 +106,16 @@
   border-color: var(--color--gray-70);
 }
 .button--primary:where(:hover), .button--primary:where(:focus) {
-  color: var(--button-color-bg);
-  border-color: var(--button-color-primary-dark);
-  background-color: var(--button-color-primary-dark);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 80%);
+  color: var(--button-color-primary);
+  filter: saturate(400%);
 }
 .button--primary:where(:active) {
-  color: var(--button-color-bg);
-  background-color: var(--button-color-primary);
-}
-.button--primary:where(:disabled), .button--primary.is-disabled {
-  color: var(--color--night-35);
-  background-color: var(--color--night-90);
+  border-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  background-color: color-mix(in lab, var(--button-color-primary-dark) 80%, black 20%);
+  color: var(--button-color-primary);
+  filter: saturate(200%);
 }
 
 .button--action,
