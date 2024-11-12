@@ -24,7 +24,7 @@
     --hero-percent: 66%;
     --hero-angle: 0deg;
   }
-  20% {
+  100% {
     --color-opacity: 0.5;
     --hero-percent: 0%;
     --hero-angle: 0deg;
@@ -59,8 +59,11 @@
   color: transparent;
   background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent));
   background-clip: text;
-  animation-timeline: scroll(block root);
+  animation-timeline: view();
+  animation-range-start: exit -30%;
+  animation-range-end: exit 50%;
   animation-name: heading-fill;
+  animation-fill-mode: both;
   animation-duration: 1ms;
 
   @container (#{$hero_break}) {
