@@ -11,7 +11,7 @@
 }
 
 ::selection {
-  background-color: var(--color--ocean-30);
+  background-color: var(--pink-dark);
   color: var(--color--white);
 }
 
