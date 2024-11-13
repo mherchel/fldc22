@@ -4,12 +4,13 @@
   {% if content.user_picture.0 %}
     <div class="user-compact__media">
       {{ content.user_picture }}
-      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 or content.field_bluesky_profile_link.0%}
         <div class="user-social">
           {{ content.field_drupal_org_profile }}
           {{ content.field_personal_website_link }}
           {{ content.field_twitter_profile_link }}
           {{ content.field_mastodon_profile_link }}
+          {{ content.field_bluesky_profile_link }}
         </div>
       {% endif %}
     </div>
@@ -38,11 +39,12 @@
     </div>
 
     {% if not content.user_picture.0 %}
-      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 %}
+      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 or content.field_bluesky_profile_link.0 %}
         <div class="user-social">
           {{ content.field_drupal_org_profile }}
           {{ content.field_personal_website_link }}
           {{ content.field_twitter_profile_link }}
+          {{ content.field_bluesky_profile_link }}
         </div>
       {% endif %}
     {% endif %}

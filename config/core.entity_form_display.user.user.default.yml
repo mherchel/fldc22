@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_biography
+    - field.field.user.user.field_bluesky_profile_link
     - field.field.user.user.field_drupal_org_profile
     - field.field.user.user.field_first_name
     - field.field.user.user.field_home_town
@@ -28,6 +29,7 @@ third_party_settings:
       children:
         - field_drupal_org_profile
         - field_twitter_profile_link
+        - field_bluesky_profile_link
         - field_mastodon_profile_link
         - field_personal_website_link
       label: Links
@@ -80,6 +82,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_bluesky_profile_link:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_drupal_org_profile:
     type: link_default
     weight: 8
@@ -114,7 +124,7 @@ content:
     third_party_settings: {  }
   field_mastodon_profile_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -130,7 +140,7 @@ content:
     third_party_settings: {  }
   field_personal_website_link:
     type: link_default
-    weight: 11
+    weight: 12
     region: content
     settings:
       placeholder_url: ''

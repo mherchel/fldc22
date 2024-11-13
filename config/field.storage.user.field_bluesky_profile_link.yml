@@ -1,0 +1,19 @@
+uuid: 5c75c17c-1af6-4362-a323-6c6163043ec5
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_bluesky_profile_link
+field_name: field_bluesky_profile_link
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -31,7 +31,7 @@ $schedule_layout_shift: $lg;
   width: 100%;
   height: 0;
   margin: 0;
-  border-top: solid 2px var(--color--sky-86);
+  border-top: solid 2px var(--pink-dark);
 
   @media ($schedule_layout_shift) {
     display: block;

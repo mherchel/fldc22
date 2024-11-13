@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_biography
+    - field.field.user.user.field_bluesky_profile_link
     - field.field.user.user.field_drupal_org_profile
     - field.field.user.user.field_first_name
     - field.field.user.user.field_home_town
@@ -33,6 +34,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_bluesky_profile_link:
+    type: link
+    label: above
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_drupal_org_profile:
     type: link
