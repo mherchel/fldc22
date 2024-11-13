@@ -69,6 +69,7 @@
     animation-name: hero-heading-fill;
     animation-fill-mode: both;
     animation-duration: 1ms;
+    animation-timing-function: linear;
   }
 }
 @media (prefers-reduced-motion: reduce) {
