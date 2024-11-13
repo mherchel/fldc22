@@ -1,30 +1,23 @@
 /* Navigation related breakpoints */
 /* Grid related breakpoints */
-@property --hero-percent {
+@property --hero-cover-percent {
   syntax: "<percentage>";
   inherits: true;
   initial-value: 0%;
 }
-@property --color-opacity {
+@property --hero-color-opacity {
   syntax: "<number>";
   inherits: true;
   initial-value: 1;
 }
-@property --hero-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 66deg;
-}
-@keyframes heading-fill {
+@keyframes hero-heading-fill {
   0% {
-    --color-opacity: 1;
-    --hero-percent: 66%;
-    --hero-angle: 0deg;
+    --hero-color-opacity: 1;
+    --hero-cover-percent: 66%;
   }
   100% {
-    --color-opacity: 0.5;
-    --hero-percent: 0%;
-    --hero-angle: 0deg;
+    --hero-color-opacity: 0.5;
+    --hero-cover-percent: 0%;
   }
 }
 .site-hero {
@@ -44,24 +37,17 @@
 }
 
 .site-hero__title[class] {
-  --color-bright: rgba(231, 0, 119, var(--color-opacity));
-  --hero-percent: 66%;
-  --hero-angle: 0deg;
+  --color-bright: rgba(231, 0, 119, var(--hero-color-opacity));
+  --hero-cover-percent: 66%;
   font-size: clamp(4rem, 2.5rem + 10vw, 13rem);
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: transparent;
-  background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent));
+  background: linear-gradient(to top, black var(--hero-cover-percent), var(--color-bright) var(--hero-cover-percent));
   -webkit-background-clip: text;
           background-clip: text;
-  animation-timeline: view();
-  animation-range-start: exit -30%;
-  animation-range-end: exit 50%;
-  animation-name: heading-fill;
-  animation-fill-mode: both;
-  animation-duration: 1ms;
 }
 @container (min-width: 700px) {
   .site-hero__title[class] {
@@ -73,10 +59,16 @@
 }
 @supports (animation-timeline: scroll()) {
   .site-hero__title[class] {
-    background: linear-gradient(var(--hero-angle), black var(--hero-percent), var(--color-bright) var(--hero-percent)), url("images/trees.webp");
+    background: linear-gradient(to top, black var(--hero-cover-percent), var(--color-bright) var(--hero-cover-percent)), url("images/trees.webp");
     background-size: auto, cover;
     -webkit-background-clip: text;
             background-clip: text;
+    animation-timeline: view();
+    animation-range-start: exit -30%;
+    animation-range-end: exit 50%;
+    animation-name: hero-heading-fill;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
   }
 }
 @media (prefers-reduced-motion: reduce) {
