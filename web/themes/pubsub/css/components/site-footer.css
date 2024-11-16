@@ -97,6 +97,9 @@
 .block-footer__social-menu-link[class] {
   color: var(--text-on-neutral-dark-secondary);
 }
+.block-footer__social-menu-link[class][href*=facebook] svg {
+  width: 1.1875rem;
+}
 .block-footer__social-menu-link[class] svg {
   width: 1.875rem;
   max-height: 1.875rem;

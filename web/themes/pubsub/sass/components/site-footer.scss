@@ -95,6 +95,10 @@
 .block-footer__social-menu-link[class] {
   color: var(--text-on-neutral-dark-secondary);
 
+  &[href*="facebook"] svg {
+    width: 19px;
+  }
+
   svg {
     width: 30px;
     max-height: 30px;
