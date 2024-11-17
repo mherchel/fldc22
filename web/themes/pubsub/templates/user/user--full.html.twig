@@ -1,13 +1,15 @@
 {{ attach_library('pubsub/user-full') }}
+{% set has_social_links = content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 or content.field_bluesky_profile_link.0  or content.field_linkedin_profile_link.0 %}
 
 <article{{ attributes.addClass('user-full') }}>
   <h1 class="user-full__title">{{ content.field_first_name }} {{ content.field_last_name }}</h1>
   {% if content.user_picture.0 %}
     <div class="user-full__floater">
       {{ content.user_picture }}
-      {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 or content.field_bluesky_profile_link.0 %}
+      {% if has_social_links %}
         <div class="user-social">
           {{ content.field_drupal_org_profile }}
+          {{ content.field_linkedin_profile_link }}
           {{ content.field_personal_website_link }}
           {{ content.field_twitter_profile_link }}
           {{ content.field_mastodon_profile_link }}
@@ -37,9 +39,10 @@
   </div>
 
   {% if not content.user_picture.0 %}
-    {% if content.field_drupal_org_profile.0 or content.field_drupal_org_profile.0 or content.field_twitter_profile_link.0 or content.field_bluesky_profile_link.0  %}
+    {% if has_social_links %}
       <div class="user-social">
         {{ content.field_drupal_org_profile }}
+        {{ content.field_linkedin_profile_link }}
         {{ content.field_personal_website_link }}
         {{ content.field_twitter_profile_link }}
         {{ content.field_bluesky_profile_link }}
