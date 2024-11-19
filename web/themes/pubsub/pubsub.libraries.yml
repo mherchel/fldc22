@@ -140,11 +140,6 @@ view-details-list:
     layout:
       css/layout/view-details-list.css: {}
 
-session-teaser:
-  css:
-    component:
-      css/components/node-teaser-session.css: {}
-
 footer-menu:
   css:
     component:

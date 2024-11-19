@@ -1,0 +1,30 @@
+name: Details
+status: stable
+props:
+  type: object
+  required:
+    - label
+    - content
+    - classes
+    - url
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    content:
+      # An associative array in PHP is an object in JSON/YML.
+      type: object
+    classes:
+      type: array
+    is_training:
+      type: boolean
+    is_non_session:
+      type: boolean
+    label:
+      type: string
+    title_suffix:
+      type: array
+    url:
+      type: string
+slots:
+  meta: {}
+  description: {}

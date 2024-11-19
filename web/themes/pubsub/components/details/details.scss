@@ -1,11 +1,11 @@
-@import "../global/variables";
+@import "../../sass/global/variables";
 
 @keyframes show-session-details {
   from { opacity: 0; }
 }
 
 .session-teaser {
-  --session-teaser-hover-color: var(--text-on-neutral-primary);
+  --session-teaser-hover-color: var(--color--sun-55);
 }
 
 .session-teaser__details[open] > *:not(.session-teaser__summary) {
@@ -71,7 +71,7 @@
   margin: 0 0 var(--sp1-5);
   padding-right: 40px; // Room for the summary chevron.
   font-size: var(--sp1-5);
-  font-weight: 600;
+  font-weight: 800;
   line-height: var(--sp2);
   letter-spacing: -0.01em;
   color: var(--color--ocean-10);
@@ -101,7 +101,7 @@
     width: 25px;
     margin-top: -3px;
     margin-right: 0.25em;
-    mask: url('../../images/pdf.svg');
+    mask: url('images/pdf.svg');
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: currentColor;

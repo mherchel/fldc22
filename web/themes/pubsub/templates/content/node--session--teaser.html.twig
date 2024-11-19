@@ -1,53 +1,28 @@
-{{ attach_library('pubsub/session-teaser') }}
+{% embed 'pubsub:details' with {
+  label: label|add_suggestion('bare')|render,
+  attributes,
+  title_suffix: title_suffix,
+  is_training: node.field_is_training.value ? true : false,
+  is_non_session: node.field_is_non_session.value ? true : false,
+  url,
+  content,
+  classes: classes|default([])
+} only %}
 
-{%
-  set classes = [
-    'session-teaser',
-    not node.isPublished() ? 'node--unpublished',
-  ]
-%}
+  {% block meta %}
+    {% if not is_non_session %}
+      {{ content.field_session_category }}
+    {% endif %}
 
-{% set is_training = node.field_is_training.value %}
-{% set is_non_session = node.field_is_non_session.value %}
+    {{ content.field_r }}
 
-<article{{ attributes.addClass(classes) }}>
-  <details class="session-teaser__details">
-    <summary class="session-teaser__summary">
-      <h3 class="session-teaser__title">{{ label }}</h3>
-      <div class="session__meta">
-        {% if not is_non_session %}
-          {{ content.field_session_category }}
-        {% endif %}
+    {% if not is_non_session %}
+      {{ content.field_audience }}
+      {{ content.field_speakers }}
+    {% endif %}
+  {% endblock meta %}
 
-        {{ content.field_r }}
-
-        {% if not is_non_session %}
-          {{ content.field_audience }}
-          {{ content.field_speakers }}
-        {% endif %}
-      </div>
-    </summary>
-    <div class="session-teaser__desc">
-      {{ content.field_description }}
-
-      <div class="session-teaser__footer">
-        {% if not is_non_session %}
-          <div class="session-teaser__desc-meta">
-            <a href="{{ url }}">
-              <span>View {{ is_training ? 'Training' : 'Session' }} Page</span>
-              <span class="visually-hidden">for {{ label }}</span>
-              {% include '@pubsub/includes/svg/arrow-right.svg' %}
-            </a>
-          </div>
-        {% endif %}
-
-        {% if content.field_slides.0 %}
-          <a class="session-teaser__slides-link" href="{{- content.field_slides|render|striptags|trim -}}">View Slides</a>
-        {% endif %}
-      </div>
-    </div>
-  </details>
-
-  {{ title_suffix }}
-
-</article>
+  {% block description %}
+    {{ content.field_description }}
+  {% endblock description %}
+{% endembed %}
