@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 ::selection {
   background-color: var(--pink-dark);
   color: var(--color--white);
