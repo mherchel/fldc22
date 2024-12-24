@@ -52,6 +52,7 @@
   border-color: transparent;
   background: var(--neutral-dark);
   color: var(--text-on-neutral-dark-secondary);
+  outline-offset: -5px;
 }
 .site-hero-details__button:after {
   content: "";
