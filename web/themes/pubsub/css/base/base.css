@@ -174,3 +174,21 @@ ul {
   list-style-type: disc;
   list-style-image: none;
 }
+
+details {
+  --details-animation-duration: 400ms;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports selector(::details-content) and (transition-behavior: allow-discrete) and (height: calc-size(auto)) {
+    details::details-content {
+      height: 0px;
+      overflow: hidden;
+      transition-property: height, content-visibility;
+      transition-duration: var(--details-animation-duration);
+      transition-behavior: allow-discrete;
+    }
+    details[open]::details-content {
+      height: calc-size(auto);
+    }
+  }
+}
