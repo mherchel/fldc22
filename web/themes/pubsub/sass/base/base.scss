@@ -154,6 +154,7 @@ h6 {
   color: var(--text-on-neutral-white);
   font-family: var(--font-sans);
   font-weight: bold;
+  text-box: trim-both cap alphabetic;
 
   @media ($md) {
     margin: var(--sp3) 0 var(--sp2);
@@ -171,21 +172,20 @@ ul {
 }
 
 details {
-   --details-animation-duration: 400ms;
+  --details-animation-duration: 400ms;
 
-   @media (prefers-reduced-motion: no-preference) {
-     @supports selector(::details-content) and (transition-behavior: allow-discrete) and (height: calc-size(auto)) {
-       &::details-content {
-         height: 0px;
-         overflow: hidden;
-         transition-property: height, content-visibility;
-         transition-duration: var(--details-animation-duration);
-         transition-behavior: allow-discrete;
-       }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports selector(::details-content) {
+      &::details-content {
+        height: 0px;
+        transition: height var(--details-animation-duration) linear;
+        content-visibility: auto !important;
+        overflow: clip;
+      }
 
-       &[open]::details-content {
-         height: calc-size(auto);
-       }
-     }
-   }
- }
+      &[open]::details-content {
+        height: auto;
+      }
+    }
+  }
+}

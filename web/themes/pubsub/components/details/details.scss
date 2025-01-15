@@ -59,7 +59,7 @@
     height: var(--sp);
     border-top: solid 4px currentColor;
     border-right: solid 4px currentColor;
-    transition: transform 0.2s, color 0.2s;
+    transition: transform var(--details-animation-duration, 200ms), color var(--details-animation-duration, 200ms);
 
     .session-teaser__details[open] & {
       transform: translatey(-6px) rotate(135deg);

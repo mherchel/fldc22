@@ -35,6 +35,7 @@
           appearance: none;
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
+  text-box: trim-both cap alphabetic;
 }
 .button:where(:hover), .button:where(:focus) {
   text-decoration: none;

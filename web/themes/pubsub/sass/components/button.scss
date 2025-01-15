@@ -8,6 +8,7 @@
 
 .button {
   @include button;
+  text-box: trim-both cap alphabetic;
 }
 
 /* No margin if is part of a menu. */
