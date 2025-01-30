@@ -12,7 +12,7 @@
 }
 
 .schedule-jump__link {
-  --background-color: var(--color--sun-55);
+  --background-color: var(--pink-dark);
   --height: var(--sp3);
   display: flex;
   justify-content: center;
@@ -36,16 +36,22 @@
     right: calc(100% + var(--sp));
     transform: rotate(-90deg) translate(var(--height), 0);
     transform-origin: right bottom;
+    letter-spacing: 0.1ch;
   }
 }
 .schedule-jump__link:before {
   content: "";
   width: 0.875rem;
   height: 1.5rem;
-  background-image: url("../../images/arrow-right-white.svg");
-  background-repeat: no-repeat;
+  -webkit-mask-image: url("../../images/arrow-right-white.svg");
+          mask-image: url("../../images/arrow-right-white.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
   margin-right: 0.5em;
   transform: rotate(90deg);
+  background-color: currentColor;
 }
 @media (min-width: 68.75rem) {
   .schedule-jump__link:before {
@@ -54,7 +60,8 @@
 }
 .schedule-jump__link:hover {
   transform: translatey(2px);
-  background-color: var(--color--sun-45);
+  background-color: var(--pink-light);
+  color: var(--color--ocean-10);
 }
 @media (min-width: 68.75rem) {
   .schedule-jump__link:hover {
@@ -63,7 +70,7 @@
 }
 .schedule-jump__link:focus {
   outline: solid 2px var(--background-color);
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 .schedule-jump__link:focus:not(:focus-visible) {
   outline: 0;

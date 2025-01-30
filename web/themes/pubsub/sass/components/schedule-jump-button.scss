@@ -15,7 +15,7 @@ $position_switch: $wide-nav;
 }
 
 .schedule-jump__link {
-  --background-color: var(--color--sun-55);
+  --background-color: var(--pink-dark);
   --height: var(--sp3);
 
   display: flex;
@@ -39,16 +39,19 @@ $position_switch: $wide-nav;
     right: calc(100% + var(--sp));
     transform: rotate(-90deg) translate(var(--height), 0);
     transform-origin: right bottom;
+    letter-spacing: 0.1ch;
   }
 
   &:before {
     content: "";
     width: 14px;
     height: 24px;
-    background-image: url('../../images/arrow-right-white.svg');
-    background-repeat: no-repeat;
+    mask-image: url('../../images/arrow-right-white.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
     margin-right: 0.5em;
     transform: rotate(90deg);
+    background-color: currentColor;
 
     @media ($position_switch) {
       transform: rotate(180deg);
@@ -57,7 +60,8 @@ $position_switch: $wide-nav;
 
   &:hover {
     transform: translatey(2px);
-    background-color: var(--color--sun-45);
+    background-color: var(--pink-light);
+    color: var(--color--ocean-10);
 
     @media ($position_switch) {
       transform: rotate(-90deg) translate(calc(var(--height) - 2px), 0);
@@ -66,7 +70,7 @@ $position_switch: $wide-nav;
 
   &:focus {
     outline: solid 2px var(--background-color);
-    outline-offset: 2px;
+    outline-offset: 4px;
 
     &:not(:focus-visible) {
       outline: 0;
