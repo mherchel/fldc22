@@ -34,6 +34,7 @@
         "drupal/gin_toolbar": "1.x-dev@dev",
         "drupal/honeypot": "^2.0",
         "drupal/login_redirect_per_role": "^1.7",
+        "drupal/mailgun": "^2.1",
         "drupal/menu_link_attributes": "^1.2",
         "drupal/metatag": "^1.16",
         "drupal/pathauto": "^1.8",
@@ -97,9 +98,10 @@
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "zaporylie/composer-drupal-optimizations": true,
             "drupal/core-project-message": true,
-            "pantheon-systems/upstream-management": true
+            "pantheon-systems/upstream-management": true,
+            "php-http/discovery": true,
+            "zaporylie/composer-drupal-optimizations": true
         }
     }
 }
