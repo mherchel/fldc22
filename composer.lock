@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40aac72690bba948702a5749bf754494",
+    "content-hash": "f30ccc02e9336e788f129f1f9ff6b827",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2916,27 +2916,30 @@
         },
         {
             "name": "drupal/gin",
-            "version": "dev-3.x",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "34f170a30aeeebef22d86c7adedf3a92f40a3fd5"
+                "reference": "4.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin-4.1.2.zip",
+                "reference": "4.1.2",
+                "shasum": "d7554670f78a7695c20032845c8b3c35abe0bd77"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11 <11.2",
-                "drupal/gin_toolbar": "^1.0"
+                "drupal/core": "^10.3 || ^11 <11.2",
+                "drupal/gin_toolbar": "^2.0"
             },
             "type": "drupal-theme",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.1+0-dev",
-                    "datestamp": "1750246187",
+                    "version": "4.1.2",
+                    "datestamp": "1760186645",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2979,26 +2982,26 @@
         },
         {
             "name": "drupal/gin_toolbar",
-            "version": "1.1.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "8.x-1.1"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "c6079e28460a9d36e2d83a710143eb56985092c6"
+                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "b312a2dea5379ea5883d92c2a2e5f0499972a083"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11 <11.2"
+                "drupal/core": "^10 || ^11 <11.2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1750245793",
+                    "version": "2.1.0",
+                    "datestamp": "1750245881",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10091,7 +10094,6 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/bulk_update_fields": 15,
-        "drupal/gin": 20,
         "drupal/user_registrationpassword": 15,
         "drupal/webform": 10,
         "drupal/youtube": 10

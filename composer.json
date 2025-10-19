@@ -30,7 +30,7 @@
         "drupal/eca": "^2.0",
         "drupal/field_group": "^3.2",
         "drupal/field_permissions": "^1.1",
-        "drupal/gin": "3.x-dev",
+        "drupal/gin": "4.1.2",
         "drupal/honeypot": "^2.0",
         "drupal/login_redirect_per_role": "^1.7",
         "drupal/mailgun": "^2.1",
