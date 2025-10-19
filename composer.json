@@ -20,7 +20,7 @@
         "drupal/antibot": "^2.0",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/bpmn_io": "^2.0",
-        "drupal/bulk_update_fields": "2.x-dev@dev",
+        "drupal/bulk_update_fields": "^2.0@alpha",
         "drupal/cleantalk": "^9.3",
         "drupal/config_pages": "^2.9",
         "drupal/core-composer-scaffold": "^10",
