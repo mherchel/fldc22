@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3b913b2bada50bc073aa3dc95764077",
+    "content-hash": "1a3289f7a4b524f559b0a4bcf8900e1b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3666,26 +3666,29 @@
         },
         {
             "name": "drupal/registration_role",
-            "version": "dev-1.x",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/registration_role.git",
-                "reference": "a3a3d15b46553864cf8fced2cb69f9b1c7172f42"
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/registration_role-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "3dcace022bae8fdbc4c66c86fa5b9b0274298a8b"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1+9-dev",
-                    "datestamp": "1661742487",
+                    "version": "2.0.2",
+                    "datestamp": "1739480619",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },

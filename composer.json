@@ -39,7 +39,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/quicklink": "^2",
         "drupal/r4032login": "^2.1",
-        "drupal/registration_role": "^1.1",
+        "drupal/registration_role": "^2.0",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/token": "^1.9",
         "drupal/upgrade_status": "^4.3",
