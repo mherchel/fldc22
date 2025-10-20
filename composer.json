@@ -48,7 +48,7 @@
         "drupal/webform": "^6.3@beta",
         "drupal/youtube": "^3.0@beta",
         "drush/drush": "^13.3",
-        "pantheon-systems/drupal-integrations": "^10.0",
+        "pantheon-systems/drupal-integrations": "^11.2",
         "pantheon-systems/upstream-management": "^1.0"
     },
     "conflict": {
