@@ -86,7 +86,8 @@
         "enable-patching": true,
         "patches": {
           "drupal/user_registrationpassword": {
-            "3467248 - TypeError: Return value must be of type array, bool returned": "https://www.drupal.org/files/issues/2024-09-03/user_registrationpassword-3467248-17.patch"
+            "3467248 - TypeError: Return value must be of type array, bool returned": "https://www.drupal.org/files/issues/2024-09-03/user_registrationpassword-3467248-17.patch",
+            "3500896 - UserPasswordForm Argument #5 TypeError": "https://www.drupal.org/files/issues/2025-01-30/user_registrationpassword-3500896.patch"
           }
         }
     },
