@@ -16,6 +16,7 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+  list-style: none;
 
   &:hover {
     &:after {
@@ -41,6 +42,7 @@
     border-radius: 0 16px 0 0;
   }
 
+  &::marker,
   &::-webkit-details-marker {
     display: none;
   }

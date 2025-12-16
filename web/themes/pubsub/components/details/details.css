@@ -18,6 +18,7 @@
   cursor: pointer;
   -webkit-user-select: none;
           user-select: none;
+  list-style: none;
 }
 .session-teaser__summary:hover:after {
   color: var(--session-teaser-hover-color);
@@ -34,7 +35,7 @@
   outline: solid 2px currentColor;
   border-radius: 0 1rem 0 0;
 }
-.session-teaser__summary::-webkit-details-marker {
+.session-teaser__summary::marker, .session-teaser__summary::-webkit-details-marker {
   display: none;
 }
 .session-teaser__summary::marker {
